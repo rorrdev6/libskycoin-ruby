@@ -15,84 +15,28 @@ require 'date'
 module SwaggerClient
 
   class InlineResponse2002
-    attr_accessor :blockchain
+    attr_accessor :addresses
 
-    attr_accessor :coin
+    attr_accessor :confirmed
 
-    attr_accessor :csp_enabled
-
-    attr_accessor :csrf_enabled
-
-    attr_accessor :gui_enabled
-
-    attr_accessor :incoming_connections
-
-    attr_accessor :json_rpc_enabled
-
-    attr_accessor :open_connections
-
-    attr_accessor :outgoing_connections
-
-    attr_accessor :started_at
-
-    attr_accessor :unconfirmed_verify_transaction
-
-    attr_accessor :unversioned_api_enabled
-
-    attr_accessor :uptime
-
-    attr_accessor :user_agent
-
-    attr_accessor :user_verify_transaction
-
-    attr_accessor :version
-
-    attr_accessor :wallet_api_enabled
+    attr_accessor :predicted
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'blockchain' => :'blockchain',
-        :'coin' => :'coin',
-        :'csp_enabled' => :'csp_enabled',
-        :'csrf_enabled' => :'csrf_enabled',
-        :'gui_enabled' => :'gui_enabled',
-        :'incoming_connections' => :'incoming_connections',
-        :'json_rpc_enabled' => :'json_rpc_enabled',
-        :'open_connections' => :'open_connections',
-        :'outgoing_connections' => :'outgoing_connections',
-        :'started_at' => :'started_at',
-        :'unconfirmed_verify_transaction' => :'unconfirmed_verify_transaction',
-        :'unversioned_api_enabled' => :'unversioned_api_enabled',
-        :'uptime' => :'uptime',
-        :'user_agent' => :'user_agent',
-        :'user_verify_transaction' => :'user_verify_transaction',
-        :'version' => :'version',
-        :'wallet_api_enabled' => :'wallet_api_enabled'
+        :'addresses' => :'addresses',
+        :'confirmed' => :'confirmed',
+        :'predicted' => :'predicted'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'blockchain' => :'InlineResponse2002Blockchain',
-        :'coin' => :'String',
-        :'csp_enabled' => :'BOOLEAN',
-        :'csrf_enabled' => :'BOOLEAN',
-        :'gui_enabled' => :'BOOLEAN',
-        :'incoming_connections' => :'Integer',
-        :'json_rpc_enabled' => :'BOOLEAN',
-        :'open_connections' => :'Integer',
-        :'outgoing_connections' => :'Integer',
-        :'started_at' => :'Integer',
-        :'unconfirmed_verify_transaction' => :'InlineResponse2002UnconfirmedVerifyTransaction',
-        :'unversioned_api_enabled' => :'BOOLEAN',
-        :'uptime' => :'String',
-        :'user_agent' => :'String',
-        :'user_verify_transaction' => :'InlineResponse2002UnconfirmedVerifyTransaction',
-        :'version' => :'InlineResponse2002Version',
-        :'wallet_api_enabled' => :'BOOLEAN'
+        :'addresses' => :'Hash<String, InlineResponse2002Addresses>',
+        :'confirmed' => :'InlineResponse2002Addresses',
+        :'predicted' => :'InlineResponse2002Addresses'
       }
     end
 
@@ -104,72 +48,18 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'blockchain')
-        self.blockchain = attributes[:'blockchain']
+      if attributes.has_key?(:'addresses')
+        if (value = attributes[:'addresses']).is_a?(Hash)
+          self.addresses = value
+        end
       end
 
-      if attributes.has_key?(:'coin')
-        self.coin = attributes[:'coin']
+      if attributes.has_key?(:'confirmed')
+        self.confirmed = attributes[:'confirmed']
       end
 
-      if attributes.has_key?(:'csp_enabled')
-        self.csp_enabled = attributes[:'csp_enabled']
-      end
-
-      if attributes.has_key?(:'csrf_enabled')
-        self.csrf_enabled = attributes[:'csrf_enabled']
-      end
-
-      if attributes.has_key?(:'gui_enabled')
-        self.gui_enabled = attributes[:'gui_enabled']
-      end
-
-      if attributes.has_key?(:'incoming_connections')
-        self.incoming_connections = attributes[:'incoming_connections']
-      end
-
-      if attributes.has_key?(:'json_rpc_enabled')
-        self.json_rpc_enabled = attributes[:'json_rpc_enabled']
-      end
-
-      if attributes.has_key?(:'open_connections')
-        self.open_connections = attributes[:'open_connections']
-      end
-
-      if attributes.has_key?(:'outgoing_connections')
-        self.outgoing_connections = attributes[:'outgoing_connections']
-      end
-
-      if attributes.has_key?(:'started_at')
-        self.started_at = attributes[:'started_at']
-      end
-
-      if attributes.has_key?(:'unconfirmed_verify_transaction')
-        self.unconfirmed_verify_transaction = attributes[:'unconfirmed_verify_transaction']
-      end
-
-      if attributes.has_key?(:'unversioned_api_enabled')
-        self.unversioned_api_enabled = attributes[:'unversioned_api_enabled']
-      end
-
-      if attributes.has_key?(:'uptime')
-        self.uptime = attributes[:'uptime']
-      end
-
-      if attributes.has_key?(:'user_agent')
-        self.user_agent = attributes[:'user_agent']
-      end
-
-      if attributes.has_key?(:'user_verify_transaction')
-        self.user_verify_transaction = attributes[:'user_verify_transaction']
-      end
-
-      if attributes.has_key?(:'version')
-        self.version = attributes[:'version']
-      end
-
-      if attributes.has_key?(:'wallet_api_enabled')
-        self.wallet_api_enabled = attributes[:'wallet_api_enabled']
+      if attributes.has_key?(:'predicted')
+        self.predicted = attributes[:'predicted']
       end
 
     end
@@ -192,23 +82,9 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          blockchain == o.blockchain &&
-          coin == o.coin &&
-          csp_enabled == o.csp_enabled &&
-          csrf_enabled == o.csrf_enabled &&
-          gui_enabled == o.gui_enabled &&
-          incoming_connections == o.incoming_connections &&
-          json_rpc_enabled == o.json_rpc_enabled &&
-          open_connections == o.open_connections &&
-          outgoing_connections == o.outgoing_connections &&
-          started_at == o.started_at &&
-          unconfirmed_verify_transaction == o.unconfirmed_verify_transaction &&
-          unversioned_api_enabled == o.unversioned_api_enabled &&
-          uptime == o.uptime &&
-          user_agent == o.user_agent &&
-          user_verify_transaction == o.user_verify_transaction &&
-          version == o.version &&
-          wallet_api_enabled == o.wallet_api_enabled
+          addresses == o.addresses &&
+          confirmed == o.confirmed &&
+          predicted == o.predicted
     end
 
     # @see the `==` method
@@ -220,7 +96,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [blockchain, coin, csp_enabled, csrf_enabled, gui_enabled, incoming_connections, json_rpc_enabled, open_connections, outgoing_connections, started_at, unconfirmed_verify_transaction, unversioned_api_enabled, uptime, user_agent, user_verify_transaction, version, wallet_api_enabled].hash
+      [addresses, confirmed, predicted].hash
     end
 
     # Builds the object from hash

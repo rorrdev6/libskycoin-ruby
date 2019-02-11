@@ -15,89 +15,28 @@ require 'date'
 module SwaggerClient
 
   class InlineResponse2003
-    attr_accessor :address
+    attr_accessor :body
 
-    attr_accessor :connected_at
+    attr_accessor :header
 
-    attr_accessor :height
+    attr_accessor :size
 
-    attr_accessor :id
-
-    attr_accessor :is_trusted_peer
-
-    attr_accessor :last_received
-
-    attr_accessor :last_sent
-
-    attr_accessor :listen_port
-
-    attr_accessor :mirror
-
-    attr_accessor :outgoing
-
-    attr_accessor :state
-
-    attr_accessor :unconfirmed_verify_transaction
-
-    attr_accessor :user_agent
-
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'address' => :'address',
-        :'connected_at' => :'connected_at',
-        :'height' => :'height',
-        :'id' => :'id',
-        :'is_trusted_peer' => :'is_trusted_peer',
-        :'last_received' => :'last_received',
-        :'last_sent' => :'last_sent',
-        :'listen_port' => :'listen_port',
-        :'mirror' => :'mirror',
-        :'outgoing' => :'outgoing',
-        :'state' => :'state',
-        :'unconfirmed_verify_transaction' => :'unconfirmed_verify_transaction',
-        :'user_agent' => :'user_agent'
+        :'body' => :'body',
+        :'header' => :'header',
+        :'size' => :'size'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'address' => :'String',
-        :'connected_at' => :'Integer',
-        :'height' => :'Integer',
-        :'id' => :'Integer',
-        :'is_trusted_peer' => :'BOOLEAN',
-        :'last_received' => :'Integer',
-        :'last_sent' => :'Integer',
-        :'listen_port' => :'Integer',
-        :'mirror' => :'Integer',
-        :'outgoing' => :'BOOLEAN',
-        :'state' => :'String',
-        :'unconfirmed_verify_transaction' => :'InlineResponse2003UnconfirmedVerifyTransaction',
-        :'user_agent' => :'String'
+        :'body' => :'InlineResponse2003Body',
+        :'header' => :'InlineResponse2003Header',
+        :'size' => :'Integer'
       }
     end
 
@@ -109,56 +48,16 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'address')
-        self.address = attributes[:'address']
+      if attributes.has_key?(:'body')
+        self.body = attributes[:'body']
       end
 
-      if attributes.has_key?(:'connected_at')
-        self.connected_at = attributes[:'connected_at']
+      if attributes.has_key?(:'header')
+        self.header = attributes[:'header']
       end
 
-      if attributes.has_key?(:'height')
-        self.height = attributes[:'height']
-      end
-
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
-      end
-
-      if attributes.has_key?(:'is_trusted_peer')
-        self.is_trusted_peer = attributes[:'is_trusted_peer']
-      end
-
-      if attributes.has_key?(:'last_received')
-        self.last_received = attributes[:'last_received']
-      end
-
-      if attributes.has_key?(:'last_sent')
-        self.last_sent = attributes[:'last_sent']
-      end
-
-      if attributes.has_key?(:'listen_port')
-        self.listen_port = attributes[:'listen_port']
-      end
-
-      if attributes.has_key?(:'mirror')
-        self.mirror = attributes[:'mirror']
-      end
-
-      if attributes.has_key?(:'outgoing')
-        self.outgoing = attributes[:'outgoing']
-      end
-
-      if attributes.has_key?(:'state')
-        self.state = attributes[:'state']
-      end
-
-      if attributes.has_key?(:'unconfirmed_verify_transaction')
-        self.unconfirmed_verify_transaction = attributes[:'unconfirmed_verify_transaction']
-      end
-
-      if attributes.has_key?(:'user_agent')
-        self.user_agent = attributes[:'user_agent']
+      if attributes.has_key?(:'size')
+        self.size = attributes[:'size']
       end
 
     end
@@ -173,19 +72,7 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      state_validator = EnumAttributeValidator.new('String', ["pending", "connected", "introduced"])
-      return false unless state_validator.valid?(@state)
       return true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] state Object to be assigned
-    def state=(state)
-      validator = EnumAttributeValidator.new('String', ["pending", "connected", "introduced"])
-      unless validator.valid?(state)
-        fail ArgumentError, "invalid value for 'state', must be one of #{validator.allowable_values}."
-      end
-      @state = state
     end
 
     # Checks equality by comparing each attribute.
@@ -193,19 +80,9 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          address == o.address &&
-          connected_at == o.connected_at &&
-          height == o.height &&
-          id == o.id &&
-          is_trusted_peer == o.is_trusted_peer &&
-          last_received == o.last_received &&
-          last_sent == o.last_sent &&
-          listen_port == o.listen_port &&
-          mirror == o.mirror &&
-          outgoing == o.outgoing &&
-          state == o.state &&
-          unconfirmed_verify_transaction == o.unconfirmed_verify_transaction &&
-          user_agent == o.user_agent
+          body == o.body &&
+          header == o.header &&
+          size == o.size
     end
 
     # @see the `==` method
@@ -217,7 +94,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [address, connected_at, height, id, is_trusted_peer, last_received, last_sent, listen_port, mirror, outgoing, state, unconfirmed_verify_transaction, user_agent].hash
+      [body, header, size].hash
     end
 
     # Builds the object from hash

@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**csrf_token** | [**InlineResponse2001CsrfToken**](InlineResponse2001CsrfToken.md) |  | [optional] 
+**count** | **Integer** |  | [optional] 
 
 

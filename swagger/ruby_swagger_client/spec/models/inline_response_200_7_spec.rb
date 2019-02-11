@@ -32,13 +32,7 @@ describe 'InlineResponse2007' do
       expect(@instance).to be_instance_of(SwaggerClient::InlineResponse2007)
     end
   end
-  describe 'test attribute "entries"' do
-    it 'should work' do
-       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  describe 'test attribute "meta"' do
+  describe 'test attribute "csrf_token"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

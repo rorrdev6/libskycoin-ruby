@@ -15,20 +15,52 @@ require 'date'
 module SwaggerClient
 
   class InlineResponse200
-    attr_accessor :count
+    attr_accessor :coins
+
+    attr_accessor :hours
+
+    attr_accessor :owner_address
+
+    attr_accessor :spent_block_seq
+
+    attr_accessor :spent_tx
+
+    attr_accessor :src_block_seq
+
+    attr_accessor :src_tc
+
+    attr_accessor :time
+
+    attr_accessor :uxid
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'count' => :'count'
+        :'coins' => :'coins',
+        :'hours' => :'hours',
+        :'owner_address' => :'owner_address',
+        :'spent_block_seq' => :'spent_block_seq',
+        :'spent_tx' => :'spent_tx',
+        :'src_block_seq' => :'src_block_seq',
+        :'src_tc' => :'src_tc',
+        :'time' => :'time',
+        :'uxid' => :'uxid'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'count' => :'Integer'
+        :'coins' => :'Integer',
+        :'hours' => :'Integer',
+        :'owner_address' => :'String',
+        :'spent_block_seq' => :'Integer',
+        :'spent_tx' => :'String',
+        :'src_block_seq' => :'Integer',
+        :'src_tc' => :'String',
+        :'time' => :'Integer',
+        :'uxid' => :'String'
       }
     end
 
@@ -40,8 +72,40 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'count')
-        self.count = attributes[:'count']
+      if attributes.has_key?(:'coins')
+        self.coins = attributes[:'coins']
+      end
+
+      if attributes.has_key?(:'hours')
+        self.hours = attributes[:'hours']
+      end
+
+      if attributes.has_key?(:'owner_address')
+        self.owner_address = attributes[:'owner_address']
+      end
+
+      if attributes.has_key?(:'spent_block_seq')
+        self.spent_block_seq = attributes[:'spent_block_seq']
+      end
+
+      if attributes.has_key?(:'spent_tx')
+        self.spent_tx = attributes[:'spent_tx']
+      end
+
+      if attributes.has_key?(:'src_block_seq')
+        self.src_block_seq = attributes[:'src_block_seq']
+      end
+
+      if attributes.has_key?(:'src_tc')
+        self.src_tc = attributes[:'src_tc']
+      end
+
+      if attributes.has_key?(:'time')
+        self.time = attributes[:'time']
+      end
+
+      if attributes.has_key?(:'uxid')
+        self.uxid = attributes[:'uxid']
       end
 
     end
@@ -64,7 +128,15 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          count == o.count
+          coins == o.coins &&
+          hours == o.hours &&
+          owner_address == o.owner_address &&
+          spent_block_seq == o.spent_block_seq &&
+          spent_tx == o.spent_tx &&
+          src_block_seq == o.src_block_seq &&
+          src_tc == o.src_tc &&
+          time == o.time &&
+          uxid == o.uxid
     end
 
     # @see the `==` method
@@ -76,7 +148,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [count].hash
+      [coins, hours, owner_address, spent_block_seq, spent_tx, src_block_seq, src_tc, time, uxid].hash
     end
 
     # Builds the object from hash

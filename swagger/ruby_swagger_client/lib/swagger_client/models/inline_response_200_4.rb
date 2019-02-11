@@ -15,20 +15,28 @@ require 'date'
 module SwaggerClient
 
   class InlineResponse2004
-    attr_accessor :addresses
+    attr_accessor :head
+
+    attr_accessor :unconfirmed
+
+    attr_accessor :unspents
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'addresses' => :'addresses'
+        :'head' => :'head',
+        :'unconfirmed' => :'unconfirmed',
+        :'unspents' => :'unspents'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'addresses' => :'Array<String>'
+        :'head' => :'InlineResponse2004Head',
+        :'unconfirmed' => :'Integer',
+        :'unspents' => :'Integer'
       }
     end
 
@@ -40,10 +48,16 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'addresses')
-        if (value = attributes[:'addresses']).is_a?(Array)
-          self.addresses = value
-        end
+      if attributes.has_key?(:'head')
+        self.head = attributes[:'head']
+      end
+
+      if attributes.has_key?(:'unconfirmed')
+        self.unconfirmed = attributes[:'unconfirmed']
+      end
+
+      if attributes.has_key?(:'unspents')
+        self.unspents = attributes[:'unspents']
       end
 
     end
@@ -66,7 +80,9 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          addresses == o.addresses
+          head == o.head &&
+          unconfirmed == o.unconfirmed &&
+          unspents == o.unspents
     end
 
     # @see the `==` method
@@ -78,7 +94,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [addresses].hash
+      [head, unconfirmed, unspents].hash
     end
 
     # Builds the object from hash

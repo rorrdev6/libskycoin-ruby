@@ -15,20 +15,20 @@ require 'date'
 module SwaggerClient
 
   class InlineResponse2001
-    attr_accessor :csrf_token
+    attr_accessor :count
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'csrf_token' => :'csrf_token'
+        :'count' => :'count'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'csrf_token' => :'InlineResponse2001CsrfToken'
+        :'count' => :'Integer'
       }
     end
 
@@ -40,8 +40,8 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'csrf_token')
-        self.csrf_token = attributes[:'csrf_token']
+      if attributes.has_key?(:'count')
+        self.count = attributes[:'count']
       end
 
     end
@@ -64,7 +64,7 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          csrf_token == o.csrf_token
+          count == o.count
     end
 
     # @see the `==` method
@@ -76,7 +76,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [csrf_token].hash
+      [count].hash
     end
 
     # Builds the object from hash

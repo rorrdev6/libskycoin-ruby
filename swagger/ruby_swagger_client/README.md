@@ -82,52 +82,112 @@ All URIs are relative to *http://staging.node.skycoin.net*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SwaggerClient::DefaultApi* | [**address_count**](docs/DefaultApi.md#address_count) | **GET** /api/v1/addresscount | Returns the total number of unique address that have coins.
+*SwaggerClient::DefaultApi* | [**address_uxouts**](docs/DefaultApi.md#address_uxouts) | **GET** /api/v1/address_uxouts | 
+*SwaggerClient::DefaultApi* | [**balance_get**](docs/DefaultApi.md#balance_get) | **GET** /api/v1/balance | Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
+*SwaggerClient::DefaultApi* | [**balance_post**](docs/DefaultApi.md#balance_post) | **POST** /api/v1/balance | Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
+*SwaggerClient::DefaultApi* | [**block**](docs/DefaultApi.md#block) | **GET** /api/v1/block | 
+*SwaggerClient::DefaultApi* | [**blockchain_metadata**](docs/DefaultApi.md#blockchain_metadata) | **GET** /api/v1/blockchain/metadata | Returns the blockchain metadata.
+*SwaggerClient::DefaultApi* | [**blockchain_progress**](docs/DefaultApi.md#blockchain_progress) | **GET** /api/v1/blockchain/progress | Returns the blockchain sync progress.
+*SwaggerClient::DefaultApi* | [**blocks_get**](docs/DefaultApi.md#blocks_get) | **GET** /api/v1/blocks | blocksHandler returns blocks between a start and end point,
+*SwaggerClient::DefaultApi* | [**blocks_post**](docs/DefaultApi.md#blocks_post) | **POST** /api/v1/blocks | blocksHandler returns blocks between a start and end point,
 *SwaggerClient::DefaultApi* | [**coin_supply**](docs/DefaultApi.md#coin_supply) | **GET** /api/v1/coinSupply | 
 *SwaggerClient::DefaultApi* | [**csrf**](docs/DefaultApi.md#csrf) | **GET** /api/v1/csrf | Creates a new CSRF token. Previous CSRF tokens are invalidated by this call.
 *SwaggerClient::DefaultApi* | [**default_connections**](docs/DefaultApi.md#default_connections) | **GET** /api/v1/network/defaultConnections | defaultConnectionsHandler returns the list of default hardcoded bootstrap addresses.\\n They are not necessarily connected to.
+*SwaggerClient::DefaultApi* | [**explorer_address**](docs/DefaultApi.md#explorer_address) | **GET** /api/v1/explorer/address | 
 *SwaggerClient::DefaultApi* | [**health**](docs/DefaultApi.md#health) | **GET** /api/v1/health | Returns node health data.
+*SwaggerClient::DefaultApi* | [**inject_transaction**](docs/DefaultApi.md#inject_transaction) | **POST** /api/v1/injectTransaction | Broadcast a hex-encoded, serialized transaction to the network.
+*SwaggerClient::DefaultApi* | [**last_blocks**](docs/DefaultApi.md#last_blocks) | **GET** /api/v1/last_blocks | 
 *SwaggerClient::DefaultApi* | [**network_connection**](docs/DefaultApi.md#network_connection) | **GET** /api/v1/network/connection | This endpoint returns a specific connection.
 *SwaggerClient::DefaultApi* | [**network_connections**](docs/DefaultApi.md#network_connections) | **GET** /api/v1/network/connections | This endpoint returns all outgoings connections.
 *SwaggerClient::DefaultApi* | [**network_connections_disconnect**](docs/DefaultApi.md#network_connections_disconnect) | **GET** /api/v1/network/connection/disconnect | 
 *SwaggerClient::DefaultApi* | [**network_connections_exchange**](docs/DefaultApi.md#network_connections_exchange) | **GET** /api/v1/network/connections/exchange | 
 *SwaggerClient::DefaultApi* | [**network_connections_trust**](docs/DefaultApi.md#network_connections_trust) | **GET** /api/v1/network/connections/trust | trustConnectionsHandler returns all trusted connections.\\n They are not necessarily connected to. In the default configuration, these will be a subset of the default hardcoded bootstrap addresses.
+*SwaggerClient::DefaultApi* | [**outputs_get**](docs/DefaultApi.md#outputs_get) | **GET** /api/v1/outputs | If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
+*SwaggerClient::DefaultApi* | [**outputs_post**](docs/DefaultApi.md#outputs_post) | **POST** /api/v1/outputs | If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
+*SwaggerClient::DefaultApi* | [**pending_txs**](docs/DefaultApi.md#pending_txs) | **GET** /api/v1/pendingTxs | 
+*SwaggerClient::DefaultApi* | [**rawtx**](docs/DefaultApi.md#rawtx) | **GET** /api/v1/rawtx | Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
 *SwaggerClient::DefaultApi* | [**resend_unconfirmed_txns**](docs/DefaultApi.md#resend_unconfirmed_txns) | **POST** /api/v1/resendUnconfirmedTxns | 
+*SwaggerClient::DefaultApi* | [**richlist**](docs/DefaultApi.md#richlist) | **GET** /api/v1/richlist | Returns the top skycoin holders.
+*SwaggerClient::DefaultApi* | [**transaction**](docs/DefaultApi.md#transaction) | **GET** /api/v1/transaction | 
+*SwaggerClient::DefaultApi* | [**transactions_get**](docs/DefaultApi.md#transactions_get) | **GET** /api/v1/transactions | Returns transactions that match the filters.
+*SwaggerClient::DefaultApi* | [**transactions_post**](docs/DefaultApi.md#transactions_post) | **POST** /api/v1/transactions | Returns transactions that match the filters.
+*SwaggerClient::DefaultApi* | [**uxout**](docs/DefaultApi.md#uxout) | **GET** /api/v1/uxout | Returns an unspent output by ID.
 *SwaggerClient::DefaultApi* | [**verify_address**](docs/DefaultApi.md#verify_address) | **POST** /api/v2/address/verify | healthHandler returns node health data.
 *SwaggerClient::DefaultApi* | [**version**](docs/DefaultApi.md#version) | **GET** /api/v1/version | 
 *SwaggerClient::DefaultApi* | [**wallet**](docs/DefaultApi.md#wallet) | **GET** /api/v1/wallet | Returns a wallet by id.
 *SwaggerClient::DefaultApi* | [**wallet_balance**](docs/DefaultApi.md#wallet_balance) | **GET** /api/v1/wallet/balance | Returns the wallet's balance, both confirmed and predicted.  The predicted balance is the confirmed balance minus the pending spends.
+*SwaggerClient::DefaultApi* | [**wallet_create**](docs/DefaultApi.md#wallet_create) | **POST** /api/v1/wallet/create | 
+*SwaggerClient::DefaultApi* | [**wallet_decrypt**](docs/DefaultApi.md#wallet_decrypt) | **POST** /api/v1/wallet/decrypt | Decrypts wallet.
+*SwaggerClient::DefaultApi* | [**wallet_encrypt**](docs/DefaultApi.md#wallet_encrypt) | **POST** /api/v1/wallet/encrypt | Encrypt wallet.
 *SwaggerClient::DefaultApi* | [**wallet_folder**](docs/DefaultApi.md#wallet_folder) | **GET** /api/v1/wallets/folderName | 
 *SwaggerClient::DefaultApi* | [**wallet_new_address**](docs/DefaultApi.md#wallet_new_address) | **POST** /api/v1/wallet/newAddress | 
 *SwaggerClient::DefaultApi* | [**wallet_new_seed**](docs/DefaultApi.md#wallet_new_seed) | **GET** /api/v1/wallet/newSeed | 
+*SwaggerClient::DefaultApi* | [**wallet_recover**](docs/DefaultApi.md#wallet_recover) | **POST** /api/v2/wallet/recover | Recovers an encrypted wallet by providing the seed. The first address will be generated from seed and compared to the first address of the specified wallet. If they match, the wallet will be regenerated with an optional password. If the wallet is not encrypted, an error is returned.
 *SwaggerClient::DefaultApi* | [**wallet_seed**](docs/DefaultApi.md#wallet_seed) | **POST** /api/v1/wallet/seed | This endpoint only works for encrypted wallets. If the wallet is unencrypted, The seed will be not returned.
+*SwaggerClient::DefaultApi* | [**wallet_spent**](docs/DefaultApi.md#wallet_spent) | **POST** /api/v1/wallet/spend | 
+*SwaggerClient::DefaultApi* | [**wallet_transactions**](docs/DefaultApi.md#wallet_transactions) | **GET** /api/v1/wallet/transactions | Returns returns all unconfirmed transactions for all addresses in a given wallet.
+*SwaggerClient::DefaultApi* | [**wallet_unload**](docs/DefaultApi.md#wallet_unload) | **POST** /api/v1/wallet/unload | Unloads wallet from the wallet service.
 *SwaggerClient::DefaultApi* | [**wallet_update**](docs/DefaultApi.md#wallet_update) | **POST** /api/v1/wallet/update | Update the wallet.
 *SwaggerClient::DefaultApi* | [**wallets**](docs/DefaultApi.md#wallets) | **GET** /api/v1/wallets | 
 
 
 ## Documentation for Models
 
- - [SwaggerClient::Apiv1walletsEntries](docs/Apiv1walletsEntries.md)
+ - [SwaggerClient::Apiv1exploreraddressInputs](docs/Apiv1exploreraddressInputs.md)
+ - [SwaggerClient::Apiv1exploreraddressStatus](docs/Apiv1exploreraddressStatus.md)
+ - [SwaggerClient::Apiv1pendingTxsTransaction](docs/Apiv1pendingTxsTransaction.md)
  - [SwaggerClient::Apiv1walletsMeta](docs/Apiv1walletsMeta.md)
  - [SwaggerClient::InlineResponse200](docs/InlineResponse200.md)
  - [SwaggerClient::InlineResponse2001](docs/InlineResponse2001.md)
- - [SwaggerClient::InlineResponse2001CsrfToken](docs/InlineResponse2001CsrfToken.md)
+ - [SwaggerClient::InlineResponse20010](docs/InlineResponse20010.md)
+ - [SwaggerClient::InlineResponse20010UnconfirmedVerifyTransaction](docs/InlineResponse20010UnconfirmedVerifyTransaction.md)
+ - [SwaggerClient::InlineResponse20011](docs/InlineResponse20011.md)
+ - [SwaggerClient::InlineResponse20011Head](docs/InlineResponse20011Head.md)
+ - [SwaggerClient::InlineResponse20011HeadOutputs](docs/InlineResponse20011HeadOutputs.md)
+ - [SwaggerClient::InlineResponse20012](docs/InlineResponse20012.md)
+ - [SwaggerClient::InlineResponse20013](docs/InlineResponse20013.md)
+ - [SwaggerClient::InlineResponse20013Richlist](docs/InlineResponse20013Richlist.md)
+ - [SwaggerClient::InlineResponse20014](docs/InlineResponse20014.md)
+ - [SwaggerClient::InlineResponse20014Status](docs/InlineResponse20014Status.md)
+ - [SwaggerClient::InlineResponse20014Txn](docs/InlineResponse20014Txn.md)
+ - [SwaggerClient::InlineResponse20015](docs/InlineResponse20015.md)
+ - [SwaggerClient::InlineResponse20015Entries](docs/InlineResponse20015Entries.md)
+ - [SwaggerClient::InlineResponse20015Meta](docs/InlineResponse20015Meta.md)
+ - [SwaggerClient::InlineResponse20016](docs/InlineResponse20016.md)
+ - [SwaggerClient::InlineResponse20017](docs/InlineResponse20017.md)
+ - [SwaggerClient::InlineResponse20018](docs/InlineResponse20018.md)
+ - [SwaggerClient::InlineResponse20018Balance](docs/InlineResponse20018Balance.md)
+ - [SwaggerClient::InlineResponse20018Txn](docs/InlineResponse20018Txn.md)
+ - [SwaggerClient::InlineResponse20019](docs/InlineResponse20019.md)
+ - [SwaggerClient::InlineResponse20019Transaction](docs/InlineResponse20019Transaction.md)
+ - [SwaggerClient::InlineResponse20019Transactions](docs/InlineResponse20019Transactions.md)
  - [SwaggerClient::InlineResponse2002](docs/InlineResponse2002.md)
- - [SwaggerClient::InlineResponse2002Blockchain](docs/InlineResponse2002Blockchain.md)
- - [SwaggerClient::InlineResponse2002BlockchainHead](docs/InlineResponse2002BlockchainHead.md)
- - [SwaggerClient::InlineResponse2002UnconfirmedVerifyTransaction](docs/InlineResponse2002UnconfirmedVerifyTransaction.md)
- - [SwaggerClient::InlineResponse2002Version](docs/InlineResponse2002Version.md)
+ - [SwaggerClient::InlineResponse20020](docs/InlineResponse20020.md)
+ - [SwaggerClient::InlineResponse20021](docs/InlineResponse20021.md)
+ - [SwaggerClient::InlineResponse20022](docs/InlineResponse20022.md)
+ - [SwaggerClient::InlineResponse20022Data](docs/InlineResponse20022Data.md)
+ - [SwaggerClient::InlineResponse20023](docs/InlineResponse20023.md)
+ - [SwaggerClient::InlineResponse2002Addresses](docs/InlineResponse2002Addresses.md)
  - [SwaggerClient::InlineResponse2003](docs/InlineResponse2003.md)
- - [SwaggerClient::InlineResponse2003UnconfirmedVerifyTransaction](docs/InlineResponse2003UnconfirmedVerifyTransaction.md)
+ - [SwaggerClient::InlineResponse2003Body](docs/InlineResponse2003Body.md)
+ - [SwaggerClient::InlineResponse2003BodyInputs](docs/InlineResponse2003BodyInputs.md)
+ - [SwaggerClient::InlineResponse2003BodyOutputs](docs/InlineResponse2003BodyOutputs.md)
+ - [SwaggerClient::InlineResponse2003BodyTxns](docs/InlineResponse2003BodyTxns.md)
+ - [SwaggerClient::InlineResponse2003Header](docs/InlineResponse2003Header.md)
  - [SwaggerClient::InlineResponse2004](docs/InlineResponse2004.md)
+ - [SwaggerClient::InlineResponse2004Head](docs/InlineResponse2004Head.md)
  - [SwaggerClient::InlineResponse2005](docs/InlineResponse2005.md)
+ - [SwaggerClient::InlineResponse2005Peers](docs/InlineResponse2005Peers.md)
  - [SwaggerClient::InlineResponse2006](docs/InlineResponse2006.md)
+ - [SwaggerClient::InlineResponse2006Blocks](docs/InlineResponse2006Blocks.md)
+ - [SwaggerClient::InlineResponse2006Header](docs/InlineResponse2006Header.md)
  - [SwaggerClient::InlineResponse2007](docs/InlineResponse2007.md)
  - [SwaggerClient::InlineResponse2008](docs/InlineResponse2008.md)
  - [SwaggerClient::InlineResponse2009](docs/InlineResponse2009.md)
- - [SwaggerClient::InlineResponse2009Data](docs/InlineResponse2009Data.md)
+ - [SwaggerClient::InlineResponse2009Blockchain](docs/InlineResponse2009Blockchain.md)
+ - [SwaggerClient::InlineResponse2009UnconfirmedVerifyTransaction](docs/InlineResponse2009UnconfirmedVerifyTransaction.md)
+ - [SwaggerClient::InlineResponse2009Version](docs/InlineResponse2009Version.md)
  - [SwaggerClient::InlineResponseDefault](docs/InlineResponseDefault.md)
- - [SwaggerClient::WalletEntry](docs/WalletEntry.md)
- - [SwaggerClient::WalletMeta](docs/WalletMeta.md)
 
 
 ## Documentation for Authorization

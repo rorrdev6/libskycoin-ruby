@@ -32,7 +32,19 @@ describe 'InlineResponse2004' do
       expect(@instance).to be_instance_of(SwaggerClient::InlineResponse2004)
     end
   end
-  describe 'test attribute "addresses"' do
+  describe 'test attribute "head"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "unconfirmed"' do
+    it 'should work' do
+       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  describe 'test attribute "unspents"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

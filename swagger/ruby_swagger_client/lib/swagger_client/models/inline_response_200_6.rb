@@ -15,20 +15,20 @@ require 'date'
 module SwaggerClient
 
   class InlineResponse2006
-    attr_accessor :success
+    attr_accessor :blocks
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'success' => :'success'
+        :'blocks' => :'blocks'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'success' => :'String'
+        :'blocks' => :'Array<InlineResponse2006Blocks>'
       }
     end
 
@@ -40,8 +40,10 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'success')
-        self.success = attributes[:'success']
+      if attributes.has_key?(:'blocks')
+        if (value = attributes[:'blocks']).is_a?(Array)
+          self.blocks = value
+        end
       end
 
     end
@@ -64,7 +66,7 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          success == o.success
+          blocks == o.blocks
     end
 
     # @see the `==` method
@@ -76,7 +78,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [success].hash
+      [blocks].hash
     end
 
     # Builds the object from hash

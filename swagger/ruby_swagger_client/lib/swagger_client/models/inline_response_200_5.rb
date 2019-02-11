@@ -15,20 +15,28 @@ require 'date'
 module SwaggerClient
 
   class InlineResponse2005
-    attr_accessor :seed
+    attr_accessor :current
+
+    attr_accessor :highest
+
+    attr_accessor :peers
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'seed' => :'seed'
+        :'current' => :'current',
+        :'highest' => :'highest',
+        :'peers' => :'peers'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'seed' => :'String'
+        :'current' => :'Integer',
+        :'highest' => :'Integer',
+        :'peers' => :'Array<InlineResponse2005Peers>'
       }
     end
 
@@ -40,8 +48,18 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'seed')
-        self.seed = attributes[:'seed']
+      if attributes.has_key?(:'current')
+        self.current = attributes[:'current']
+      end
+
+      if attributes.has_key?(:'highest')
+        self.highest = attributes[:'highest']
+      end
+
+      if attributes.has_key?(:'peers')
+        if (value = attributes[:'peers']).is_a?(Array)
+          self.peers = value
+        end
       end
 
     end
@@ -64,7 +82,9 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          seed == o.seed
+          current == o.current &&
+          highest == o.highest &&
+          peers == o.peers
     end
 
     # @see the `==` method
@@ -76,7 +96,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [seed].hash
+      [current, highest, peers].hash
     end
 
     # Builds the object from hash

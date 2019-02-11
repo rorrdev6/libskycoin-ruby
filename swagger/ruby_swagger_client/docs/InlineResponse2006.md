@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**success** | **String** |  | [optional] 
+**blocks** | [**Array&lt;InlineResponse2006Blocks&gt;**](InlineResponse2006Blocks.md) |  | [optional] 
 
 

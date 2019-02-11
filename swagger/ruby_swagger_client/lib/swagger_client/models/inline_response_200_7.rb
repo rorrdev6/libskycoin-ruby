@@ -15,24 +15,20 @@ require 'date'
 module SwaggerClient
 
   class InlineResponse2007
-    attr_accessor :entries
-
-    attr_accessor :meta
+    attr_accessor :csrf_token
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'entries' => :'entries',
-        :'meta' => :'meta'
+        :'csrf_token' => :'csrf_token'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'entries' => :'Array<Apiv1walletsEntries>',
-        :'meta' => :'Apiv1walletsMeta'
+        :'csrf_token' => :'String'
       }
     end
 
@@ -44,14 +40,8 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'entries')
-        if (value = attributes[:'entries']).is_a?(Array)
-          self.entries = value
-        end
-      end
-
-      if attributes.has_key?(:'meta')
-        self.meta = attributes[:'meta']
+      if attributes.has_key?(:'csrf_token')
+        self.csrf_token = attributes[:'csrf_token']
       end
 
     end
@@ -74,8 +64,7 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          entries == o.entries &&
-          meta == o.meta
+          csrf_token == o.csrf_token
     end
 
     # @see the `==` method
@@ -87,7 +76,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [entries, meta].hash
+      [csrf_token].hash
     end
 
     # Builds the object from hash

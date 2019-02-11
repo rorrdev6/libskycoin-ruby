@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**seed** | **String** |  | [optional] 
+**current** | **Integer** |  | [optional] 
+**highest** | **Integer** |  | [optional] 
+**peers** | [**Array&lt;InlineResponse2005Peers&gt;**](InlineResponse2005Peers.md) |  | [optional] 
 
 

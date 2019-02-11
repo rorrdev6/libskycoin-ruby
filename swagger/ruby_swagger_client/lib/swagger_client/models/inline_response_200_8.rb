@@ -15,20 +15,56 @@ require 'date'
 module SwaggerClient
 
   class InlineResponse2008
-    attr_accessor :address
+    attr_accessor :fee
+
+    attr_accessor :inner_hash
+
+    attr_accessor :inputs
+
+    attr_accessor :length
+
+    attr_accessor :outputs
+
+    attr_accessor :sigs
+
+    attr_accessor :status
+
+    attr_accessor :timestamp
+
+    attr_accessor :txid
+
+    attr_accessor :type
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'address' => :'address'
+        :'fee' => :'fee',
+        :'inner_hash' => :'inner_hash',
+        :'inputs' => :'inputs',
+        :'length' => :'length',
+        :'outputs' => :'outputs',
+        :'sigs' => :'sigs',
+        :'status' => :'status',
+        :'timestamp' => :'timestamp',
+        :'txid' => :'txid',
+        :'type' => :'type'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'address' => :'String'
+        :'fee' => :'Integer',
+        :'inner_hash' => :'String',
+        :'inputs' => :'Array<Apiv1exploreraddressInputs>',
+        :'length' => :'Integer',
+        :'outputs' => :'Array<InlineResponse2003BodyOutputs>',
+        :'sigs' => :'Array<String>',
+        :'status' => :'Apiv1exploreraddressStatus',
+        :'timestamp' => :'Integer',
+        :'txid' => :'String',
+        :'type' => :'Integer'
       }
     end
 
@@ -40,8 +76,50 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'address')
-        self.address = attributes[:'address']
+      if attributes.has_key?(:'fee')
+        self.fee = attributes[:'fee']
+      end
+
+      if attributes.has_key?(:'inner_hash')
+        self.inner_hash = attributes[:'inner_hash']
+      end
+
+      if attributes.has_key?(:'inputs')
+        if (value = attributes[:'inputs']).is_a?(Array)
+          self.inputs = value
+        end
+      end
+
+      if attributes.has_key?(:'length')
+        self.length = attributes[:'length']
+      end
+
+      if attributes.has_key?(:'outputs')
+        if (value = attributes[:'outputs']).is_a?(Array)
+          self.outputs = value
+        end
+      end
+
+      if attributes.has_key?(:'sigs')
+        if (value = attributes[:'sigs']).is_a?(Array)
+          self.sigs = value
+        end
+      end
+
+      if attributes.has_key?(:'status')
+        self.status = attributes[:'status']
+      end
+
+      if attributes.has_key?(:'timestamp')
+        self.timestamp = attributes[:'timestamp']
+      end
+
+      if attributes.has_key?(:'txid')
+        self.txid = attributes[:'txid']
+      end
+
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
       end
 
     end
@@ -64,7 +142,16 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          address == o.address
+          fee == o.fee &&
+          inner_hash == o.inner_hash &&
+          inputs == o.inputs &&
+          length == o.length &&
+          outputs == o.outputs &&
+          sigs == o.sigs &&
+          status == o.status &&
+          timestamp == o.timestamp &&
+          txid == o.txid &&
+          type == o.type
     end
 
     # @see the `==` method
@@ -76,7 +163,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [address].hash
+      [fee, inner_hash, inputs, length, outputs, sigs, status, timestamp, txid, type].hash
     end
 
     # Builds the object from hash

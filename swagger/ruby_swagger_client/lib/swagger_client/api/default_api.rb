@@ -23,7 +23,7 @@ module SwaggerClient
     # Returns the total number of unique address that have coins.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [InlineResponse200]
+    # @return [InlineResponse2001]
     def address_count(opts = {})
       data, _status_code, _headers = address_count_with_http_info(opts)
       return data
@@ -32,7 +32,7 @@ module SwaggerClient
     # Returns the total number of unique address that have coins.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(InlineResponse200, Fixnum, Hash)>] InlineResponse200 data, response status code and response headers
+    # @return [Array<(InlineResponse2001, Fixnum, Hash)>] InlineResponse2001 data, response status code and response headers
     def address_count_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.address_count ..."
@@ -62,9 +62,451 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse200')
+        :return_type => 'InlineResponse2001')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#address_count\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # Returns the historical, spent outputs associated with an address
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :address address to filter by
+    # @return [Array<InlineResponse200>]
+    def address_uxouts(opts = {})
+      data, _status_code, _headers = address_uxouts_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # Returns the historical, spent outputs associated with an address
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :address address to filter by
+    # @return [Array<(Array<InlineResponse200>, Fixnum, Hash)>] Array<InlineResponse200> data, response status code and response headers
+    def address_uxouts_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.address_uxouts ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/address_uxouts"
+
+      # query parameters
+      query_params = {}
+      query_params[:'address'] = opts[:'address'] if !opts[:'address'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<InlineResponse200>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#address_uxouts\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
+    # 
+    # @param addrs command separated list of addresses
+    # @param [Hash] opts the optional parameters
+    # @return [InlineResponse2002]
+    def balance_get(addrs, opts = {})
+      data, _status_code, _headers = balance_get_with_http_info(addrs, opts)
+      return data
+    end
+
+    # Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
+    # 
+    # @param addrs command separated list of addresses
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(InlineResponse2002, Fixnum, Hash)>] InlineResponse2002 data, response status code and response headers
+    def balance_get_with_http_info(addrs, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.balance_get ..."
+      end
+      # verify the required parameter 'addrs' is set
+      if @api_client.config.client_side_validation && addrs.nil?
+        fail ArgumentError, "Missing the required parameter 'addrs' when calling DefaultApi.balance_get"
+      end
+      # resource path
+      local_var_path = "/api/v1/balance"
+
+      # query parameters
+      query_params = {}
+      query_params[:'addrs'] = addrs
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse2002')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#balance_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
+    # 
+    # @param addrs command separated list of addresses
+    # @param [Hash] opts the optional parameters
+    # @return [InlineResponse2002]
+    def balance_post(addrs, opts = {})
+      data, _status_code, _headers = balance_post_with_http_info(addrs, opts)
+      return data
+    end
+
+    # Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
+    # 
+    # @param addrs command separated list of addresses
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(InlineResponse2002, Fixnum, Hash)>] InlineResponse2002 data, response status code and response headers
+    def balance_post_with_http_info(addrs, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.balance_post ..."
+      end
+      # verify the required parameter 'addrs' is set
+      if @api_client.config.client_side_validation && addrs.nil?
+        fail ArgumentError, "Missing the required parameter 'addrs' when calling DefaultApi.balance_post"
+      end
+      # resource path
+      local_var_path = "/api/v1/balance"
+
+      # query parameters
+      query_params = {}
+      query_params[:'addrs'] = addrs
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse2002')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#balance_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # Returns a block by hash or seq. Note: only one of hash or seq is allowed
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose (default to true)
+    # @option opts [String] :hash 
+    # @option opts [Integer] :seq 
+    # @return [InlineResponse2003]
+    def block(opts = {})
+      data, _status_code, _headers = block_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # Returns a block by hash or seq. Note: only one of hash or seq is allowed
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose
+    # @option opts [String] :hash 
+    # @option opts [Integer] :seq 
+    # @return [Array<(InlineResponse2003, Fixnum, Hash)>] InlineResponse2003 data, response status code and response headers
+    def block_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.block ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/block"
+
+      # query parameters
+      query_params = {}
+      query_params[:'verbose'] = opts[:'verbose'] if !opts[:'verbose'].nil?
+      query_params[:'hash'] = opts[:'hash'] if !opts[:'hash'].nil?
+      query_params[:'seq'] = opts[:'seq'] if !opts[:'seq'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse2003')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#block\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns the blockchain metadata.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [InlineResponse2004]
+    def blockchain_metadata(opts = {})
+      data, _status_code, _headers = blockchain_metadata_with_http_info(opts)
+      return data
+    end
+
+    # Returns the blockchain metadata.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(InlineResponse2004, Fixnum, Hash)>] InlineResponse2004 data, response status code and response headers
+    def blockchain_metadata_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.blockchain_metadata ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/blockchain/metadata"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse2004')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#blockchain_metadata\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns the blockchain sync progress.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [InlineResponse2005]
+    def blockchain_progress(opts = {})
+      data, _status_code, _headers = blockchain_progress_with_http_info(opts)
+      return data
+    end
+
+    # Returns the blockchain sync progress.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(InlineResponse2005, Fixnum, Hash)>] InlineResponse2005 data, response status code and response headers
+    def blockchain_progress_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.blockchain_progress ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/blockchain/progress"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse2005')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#blockchain_progress\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # blocksHandler returns blocks between a start and end point,
+    # or an explicit list of sequences. If using start and end, the block sequences include both the start and end point. Explicit sequences cannot be combined with start and end.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose (default to true)
+    # @option opts [Integer] :start 
+    # @option opts [Integer] :_end 
+    # @option opts [String] :seqs 
+    # @return [InlineResponse2006]
+    def blocks_get(opts = {})
+      data, _status_code, _headers = blocks_get_with_http_info(opts)
+      return data
+    end
+
+    # blocksHandler returns blocks between a start and end point,
+    # or an explicit list of sequences. If using start and end, the block sequences include both the start and end point. Explicit sequences cannot be combined with start and end.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose
+    # @option opts [Integer] :start 
+    # @option opts [Integer] :_end 
+    # @option opts [String] :seqs 
+    # @return [Array<(InlineResponse2006, Fixnum, Hash)>] InlineResponse2006 data, response status code and response headers
+    def blocks_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.blocks_get ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/blocks"
+
+      # query parameters
+      query_params = {}
+      query_params[:'verbose'] = opts[:'verbose'] if !opts[:'verbose'].nil?
+      query_params[:'start'] = opts[:'start'] if !opts[:'start'].nil?
+      query_params[:'end'] = opts[:'_end'] if !opts[:'_end'].nil?
+      query_params[:'seqs'] = opts[:'seqs'] if !opts[:'seqs'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse2006')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#blocks_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # blocksHandler returns blocks between a start and end point,
+    # or an explicit list of sequences. If using start and end, the block sequences include both the start and end point. Explicit sequences cannot be combined with start and end.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose (default to true)
+    # @option opts [Integer] :start 
+    # @option opts [Integer] :_end 
+    # @option opts [String] :seqs 
+    # @return [InlineResponse2006]
+    def blocks_post(opts = {})
+      data, _status_code, _headers = blocks_post_with_http_info(opts)
+      return data
+    end
+
+    # blocksHandler returns blocks between a start and end point,
+    # or an explicit list of sequences. If using start and end, the block sequences include both the start and end point. Explicit sequences cannot be combined with start and end.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose
+    # @option opts [Integer] :start 
+    # @option opts [Integer] :_end 
+    # @option opts [String] :seqs 
+    # @return [Array<(InlineResponse2006, Fixnum, Hash)>] InlineResponse2006 data, response status code and response headers
+    def blocks_post_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.blocks_post ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/blocks"
+
+      # query parameters
+      query_params = {}
+      query_params[:'verbose'] = opts[:'verbose'] if !opts[:'verbose'].nil?
+      query_params[:'start'] = opts[:'start'] if !opts[:'start'].nil?
+      query_params[:'end'] = opts[:'_end'] if !opts[:'_end'].nil?
+      query_params[:'seqs'] = opts[:'seqs'] if !opts[:'seqs'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse2006')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#blocks_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -120,7 +562,7 @@ module SwaggerClient
     # Creates a new CSRF token. Previous CSRF tokens are invalidated by this call.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [InlineResponse2001]
+    # @return [InlineResponse2007]
     def csrf(opts = {})
       data, _status_code, _headers = csrf_with_http_info(opts)
       return data
@@ -129,7 +571,7 @@ module SwaggerClient
     # Creates a new CSRF token. Previous CSRF tokens are invalidated by this call.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(InlineResponse2001, Fixnum, Hash)>] InlineResponse2001 data, response status code and response headers
+    # @return [Array<(InlineResponse2007, Fixnum, Hash)>] InlineResponse2007 data, response status code and response headers
     def csrf_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.csrf ..."
@@ -159,7 +601,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse2001')
+        :return_type => 'InlineResponse2007')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#csrf\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -215,10 +657,62 @@ module SwaggerClient
       return data, status_code, headers
     end
 
+    # 
+    # Returns all transactions (confirmed and unconfirmed) for an address
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :address tags to filter by
+    # @return [Array<InlineResponse2008>]
+    def explorer_address(opts = {})
+      data, _status_code, _headers = explorer_address_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # Returns all transactions (confirmed and unconfirmed) for an address
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :address tags to filter by
+    # @return [Array<(Array<InlineResponse2008>, Fixnum, Hash)>] Array<InlineResponse2008> data, response status code and response headers
+    def explorer_address_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.explorer_address ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/explorer/address"
+
+      # query parameters
+      query_params = {}
+      query_params[:'address'] = opts[:'address'] if !opts[:'address'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<InlineResponse2008>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#explorer_address\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Returns node health data.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [InlineResponse2002]
+    # @return [InlineResponse2009]
     def health(opts = {})
       data, _status_code, _headers = health_with_http_info(opts)
       return data
@@ -227,7 +721,7 @@ module SwaggerClient
     # Returns node health data.
     # 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(InlineResponse2002, Fixnum, Hash)>] InlineResponse2002 data, response status code and response headers
+    # @return [Array<(InlineResponse2009, Fixnum, Hash)>] InlineResponse2009 data, response status code and response headers
     def health_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.health ..."
@@ -257,9 +751,119 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse2002')
+        :return_type => 'InlineResponse2009')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#health\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Broadcast a hex-encoded, serialized transaction to the network.
+    # 
+    # @param rawtx hex-encoded serialized transaction string.
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def inject_transaction(rawtx, opts = {})
+      inject_transaction_with_http_info(rawtx, opts)
+      return nil
+    end
+
+    # Broadcast a hex-encoded, serialized transaction to the network.
+    # 
+    # @param rawtx hex-encoded serialized transaction string.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def inject_transaction_with_http_info(rawtx, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.inject_transaction ..."
+      end
+      # verify the required parameter 'rawtx' is set
+      if @api_client.config.client_side_validation && rawtx.nil?
+        fail ArgumentError, "Missing the required parameter 'rawtx' when calling DefaultApi.inject_transaction"
+      end
+      # resource path
+      local_var_path = "/api/v1/injectTransaction"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+      header_params[:'rawtx'] = rawtx
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#inject_transaction\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # Returns the most recent N blocks on the blockchain
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose (default to true)
+    # @option opts [Integer] :num 
+    # @return [InlineResponse2006]
+    def last_blocks(opts = {})
+      data, _status_code, _headers = last_blocks_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # Returns the most recent N blocks on the blockchain
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose
+    # @option opts [Integer] :num 
+    # @return [Array<(InlineResponse2006, Fixnum, Hash)>] InlineResponse2006 data, response status code and response headers
+    def last_blocks_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.last_blocks ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/last_blocks"
+
+      # query parameters
+      query_params = {}
+      query_params[:'verbose'] = opts[:'verbose'] if !opts[:'verbose'].nil?
+      query_params[:'num'] = opts[:'num'] if !opts[:'num'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse2006')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#last_blocks\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -268,7 +872,7 @@ module SwaggerClient
     # 
     # @param addr Address port
     # @param [Hash] opts the optional parameters
-    # @return [InlineResponse2003]
+    # @return [InlineResponse20010]
     def network_connection(addr, opts = {})
       data, _status_code, _headers = network_connection_with_http_info(addr, opts)
       return data
@@ -278,7 +882,7 @@ module SwaggerClient
     # 
     # @param addr Address port
     # @param [Hash] opts the optional parameters
-    # @return [Array<(InlineResponse2003, Fixnum, Hash)>] InlineResponse2003 data, response status code and response headers
+    # @return [Array<(InlineResponse20010, Fixnum, Hash)>] InlineResponse20010 data, response status code and response headers
     def network_connection_with_http_info(addr, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.network_connection ..."
@@ -313,7 +917,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse2003')
+        :return_type => 'InlineResponse20010')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#network_connection\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -325,7 +929,7 @@ module SwaggerClient
     # @param [Hash] opts the optional parameters
     # @option opts [String] :states Connection status.
     # @option opts [String] :direction Direction of the connection.
-    # @return [Array<InlineResponse2003>]
+    # @return [Array<InlineResponse20010>]
     def network_connections(opts = {})
       data, _status_code, _headers = network_connections_with_http_info(opts)
       return data
@@ -336,7 +940,7 @@ module SwaggerClient
     # @param [Hash] opts the optional parameters
     # @option opts [String] :states Connection status.
     # @option opts [String] :direction Direction of the connection.
-    # @return [Array<(Array<InlineResponse2003>, Fixnum, Hash)>] Array<InlineResponse2003> data, response status code and response headers
+    # @return [Array<(Array<InlineResponse20010>, Fixnum, Hash)>] Array<InlineResponse20010> data, response status code and response headers
     def network_connections_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.network_connections ..."
@@ -374,7 +978,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<InlineResponse2003>')
+        :return_type => 'Array<InlineResponse20010>')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#network_connections\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -534,6 +1138,235 @@ module SwaggerClient
       return data, status_code, headers
     end
 
+    # If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
+    # 
+    # @param address 
+    # @param hash 
+    # @param [Hash] opts the optional parameters
+    # @return [InlineResponse20011]
+    def outputs_get(address, hash, opts = {})
+      data, _status_code, _headers = outputs_get_with_http_info(address, hash, opts)
+      return data
+    end
+
+    # If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
+    # 
+    # @param address 
+    # @param hash 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(InlineResponse20011, Fixnum, Hash)>] InlineResponse20011 data, response status code and response headers
+    def outputs_get_with_http_info(address, hash, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.outputs_get ..."
+      end
+      # verify the required parameter 'address' is set
+      if @api_client.config.client_side_validation && address.nil?
+        fail ArgumentError, "Missing the required parameter 'address' when calling DefaultApi.outputs_get"
+      end
+      # verify the required parameter 'hash' is set
+      if @api_client.config.client_side_validation && hash.nil?
+        fail ArgumentError, "Missing the required parameter 'hash' when calling DefaultApi.outputs_get"
+      end
+      # resource path
+      local_var_path = "/api/v1/outputs"
+
+      # query parameters
+      query_params = {}
+      query_params[:'address'] = address
+      query_params[:'hash'] = hash
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse20011')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#outputs_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
+    # 
+    # @param address 
+    # @param hash 
+    # @param [Hash] opts the optional parameters
+    # @return [InlineResponse20011]
+    def outputs_post(address, hash, opts = {})
+      data, _status_code, _headers = outputs_post_with_http_info(address, hash, opts)
+      return data
+    end
+
+    # If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
+    # 
+    # @param address 
+    # @param hash 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(InlineResponse20011, Fixnum, Hash)>] InlineResponse20011 data, response status code and response headers
+    def outputs_post_with_http_info(address, hash, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.outputs_post ..."
+      end
+      # verify the required parameter 'address' is set
+      if @api_client.config.client_side_validation && address.nil?
+        fail ArgumentError, "Missing the required parameter 'address' when calling DefaultApi.outputs_post"
+      end
+      # verify the required parameter 'hash' is set
+      if @api_client.config.client_side_validation && hash.nil?
+        fail ArgumentError, "Missing the required parameter 'hash' when calling DefaultApi.outputs_post"
+      end
+      # resource path
+      local_var_path = "/api/v1/outputs"
+
+      # query parameters
+      query_params = {}
+      query_params[:'address'] = address
+      query_params[:'hash'] = hash
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse20011')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#outputs_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # Returns pending (unconfirmed) transactions
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose transaction input data (default to true)
+    # @return [Array<InlineResponse20012>]
+    def pending_txs(opts = {})
+      data, _status_code, _headers = pending_txs_with_http_info(opts)
+      return data
+    end
+
+    # 
+    # Returns pending (unconfirmed) transactions
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose transaction input data
+    # @return [Array<(Array<InlineResponse20012>, Fixnum, Hash)>] Array<InlineResponse20012> data, response status code and response headers
+    def pending_txs_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.pending_txs ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/pendingTxs"
+
+      # query parameters
+      query_params = {}
+      query_params[:'verbose'] = opts[:'verbose'] if !opts[:'verbose'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<InlineResponse20012>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#pending_txs\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :txid Transaction id hash
+    # @return [nil]
+    def rawtx(opts = {})
+      rawtx_with_http_info(opts)
+      return nil
+    end
+
+    # Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :txid Transaction id hash
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def rawtx_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.rawtx ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/rawtx"
+
+      # query parameters
+      query_params = {}
+      query_params[:'txid'] = opts[:'txid'] if !opts[:'txid'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#rawtx\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # 
     # Broadcasts all unconfirmed transactions from the unconfirmed transaction pool
     # @param [Hash] opts the optional parameters
@@ -582,11 +1415,296 @@ module SwaggerClient
       return data, status_code, headers
     end
 
+    # Returns the top skycoin holders.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :include_distribution include distribution addresses or not, default value false
+    # @option opts [String] :n include distribution addresses or not, default value false
+    # @return [InlineResponse20013]
+    def richlist(opts = {})
+      data, _status_code, _headers = richlist_with_http_info(opts)
+      return data
+    end
+
+    # Returns the top skycoin holders.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :include_distribution include distribution addresses or not, default value false
+    # @option opts [String] :n include distribution addresses or not, default value false
+    # @return [Array<(InlineResponse20013, Fixnum, Hash)>] InlineResponse20013 data, response status code and response headers
+    def richlist_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.richlist ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/richlist"
+
+      # query parameters
+      query_params = {}
+      query_params[:'include-distribution'] = opts[:'include_distribution'] if !opts[:'include_distribution'].nil?
+      query_params[:'n'] = opts[:'n'] if !opts[:'n'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse20013')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#richlist\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # Returns a transaction identified by its txid hash
+    # @param txid transaction hash
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :encoded return as a raw encoded transaction.
+    # @option opts [BOOLEAN] :verbose include verbose transaction input data (default to true)
+    # @return [InlineResponse20014]
+    def transaction(txid, opts = {})
+      data, _status_code, _headers = transaction_with_http_info(txid, opts)
+      return data
+    end
+
+    # 
+    # Returns a transaction identified by its txid hash
+    # @param txid transaction hash
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :encoded return as a raw encoded transaction.
+    # @option opts [BOOLEAN] :verbose include verbose transaction input data
+    # @return [Array<(InlineResponse20014, Fixnum, Hash)>] InlineResponse20014 data, response status code and response headers
+    def transaction_with_http_info(txid, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.transaction ..."
+      end
+      # verify the required parameter 'txid' is set
+      if @api_client.config.client_side_validation && txid.nil?
+        fail ArgumentError, "Missing the required parameter 'txid' when calling DefaultApi.transaction"
+      end
+      # resource path
+      local_var_path = "/api/v1/transaction"
+
+      # query parameters
+      query_params = {}
+      query_params[:'txid'] = txid
+      query_params[:'encoded'] = opts[:'encoded'] if !opts[:'encoded'].nil?
+      query_params[:'verbose'] = opts[:'verbose'] if !opts[:'verbose'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse20014')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#transaction\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns transactions that match the filters.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :addrs command separated list of addresses
+    # @option opts [String] :confirmed Whether the transactions should be confirmed [optional, must be 0 or 1; if not provided, returns all]
+    # @option opts [BOOLEAN] :verbose include verbose transaction input data (default to true)
+    # @return [Array<InlineResponse20014>]
+    def transactions_get(opts = {})
+      data, _status_code, _headers = transactions_get_with_http_info(opts)
+      return data
+    end
+
+    # Returns transactions that match the filters.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :addrs command separated list of addresses
+    # @option opts [String] :confirmed Whether the transactions should be confirmed [optional, must be 0 or 1; if not provided, returns all]
+    # @option opts [BOOLEAN] :verbose include verbose transaction input data
+    # @return [Array<(Array<InlineResponse20014>, Fixnum, Hash)>] Array<InlineResponse20014> data, response status code and response headers
+    def transactions_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.transactions_get ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/transactions"
+
+      # query parameters
+      query_params = {}
+      query_params[:'addrs'] = opts[:'addrs'] if !opts[:'addrs'].nil?
+      query_params[:'confirmed'] = opts[:'confirmed'] if !opts[:'confirmed'].nil?
+      query_params[:'verbose'] = opts[:'verbose'] if !opts[:'verbose'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<InlineResponse20014>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#transactions_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns transactions that match the filters.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :addrs command separated list of addresses
+    # @option opts [String] :confirmed Whether the transactions should be confirmed [optional, must be 0 or 1; if not provided, returns all]
+    # @option opts [BOOLEAN] :verbose include verbose transaction input data (default to true)
+    # @return [Array<InlineResponse20014>]
+    def transactions_post(opts = {})
+      data, _status_code, _headers = transactions_post_with_http_info(opts)
+      return data
+    end
+
+    # Returns transactions that match the filters.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :addrs command separated list of addresses
+    # @option opts [String] :confirmed Whether the transactions should be confirmed [optional, must be 0 or 1; if not provided, returns all]
+    # @option opts [BOOLEAN] :verbose include verbose transaction input data
+    # @return [Array<(Array<InlineResponse20014>, Fixnum, Hash)>] Array<InlineResponse20014> data, response status code and response headers
+    def transactions_post_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.transactions_post ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/transactions"
+
+      # query parameters
+      query_params = {}
+      query_params[:'addrs'] = opts[:'addrs'] if !opts[:'addrs'].nil?
+      query_params[:'confirmed'] = opts[:'confirmed'] if !opts[:'confirmed'].nil?
+      query_params[:'verbose'] = opts[:'verbose'] if !opts[:'verbose'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'Array<InlineResponse20014>')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#transactions_post\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns an unspent output by ID.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :uxid uxid to filter by
+    # @return [InlineResponse200]
+    def uxout(opts = {})
+      data, _status_code, _headers = uxout_with_http_info(opts)
+      return data
+    end
+
+    # Returns an unspent output by ID.
+    # 
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :uxid uxid to filter by
+    # @return [Array<(InlineResponse200, Fixnum, Hash)>] InlineResponse200 data, response status code and response headers
+    def uxout_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.uxout ..."
+      end
+      # resource path
+      local_var_path = "/api/v1/uxout"
+
+      # query parameters
+      query_params = {}
+      query_params[:'uxid'] = opts[:'uxid'] if !opts[:'uxid'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse200')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#uxout\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # healthHandler returns node health data.
     # 
     # @param address Address id.
     # @param [Hash] opts the optional parameters
-    # @return [InlineResponse2009]
+    # @return [InlineResponse20022]
     def verify_address(address, opts = {})
       data, _status_code, _headers = verify_address_with_http_info(address, opts)
       return data
@@ -596,7 +1714,7 @@ module SwaggerClient
     # 
     # @param address Address id.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(InlineResponse2009, Fixnum, Hash)>] InlineResponse2009 data, response status code and response headers
+    # @return [Array<(InlineResponse20022, Fixnum, Hash)>] InlineResponse20022 data, response status code and response headers
     def verify_address_with_http_info(address, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.verify_address ..."
@@ -631,7 +1749,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse2009')
+        :return_type => 'InlineResponse20022')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#verify_address\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -690,7 +1808,7 @@ module SwaggerClient
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :id tags to filter by
-    # @return [WalletMeta]
+    # @return [InlineResponse20015]
     def wallet(opts = {})
       data, _status_code, _headers = wallet_with_http_info(opts)
       return data
@@ -700,7 +1818,7 @@ module SwaggerClient
     # 
     # @param [Hash] opts the optional parameters
     # @option opts [String] :id tags to filter by
-    # @return [Array<(WalletMeta, Fixnum, Hash)>] WalletMeta data, response status code and response headers
+    # @return [Array<(InlineResponse20015, Fixnum, Hash)>] InlineResponse20015 data, response status code and response headers
     def wallet_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.wallet ..."
@@ -731,7 +1849,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'WalletMeta')
+        :return_type => 'InlineResponse20015')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#wallet\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -742,7 +1860,7 @@ module SwaggerClient
     # 
     # @param id tags to filter by
     # @param [Hash] opts the optional parameters
-    # @return [InlineResponseDefault]
+    # @return [InlineResponse2002]
     def wallet_balance(id, opts = {})
       data, _status_code, _headers = wallet_balance_with_http_info(id, opts)
       return data
@@ -752,7 +1870,7 @@ module SwaggerClient
     # 
     # @param id tags to filter by
     # @param [Hash] opts the optional parameters
-    # @return [Array<(InlineResponseDefault, Fixnum, Hash)>] InlineResponseDefault data, response status code and response headers
+    # @return [Array<(InlineResponse2002, Fixnum, Hash)>] InlineResponse2002 data, response status code and response headers
     def wallet_balance_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.wallet_balance ..."
@@ -787,9 +1905,211 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponseDefault')
+        :return_type => 'InlineResponse2002')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#wallet_balance\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # 
+    # Loads wallet from seed, will scan ahead N address and load addresses till the last one that have coins.
+    # @param seed Wallet seed.
+    # @param label Wallet label.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :scan The number of addresses to scan ahead for balances.
+    # @option opts [BOOLEAN] :encrypt Encrypt wallet.
+    # @option opts [String] :password Wallet Password
+    # @return [InlineResponse20015]
+    def wallet_create(seed, label, opts = {})
+      data, _status_code, _headers = wallet_create_with_http_info(seed, label, opts)
+      return data
+    end
+
+    # 
+    # Loads wallet from seed, will scan ahead N address and load addresses till the last one that have coins.
+    # @param seed Wallet seed.
+    # @param label Wallet label.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :scan The number of addresses to scan ahead for balances.
+    # @option opts [BOOLEAN] :encrypt Encrypt wallet.
+    # @option opts [String] :password Wallet Password
+    # @return [Array<(InlineResponse20015, Fixnum, Hash)>] InlineResponse20015 data, response status code and response headers
+    def wallet_create_with_http_info(seed, label, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.wallet_create ..."
+      end
+      # verify the required parameter 'seed' is set
+      if @api_client.config.client_side_validation && seed.nil?
+        fail ArgumentError, "Missing the required parameter 'seed' when calling DefaultApi.wallet_create"
+      end
+      # verify the required parameter 'label' is set
+      if @api_client.config.client_side_validation && label.nil?
+        fail ArgumentError, "Missing the required parameter 'label' when calling DefaultApi.wallet_create"
+      end
+      if @api_client.config.client_side_validation && !opts[:'scan'].nil? && opts[:'scan'] < 1
+        fail ArgumentError, 'invalid value for "opts[:"scan"]" when calling DefaultApi.wallet_create, must be greater than or equal to 1.'
+      end
+
+      # resource path
+      local_var_path = "/api/v1/wallet/create"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+      header_params[:'seed'] = seed
+      header_params[:'label'] = label
+      header_params[:'scan'] = opts[:'scan'] if !opts[:'scan'].nil?
+      header_params[:'encrypt'] = opts[:'encrypt'] if !opts[:'encrypt'].nil?
+      header_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse20015')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#wallet_create\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Decrypts wallet.
+    # 
+    # @param id Wallet id.
+    # @param password Wallet password.
+    # @param [Hash] opts the optional parameters
+    # @return [InlineResponse20015]
+    def wallet_decrypt(id, password, opts = {})
+      data, _status_code, _headers = wallet_decrypt_with_http_info(id, password, opts)
+      return data
+    end
+
+    # Decrypts wallet.
+    # 
+    # @param id Wallet id.
+    # @param password Wallet password.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(InlineResponse20015, Fixnum, Hash)>] InlineResponse20015 data, response status code and response headers
+    def wallet_decrypt_with_http_info(id, password, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.wallet_decrypt ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling DefaultApi.wallet_decrypt"
+      end
+      # verify the required parameter 'password' is set
+      if @api_client.config.client_side_validation && password.nil?
+        fail ArgumentError, "Missing the required parameter 'password' when calling DefaultApi.wallet_decrypt"
+      end
+      # resource path
+      local_var_path = "/api/v1/wallet/decrypt"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+      header_params[:'id'] = id
+      header_params[:'password'] = password
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse20015')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#wallet_decrypt\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Encrypt wallet.
+    # 
+    # @param id Wallet id.
+    # @param password Wallet password.
+    # @param [Hash] opts the optional parameters
+    # @return [InlineResponse20015]
+    def wallet_encrypt(id, password, opts = {})
+      data, _status_code, _headers = wallet_encrypt_with_http_info(id, password, opts)
+      return data
+    end
+
+    # Encrypt wallet.
+    # 
+    # @param id Wallet id.
+    # @param password Wallet password.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(InlineResponse20015, Fixnum, Hash)>] InlineResponse20015 data, response status code and response headers
+    def wallet_encrypt_with_http_info(id, password, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.wallet_encrypt ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling DefaultApi.wallet_encrypt"
+      end
+      # verify the required parameter 'password' is set
+      if @api_client.config.client_side_validation && password.nil?
+        fail ArgumentError, "Missing the required parameter 'password' when calling DefaultApi.wallet_encrypt"
+      end
+      # resource path
+      local_var_path = "/api/v1/wallet/encrypt"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+      header_params[:'id'] = id
+      header_params[:'password'] = password
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse20015')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#wallet_encrypt\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -798,7 +2118,7 @@ module SwaggerClient
     # Returns the wallet directory path
     # @param addr Address port
     # @param [Hash] opts the optional parameters
-    # @return [InlineResponse2008]
+    # @return [InlineResponse20021]
     def wallet_folder(addr, opts = {})
       data, _status_code, _headers = wallet_folder_with_http_info(addr, opts)
       return data
@@ -808,7 +2128,7 @@ module SwaggerClient
     # Returns the wallet directory path
     # @param addr Address port
     # @param [Hash] opts the optional parameters
-    # @return [Array<(InlineResponse2008, Fixnum, Hash)>] InlineResponse2008 data, response status code and response headers
+    # @return [Array<(InlineResponse20021, Fixnum, Hash)>] InlineResponse20021 data, response status code and response headers
     def wallet_folder_with_http_info(addr, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.wallet_folder ..."
@@ -843,7 +2163,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse2008')
+        :return_type => 'InlineResponse20021')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#wallet_folder\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -856,7 +2176,7 @@ module SwaggerClient
     # @param [Hash] opts the optional parameters
     # @option opts [String] :num The number you want to generate
     # @option opts [String] :password Wallet Password
-    # @return [InlineResponse2004]
+    # @return [InlineResponse20016]
     def wallet_new_address(id, opts = {})
       data, _status_code, _headers = wallet_new_address_with_http_info(id, opts)
       return data
@@ -868,7 +2188,7 @@ module SwaggerClient
     # @param [Hash] opts the optional parameters
     # @option opts [String] :num The number you want to generate
     # @option opts [String] :password Wallet Password
-    # @return [Array<(InlineResponse2004, Fixnum, Hash)>] InlineResponse2004 data, response status code and response headers
+    # @return [Array<(InlineResponse20016, Fixnum, Hash)>] InlineResponse20016 data, response status code and response headers
     def wallet_new_address_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.wallet_new_address ..."
@@ -905,7 +2225,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse2004')
+        :return_type => 'InlineResponse20016')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#wallet_new_address\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -916,7 +2236,7 @@ module SwaggerClient
     # Returns the wallet directory path
     # @param [Hash] opts the optional parameters
     # @option opts [String] :entropy Entropy bitSize.
-    # @return [InlineResponse2005]
+    # @return [InlineResponse20017]
     def wallet_new_seed(opts = {})
       data, _status_code, _headers = wallet_new_seed_with_http_info(opts)
       return data
@@ -926,7 +2246,7 @@ module SwaggerClient
     # Returns the wallet directory path
     # @param [Hash] opts the optional parameters
     # @option opts [String] :entropy Entropy bitSize.
-    # @return [Array<(InlineResponse2005, Fixnum, Hash)>] InlineResponse2005 data, response status code and response headers
+    # @return [Array<(InlineResponse20017, Fixnum, Hash)>] InlineResponse20017 data, response status code and response headers
     def wallet_new_seed_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.wallet_new_seed ..."
@@ -960,9 +2280,75 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse2005')
+        :return_type => 'InlineResponse20017')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#wallet_new_seed\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Recovers an encrypted wallet by providing the seed. The first address will be generated from seed and compared to the first address of the specified wallet. If they match, the wallet will be regenerated with an optional password. If the wallet is not encrypted, an error is returned.
+    # 
+    # @param id Wallet id.
+    # @param seed Wallet seed.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :password Wallet password.
+    # @return [InlineResponse20023]
+    def wallet_recover(id, seed, opts = {})
+      data, _status_code, _headers = wallet_recover_with_http_info(id, seed, opts)
+      return data
+    end
+
+    # Recovers an encrypted wallet by providing the seed. The first address will be generated from seed and compared to the first address of the specified wallet. If they match, the wallet will be regenerated with an optional password. If the wallet is not encrypted, an error is returned.
+    # 
+    # @param id Wallet id.
+    # @param seed Wallet seed.
+    # @param [Hash] opts the optional parameters
+    # @option opts [String] :password Wallet password.
+    # @return [Array<(InlineResponse20023, Fixnum, Hash)>] InlineResponse20023 data, response status code and response headers
+    def wallet_recover_with_http_info(id, seed, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.wallet_recover ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling DefaultApi.wallet_recover"
+      end
+      # verify the required parameter 'seed' is set
+      if @api_client.config.client_side_validation && seed.nil?
+        fail ArgumentError, "Missing the required parameter 'seed' when calling DefaultApi.wallet_recover"
+      end
+      # resource path
+      local_var_path = "/api/v2/wallet/recover"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+      header_params[:'id'] = id
+      header_params[:'seed'] = seed
+      header_params[:'password'] = opts[:'password'] if !opts[:'password'].nil?
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse20023')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#wallet_recover\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -972,7 +2358,7 @@ module SwaggerClient
     # @param id Wallet Id.
     # @param password Wallet password.
     # @param [Hash] opts the optional parameters
-    # @return [InlineResponse2005]
+    # @return [InlineResponse20017]
     def wallet_seed(id, password, opts = {})
       data, _status_code, _headers = wallet_seed_with_http_info(id, password, opts)
       return data
@@ -983,7 +2369,7 @@ module SwaggerClient
     # @param id Wallet Id.
     # @param password Wallet password.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(InlineResponse2005, Fixnum, Hash)>] InlineResponse2005 data, response status code and response headers
+    # @return [Array<(InlineResponse20017, Fixnum, Hash)>] InlineResponse20017 data, response status code and response headers
     def wallet_seed_with_http_info(id, password, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.wallet_seed ..."
@@ -1023,49 +2409,178 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'InlineResponse2005')
+        :return_type => 'InlineResponse20017')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#wallet_seed\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Update the wallet.
     # 
-    # @param id Wallet Id.
-    # @param label The label the wallet will be updated to.
+    # Creates and broadcasts a transaction sending money from one of our wallets to destination address.
+    # @param id Wallet id
+    # @param dst Recipient address
+    # @param coins Number of coins to spend, in droplets. 1 coin equals 1e6 droplets.
+    # @param password Wallet password.
     # @param [Hash] opts the optional parameters
-    # @return [InlineResponse2006]
-    def wallet_update(id, label, opts = {})
-      data, _status_code, _headers = wallet_update_with_http_info(id, label, opts)
+    # @return [InlineResponse20018]
+    def wallet_spent(id, dst, coins, password, opts = {})
+      data, _status_code, _headers = wallet_spent_with_http_info(id, dst, coins, password, opts)
       return data
     end
 
-    # Update the wallet.
     # 
-    # @param id Wallet Id.
-    # @param label The label the wallet will be updated to.
+    # Creates and broadcasts a transaction sending money from one of our wallets to destination address.
+    # @param id Wallet id
+    # @param dst Recipient address
+    # @param coins Number of coins to spend, in droplets. 1 coin equals 1e6 droplets.
+    # @param password Wallet password.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(InlineResponse2006, Fixnum, Hash)>] InlineResponse2006 data, response status code and response headers
-    def wallet_update_with_http_info(id, label, opts = {})
+    # @return [Array<(InlineResponse20018, Fixnum, Hash)>] InlineResponse20018 data, response status code and response headers
+    def wallet_spent_with_http_info(id, dst, coins, password, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug "Calling API: DefaultApi.wallet_update ..."
+        @api_client.config.logger.debug "Calling API: DefaultApi.wallet_spent ..."
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling DefaultApi.wallet_update"
+        fail ArgumentError, "Missing the required parameter 'id' when calling DefaultApi.wallet_spent"
       end
-      # verify the required parameter 'label' is set
-      if @api_client.config.client_side_validation && label.nil?
-        fail ArgumentError, "Missing the required parameter 'label' when calling DefaultApi.wallet_update"
+      # verify the required parameter 'dst' is set
+      if @api_client.config.client_side_validation && dst.nil?
+        fail ArgumentError, "Missing the required parameter 'dst' when calling DefaultApi.wallet_spent"
+      end
+      # verify the required parameter 'coins' is set
+      if @api_client.config.client_side_validation && coins.nil?
+        fail ArgumentError, "Missing the required parameter 'coins' when calling DefaultApi.wallet_spent"
+      end
+      # verify the required parameter 'password' is set
+      if @api_client.config.client_side_validation && password.nil?
+        fail ArgumentError, "Missing the required parameter 'password' when calling DefaultApi.wallet_spent"
       end
       # resource path
-      local_var_path = "/api/v1/wallet/update"
+      local_var_path = "/api/v1/wallet/spend"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+      header_params[:'id'] = id
+      header_params[:'dst'] = dst
+      header_params[:'coins'] = coins
+      header_params[:'password'] = password
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse20018')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#wallet_spent\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Returns returns all unconfirmed transactions for all addresses in a given wallet.
+    # 
+    # @param id Wallet id.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose transaction input data (default to true)
+    # @return [InlineResponse20019]
+    def wallet_transactions(id, opts = {})
+      data, _status_code, _headers = wallet_transactions_with_http_info(id, opts)
+      return data
+    end
+
+    # Returns returns all unconfirmed transactions for all addresses in a given wallet.
+    # 
+    # @param id Wallet id.
+    # @param [Hash] opts the optional parameters
+    # @option opts [BOOLEAN] :verbose include verbose transaction input data
+    # @return [Array<(InlineResponse20019, Fixnum, Hash)>] InlineResponse20019 data, response status code and response headers
+    def wallet_transactions_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.wallet_transactions ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling DefaultApi.wallet_transactions"
+      end
+      # resource path
+      local_var_path = "/api/v1/wallet/transactions"
 
       # query parameters
       query_params = {}
       query_params[:'id'] = id
-      query_params[:'label'] = label
+      query_params[:'verbose'] = opts[:'verbose'] if !opts[:'verbose'].nil?
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'InlineResponse20019')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#wallet_transactions\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Unloads wallet from the wallet service.
+    # 
+    # @param id Wallet Id.
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def wallet_unload(id, opts = {})
+      wallet_unload_with_http_info(id, opts)
+      return nil
+    end
+
+    # Unloads wallet from the wallet service.
+    # 
+    # @param id Wallet Id.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def wallet_unload_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.wallet_unload ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling DefaultApi.wallet_unload"
+      end
+      # resource path
+      local_var_path = "/api/v1/wallet/unload"
+
+      # query parameters
+      query_params = {}
+      query_params[:'id'] = id
 
       # header parameters
       header_params = {}
@@ -1085,8 +2600,69 @@ module SwaggerClient
         :query_params => query_params,
         :form_params => form_params,
         :body => post_body,
-        :auth_names => auth_names,
-        :return_type => 'InlineResponse2006')
+        :auth_names => auth_names)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: DefaultApi#wallet_unload\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Update the wallet.
+    # 
+    # @param id Wallet Id.
+    # @param label The label the wallet will be updated to.
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def wallet_update(id, label, opts = {})
+      wallet_update_with_http_info(id, label, opts)
+      return nil
+    end
+
+    # Update the wallet.
+    # 
+    # @param id Wallet Id.
+    # @param label The label the wallet will be updated to.
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
+    def wallet_update_with_http_info(id, label, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "Calling API: DefaultApi.wallet_update ..."
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling DefaultApi.wallet_update"
+      end
+      # verify the required parameter 'label' is set
+      if @api_client.config.client_side_validation && label.nil?
+        fail ArgumentError, "Missing the required parameter 'label' when calling DefaultApi.wallet_update"
+      end
+      # resource path
+      local_var_path = "/api/v1/wallet/update"
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json', 'application/xml'])
+      header_params[:'id'] = id
+      header_params[:'label'] = label
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = ['csrfAuth']
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#wallet_update\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -1096,7 +2672,7 @@ module SwaggerClient
     # 
     # Returns all loaded wallets
     # @param [Hash] opts the optional parameters
-    # @return [Array<InlineResponse2007>]
+    # @return [Array<InlineResponse20020>]
     def wallets(opts = {})
       data, _status_code, _headers = wallets_with_http_info(opts)
       return data
@@ -1105,7 +2681,7 @@ module SwaggerClient
     # 
     # Returns all loaded wallets
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<InlineResponse2007>, Fixnum, Hash)>] Array<InlineResponse2007> data, response status code and response headers
+    # @return [Array<(Array<InlineResponse20020>, Fixnum, Hash)>] Array<InlineResponse20020> data, response status code and response headers
     def wallets_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: DefaultApi.wallets ..."
@@ -1135,7 +2711,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<InlineResponse2007>')
+        :return_type => 'Array<InlineResponse20020>')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DefaultApi#wallets\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
