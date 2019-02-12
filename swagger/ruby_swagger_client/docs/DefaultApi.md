@@ -1,6 +1,6 @@
 # SwaggerClient::DefaultApi
 
-All URIs are relative to *http://staging.node.skycoin.net*
+All URIs are relative to *http://127.0.0.1:6420*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,6 @@ Method | HTTP request | Description
 [**default_connections**](DefaultApi.md#default_connections) | **GET** /api/v1/network/defaultConnections | defaultConnectionsHandler returns the list of default hardcoded bootstrap addresses.\\n They are not necessarily connected to.
 [**explorer_address**](DefaultApi.md#explorer_address) | **GET** /api/v1/explorer/address | 
 [**health**](DefaultApi.md#health) | **GET** /api/v1/health | Returns node health data.
-[**inject_transaction**](DefaultApi.md#inject_transaction) | **POST** /api/v1/injectTransaction | Broadcast a hex-encoded, serialized transaction to the network.
 [**last_blocks**](DefaultApi.md#last_blocks) | **GET** /api/v1/last_blocks | 
 [**network_connection**](DefaultApi.md#network_connection) | **GET** /api/v1/network/connection | This endpoint returns a specific connection.
 [**network_connections**](DefaultApi.md#network_connections) | **GET** /api/v1/network/connections | This endpoint returns all outgoings connections.
@@ -28,14 +27,15 @@ Method | HTTP request | Description
 [**outputs_get**](DefaultApi.md#outputs_get) | **GET** /api/v1/outputs | If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
 [**outputs_post**](DefaultApi.md#outputs_post) | **POST** /api/v1/outputs | If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
 [**pending_txs**](DefaultApi.md#pending_txs) | **GET** /api/v1/pendingTxs | 
-[**rawtx**](DefaultApi.md#rawtx) | **GET** /api/v1/rawtx | Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
 [**resend_unconfirmed_txns**](DefaultApi.md#resend_unconfirmed_txns) | **POST** /api/v1/resendUnconfirmedTxns | 
 [**richlist**](DefaultApi.md#richlist) | **GET** /api/v1/richlist | Returns the top skycoin holders.
 [**transaction**](DefaultApi.md#transaction) | **GET** /api/v1/transaction | 
+[**transaction_inject**](DefaultApi.md#transaction_inject) | **POST** /api/v2/transaction/inject | Broadcast a hex-encoded, serialized transaction to the network.
+[**transaction_raw**](DefaultApi.md#transaction_raw) | **GET** /api/v2/transaction/raw | Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
 [**transactions_get**](DefaultApi.md#transactions_get) | **GET** /api/v1/transactions | Returns transactions that match the filters.
 [**transactions_post**](DefaultApi.md#transactions_post) | **POST** /api/v1/transactions | Returns transactions that match the filters.
 [**uxout**](DefaultApi.md#uxout) | **GET** /api/v1/uxout | Returns an unspent output by ID.
-[**verify_address**](DefaultApi.md#verify_address) | **POST** /api/v2/address/verify | healthHandler returns node health data.
+[**verify_address**](DefaultApi.md#verify_address) | **POST** /api/v2/address/verify | Verifies a Skycoin address.
 [**version**](DefaultApi.md#version) | **GET** /api/v1/version | 
 [**wallet**](DefaultApi.md#wallet) | **GET** /api/v1/wallet | Returns a wallet by id.
 [**wallet_balance**](DefaultApi.md#wallet_balance) | **GET** /api/v1/wallet/balance | Returns the wallet&#39;s balance, both confirmed and predicted.  The predicted balance is the confirmed balance minus the pending spends.
@@ -47,6 +47,7 @@ Method | HTTP request | Description
 [**wallet_new_seed**](DefaultApi.md#wallet_new_seed) | **GET** /api/v1/wallet/newSeed | 
 [**wallet_recover**](DefaultApi.md#wallet_recover) | **POST** /api/v2/wallet/recover | Recovers an encrypted wallet by providing the seed. The first address will be generated from seed and compared to the first address of the specified wallet. If they match, the wallet will be regenerated with an optional password. If the wallet is not encrypted, an error is returned.
 [**wallet_seed**](DefaultApi.md#wallet_seed) | **POST** /api/v1/wallet/seed | This endpoint only works for encrypted wallets. If the wallet is unencrypted, The seed will be not returned.
+[**wallet_seed_verify**](DefaultApi.md#wallet_seed_verify) | **POST** /api/v2/wallet/seed/verify | Verifies a wallet seed.
 [**wallet_spent**](DefaultApi.md#wallet_spent) | **POST** /api/v1/wallet/spend | 
 [**wallet_transactions**](DefaultApi.md#wallet_transactions) | **GET** /api/v1/wallet/transactions | Returns returns all unconfirmed transactions for all addresses in a given wallet.
 [**wallet_unload**](DefaultApi.md#wallet_unload) | **POST** /api/v1/wallet/unload | Unloads wallet from the wallet service.
@@ -63,13 +64,6 @@ Returns the total number of unique address that have coins.
 ```ruby
 # load the gem
 require 'swagger_client'
-# setup authorization
-SwaggerClient.configure do |config|
-  # Configure API key authorization: csrfAuth
-  config.api_key['csrf_Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['csrf_Token'] = 'Bearer'
-end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -91,7 +85,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[csrfAuth](../README.md#csrfAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -201,6 +195,13 @@ Returns the balance of one or more addresses, both confirmed and predicted. The 
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -228,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -431,6 +432,13 @@ or an explicit list of sequences. If using start and end, the block sequences in
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -465,7 +473,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -561,13 +569,6 @@ defaultConnectionsHandler returns the list of default hardcoded bootstrap addres
 ```ruby
 # load the gem
 require 'swagger_client'
-# setup authorization
-SwaggerClient.configure do |config|
-  # Configure API key authorization: csrfAuth
-  config.api_key['csrf_Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['csrf_Token'] = 'Bearer'
-end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -589,7 +590,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[csrfAuth](../README.md#csrfAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -684,50 +685,6 @@ No authorization required
 
 
 
-# **inject_transaction**
-> inject_transaction(rawtx)
-
-Broadcast a hex-encoded, serialized transaction to the network.
-
-### Example
-```ruby
-# load the gem
-require 'swagger_client'
-
-api_instance = SwaggerClient::DefaultApi.new
-
-rawtx = "rawtx_example" # String | hex-encoded serialized transaction string.
-
-
-begin
-  #Broadcast a hex-encoded, serialized transaction to the network.
-  api_instance.inject_transaction(rawtx)
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DefaultApi->inject_transaction: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **rawtx** | **String**| hex-encoded serialized transaction string. | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json
-
-
-
 # **last_blocks**
 > InlineResponse2006 last_blocks(opts)
 
@@ -786,13 +743,6 @@ This endpoint returns a specific connection.
 ```ruby
 # load the gem
 require 'swagger_client'
-# setup authorization
-SwaggerClient.configure do |config|
-  # Configure API key authorization: csrfAuth
-  config.api_key['csrf_Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['csrf_Token'] = 'Bearer'
-end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -820,7 +770,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[csrfAuth](../README.md#csrfAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -947,13 +897,6 @@ This endpoint returns all connections found through peer exchange
 ```ruby
 # load the gem
 require 'swagger_client'
-# setup authorization
-SwaggerClient.configure do |config|
-  # Configure API key authorization: csrfAuth
-  config.api_key['csrf_Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['csrf_Token'] = 'Bearer'
-end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -974,7 +917,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[csrfAuth](../README.md#csrfAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -1030,7 +973,7 @@ This endpoint does not need any parameter.
 
 
 # **outputs_get**
-> InlineResponse20011 outputs_get(address, hash)
+> InlineResponse20011 outputs_get(opts)
 
 If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
 
@@ -1041,14 +984,14 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::DefaultApi.new
 
-address = "address_example" # String | 
-
-hash = "hash_example" # String | 
-
+opts = { 
+  address: "address_example", # String | 
+  hash: "hash_example" # String | 
+}
 
 begin
   #If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
-  result = api_instance.outputs_get(address, hash)
+  result = api_instance.outputs_get(opts)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling DefaultApi->outputs_get: #{e}"
@@ -1059,8 +1002,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **String**|  | 
- **hash** | **String**|  | 
+ **address** | **String**|  | [optional] 
+ **hash** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1078,7 +1021,7 @@ No authorization required
 
 
 # **outputs_post**
-> InlineResponse20011 outputs_post(address, hash)
+> InlineResponse20011 outputs_post(opts)
 
 If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
 
@@ -1086,17 +1029,24 @@ If neither addrs nor hashes are specificed, return all unspent outputs. If only 
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
-address = "address_example" # String | 
-
-hash = "hash_example" # String | 
-
+opts = { 
+  address: "address_example", # String | 
+  hash: "hash_example" # String | 
+}
 
 begin
   #If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
-  result = api_instance.outputs_post(address, hash)
+  result = api_instance.outputs_post(opts)
   p result
 rescue SwaggerClient::ApiError => e
   puts "Exception when calling DefaultApi->outputs_post: #{e}"
@@ -1107,8 +1057,8 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **String**|  | 
- **hash** | **String**|  | 
+ **address** | **String**|  | [optional] 
+ **hash** | **String**|  | [optional] 
 
 ### Return type
 
@@ -1116,7 +1066,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -1172,51 +1122,6 @@ No authorization required
 
 
 
-# **rawtx**
-> rawtx(opts)
-
-Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
-
-### Example
-```ruby
-# load the gem
-require 'swagger_client'
-
-api_instance = SwaggerClient::DefaultApi.new
-
-opts = { 
-  txid: "txid_example" # String | Transaction id hash
-}
-
-begin
-  #Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
-  api_instance.rawtx(opts)
-rescue SwaggerClient::ApiError => e
-  puts "Exception when calling DefaultApi->rawtx: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **txid** | **String**| Transaction id hash | [optional] 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json
-
-
-
 # **resend_unconfirmed_txns**
 > resend_unconfirmed_txns
 
@@ -1228,6 +1133,13 @@ Broadcasts all unconfirmed transactions from the unconfirmed transaction pool
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -1247,7 +1159,7 @@ nil (empty response body)
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -1356,6 +1268,104 @@ No authorization required
 
 
 
+# **transaction_inject**
+> InlineResponse20023 transaction_inject(rawtx)
+
+Broadcast a hex-encoded, serialized transaction to the network.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::DefaultApi.new
+
+rawtx = "rawtx_example" # String | hex-encoded serialized transaction string.
+
+
+begin
+  #Broadcast a hex-encoded, serialized transaction to the network.
+  result = api_instance.transaction_inject(rawtx)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling DefaultApi->transaction_inject: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rawtx** | **String**| hex-encoded serialized transaction string. | 
+
+### Return type
+
+[**InlineResponse20023**](InlineResponse20023.md)
+
+### Authorization
+
+[csrfAuth](../README.md#csrfAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json
+
+
+
+# **transaction_raw**
+> InlineResponse20024 transaction_raw(opts)
+
+Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+
+api_instance = SwaggerClient::DefaultApi.new
+
+opts = { 
+  txid: "txid_example" # String | Transaction id hash
+}
+
+begin
+  #Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
+  result = api_instance.transaction_raw(opts)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling DefaultApi->transaction_raw: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **txid** | **String**| Transaction id hash | [optional] 
+
+### Return type
+
+[**InlineResponse20024**](InlineResponse20024.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json
+
+
+
 # **transactions_get**
 > Array&lt;InlineResponse20014&gt; transactions_get(opts)
 
@@ -1415,6 +1425,13 @@ Returns transactions that match the filters.
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -1447,7 +1464,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -1505,7 +1522,7 @@ No authorization required
 # **verify_address**
 > InlineResponse20022 verify_address(address)
 
-healthHandler returns node health data.
+Verifies a Skycoin address.
 
 ### Example
 ```ruby
@@ -1525,7 +1542,7 @@ address = "address_example" # String | Address id.
 
 
 begin
-  #healthHandler returns node health data.
+  #Verifies a Skycoin address.
   result = api_instance.verify_address(address)
   p result
 rescue SwaggerClient::ApiError => e
@@ -1695,6 +1712,13 @@ Loads wallet from seed, will scan ahead N address and load addresses till the la
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -1732,7 +1756,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -1750,6 +1774,13 @@ Decrypts wallet.
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -1780,7 +1811,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -1798,6 +1829,13 @@ Encrypt wallet.
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -1828,7 +1866,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -1848,13 +1886,6 @@ Returns the wallet directory path
 ```ruby
 # load the gem
 require 'swagger_client'
-# setup authorization
-SwaggerClient.configure do |config|
-  # Configure API key authorization: csrfAuth
-  config.api_key['csrf_Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['csrf_Token'] = 'Bearer'
-end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -1881,7 +1912,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[csrfAuth](../README.md#csrfAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -1901,6 +1932,13 @@ Generates new addresses
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -1933,7 +1971,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -1953,13 +1991,6 @@ Returns the wallet directory path
 ```ruby
 # load the gem
 require 'swagger_client'
-# setup authorization
-SwaggerClient.configure do |config|
-  # Configure API key authorization: csrfAuth
-  config.api_key['csrf_Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['csrf_Token'] = 'Bearer'
-end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -1987,7 +2018,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[csrfAuth](../README.md#csrfAuth)
+No authorization required
 
 ### HTTP request headers
 
@@ -1997,7 +2028,7 @@ Name | Type | Description  | Notes
 
 
 # **wallet_recover**
-> InlineResponse20023 wallet_recover(id, seed, opts)
+> InlineResponse20025 wallet_recover(id, seed, opts)
 
 Recovers an encrypted wallet by providing the seed. The first address will be generated from seed and compared to the first address of the specified wallet. If they match, the wallet will be regenerated with an optional password. If the wallet is not encrypted, an error is returned.
 
@@ -2005,6 +2036,13 @@ Recovers an encrypted wallet by providing the seed. The first address will be ge
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -2035,11 +2073,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -2103,6 +2141,59 @@ Name | Type | Description  | Notes
 
 
 
+# **wallet_seed_verify**
+> InlineResponse20026 wallet_seed_verify(opts)
+
+Verifies a wallet seed.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
+
+api_instance = SwaggerClient::DefaultApi.new
+
+opts = { 
+  seed: "seed_example" # String | Seed to be verified.
+}
+
+begin
+  #Verifies a wallet seed.
+  result = api_instance.wallet_seed_verify(opts)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling DefaultApi->wallet_seed_verify: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **seed** | **String**| Seed to be verified. | [optional] 
+
+### Return type
+
+[**InlineResponse20026**](InlineResponse20026.md)
+
+### Authorization
+
+[csrfAuth](../README.md#csrfAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
 # **wallet_spent**
 > InlineResponse20018 wallet_spent(id, dst, coins, password)
 
@@ -2114,6 +2205,13 @@ Creates and broadcasts a transaction sending money from one of our wallets to de
 ```ruby
 # load the gem
 require 'swagger_client'
+# setup authorization
+SwaggerClient.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['csrf_Token'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['csrf_Token'] = 'Bearer'
+end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -2149,7 +2247,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[csrfAuth](../README.md#csrfAuth)
 
 ### HTTP request headers
 
@@ -2323,13 +2421,6 @@ Returns all loaded wallets
 ```ruby
 # load the gem
 require 'swagger_client'
-# setup authorization
-SwaggerClient.configure do |config|
-  # Configure API key authorization: csrfAuth
-  config.api_key['csrf_Token'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['csrf_Token'] = 'Bearer'
-end
 
 api_instance = SwaggerClient::DefaultApi.new
 
@@ -2350,7 +2441,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[csrfAuth](../README.md#csrfAuth)
+No authorization required
 
 ### HTTP request headers
 

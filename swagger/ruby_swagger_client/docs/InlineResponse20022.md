@@ -4,5 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**InlineResponse20022Data**](InlineResponse20022Data.md) |  | [optional] 
+**error** | **Object** |  | [optional] 
 
 

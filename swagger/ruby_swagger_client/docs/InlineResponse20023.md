@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**InlineResponse20015**](InlineResponse20015.md) |  | [optional] 
+**data** | [**InlineResponse20023Data**](InlineResponse20023Data.md) |  | [optional] 
+**error** | [**InlineResponse20023Error**](InlineResponse20023Error.md) |  | [optional] 
 
 
