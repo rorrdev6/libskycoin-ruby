@@ -3,3 +3,7 @@ lang: ruby
 script: ./travis/skyapi.sh
 
 rvm: 2.5
+
+notifications:
+  email: false
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
