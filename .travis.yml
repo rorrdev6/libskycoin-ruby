@@ -1,6 +1,8 @@
 lang: ruby
 
-script: ./travis/skyapi.sh
+script: 
+    - ./travis/skyapi.sh
+    - make build
 
 rvm: 2.5
 
