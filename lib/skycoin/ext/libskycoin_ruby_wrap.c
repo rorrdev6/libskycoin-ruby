@@ -11135,6 +11135,46 @@ fail:
 
 
 SWIGINTERN VALUE
+_wrap_sky_wallet_new_balance_from_ux_out(int argc, VALUE *argv, VALUE self) {
+  GoUint64 arg1 ;
+  coin__UxOut *arg2 = (coin__UxOut *) 0 ;
+  wallet__Balance *arg3 = (wallet__Balance *) 0 ;
+  unsigned long long val1 ;
+  int ecode1 = 0 ;
+  void *argp2 = 0 ;
+  int res2 = 0 ;
+  void *argp3 = 0 ;
+  int res3 = 0 ;
+  GoUint32 result;
+  VALUE vresult = Qnil;
+  
+  if ((argc < 3) || (argc > 3)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
+  }
+  ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(argv[0], &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), Ruby_Format_TypeError( "", "GoUint64","SKY_wallet_NewBalanceFromUxOut", 1, argv[0] ));
+  } 
+  arg1 = (GoUint64)(val1);
+  res2 = SWIG_ConvertPtr(argv[1], &argp2,SWIGTYPE_p_coin__UxOut, 0 |  0 );
+  if (!SWIG_IsOK(res2)) {
+    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "coin__UxOut *","SKY_wallet_NewBalanceFromUxOut", 2, argv[1] )); 
+  }
+  arg2 = (coin__UxOut *)(argp2);
+  res3 = SWIG_ConvertPtr(argv[2], &argp3,SWIGTYPE_p_wallet__Balance, 0 |  0 );
+  if (!SWIG_IsOK(res3)) {
+    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "wallet__Balance *","SKY_wallet_NewBalanceFromUxOut", 3, argv[2] )); 
+  }
+  arg3 = (wallet__Balance *)(argp3);
+  result = (GoUint32)SKY_wallet_NewBalanceFromUxOut(arg1,arg2,arg3);
+  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
 _wrap_sky_wallet_balance_add(int argc, VALUE *argv, VALUE self) {
   wallet__Balance *arg1 = (wallet__Balance *) 0 ;
   wallet__Balance *arg2 = (wallet__Balance *) 0 ;
@@ -12405,6 +12445,38 @@ fail:
 
 
 SWIGINTERN VALUE
+_wrap_sky_coin_address_ux_outs_add(int argc, VALUE *argv, VALUE self) {
+  AddressUxOuts_Handle arg1 ;
+  AddressUxOuts_Handle arg2 ;
+  AddressUxOuts_Handle *arg3 = (AddressUxOuts_Handle *) 0 ;
+  Handle temp3 ;
+  GoUint32 result;
+  VALUE vresult = Qnil;
+  
+  {
+    arg3 = &temp3;
+  }
+  if ((argc < 2) || (argc > 2)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
+  }
+  {
+    SWIG_AsVal_long(argv[0], (long*)&arg1);
+  }
+  {
+    SWIG_AsVal_long(argv[1], (long*)&arg2);
+  }
+  result = (GoUint32)SKY_coin_AddressUxOuts_Add(arg1,arg2,arg3);
+  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long(*arg3));
+  }
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
 _wrap_sky_coin_address_ux_outs_get(int argc, VALUE *argv, VALUE self) {
   AddressUxOuts_Handle arg1 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
@@ -13557,6 +13629,114 @@ _wrap_sky_httphelper_coins_value(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
   result = (GoUint32)SKY_httphelper_Coins_Value(arg1,arg2);
+  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long( *arg1 ));
+  }
+  {
+    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long( *arg2 ));
+  }
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_sky_httphelper_hours_unmarshal_json(int argc, VALUE *argv, VALUE self) {
+  httphelper__Hours *arg1 = (httphelper__Hours *) 0 ;
+  GoSlice arg2 ;
+  GoUint64 temp1 ;
+  GoUint32 result;
+  VALUE vresult = Qnil;
+  
+  {
+    temp1 = 0;
+    arg1 = &temp1;
+  }
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( argv[0], &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_httphelper_Hours_UnmarshalJSON', expecting string");
+    }
+    (&arg2)->data = buffer;
+    (&arg2)->len = size - 1;
+    (&arg2)->cap = size;
+  }
+  result = (GoUint32)SKY_httphelper_Hours_UnmarshalJSON(arg1,arg2);
+  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long( *arg1 ));
+  }
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_sky_httphelper_hours_marshal_json(int argc, VALUE *argv, VALUE self) {
+  httphelper__Hours *arg1 = (httphelper__Hours *) 0 ;
+  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
+  GoUint64 temp1 ;
+  GoSlice_ temp2 ;
+  GoUint32 result;
+  VALUE vresult = Qnil;
+  
+  {
+    temp1 = 0;
+    arg1 = &temp1;
+  }
+  {
+    temp2.data = NULL;
+    temp2.len = 0;
+    temp2.cap = 0;
+    arg2 = (coin__UxArray *)&temp2;
+  }
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (GoUint32)SKY_httphelper_Hours_MarshalJSON(arg1,arg2);
+  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long( *arg1 ));
+  }
+  {
+    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
+    free( (void*)arg2->data );
+  }
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_sky_httphelper_hours_value(int argc, VALUE *argv, VALUE self) {
+  httphelper__Hours *arg1 = (httphelper__Hours *) 0 ;
+  GoUint64 *arg2 = (GoUint64 *) 0 ;
+  GoUint64 temp1 ;
+  GoUint64 temp2 ;
+  GoUint32 result;
+  VALUE vresult = Qnil;
+  
+  {
+    temp1 = 0;
+    arg1 = &temp1;
+  }
+  {
+    temp2 = 0;
+    arg2 = &temp2;
+  }
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  result = (GoUint32)SKY_httphelper_Hours_Value(arg1,arg2);
   vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long( *arg1 ));
@@ -14760,6 +14940,64 @@ fail:
 
 
 SWIGINTERN VALUE
+_wrap_sky_api_client_new_wallet_address(int argc, VALUE *argv, VALUE self) {
+  Client__Handle arg1 ;
+  GoString arg2 ;
+  GoInt arg3 ;
+  GoString arg4 ;
+  Strings__Handle *arg5 = (Strings__Handle *) 0 ;
+  long long val3 ;
+  int ecode3 = 0 ;
+  Handle temp5 ;
+  GoUint32 result;
+  VALUE vresult = Qnil;
+  
+  {
+    arg5 = &temp5;
+  }
+  if ((argc < 4) || (argc > 4)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 4)",argc); SWIG_fail;
+  }
+  {
+    SWIG_AsVal_long(argv[0], (long*)&arg1);
+  }
+  {
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( argv[1], &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_api_Client_NewWalletAddress', expecting string");
+    }
+    (&arg2)->p = buffer;
+    (&arg2)->n = size - 1;
+  }
+  ecode3 = SWIG_AsVal_long_SS_long(argv[2], &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), Ruby_Format_TypeError( "", "GoInt","SKY_api_Client_NewWalletAddress", 3, argv[2] ));
+  } 
+  arg3 = (GoInt)(val3);
+  {
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( argv[3], &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_api_Client_NewWalletAddress', expecting string");
+    }
+    (&arg4)->p = buffer;
+    (&arg4)->n = size - 1;
+  }
+  result = (GoUint32)SKY_api_Client_NewWalletAddress(arg1,arg2,arg3,arg4,arg5);
+  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long(*arg5));
+  }
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
 _wrap_sky_api_client_wallet_balance(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
@@ -15944,6 +16182,41 @@ fail:
 
 
 SWIGINTERN VALUE
+_wrap_sky_wallet_load(int argc, VALUE *argv, VALUE self) {
+  GoString arg1 ;
+  Wallet__Handle *arg2 = (Wallet__Handle *) 0 ;
+  Handle temp2 ;
+  GoUint32 result;
+  VALUE vresult = Qnil;
+  
+  {
+    arg2 = &temp2;
+  }
+  if ((argc < 1) || (argc > 1)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
+  }
+  {
+    char* buffer = 0;
+    size_t size = 0;
+    int res = SWIG_AsCharPtrAndSize( argv[0], &buffer, &size, 0 );
+    if (!SWIG_IsOK(res)) {
+      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_Load', expecting string");
+    }
+    (&arg1)->p = buffer;
+    (&arg1)->n = size - 1;
+  }
+  result = (GoUint32)SKY_wallet_Load(arg1,arg2);
+  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
+  {
+    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long(*arg2));
+  }
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
 _wrap_sky_wallet_wallet_save(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoString arg2 ;
@@ -16993,6 +17266,32 @@ _wrap_sky_params_get_distribution_addresses(int argc, VALUE *argv, VALUE self) {
     rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
   }
   SKY_params_GetDistributionAddresses(arg1);
+  {
+    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
+    free( (void*)arg1->data );
+  }
+  return vresult;
+fail:
+  return Qnil;
+}
+
+
+SWIGINTERN VALUE
+_wrap_sky_params_get_unlocked_distribution_addresses(int argc, VALUE *argv, VALUE self) {
+  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
+  GoSlice_ temp1 ;
+  VALUE vresult = Qnil;
+  
+  {
+    temp1.data = NULL;
+    temp1.len = 0;
+    temp1.cap = 0;
+    arg1 = (coin__UxArray *)&temp1;
+  }
+  if ((argc < 0) || (argc > 0)) {
+    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
+  }
+  SKY_params_GetUnlockedDistributionAddresses(arg1);
   {
     vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
     free( (void*)arg1->data );
@@ -23435,6 +23734,7 @@ SWIGEXPORT void Init_skycoin(void) {
   rb_define_global_function("sky_coin_int_64to_uint_64", _wrap_sky_coin_int_64to_uint_64, -1);
   rb_define_global_function("sky_coin_int_to_uint_32", _wrap_sky_coin_int_to_uint_32, -1);
   rb_define_global_function("sky_wallet_new_balance", _wrap_sky_wallet_new_balance, -1);
+  rb_define_global_function("sky_wallet_new_balance_from_ux_out", _wrap_sky_wallet_new_balance_from_ux_out, -1);
   rb_define_global_function("sky_wallet_balance_add", _wrap_sky_wallet_balance_add, -1);
   rb_define_global_function("sky_wallet_balance_sub", _wrap_sky_wallet_balance_sub, -1);
   rb_define_global_function("sky_wallet_balance_equals", _wrap_sky_wallet_balance_equals, -1);
@@ -23464,6 +23764,7 @@ SWIGEXPORT void Init_skycoin(void) {
   rb_define_global_function("sky_coin_address_ux_outs_keys", _wrap_sky_coin_address_ux_outs_keys, -1);
   rb_define_global_function("sky_coin_address_ux_outs_flatten", _wrap_sky_coin_address_ux_outs_flatten, -1);
   rb_define_global_function("sky_coin_address_ux_outs_sub", _wrap_sky_coin_address_ux_outs_sub, -1);
+  rb_define_global_function("sky_coin_address_ux_outs_add", _wrap_sky_coin_address_ux_outs_add, -1);
   rb_define_global_function("sky_coin_address_ux_outs_get", _wrap_sky_coin_address_ux_outs_get, -1);
   rb_define_global_function("sky_coin_address_ux_outs_has_key", _wrap_sky_coin_address_ux_outs_has_key, -1);
   rb_define_global_function("sky_coin_address_ux_outs_get_output_length", _wrap_sky_coin_address_ux_outs_get_output_length, -1);
@@ -23496,6 +23797,9 @@ SWIGEXPORT void Init_skycoin(void) {
   rb_define_global_function("sky_httphelper_coins_unmarshal_json", _wrap_sky_httphelper_coins_unmarshal_json, -1);
   rb_define_global_function("sky_httphelper_coins_marshal_json", _wrap_sky_httphelper_coins_marshal_json, -1);
   rb_define_global_function("sky_httphelper_coins_value", _wrap_sky_httphelper_coins_value, -1);
+  rb_define_global_function("sky_httphelper_hours_unmarshal_json", _wrap_sky_httphelper_hours_unmarshal_json, -1);
+  rb_define_global_function("sky_httphelper_hours_marshal_json", _wrap_sky_httphelper_hours_marshal_json, -1);
+  rb_define_global_function("sky_httphelper_hours_value", _wrap_sky_httphelper_hours_value, -1);
   rb_define_global_function("sky_wallet_new_readable_entry", _wrap_sky_wallet_new_readable_entry, -1);
   rb_define_global_function("sky_wallet_load_readable_wallet", _wrap_sky_wallet_load_readable_wallet, -1);
   rb_define_global_function("sky_wallet_readable_wallet_save", _wrap_sky_wallet_readable_wallet_save, -1);
@@ -23528,6 +23832,7 @@ SWIGEXPORT void Init_skycoin(void) {
   rb_define_global_function("sky_api_client_wallets", _wrap_sky_api_client_wallets, -1);
   rb_define_global_function("sky_api_client_create_unencrypted_wallet", _wrap_sky_api_client_create_unencrypted_wallet, -1);
   rb_define_global_function("sky_api_client_create_encrypted_wallet", _wrap_sky_api_client_create_encrypted_wallet, -1);
+  rb_define_global_function("sky_api_client_new_wallet_address", _wrap_sky_api_client_new_wallet_address, -1);
   rb_define_global_function("sky_api_client_wallet_balance", _wrap_sky_api_client_wallet_balance, -1);
   rb_define_global_function("sky_api_client_spend", _wrap_sky_api_client_spend, -1);
   rb_define_global_function("sky_api_client_create_transaction", _wrap_sky_api_client_create_transaction, -1);
@@ -23559,6 +23864,7 @@ SWIGEXPORT void Init_skycoin(void) {
   rb_define_global_function("sky_wallet_new_wallet", _wrap_sky_wallet_new_wallet, -1);
   rb_define_global_function("sky_wallet_wallet_lock", _wrap_sky_wallet_wallet_lock, -1);
   rb_define_global_function("sky_wallet_wallet_unlock", _wrap_sky_wallet_wallet_unlock, -1);
+  rb_define_global_function("sky_wallet_load", _wrap_sky_wallet_load, -1);
   rb_define_global_function("sky_wallet_wallet_save", _wrap_sky_wallet_wallet_save, -1);
   rb_define_global_function("sky_wallet_wallet_validate", _wrap_sky_wallet_wallet_validate, -1);
   rb_define_global_function("sky_wallet_wallet_type", _wrap_sky_wallet_wallet_type, -1);
@@ -23587,6 +23893,7 @@ SWIGEXPORT void Init_skycoin(void) {
   rb_define_global_function("sky_fee_remaining_hours", _wrap_sky_fee_remaining_hours, -1);
   rb_define_global_function("sky_fee_transaction_fee", _wrap_sky_fee_transaction_fee, -1);
   rb_define_global_function("sky_params_get_distribution_addresses", _wrap_sky_params_get_distribution_addresses, -1);
+  rb_define_global_function("sky_params_get_unlocked_distribution_addresses", _wrap_sky_params_get_unlocked_distribution_addresses, -1);
   rb_define_global_function("sky_params_get_locked_distribution_addresses", _wrap_sky_params_get_locked_distribution_addresses, -1);
   rb_define_global_function("sky_cli_get_wallet_outputs_from_file", _wrap_sky_cli_get_wallet_outputs_from_file, -1);
   rb_define_global_function("sky_cli_get_wallet_outputs", _wrap_sky_cli_get_wallet_outputs, -1);
