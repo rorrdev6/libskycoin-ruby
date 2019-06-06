@@ -4,14 +4,17 @@ env:
   global:
     - CGO_ENABLED: 1
 
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
 install:
+  - eval "$(gimme 1.10)" 
   # Install gox
   - go env
   - go get github.com/gz-c/gox
   - go get -t ./...
 
 script: 
-    - ./travis/skyapi.sh
+    - ./.travis/skyapi.sh
     - make build
 
 rvm: 2.5
