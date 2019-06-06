@@ -2,5 +2,5 @@ require "skycoin/version"
 
 module Skycoin
   class Error < StandardError; end
-  # Your code goes here...
+  # Pls your code here
 end

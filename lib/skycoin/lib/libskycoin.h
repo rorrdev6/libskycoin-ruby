@@ -249,7 +249,7 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
 
 #line 1 "cgo-generated-wrapper"
 
-#line 10 "wallet.balance.go"
+#line 9 "wallet.balance.go"
 
 
   #include <string.h>
@@ -884,8 +884,6 @@ extern GoUint32 SKY_coin_IntToUint32(GoInt p0, GoUint32* p1);
 
 extern GoUint32 SKY_wallet_NewBalance(GoUint64 p0, GoUint64 p1, wallet__Balance* p2);
 
-extern GoUint32 SKY_wallet_NewBalanceFromUxOut(GoUint64 p0, coin__UxOut* p1, wallet__Balance* p2);
-
 extern GoUint32 SKY_wallet_Balance_Add(wallet__Balance* p0, wallet__Balance* p1, wallet__Balance* p2);
 
 extern GoUint32 SKY_wallet_Balance_Sub(wallet__Balance* p0, wallet__Balance* p1, wallet__Balance* p2);
@@ -943,8 +941,6 @@ extern GoUint32 SKY_coin_AddressUxOuts_Keys(AddressUxOuts_Handle p0, coin__UxArr
 extern GoUint32 SKY_coin_AddressUxOuts_Flatten(AddressUxOuts_Handle p0, coin__UxArray* p1);
 
 extern GoUint32 SKY_coin_AddressUxOuts_Sub(AddressUxOuts_Handle p0, AddressUxOuts_Handle p1, AddressUxOuts_Handle* p2);
-
-extern GoUint32 SKY_coin_AddressUxOuts_Add(AddressUxOuts_Handle p0, AddressUxOuts_Handle p1, AddressUxOuts_Handle* p2);
 
 extern GoUint32 SKY_coin_AddressUxOuts_Get(AddressUxOuts_Handle p0, cipher__Address* p1, coin__UxArray* p2);
 
@@ -1010,12 +1006,6 @@ extern GoUint32 SKY_httphelper_Coins_MarshalJSON(httphelper__Coins* p0, coin__Ux
 
 extern GoUint32 SKY_httphelper_Coins_Value(httphelper__Coins* p0, GoUint64* p1);
 
-extern GoUint32 SKY_httphelper_Hours_UnmarshalJSON(httphelper__Hours* p0, GoSlice p1);
-
-extern GoUint32 SKY_httphelper_Hours_MarshalJSON(httphelper__Hours* p0, coin__UxArray* p1);
-
-extern GoUint32 SKY_httphelper_Hours_Value(httphelper__Hours* p0, GoUint64* p1);
-
 extern GoUint32 SKY_wallet_NewReadableEntry(GoString p0, wallet__Entry* p1, ReadableEntry__Handle* p2);
 
 extern GoUint32 SKY_wallet_LoadReadableWallet(GoString p0, ReadableWallet__Handle* p1);
@@ -1080,8 +1070,6 @@ extern GoUint32 SKY_api_Client_CreateUnencryptedWallet(Client__Handle p0, GoStri
 
 extern GoUint32 SKY_api_Client_CreateEncryptedWallet(Client__Handle p0, GoString p1, GoString p2, GoString p3, GoInt p4, WalletResponse__Handle* p5);
 
-extern GoUint32 SKY_api_Client_NewWalletAddress(Client__Handle p0, GoString p1, GoInt p2, GoString p3, Strings__Handle* p4);
-
 extern GoUint32 SKY_api_Client_WalletBalance(Client__Handle p0, GoString p1, wallet__BalancePair* p2);
 
 extern GoUint32 SKY_api_Client_Spend(Client__Handle p0, GoString p1, GoString p2, GoUint64 p3, GoString p4, SpendResult_Handle* p5);
@@ -1144,8 +1132,6 @@ extern GoUint32 SKY_wallet_Wallet_Lock(Wallet__Handle p0, GoSlice p1, GoString p
 
 extern GoUint32 SKY_wallet_Wallet_Unlock(Wallet__Handle p0, GoSlice p1, Wallet__Handle* p2);
 
-extern GoUint32 SKY_wallet_Load(GoString p0, Wallet__Handle* p1);
-
 extern GoUint32 SKY_wallet_Wallet_Save(Wallet__Handle p0, GoString p1);
 
 extern GoUint32 SKY_wallet_Wallet_Validate(Wallet__Handle p0);
@@ -1201,8 +1187,6 @@ extern GoUint32 SKY_fee_RemainingHours(GoUint64 p0, GoUint32 p1, GoUint64* p2);
 extern GoUint32 SKY_fee_TransactionFee(Transaction__Handle p0, GoUint64 p1, coin__UxArray* p2, GoUint64* p3);
 
 extern void SKY_params_GetDistributionAddresses(coin__UxArray* p0);
-
-extern void SKY_params_GetUnlockedDistributionAddresses(coin__UxArray* p0);
 
 extern void SKY_params_GetLockedDistributionAddresses(coin__UxArray* p0);
 

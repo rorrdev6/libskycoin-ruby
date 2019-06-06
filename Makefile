@@ -14,7 +14,7 @@ SKYCOIN_DIR  ?= $(SKYLIBC_DIR)/vendor/github.com/skycoin/skycoin
 SKYBUILD_DIR  = $(SKYLIBC_DIR)/build
 BUILDLIBC_DIR = $(SKYBUILD_DIR)/libskycoin
 LIBC_DIR      = $(SKYLIBC_DIR)/lib/cgo
-LIBSWIG_DIR   = lib/skycoin/ext/include
+LIBSWIG_DIR   = lib/skycoin/ext
 BUILD_DIR     = build
 BIN_DIR       = $(SKYLIBC_DIR)/bin
 INCLUDE_DIR   = $(SKYLIBC_DIR)/include
@@ -58,11 +58,12 @@ build-swig: ## Generate Ruby C module from SWIG interfaces
 		fi \
 	}
 	rm -f ext/libskycoin_ruby_wrap.c
-	swig -ruby -w501,505,401,302,509,451 -ILIBSWIG_DIR/include -I$(INCLUDE_DIR) $(LIBSWIG_DIR)/skycoin.i
+	swig -ruby -autorename -globalmodule -w501,505,401,302,509,451 -I$(LIBSWIG_DIR)/include -I$(INCLUDE_DIR) -outdir $(LIBSWIG_DIR) $(LIBSWIG_DIR)/libskycoin_ruby.i
 
 build-libc-swig: build-libc build-swig
 
 build: build-libc-swig ## Build Libruby package
+	 cd $(LIBSWIG_DIR) && ruby extconf.rb
 
 test-ci: build-libc build-swig  ## Run tests on (Travis) CI build
 

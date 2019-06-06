@@ -2339,7 +2339,7 @@ SWIG_From_signed_SS_char  (signed char value)
 }
 
 SWIGINTERN VALUE
-_wrap_equalSlices(int argc, VALUE *argv, VALUE self) {
+_wrap_equal_slices(int argc, VALUE *argv, VALUE self) {
   GoSlice *arg1 = (GoSlice *) 0 ;
   GoSlice *arg2 = (GoSlice *) 0 ;
   int arg3 ;
@@ -2379,7 +2379,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_equalTransactions(int argc, VALUE *argv, VALUE self) {
+_wrap_equal_transactions(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   coin__Transaction *arg2 = (coin__Transaction *) 0 ;
   void *argp1 = 0 ;
@@ -2411,7 +2411,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_equalTransactionsArrays(int argc, VALUE *argv, VALUE self) {
+_wrap_equal_transactions_arrays(int argc, VALUE *argv, VALUE self) {
   coin__Transactions *arg1 = (coin__Transactions *) 0 ;
   coin__Transactions *arg2 = (coin__Transactions *) 0 ;
   void *argp1 = 0 ;
@@ -2443,7 +2443,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_equalBlockHeaders(int argc, VALUE *argv, VALUE self) {
+_wrap_equal_block_headers(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   coin__BlockHeader *arg2 = (coin__BlockHeader *) 0 ;
   void *argp1 = 0 ;
@@ -2474,10 +2474,10 @@ fail:
 }
 
 
-static swig_class SwigClassCipher_PubKey;
+static swig_class SwigClassCipherPubKey;
 
 SWIGINTERN VALUE
-_wrap_cipher_PubKey_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherPubKey_data_set(int argc, VALUE *argv, VALUE self) {
   cipher_PubKey *arg1 = (cipher_PubKey *) 0 ;
   GoUint8 *arg2 ;
   void *argp1 = 0 ;
@@ -2513,7 +2513,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_PubKey_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherPubKey_data_get(int argc, VALUE *argv, VALUE self) {
   cipher_PubKey *arg1 = (cipher_PubKey *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -2538,9 +2538,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher_PubKey_allocate(VALUE self)
+_wrap_CipherPubKey_allocate(VALUE self)
 #else
-_wrap_cipher_PubKey_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherPubKey_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher_PubKey);
@@ -2552,7 +2552,7 @@ _wrap_cipher_PubKey_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher_PubKey(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherPubKey(int argc, VALUE *argv, VALUE self) {
   cipher_PubKey *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -2572,10 +2572,10 @@ free_cipher_PubKey(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher_SecKey;
+static swig_class SwigClassCipherSecKey;
 
 SWIGINTERN VALUE
-_wrap_cipher_SecKey_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSecKey_data_set(int argc, VALUE *argv, VALUE self) {
   cipher_SecKey *arg1 = (cipher_SecKey *) 0 ;
   GoUint8 *arg2 ;
   void *argp1 = 0 ;
@@ -2611,7 +2611,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_SecKey_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSecKey_data_get(int argc, VALUE *argv, VALUE self) {
   cipher_SecKey *arg1 = (cipher_SecKey *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -2636,9 +2636,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher_SecKey_allocate(VALUE self)
+_wrap_CipherSecKey_allocate(VALUE self)
 #else
-_wrap_cipher_SecKey_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherSecKey_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher_SecKey);
@@ -2650,7 +2650,7 @@ _wrap_cipher_SecKey_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher_SecKey(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherSecKey(int argc, VALUE *argv, VALUE self) {
   cipher_SecKey *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -2670,10 +2670,10 @@ free_cipher_SecKey(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher_Ripemd160;
+static swig_class SwigClassCipherRipemd160;
 
 SWIGINTERN VALUE
-_wrap_cipher_Ripemd160_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherRipemd160_data_set(int argc, VALUE *argv, VALUE self) {
   cipher_Ripemd160 *arg1 = (cipher_Ripemd160 *) 0 ;
   GoUint8 *arg2 ;
   void *argp1 = 0 ;
@@ -2709,7 +2709,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_Ripemd160_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherRipemd160_data_get(int argc, VALUE *argv, VALUE self) {
   cipher_Ripemd160 *arg1 = (cipher_Ripemd160 *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -2734,9 +2734,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher_Ripemd160_allocate(VALUE self)
+_wrap_CipherRipemd160_allocate(VALUE self)
 #else
-_wrap_cipher_Ripemd160_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherRipemd160_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher_Ripemd160);
@@ -2748,7 +2748,7 @@ _wrap_cipher_Ripemd160_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher_Ripemd160(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherRipemd160(int argc, VALUE *argv, VALUE self) {
   cipher_Ripemd160 *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -2768,10 +2768,10 @@ free_cipher_Ripemd160(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher_Sig;
+static swig_class SwigClassCipherSig;
 
 SWIGINTERN VALUE
-_wrap_cipher_Sig_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSig_data_set(int argc, VALUE *argv, VALUE self) {
   cipher_Sig *arg1 = (cipher_Sig *) 0 ;
   GoUint8 *arg2 ;
   void *argp1 = 0 ;
@@ -2807,7 +2807,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_Sig_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSig_data_get(int argc, VALUE *argv, VALUE self) {
   cipher_Sig *arg1 = (cipher_Sig *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -2832,9 +2832,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher_Sig_allocate(VALUE self)
+_wrap_CipherSig_allocate(VALUE self)
 #else
-_wrap_cipher_Sig_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherSig_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher_Sig);
@@ -2846,7 +2846,7 @@ _wrap_cipher_Sig_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher_Sig(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherSig(int argc, VALUE *argv, VALUE self) {
   cipher_Sig *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -2866,10 +2866,10 @@ free_cipher_Sig(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher_SHA256;
+static swig_class SwigClassCipherSHA256;
 
 SWIGINTERN VALUE
-_wrap_cipher_SHA256_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSHA256_data_set(int argc, VALUE *argv, VALUE self) {
   cipher_SHA256 *arg1 = (cipher_SHA256 *) 0 ;
   GoUint8 *arg2 ;
   void *argp1 = 0 ;
@@ -2905,7 +2905,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_SHA256_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSHA256_data_get(int argc, VALUE *argv, VALUE self) {
   cipher_SHA256 *arg1 = (cipher_SHA256 *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -2930,9 +2930,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher_SHA256_allocate(VALUE self)
+_wrap_CipherSHA256_allocate(VALUE self)
 #else
-_wrap_cipher_SHA256_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherSHA256_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher_SHA256);
@@ -2944,7 +2944,7 @@ _wrap_cipher_SHA256_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher_SHA256(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherSHA256(int argc, VALUE *argv, VALUE self) {
   cipher_SHA256 *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -2964,10 +2964,10 @@ free_cipher_SHA256(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher_Checksum;
+static swig_class SwigClassCipherChecksum;
 
 SWIGINTERN VALUE
-_wrap_cipher_Checksum_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherChecksum_data_set(int argc, VALUE *argv, VALUE self) {
   cipher_Checksum *arg1 = (cipher_Checksum *) 0 ;
   GoUint8 *arg2 ;
   void *argp1 = 0 ;
@@ -3003,7 +3003,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_Checksum_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherChecksum_data_get(int argc, VALUE *argv, VALUE self) {
   cipher_Checksum *arg1 = (cipher_Checksum *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3028,9 +3028,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher_Checksum_allocate(VALUE self)
+_wrap_CipherChecksum_allocate(VALUE self)
 #else
-_wrap_cipher_Checksum_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherChecksum_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher_Checksum);
@@ -3042,7 +3042,7 @@ _wrap_cipher_Checksum_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher_Checksum(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherChecksum(int argc, VALUE *argv, VALUE self) {
   cipher_Checksum *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -3062,10 +3062,10 @@ free_cipher_Checksum(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher_SecKeys;
+static swig_class SwigClassCipherSecKeys;
 
 SWIGINTERN VALUE
-_wrap_cipher_SecKeys_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSecKeys_data_set(int argc, VALUE *argv, VALUE self) {
   cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
   cipher_SecKey *arg2 = (cipher_SecKey *) 0 ;
   void *argp1 = 0 ;
@@ -3094,7 +3094,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_SecKeys_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSecKeys_data_get(int argc, VALUE *argv, VALUE self) {
   cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3118,7 +3118,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_SecKeys_count_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSecKeys_count_set(int argc, VALUE *argv, VALUE self) {
   cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -3147,7 +3147,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_SecKeys_count_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSecKeys_count_get(int argc, VALUE *argv, VALUE self) {
   cipher_SecKeys *arg1 = (cipher_SecKeys *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3172,9 +3172,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher_SecKeys_allocate(VALUE self)
+_wrap_CipherSecKeys_allocate(VALUE self)
 #else
-_wrap_cipher_SecKeys_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherSecKeys_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher_SecKeys);
@@ -3186,7 +3186,7 @@ _wrap_cipher_SecKeys_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher_SecKeys(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherSecKeys(int argc, VALUE *argv, VALUE self) {
   cipher_SecKeys *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -3206,10 +3206,10 @@ free_cipher_SecKeys(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher_PubKeys;
+static swig_class SwigClassCipherPubKeys;
 
 SWIGINTERN VALUE
-_wrap_cipher_PubKeys_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherPubKeys_data_set(int argc, VALUE *argv, VALUE self) {
   cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
   cipher_PubKey *arg2 = (cipher_PubKey *) 0 ;
   void *argp1 = 0 ;
@@ -3238,7 +3238,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_PubKeys_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherPubKeys_data_get(int argc, VALUE *argv, VALUE self) {
   cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3262,7 +3262,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_PubKeys_count_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherPubKeys_count_set(int argc, VALUE *argv, VALUE self) {
   cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -3291,7 +3291,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_PubKeys_count_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherPubKeys_count_get(int argc, VALUE *argv, VALUE self) {
   cipher_PubKeys *arg1 = (cipher_PubKeys *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3316,9 +3316,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher_PubKeys_allocate(VALUE self)
+_wrap_CipherPubKeys_allocate(VALUE self)
 #else
-_wrap_cipher_PubKeys_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherPubKeys_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher_PubKeys);
@@ -3330,7 +3330,7 @@ _wrap_cipher_PubKeys_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher_PubKeys(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherPubKeys(int argc, VALUE *argv, VALUE self) {
   cipher_PubKeys *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -3350,10 +3350,10 @@ free_cipher_PubKeys(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher_SHA256s;
+static swig_class SwigClassCipherSHA256s;
 
 SWIGINTERN VALUE
-_wrap_cipher_SHA256s_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSHA256s_data_set(int argc, VALUE *argv, VALUE self) {
   cipher_SHA256s *arg1 = (cipher_SHA256s *) 0 ;
   cipher_SHA256 *arg2 = (cipher_SHA256 *) 0 ;
   void *argp1 = 0 ;
@@ -3382,7 +3382,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_SHA256s_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSHA256s_data_get(int argc, VALUE *argv, VALUE self) {
   cipher_SHA256s *arg1 = (cipher_SHA256s *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3406,7 +3406,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_SHA256s_count_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSHA256s_count_set(int argc, VALUE *argv, VALUE self) {
   cipher_SHA256s *arg1 = (cipher_SHA256s *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -3435,7 +3435,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_SHA256s_count_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherSHA256s_count_get(int argc, VALUE *argv, VALUE self) {
   cipher_SHA256s *arg1 = (cipher_SHA256s *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3460,9 +3460,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher_SHA256s_allocate(VALUE self)
+_wrap_CipherSHA256s_allocate(VALUE self)
 #else
-_wrap_cipher_SHA256s_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherSHA256s_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher_SHA256s);
@@ -3474,7 +3474,7 @@ _wrap_cipher_SHA256s_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher_SHA256s(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherSHA256s(int argc, VALUE *argv, VALUE self) {
   cipher_SHA256s *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -3494,10 +3494,10 @@ free_cipher_SHA256s(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCoin_UxOutArray;
+static swig_class SwigClassCoinUxOutArray;
 
 SWIGINTERN VALUE
-_wrap_coin_UxOutArray_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxOutArray_data_set(int argc, VALUE *argv, VALUE self) {
   coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
   coin__UxOut *arg2 = (coin__UxOut *) 0 ;
   void *argp1 = 0 ;
@@ -3526,7 +3526,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin_UxOutArray_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxOutArray_data_get(int argc, VALUE *argv, VALUE self) {
   coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3550,7 +3550,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin_UxOutArray_count_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxOutArray_count_set(int argc, VALUE *argv, VALUE self) {
   coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -3579,7 +3579,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin_UxOutArray_count_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxOutArray_count_get(int argc, VALUE *argv, VALUE self) {
   coin_UxOutArray *arg1 = (coin_UxOutArray *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3604,9 +3604,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_coin_UxOutArray_allocate(VALUE self)
+_wrap_CoinUxOutArray_allocate(VALUE self)
 #else
-_wrap_coin_UxOutArray_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CoinUxOutArray_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_coin_UxOutArray);
@@ -3618,7 +3618,7 @@ _wrap_coin_UxOutArray_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_coin_UxOutArray(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CoinUxOutArray(int argc, VALUE *argv, VALUE self) {
   coin_UxOutArray *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -3638,10 +3638,10 @@ free_coin_UxOutArray(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher_Addresses;
+static swig_class SwigClassCipherAddresses;
 
 SWIGINTERN VALUE
-_wrap_cipher_Addresses_data_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherAddresses_data_set(int argc, VALUE *argv, VALUE self) {
   cipher_Addresses *arg1 = (cipher_Addresses *) 0 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   void *argp1 = 0 ;
@@ -3670,7 +3670,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_Addresses_data_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherAddresses_data_get(int argc, VALUE *argv, VALUE self) {
   cipher_Addresses *arg1 = (cipher_Addresses *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3694,7 +3694,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_Addresses_count_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherAddresses_count_set(int argc, VALUE *argv, VALUE self) {
   cipher_Addresses *arg1 = (cipher_Addresses *) 0 ;
   int arg2 ;
   void *argp1 = 0 ;
@@ -3723,7 +3723,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher_Addresses_count_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherAddresses_count_get(int argc, VALUE *argv, VALUE self) {
   cipher_Addresses *arg1 = (cipher_Addresses *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3748,9 +3748,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher_Addresses_allocate(VALUE self)
+_wrap_CipherAddresses_allocate(VALUE self)
 #else
-_wrap_cipher_Addresses_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherAddresses_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher_Addresses);
@@ -3762,7 +3762,7 @@ _wrap_cipher_Addresses_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher_Addresses(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherAddresses(int argc, VALUE *argv, VALUE self) {
   cipher_Addresses *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -3782,10 +3782,10 @@ free_cipher_Addresses(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassFee_Calculator;
+static swig_class SwigClassFeeCalculator;
 
 SWIGINTERN VALUE
-_wrap_Fee_Calculator_callback_set(int argc, VALUE *argv, VALUE self) {
+_wrap_FeeCalculator_callback_set(int argc, VALUE *argv, VALUE self) {
   Fee_Calculator *arg1 = (Fee_Calculator *) 0 ;
   FeeCalcFunc arg2 = (FeeCalcFunc) 0 ;
   void *argp1 = 0 ;
@@ -3813,7 +3813,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Fee_Calculator_callback_get(int argc, VALUE *argv, VALUE self) {
+_wrap_FeeCalculator_callback_get(int argc, VALUE *argv, VALUE self) {
   Fee_Calculator *arg1 = (Fee_Calculator *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3837,7 +3837,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Fee_Calculator_context_set(int argc, VALUE *argv, VALUE self) {
+_wrap_FeeCalculator_context_set(int argc, VALUE *argv, VALUE self) {
   Fee_Calculator *arg1 = (Fee_Calculator *) 0 ;
   void *arg2 = (void *) 0 ;
   void *argp1 = 0 ;
@@ -3864,7 +3864,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_Fee_Calculator_context_get(int argc, VALUE *argv, VALUE self) {
+_wrap_FeeCalculator_context_get(int argc, VALUE *argv, VALUE self) {
   Fee_Calculator *arg1 = (Fee_Calculator *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3889,9 +3889,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_Fee_Calculator_allocate(VALUE self)
+_wrap_FeeCalculator_allocate(VALUE self)
 #else
-_wrap_Fee_Calculator_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_FeeCalculator_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_Fee_Calculator);
@@ -3903,7 +3903,7 @@ _wrap_Fee_Calculator_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_Fee_Calculator(int argc, VALUE *argv, VALUE self) {
+_wrap_new_FeeCalculator(int argc, VALUE *argv, VALUE self) {
   Fee_Calculator *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -3923,10 +3923,10 @@ free_Fee_Calculator(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClass_GoString_;
+static swig_class SwigClassGoString;
 
 SWIGINTERN VALUE
-_wrap__GoString__p_set(int argc, VALUE *argv, VALUE self) {
+_wrap_GoString_p_set(int argc, VALUE *argv, VALUE self) {
   _GoString_ *arg1 = (_GoString_ *) 0 ;
   char *arg2 = (char *) 0 ;
   void *argp1 = 0 ;
@@ -3963,7 +3963,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap__GoString__p_get(int argc, VALUE *argv, VALUE self) {
+_wrap_GoString_p_get(int argc, VALUE *argv, VALUE self) {
   _GoString_ *arg1 = (_GoString_ *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -3987,7 +3987,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap__GoString__n_set(int argc, VALUE *argv, VALUE self) {
+_wrap_GoString_n_set(int argc, VALUE *argv, VALUE self) {
   _GoString_ *arg1 = (_GoString_ *) 0 ;
   ptrdiff_t arg2 ;
   void *argp1 = 0 ;
@@ -4016,7 +4016,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap__GoString__n_get(int argc, VALUE *argv, VALUE self) {
+_wrap_GoString_n_get(int argc, VALUE *argv, VALUE self) {
   _GoString_ *arg1 = (_GoString_ *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -4041,9 +4041,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap__GoString__allocate(VALUE self)
+_wrap_GoString_allocate(VALUE self)
 #else
-_wrap__GoString__allocate(int argc, VALUE *argv, VALUE self)
+_wrap_GoString_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p__GoString_);
@@ -4055,7 +4055,7 @@ _wrap__GoString__allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new__GoString_(int argc, VALUE *argv, VALUE self) {
+_wrap_new_GoString(int argc, VALUE *argv, VALUE self) {
   _GoString_ *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -4411,7 +4411,7 @@ free_GoSlice(void *self) {
 }
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_CryptoTypeFromString(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_crypto_type_from_string(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -4449,7 +4449,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Create_Transaction(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_create_transaction(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle *arg1 = (Transaction__Handle *) 0 ;
   Handle temp1 ;
   GoUint32 result;
@@ -4473,7 +4473,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_Copy(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_copy(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   Transaction__Handle *arg2 = (Transaction__Handle *) 0 ;
   Handle temp2 ;
@@ -4501,7 +4501,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_GetTransactionObject(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_get_transaction_object(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   coin__Transaction **arg2 = (coin__Transaction **) 0 ;
   void *argp2 = 0 ;
@@ -4529,7 +4529,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_ResetInputs(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_reset_inputs(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt arg2 ;
   long long val2 ;
@@ -4557,7 +4557,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_GetInputsCount(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_get_inputs_count(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt *arg2 = (GoInt *) 0 ;
   GoInt temp2 ;
@@ -4587,7 +4587,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_GetInputAt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_get_input_at(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt arg2 ;
   cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
@@ -4624,7 +4624,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_SetInputAt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_set_input_at(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt arg2 ;
   cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
@@ -4661,7 +4661,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_GetOutputsCount(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_get_outputs_count(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt *arg2 = (GoInt *) 0 ;
   GoInt temp2 ;
@@ -4691,7 +4691,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_GetOutputAt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_get_output_at(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt arg2 ;
   coin__TransactionOutput *arg3 = (coin__TransactionOutput *) 0 ;
@@ -4727,7 +4727,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_SetOutputAt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_set_output_at(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt arg2 ;
   coin__TransactionOutput *arg3 = (coin__TransactionOutput *) 0 ;
@@ -4763,7 +4763,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_GetSignaturesCount(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_get_signatures_count(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt *arg2 = (GoInt *) 0 ;
   GoInt temp2 ;
@@ -4793,7 +4793,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_GetSignatureAt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_get_signature_at(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt arg2 ;
   cipher__Sig *arg3 = (cipher__Sig *) 0 ;
@@ -4830,7 +4830,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_SetSignatureAt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_set_signature_at(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt arg2 ;
   cipher__Sig *arg3 = (cipher__Sig *) 0 ;
@@ -4867,7 +4867,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_PushSignature(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_push_signature(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   cipher__Sig *arg2 = (cipher__Sig *) 0 ;
   GoUint32 result;
@@ -4896,7 +4896,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_ResetOutputs(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_reset_outputs(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt arg2 ;
   long long val2 ;
@@ -4924,7 +4924,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_ResetSignatures(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_reset_signatures(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoInt arg2 ;
   long long val2 ;
@@ -4952,7 +4952,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_Verify(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_verify(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoUint32 result;
   VALUE vresult = Qnil;
@@ -4972,7 +4972,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_VerifyInput(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_verify_input(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -5004,7 +5004,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_PushInput(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_push_input(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint16 *arg3 = (GoUint16 *) 0 ;
@@ -5043,7 +5043,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_TransactionOutput_UxID(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_output_ux_id(int argc, VALUE *argv, VALUE self) {
   coin__TransactionOutput *arg1 = (coin__TransactionOutput *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
@@ -5085,7 +5085,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_PushOutput(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_push_output(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   GoUint64 arg3 ;
@@ -5129,7 +5129,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_SignInputs(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_sign_inputs(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoSlice arg2 ;
   GoUint32 result;
@@ -5161,7 +5161,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_Size(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_size(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoUint32 *arg2 = (GoUint32 *) 0 ;
   GoUint32 temp2 ;
@@ -5191,7 +5191,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_Hash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_hash(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -5220,7 +5220,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_SizeHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_size_hash(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoUint32 *arg2 = (GoUint32 *) 0 ;
   cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
@@ -5259,7 +5259,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_TxID(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_tx_id(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -5291,7 +5291,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_TxIDHex(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_tx_idhex(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -5322,7 +5322,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_UpdateHeader(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_update_header(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoUint32 result;
   VALUE vresult = Qnil;
@@ -5342,7 +5342,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_HashInner(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_hash_inner(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -5371,7 +5371,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_Serialize(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_serialize(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -5403,7 +5403,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_TransactionDeserialize(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_deserialize(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   Transaction__Handle *arg2 = (Transaction__Handle *) 0 ;
   Handle temp2 ;
@@ -5439,7 +5439,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transaction_OutputHours(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transaction_output_hours(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
@@ -5468,7 +5468,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Create_Transactions(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_create_transactions(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle *arg1 = (Transactions__Handle *) 0 ;
   Handle temp1 ;
   GoUint32 result;
@@ -5492,7 +5492,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_GetTransactionsObject(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_get_transactions_object(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   coin__UxArray **arg2 = (coin__UxArray **) 0 ;
   void *argp2 = 0 ;
@@ -5520,7 +5520,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transactions_Length(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transactions_length(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   GoInt *arg2 = (GoInt *) 0 ;
   GoInt temp2 ;
@@ -5550,7 +5550,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transactions_Add(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transactions_add(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   Transaction__Handle arg2 ;
   GoUint32 result;
@@ -5574,7 +5574,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transactions_Fees(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transactions_fees(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   FeeCalculator *arg2 = (FeeCalculator *) 0 ;
   GoUint64 *arg3 = (GoUint64 *) 0 ;
@@ -5611,7 +5611,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transactions_GetAt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transactions_get_at(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   GoInt arg2 ;
   Transaction__Handle *arg3 = (Transaction__Handle *) 0 ;
@@ -5647,7 +5647,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transactions_Hashes(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transactions_hashes(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -5679,7 +5679,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transactions_Size(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transactions_size(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   GoUint32 *arg2 = (GoUint32 *) 0 ;
   GoUint32 temp2 ;
@@ -5709,7 +5709,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Transactions_TruncateBytesTo(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_transactions_truncate_bytes_to(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   GoUint32 arg2 ;
   Transactions__Handle *arg3 = (Transactions__Handle *) 0 ;
@@ -5745,7 +5745,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_SortTransactions(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_sort_transactions(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   FeeCalculator *arg2 = (FeeCalculator *) 0 ;
   Transactions__Handle *arg3 = (Transactions__Handle *) 0 ;
@@ -5781,7 +5781,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_NewSortableTransactions(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_new_sortable_transactions(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   FeeCalculator *arg2 = (FeeCalculator *) 0 ;
   SortableTransactionResult_Handle *arg3 = (SortableTransactionResult_Handle *) 0 ;
@@ -5817,7 +5817,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_SortableTransactions_Sort(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_sortable_transactions_sort(int argc, VALUE *argv, VALUE self) {
   SortableTransactionResult_Handle arg1 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -5847,7 +5847,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_SortableTransactions_Len(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_sortable_transactions_len(int argc, VALUE *argv, VALUE self) {
   SortableTransactionResult_Handle arg1 ;
   GoInt *arg2 = (GoInt *) 0 ;
   void *argp1 ;
@@ -5887,7 +5887,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_SortableTransactions_Less(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_sortable_transactions_less(int argc, VALUE *argv, VALUE self) {
   SortableTransactionResult_Handle arg1 ;
   GoInt arg2 ;
   GoInt arg3 ;
@@ -5943,7 +5943,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_SortableTransactions_Swap(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_sortable_transactions_swap(int argc, VALUE *argv, VALUE self) {
   SortableTransactionResult_Handle arg1 ;
   GoInt arg2 ;
   GoInt arg3 ;
@@ -5989,7 +5989,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_VerifyTransactionCoinsSpending(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_verify_transaction_coins_spending(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp1 ;
@@ -6029,7 +6029,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_VerifyTransactionHoursSpending(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_verify_transaction_hours_spending(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -6077,7 +6077,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_encrypt_ScryptChacha20poly1305_Encrypt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_encrypt_scrypt_chacha_20poly_1305_encrypt(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
   GoSlice arg2 ;
   GoSlice arg3 ;
@@ -6137,7 +6137,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_encrypt_ScryptChacha20poly1305_Decrypt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_encrypt_scrypt_chacha_20poly_1305_decrypt(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
   GoSlice arg2 ;
   GoSlice arg3 ;
@@ -6197,7 +6197,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_LoadConfig(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_load_config(int argc, VALUE *argv, VALUE self) {
   Config__Handle *arg1 = (Config__Handle *) 0 ;
   Handle temp1 ;
   GoUint32 result;
@@ -6221,7 +6221,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_Config_FullWalletPath(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_config_full_wallet_path(int argc, VALUE *argv, VALUE self) {
   Config__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -6252,7 +6252,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_Config_FullDBPath(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_config_full_dbpath(int argc, VALUE *argv, VALUE self) {
   Config__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -6283,7 +6283,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_NewCLI(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_new_cli(int argc, VALUE *argv, VALUE self) {
   Config__Handle arg1 ;
   CLI__Handle *arg2 = (CLI__Handle *) 0 ;
   Handle temp2 ;
@@ -6311,7 +6311,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_NewPasswordReader(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_new_password_reader(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   PasswordReader__Handle *arg2 = (PasswordReader__Handle *) 0 ;
   Handle temp2 ;
@@ -6345,7 +6345,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_PasswordFromBytes_Password(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_password_from_bytes_password(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp1 ;
@@ -6385,7 +6385,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_PasswordFromTerm_Password(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_password_from_term_password(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoSlice_ temp1 ;
   GoUint32 result;
@@ -6413,7 +6413,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_GenerateWallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_generate_wallet(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   Options__Handle *arg2 = (Options__Handle *) 0 ;
   GoUint64 arg3 ;
@@ -6464,7 +6464,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_MakeAlphanumericSeed(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_make_alphanumeric_seed(int argc, VALUE *argv, VALUE self) {
   GoString_ *arg1 = (GoString_ *) 0 ;
   GoString temp1 ;
   GoUint32 result;
@@ -6491,7 +6491,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_CheckWalletBalance(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_check_wallet_balance(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoString arg2 ;
   BalanceResult_Handle *arg3 = (BalanceResult_Handle *) 0 ;
@@ -6530,7 +6530,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_GetBalanceOfAddresses(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_get_balance_of_addresses(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoSlice arg2 ;
   BalanceResult_Handle *arg3 = (BalanceResult_Handle *) 0 ;
@@ -6570,7 +6570,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_RandByte(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_rand_byte(int argc, VALUE *argv, VALUE self) {
   GoInt arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   long long val1 ;
@@ -6606,7 +6606,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_NewPubKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_new_pub_key(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
   GoUint32 result;
@@ -6643,7 +6643,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_PubKeyFromHex(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_pub_key_from_hex(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
   GoUint32 result;
@@ -6679,7 +6679,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_PubKeyFromSecKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_pub_key_from_sec_key(int argc, VALUE *argv, VALUE self) {
   cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
   cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
   GoUint32 result;
@@ -6713,7 +6713,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_PubKeyFromSig(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_pub_key_from_sig(int argc, VALUE *argv, VALUE self) {
   cipher__Sig *arg1 = (cipher__Sig *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   cipher__PubKey *arg3 = (cipher__PubKey *) 0 ;
@@ -6756,7 +6756,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_PubKey_Verify(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_pub_key_verify(int argc, VALUE *argv, VALUE self) {
   cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
   GoUint32 result;
   VALUE vresult = Qnil;
@@ -6781,7 +6781,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_PubKey_Hex(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_pub_key_hex(int argc, VALUE *argv, VALUE self) {
   cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -6817,7 +6817,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_PubKeyRipemd160(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_pub_key_ripemd_160(int argc, VALUE *argv, VALUE self) {
   cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
   cipher__Ripemd160 *arg2 = (cipher__Ripemd160 *) 0 ;
   GoUint32 result;
@@ -6851,7 +6851,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_NewSecKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_new_sec_key(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
   GoUint32 result;
@@ -6888,7 +6888,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SecKeyFromHex(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sec_key_from_hex(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
   GoUint32 result;
@@ -6924,7 +6924,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SecKey_Verify(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sec_key_verify(int argc, VALUE *argv, VALUE self) {
   cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
   GoUint32 result;
   VALUE vresult = Qnil;
@@ -6949,7 +6949,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SecKey_Hex(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sec_key_hex(int argc, VALUE *argv, VALUE self) {
   cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -6985,7 +6985,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_ECDH(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_ecdh(int argc, VALUE *argv, VALUE self) {
   cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
   cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -7031,7 +7031,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_NewSig(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_new_sig(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   cipher__Sig *arg2 = (cipher__Sig *) 0 ;
   GoUint32 result;
@@ -7068,7 +7068,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SigFromHex(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sig_from_hex(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   cipher__Sig *arg2 = (cipher__Sig *) 0 ;
   GoUint32 result;
@@ -7104,7 +7104,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_Sig_Hex(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sig_hex(int argc, VALUE *argv, VALUE self) {
   cipher__Sig *arg1 = (cipher__Sig *) 0 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -7140,7 +7140,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SignHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sign_hash(int argc, VALUE *argv, VALUE self) {
   cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
   cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
   cipher__Sig *arg3 = (cipher__Sig *) 0 ;
@@ -7183,7 +7183,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_VerifyAddressSignedHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_verify_address_signed_hash(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   cipher__Sig *arg2 = (cipher__Sig *) 0 ;
   cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
@@ -7225,7 +7225,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_VerifySignedHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_verify_signed_hash(int argc, VALUE *argv, VALUE self) {
   cipher__Sig *arg1 = (cipher__Sig *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -7259,7 +7259,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_VerifyPubKeySignedHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_verify_pub_key_signed_hash(int argc, VALUE *argv, VALUE self) {
   cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
   cipher__Sig *arg2 = (cipher__Sig *) 0 ;
   cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
@@ -7302,7 +7302,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_GenerateKeyPair(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_generate_key_pair(int argc, VALUE *argv, VALUE self) {
   cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
   cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
   GoUint32 result;
@@ -7336,7 +7336,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_GenerateDeterministicKeyPair(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_generate_deterministic_key_pair(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
   cipher__SecKey *arg3 = (cipher__SecKey *) 0 ;
@@ -7382,7 +7382,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_DeterministicKeyPairIterator(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_deterministic_key_pair_iterator(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   cipher__PubKey *arg3 = (cipher__PubKey *) 0 ;
@@ -7440,7 +7440,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_GenerateDeterministicKeyPairs(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_generate_deterministic_key_pairs(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoInt arg2 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -7488,7 +7488,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_generate_deterministic_key_pairs_seed(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoInt arg2 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -7548,7 +7548,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_CheckSecKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_check_sec_key(int argc, VALUE *argv, VALUE self) {
   cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
   GoUint32 result;
   VALUE vresult = Qnil;
@@ -7573,7 +7573,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_CheckSecKeyHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_check_sec_key_hash(int argc, VALUE *argv, VALUE self) {
   cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -7607,7 +7607,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_map_Get(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_map_get(int argc, VALUE *argv, VALUE self) {
   GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
   GoString arg2 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
@@ -7653,7 +7653,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_map_HasKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_map_has_key(int argc, VALUE *argv, VALUE self) {
   GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
   GoString arg2 ;
   Handle temp1 ;
@@ -7688,7 +7688,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_map_Close(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_map_close(int argc, VALUE *argv, VALUE self) {
   GoStringMap_ *arg1 = (GoStringMap_ *) 0 ;
   Handle temp1 ;
   GoUint32 result;
@@ -7712,7 +7712,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_GenerateAddressesInFile(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_generate_addresses_in_file(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoUint64 arg2 ;
   PasswordReader__Handle arg3 ;
@@ -7773,7 +7773,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_FormatAddressesAsJSON(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_format_addresses_as_json(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -7812,7 +7812,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_FormatAddressesAsJoinedArray(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_format_addresses_as_joined_array(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -7851,7 +7851,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_AddressesToStrings(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_addresses_to_strings(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -7891,7 +7891,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_logging_EnableColors(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_logging_enable_colors(int argc, VALUE *argv, VALUE self) {
   GoUint32 result;
   VALUE vresult = Qnil;
   
@@ -7907,7 +7907,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_logging_DisableColors(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_logging_disable_colors(int argc, VALUE *argv, VALUE self) {
   GoUint32 result;
   VALUE vresult = Qnil;
   
@@ -7923,7 +7923,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_logging_Disable(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_logging_disable(int argc, VALUE *argv, VALUE self) {
   GoUint32 result;
   VALUE vresult = Qnil;
   
@@ -7939,7 +7939,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_certutil_NewTLSCertPair(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_certutil_new_tlscert_pair(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoString arg2 ;
   GoSlice arg3 ;
@@ -8013,7 +8013,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_NewWalletResponse(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_new_wallet_response(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   WalletResponse__Handle *arg2 = (WalletResponse__Handle *) 0 ;
   Handle temp2 ;
@@ -8041,7 +8041,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_apputil_CatchInterruptPanic(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_apputil_catch_interrupt_panic(int argc, VALUE *argv, VALUE self) {
   GoUint32 result;
   VALUE vresult = Qnil;
   
@@ -8057,7 +8057,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_apputil_CatchDebug(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_apputil_catch_debug(int argc, VALUE *argv, VALUE self) {
   GoUint32 result;
   VALUE vresult = Qnil;
   
@@ -8073,7 +8073,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_apputil_PrintProgramStatus(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_apputil_print_program_status(int argc, VALUE *argv, VALUE self) {
   GoUint32 result;
   VALUE vresult = Qnil;
   
@@ -8089,7 +8089,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_params_DropletPrecisionToDivisor(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_params_droplet_precision_to_divisor(int argc, VALUE *argv, VALUE self) {
   GoUint8 arg1 ;
   unsigned char val1 ;
   int ecode1 = 0 ;
@@ -8113,7 +8113,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_params_DropletPrecisionCheck(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_params_droplet_precision_check(int argc, VALUE *argv, VALUE self) {
   GoUint8 arg1 ;
   GoUint64 arg2 ;
   unsigned char val1 ;
@@ -8145,7 +8145,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_DecodeBase58Address(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_decode_base_58address(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   void *argp2 = 0 ;
@@ -8180,7 +8180,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_AddressFromBytes(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_address_from_bytes(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   void *argp2 = 0 ;
@@ -8216,7 +8216,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_AddressFromPubKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_address_from_pub_key(int argc, VALUE *argv, VALUE self) {
   cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   void *argp2 = 0 ;
@@ -8249,7 +8249,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_AddressFromSecKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_address_from_sec_key(int argc, VALUE *argv, VALUE self) {
   cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   void *argp2 = 0 ;
@@ -8282,7 +8282,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_Address_Null(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_address_null(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   GoUint8 *arg2 = (GoUint8 *) 0 ;
   void *argp1 = 0 ;
@@ -8316,7 +8316,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_Address_Bytes(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_address_bytes(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   void *argp1 = 0 ;
@@ -8352,7 +8352,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_Address_Verify(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_address_verify(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
   void *argp1 = 0 ;
@@ -8385,7 +8385,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_Address_String(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_address_string(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   void *argp1 = 0 ;
@@ -8420,7 +8420,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_Address_Checksum(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_address_checksum(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   cipher__Checksum *arg2 = (cipher__Checksum *) 0 ;
   void *argp1 = 0 ;
@@ -8453,7 +8453,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_testutil_MakeAddress(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_testutil_make_address(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -8477,7 +8477,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_NewBlock(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_new_block(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   GoUint64 arg2 ;
   cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
@@ -8534,7 +8534,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_SignedBlock_VerifySignature(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_signed_block_verify_signature(int argc, VALUE *argv, VALUE self) {
   coin__SignedBlock *arg1 = (coin__SignedBlock *) 0 ;
   cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
   void *argp1 = 0 ;
@@ -8567,7 +8567,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_NewGenesisBlock(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_new_genesis_block(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   GoUint64 arg2 ;
   GoUint64 arg3 ;
@@ -8615,7 +8615,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Block_HashHeader(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_hash_header(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -8644,7 +8644,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Block_PreHashHeader(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_pre_hash_header(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -8673,7 +8673,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Block_Time(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_time(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
@@ -8702,7 +8702,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Block_Seq(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_seq(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
@@ -8731,7 +8731,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Block_HashBody(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_hash_body(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -8760,7 +8760,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Block_Size(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_size(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   GoUint32 *arg2 = (GoUint32 *) 0 ;
   GoUint32 temp2 ;
@@ -8790,7 +8790,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Block_String(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_string(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -8821,7 +8821,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Block_GetTransaction(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_get_transaction(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   Transaction__Handle *arg3 = (Transaction__Handle *) 0 ;
@@ -8868,7 +8868,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_NewBlockHeader(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_new_block_header(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint64 arg3 ;
@@ -8929,7 +8929,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockHeader_Hash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_header_hash(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   void *argp1 = 0 ;
@@ -8962,7 +8962,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockHeader_Bytes(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_header_bytes(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   void *argp1 = 0 ;
@@ -8998,7 +8998,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockHeader_String(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_header_string(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   void *argp1 = 0 ;
@@ -9033,7 +9033,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockBody_Hash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_body_hash(int argc, VALUE *argv, VALUE self) {
   BlockBody__Handle arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -9062,7 +9062,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockBody_Size(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_body_size(int argc, VALUE *argv, VALUE self) {
   BlockBody__Handle *arg1 = (BlockBody__Handle *) 0 ;
   GoUint32 *arg2 = (GoUint32 *) 0 ;
   Handle temp1 ;
@@ -9096,7 +9096,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockBody_Bytes(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_body_bytes(int argc, VALUE *argv, VALUE self) {
   BlockBody__Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -9128,7 +9128,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_CreateUnspents(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_create_unspents(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   Transaction__Handle arg2 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -9168,7 +9168,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_CreateUnspent(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_create_unspent(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   Transaction__Handle arg2 ;
   GoInt arg3 ;
@@ -9212,7 +9212,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_GetBlockObject(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_get_block_object(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   coin__Block **arg2 = (coin__Block **) 0 ;
   void *argp2 = 0 ;
@@ -9240,7 +9240,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_GetBlockBody(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_get_block_body(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   BlockBody__Handle *arg2 = (BlockBody__Handle *) 0 ;
   Handle temp2 ;
@@ -9268,7 +9268,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_NewEmptyBlock(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_new_empty_block(int argc, VALUE *argv, VALUE self) {
   Transactions__Handle arg1 ;
   Block__Handle *arg2 = (Block__Handle *) 0 ;
   Handle temp2 ;
@@ -9296,7 +9296,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Block_GetBlockHeader(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_get_block_header(int argc, VALUE *argv, VALUE self) {
   Block__Handle arg1 ;
   BlockHeader__Handle *arg2 = (BlockHeader__Handle *) 0 ;
   void *argp2 = 0 ;
@@ -9324,7 +9324,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_GetBlockHeaderObject(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_get_block_header_object(int argc, VALUE *argv, VALUE self) {
   BlockHeader__Handle arg1 ;
   coin__BlockHeader **arg2 = (coin__BlockHeader **) 0 ;
   void *argp1 ;
@@ -9362,7 +9362,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockHeader_Time(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_header_time(int argc, VALUE *argv, VALUE self) {
   BlockHeader__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   void *argp1 ;
@@ -9401,7 +9401,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockHeader_BkSeq(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_header_bk_seq(int argc, VALUE *argv, VALUE self) {
   BlockHeader__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   void *argp1 ;
@@ -9440,7 +9440,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockHeader_UxHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_header_ux_hash(int argc, VALUE *argv, VALUE self) {
   BlockHeader__Handle arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   void *argp1 ;
@@ -9479,7 +9479,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockHeader_Fee(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_header_fee(int argc, VALUE *argv, VALUE self) {
   BlockHeader__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   void *argp1 ;
@@ -9518,7 +9518,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_BlockBody_Transactions(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_block_body_transactions(int argc, VALUE *argv, VALUE self) {
   BlockBody__Handle arg1 ;
   Transactions__Handle *arg2 = (Transactions__Handle *) 0 ;
   Handle temp2 ;
@@ -9546,7 +9546,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Entry_Verify(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_entry_verify(int argc, VALUE *argv, VALUE self) {
   wallet__Entry *arg1 = (wallet__Entry *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9570,7 +9570,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Entry_VerifyPublic(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_entry_verify_public(int argc, VALUE *argv, VALUE self) {
   wallet__Entry *arg1 = (wallet__Entry *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -9594,7 +9594,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_NewCreateTransactionResponse(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_new_create_transaction_response(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoSlice arg2 ;
   CreateTransactionResponse__Handle *arg3 = (CreateTransactionResponse__Handle *) 0 ;
@@ -9634,7 +9634,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_NewCreatedTransaction(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_new_created_transaction(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoSlice arg2 ;
   CreatedTransaction__Handle *arg3 = (CreatedTransaction__Handle *) 0 ;
@@ -9674,7 +9674,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_CreatedTransaction_ToTransaction(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_created_transaction_to_transaction(int argc, VALUE *argv, VALUE self) {
   CreatedTransaction__Handle arg1 ;
   Transaction__Handle *arg2 = (Transaction__Handle *) 0 ;
   Handle temp2 ;
@@ -9702,7 +9702,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_NewCreatedTransactionOutput(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_new_created_transaction_output(int argc, VALUE *argv, VALUE self) {
   coin__TransactionOutput *arg1 = (coin__TransactionOutput *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   CreatedTransactionOutput__Handle *arg3 = (CreatedTransactionOutput__Handle *) 0 ;
@@ -9743,7 +9743,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_NewCreatedTransactionInput(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_new_created_transaction_input(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   CreatedTransactionInput__Handle *arg2 = (CreatedTransactionInput__Handle *) 0 ;
   void *argp1 = 0 ;
@@ -9775,7 +9775,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_AddPrivateKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_add_private_key(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoString arg2 ;
   GoUint32 result;
@@ -9806,7 +9806,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_AddPrivateKeyToFile(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_add_private_key_to_file(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoString arg2 ;
   PasswordReader__Handle arg3 ;
@@ -9858,7 +9858,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_bip39_NewDefaultMnemomic(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_bip_39_new_default_mnemomic(int argc, VALUE *argv, VALUE self) {
   GoString_ *arg1 = (GoString_ *) 0 ;
   GoString temp1 ;
   GoUint32 result;
@@ -9885,7 +9885,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_bip39_NewEntropy(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_bip_39_new_entropy(int argc, VALUE *argv, VALUE self) {
   GoInt arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   long long val1 ;
@@ -9921,7 +9921,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_bip39_NewMnemonic(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_bip_39_new_mnemonic(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -9960,7 +9960,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_bip39_MnemonicToByteArray(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_bip_39_mnemonic_to_byte_array(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -9999,7 +9999,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_bip39_IsMnemonicValid(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_bip_39_is_mnemonic_valid(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoUint8 *arg2 = (GoUint8 *) 0 ;
   GoUint8 temp2 ;
@@ -10036,7 +10036,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_JsonEncode_Handle(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_json_encode_handle(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -10067,7 +10067,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_Handle_Progress_GetCurrent(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_progress_get_current(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
@@ -10096,7 +10096,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_Handle_Block_GetHeadSeq(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_block_get_head_seq(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
@@ -10125,7 +10125,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_Handle_Block_GetHeadHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_block_get_head_hash(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -10156,7 +10156,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_Handle_Block_GetPreviousBlockHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_block_get_previous_block_hash(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -10187,7 +10187,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_Handle_Blocks_GetAt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_blocks_get_at(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   GoUint64 arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -10223,7 +10223,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_Handle_Blocks_GetCount(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_blocks_get_count(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
@@ -10252,7 +10252,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_Handle_Connections_GetCount(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_connections_get_count(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
@@ -10281,7 +10281,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_Handle_Strings_GetCount(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_strings_get_count(int argc, VALUE *argv, VALUE self) {
   Strings__Handle arg1 ;
   GoUint32 *arg2 = (GoUint32 *) 0 ;
   GoUint32 temp2 ;
@@ -10311,7 +10311,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_Handle_Strings_Sort(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_strings_sort(int argc, VALUE *argv, VALUE self) {
   Strings__Handle arg1 ;
   GoUint32 result;
   VALUE vresult = Qnil;
@@ -10331,7 +10331,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_Handle_Strings_GetAt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_strings_get_at(int argc, VALUE *argv, VALUE self) {
   Strings__Handle arg1 ;
   GoInt arg2 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
@@ -10370,7 +10370,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_Client_GetWalletDir(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_client_get_wallet_dir(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -10401,7 +10401,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_Client_GetWalletFileName(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_client_get_wallet_file_name(int argc, VALUE *argv, VALUE self) {
   WalletResponse__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -10432,7 +10432,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_Client_GetWalletLabel(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_client_get_wallet_label(int argc, VALUE *argv, VALUE self) {
   WalletResponse__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -10463,7 +10463,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_Client_GetWalletFullPath(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_client_get_wallet_full_path(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   WalletResponse__Handle arg2 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
@@ -10498,7 +10498,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_GetWalletMeta(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_get_wallet_meta(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoStringMap_ *arg2 = (GoStringMap_ *) 0 ;
   Handle temp2 ;
@@ -10526,7 +10526,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_GetWalletEntriesCount(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_get_wallet_entries_count(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoUint32 *arg2 = (GoUint32 *) 0 ;
   GoUint32 temp2 ;
@@ -10556,7 +10556,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_Client_GetWalletResponseEntriesCount(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_client_get_wallet_response_entries_count(int argc, VALUE *argv, VALUE self) {
   WalletResponse__Handle arg1 ;
   GoUint32 *arg2 = (GoUint32 *) 0 ;
   GoUint32 temp2 ;
@@ -10586,7 +10586,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_WalletGetEntry(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_wallet_get_entry(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoUint32 arg2 ;
   cipher__Address *arg3 = (cipher__Address *) 0 ;
@@ -10631,7 +10631,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_WalletResponseGetEntry(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_wallet_response_get_entry(int argc, VALUE *argv, VALUE self) {
   WalletResponse__Handle arg1 ;
   GoUint32 arg2 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
@@ -10681,7 +10681,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_WalletResponseIsEncrypted(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_wallet_response_is_encrypted(int argc, VALUE *argv, VALUE self) {
   WalletResponse__Handle arg1 ;
   GoUint8 *arg2 = (GoUint8 *) 0 ;
   GoUint8 temp2 ;
@@ -10711,7 +10711,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_WalletResponseGetCryptoType(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_wallet_response_get_crypto_type(int argc, VALUE *argv, VALUE self) {
   WalletResponse__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -10742,7 +10742,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_WalletsResponseGetCount(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_wallets_response_get_count(int argc, VALUE *argv, VALUE self) {
   Wallets__Handle arg1 ;
   GoUint32 *arg2 = (GoUint32 *) 0 ;
   GoUint32 temp2 ;
@@ -10772,7 +10772,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_WalletsResponseGetAt(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_wallets_response_get_at(int argc, VALUE *argv, VALUE self) {
   Wallets__Handle arg1 ;
   GoUint32 arg2 ;
   WalletResponse__Handle *arg3 = (WalletResponse__Handle *) 0 ;
@@ -10808,7 +10808,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_GetWalletFolderAddress(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_get_wallet_folder_address(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -10839,7 +10839,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_GetWalletSeed(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_get_wallet_seed(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -10870,7 +10870,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_GetWalletLastSeed(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_get_wallet_last_seed(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -10901,7 +10901,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Handle_GetBuildInfoData(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_handle_get_build_info_data(int argc, VALUE *argv, VALUE self) {
   BuildInfo_Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
@@ -10954,7 +10954,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_AddUint64(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_add_uint_64(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   GoUint64 arg2 ;
   GoUint64 *arg3 = (GoUint64 *) 0 ;
@@ -10995,7 +10995,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Uint64ToInt64(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_uint_64to_int_64(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   GoInt64 *arg2 = (GoInt64 *) 0 ;
   unsigned long long val1 ;
@@ -11028,7 +11028,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_Int64ToUint64(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_int_64to_uint_64(int argc, VALUE *argv, VALUE self) {
   GoInt64 arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   long long val1 ;
@@ -11061,7 +11061,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_IntToUint32(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_int_to_uint_32(int argc, VALUE *argv, VALUE self) {
   GoInt arg1 ;
   GoUint32 *arg2 = (GoUint32 *) 0 ;
   long long val1 ;
@@ -11095,7 +11095,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_NewBalance(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_new_balance(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   GoUint64 arg2 ;
   wallet__Balance *arg3 = (wallet__Balance *) 0 ;
@@ -11135,47 +11135,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_NewBalanceFromUxOut(int argc, VALUE *argv, VALUE self) {
-  GoUint64 arg1 ;
-  coin__UxOut *arg2 = (coin__UxOut *) 0 ;
-  wallet__Balance *arg3 = (wallet__Balance *) 0 ;
-  unsigned long long val1 ;
-  int ecode1 = 0 ;
-  void *argp2 = 0 ;
-  int res2 = 0 ;
-  void *argp3 = 0 ;
-  int res3 = 0 ;
-  GoUint32 result;
-  VALUE vresult = Qnil;
-  
-  if ((argc < 3) || (argc > 3)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 3)",argc); SWIG_fail;
-  }
-  ecode1 = SWIG_AsVal_unsigned_SS_long_SS_long(argv[0], &val1);
-  if (!SWIG_IsOK(ecode1)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode1), Ruby_Format_TypeError( "", "GoUint64","SKY_wallet_NewBalanceFromUxOut", 1, argv[0] ));
-  } 
-  arg1 = (GoUint64)(val1);
-  res2 = SWIG_ConvertPtr(argv[1], &argp2,SWIGTYPE_p_coin__UxOut, 0 |  0 );
-  if (!SWIG_IsOK(res2)) {
-    SWIG_exception_fail(SWIG_ArgError(res2), Ruby_Format_TypeError( "", "coin__UxOut *","SKY_wallet_NewBalanceFromUxOut", 2, argv[1] )); 
-  }
-  arg2 = (coin__UxOut *)(argp2);
-  res3 = SWIG_ConvertPtr(argv[2], &argp3,SWIGTYPE_p_wallet__Balance, 0 |  0 );
-  if (!SWIG_IsOK(res3)) {
-    SWIG_exception_fail(SWIG_ArgError(res3), Ruby_Format_TypeError( "", "wallet__Balance *","SKY_wallet_NewBalanceFromUxOut", 3, argv[2] )); 
-  }
-  arg3 = (wallet__Balance *)(argp3);
-  result = (GoUint32)SKY_wallet_NewBalanceFromUxOut(arg1,arg2,arg3);
-  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_SKY_wallet_Balance_Add(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_balance_add(int argc, VALUE *argv, VALUE self) {
   wallet__Balance *arg1 = (wallet__Balance *) 0 ;
   wallet__Balance *arg2 = (wallet__Balance *) 0 ;
   wallet__Balance *arg3 = (wallet__Balance *) 0 ;
@@ -11215,7 +11175,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Balance_Sub(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_balance_sub(int argc, VALUE *argv, VALUE self) {
   wallet__Balance *arg1 = (wallet__Balance *) 0 ;
   wallet__Balance *arg2 = (wallet__Balance *) 0 ;
   wallet__Balance *arg3 = (wallet__Balance *) 0 ;
@@ -11255,7 +11215,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Balance_Equals(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_balance_equals(int argc, VALUE *argv, VALUE self) {
   wallet__Balance *arg1 = (wallet__Balance *) 0 ;
   wallet__Balance *arg2 = (wallet__Balance *) 0 ;
   GoUint8 *arg3 = (GoUint8 *) 0 ;
@@ -11297,7 +11257,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Balance_IsZero(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_balance_is_zero(int argc, VALUE *argv, VALUE self) {
   wallet__Balance *arg1 = (wallet__Balance *) 0 ;
   GoUint8 *arg2 = (GoUint8 *) 0 ;
   void *argp1 = 0 ;
@@ -11331,7 +11291,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_CreateRawTxFromWallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_create_raw_tx_from_wallet(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -11407,7 +11367,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_CreateRawTxFromAddress(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_create_raw_tx_from_address(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -11494,7 +11454,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_CreateRawTx(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_create_raw_tx(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   Wallet__Handle arg2 ;
   GoSlice arg3 ;
@@ -11573,7 +11533,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_NewTransaction(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_new_transaction(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoSlice arg2 ;
   GoSlice arg3 ;
@@ -11633,7 +11593,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_iputil_LocalhostIP(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_iputil_localhost_ip(int argc, VALUE *argv, VALUE self) {
   GoString_ *arg1 = (GoString_ *) 0 ;
   GoString temp1 ;
   GoUint32 result;
@@ -11660,7 +11620,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_iputil_IsLocalhost(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_iputil_is_localhost(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoUint8 *arg2 = (GoUint8 *) 0 ;
   GoUint8 temp2 ;
@@ -11697,7 +11657,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_iputil_SplitAddr(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_iputil_split_addr(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoUint16 *arg3 = (GoUint16 *) 0 ;
@@ -11745,7 +11705,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxOut_Hash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_out_hash(int argc, VALUE *argv, VALUE self) {
   coin__UxOut *arg1 = (coin__UxOut *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   void *argp1 = 0 ;
@@ -11778,7 +11738,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxOut_SnapshotHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_out_snapshot_hash(int argc, VALUE *argv, VALUE self) {
   coin__UxOut *arg1 = (coin__UxOut *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   void *argp1 = 0 ;
@@ -11811,7 +11771,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxBody_Hash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_body_hash(int argc, VALUE *argv, VALUE self) {
   coin__UxBody *arg1 = (coin__UxBody *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   void *argp1 = 0 ;
@@ -11844,7 +11804,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxOut_CoinHours(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_out_coin_hours(int argc, VALUE *argv, VALUE self) {
   coin__UxOut *arg1 = (coin__UxOut *) 0 ;
   GoUint64 arg2 ;
   GoUint64 *arg3 = (GoUint64 *) 0 ;
@@ -11885,7 +11845,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxArray_Hashes(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_array_hashes(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp1 ;
@@ -11925,7 +11885,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxArray_HasDupes(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_array_has_dupes(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoUint8 *arg2 = (GoUint8 *) 0 ;
   GoSlice_ temp1 ;
@@ -11963,7 +11923,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxArray_Sort(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_array_sort(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoSlice_ temp1 ;
   GoUint32 result;
@@ -11991,7 +11951,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxArray_Len(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_array_len(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoInt *arg2 = (GoInt *) 0 ;
   GoSlice_ temp1 ;
@@ -12029,7 +11989,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxArray_Less(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_array_less(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoInt arg2 ;
   GoInt arg3 ;
@@ -12083,7 +12043,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxArray_Swap(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_array_swap(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoInt arg2 ;
   GoInt arg3 ;
@@ -12127,7 +12087,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxArray_Coins(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_array_coins(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoSlice_ temp1 ;
@@ -12164,7 +12124,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxArray_CoinHours(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_array_coin_hours(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoUint64 arg2 ;
   GoUint64 *arg3 = (GoUint64 *) 0 ;
@@ -12209,7 +12169,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxArray_Sub(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_array_sub(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -12261,7 +12221,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_UxArray_Add(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_ux_array_add(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -12313,7 +12273,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_NewAddressUxOuts(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_new_address_ux_outs(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   AddressUxOuts_Handle *arg2 = (AddressUxOuts_Handle *) 0 ;
   GoSlice_ temp1 ;
@@ -12349,7 +12309,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_AddressUxOuts_Keys(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_address_ux_outs_keys(int argc, VALUE *argv, VALUE self) {
   AddressUxOuts_Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -12381,7 +12341,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_AddressUxOuts_Flatten(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_address_ux_outs_flatten(int argc, VALUE *argv, VALUE self) {
   AddressUxOuts_Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -12413,7 +12373,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_AddressUxOuts_Sub(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_address_ux_outs_sub(int argc, VALUE *argv, VALUE self) {
   AddressUxOuts_Handle arg1 ;
   AddressUxOuts_Handle arg2 ;
   AddressUxOuts_Handle *arg3 = (AddressUxOuts_Handle *) 0 ;
@@ -12445,39 +12405,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_AddressUxOuts_Add(int argc, VALUE *argv, VALUE self) {
-  AddressUxOuts_Handle arg1 ;
-  AddressUxOuts_Handle arg2 ;
-  AddressUxOuts_Handle *arg3 = (AddressUxOuts_Handle *) 0 ;
-  Handle temp3 ;
-  GoUint32 result;
-  VALUE vresult = Qnil;
-  
-  {
-    arg3 = &temp3;
-  }
-  if ((argc < 2) || (argc > 2)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 2)",argc); SWIG_fail;
-  }
-  {
-    SWIG_AsVal_long(argv[0], (long*)&arg1);
-  }
-  {
-    SWIG_AsVal_long(argv[1], (long*)&arg2);
-  }
-  result = (GoUint32)SKY_coin_AddressUxOuts_Add(arg1,arg2,arg3);
-  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long(*arg3));
-  }
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_SKY_coin_AddressUxOuts_Get(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_address_ux_outs_get(int argc, VALUE *argv, VALUE self) {
   AddressUxOuts_Handle arg1 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -12517,7 +12445,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_AddressUxOuts_HasKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_address_ux_outs_has_key(int argc, VALUE *argv, VALUE self) {
   AddressUxOuts_Handle arg1 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   GoUint8 *arg3 = (GoUint8 *) 0 ;
@@ -12555,7 +12483,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_AddressUxOuts_GetOutputLength(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_address_ux_outs_get_output_length(int argc, VALUE *argv, VALUE self) {
   AddressUxOuts_Handle arg1 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   GoInt *arg3 = (GoInt *) 0 ;
@@ -12593,7 +12521,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_AddressUxOuts_Length(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_address_ux_outs_length(int argc, VALUE *argv, VALUE self) {
   AddressUxOuts_Handle arg1 ;
   GoInt *arg2 = (GoInt *) 0 ;
   GoInt temp2 ;
@@ -12623,7 +12551,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_coin_AddressUxOuts_Set(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_coin_address_ux_outs_set(int argc, VALUE *argv, VALUE self) {
   AddressUxOuts_Handle arg1 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -12663,7 +12591,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_webrpc_NewClient(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_webrpc_new_client(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   WebRpcClient__Handle *arg2 = (WebRpcClient__Handle *) 0 ;
   Handle temp2 ;
@@ -12698,7 +12626,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_webrpc_Client_CSRF(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_webrpc_client_csrf(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -12729,7 +12657,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_webrpc_Client_InjectTransaction(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_webrpc_client_inject_transaction(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   Transaction__Handle arg2 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
@@ -12764,7 +12692,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_webrpc_Client_GetStatus(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_webrpc_client_get_status(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   StatusResult_Handle *arg2 = (StatusResult_Handle *) 0 ;
   void *argp2 = 0 ;
@@ -12792,7 +12720,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_webrpc_Client_GetTransactionByID(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_webrpc_client_get_transaction_by_id(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoString arg2 ;
   TransactionResult_Handle *arg3 = (TransactionResult_Handle *) 0 ;
@@ -12831,7 +12759,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_webrpc_Client_GetAddressUxOuts(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_webrpc_client_get_address_ux_outs(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoSlice arg2 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -12875,7 +12803,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_webrpc_Client_GetBlocksInRange(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_webrpc_client_get_blocks_in_range(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoUint64 arg2 ;
   GoUint64 arg3 ;
@@ -12923,7 +12851,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_webrpc_Client_GetBlocksBySeq(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_webrpc_client_get_blocks_by_seq(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoSlice arg2 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -12967,7 +12895,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_webrpc_Client_GetLastBlocks(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_webrpc_client_get_last_blocks(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoUint64 arg2 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -13007,7 +12935,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_Ripemd160_Set(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_ripemd_160_set(int argc, VALUE *argv, VALUE self) {
   cipher__Ripemd160 *arg1 = (cipher__Ripemd160 *) 0 ;
   GoSlice arg2 ;
   GoUint32 result;
@@ -13044,7 +12972,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_HashRipemd160(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_hash_ripemd_160(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   cipher__Ripemd160 *arg2 = (cipher__Ripemd160 *) 0 ;
   GoUint32 result;
@@ -13081,7 +13009,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SHA256_Set(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sha_256_set(int argc, VALUE *argv, VALUE self) {
   cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
   GoSlice arg2 ;
   GoUint32 result;
@@ -13118,7 +13046,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SHA256_Hex(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sha_256_hex(int argc, VALUE *argv, VALUE self) {
   cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -13154,7 +13082,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SHA256_Xor(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sha_256_xor(int argc, VALUE *argv, VALUE self) {
   cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
@@ -13197,7 +13125,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SumSHA256(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sum_sha_256(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -13234,7 +13162,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SHA256FromHex(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sha_256from_hex(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -13270,7 +13198,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_DoubleSHA256(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_double_sha_256(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   GoUint32 result;
@@ -13307,7 +13235,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_AddSHA256(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_add_sha_256(int argc, VALUE *argv, VALUE self) {
   cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   cipher__SHA256 *arg3 = (cipher__SHA256 *) 0 ;
@@ -13350,7 +13278,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_Merkle(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_merkle(int argc, VALUE *argv, VALUE self) {
   GoSlice *arg1 = (GoSlice *) 0 ;
   cipher__SHA256 *arg2 = (cipher__SHA256 *) 0 ;
   void *argp1 = 0 ;
@@ -13383,7 +13311,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SHA256_Null(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sha_256_null(int argc, VALUE *argv, VALUE self) {
   cipher__SHA256 *arg1 = (cipher__SHA256 *) 0 ;
   GoUint8 *arg2 = (GoUint8 *) 0 ;
   GoUint8 temp2 ;
@@ -13418,7 +13346,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_handle_close(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_close(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   
   if ((argc < 1) || (argc > 1)) {
@@ -13435,7 +13363,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_handle_copy(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_handle_copy(int argc, VALUE *argv, VALUE self) {
   Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   Handle temp2 ;
@@ -13463,7 +13391,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_httphelper_Address_UnmarshalJSON(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_httphelper_address_unmarshal_json(int argc, VALUE *argv, VALUE self) {
   httphelper__Address *arg1 = (httphelper__Address *) 0 ;
   GoSlice arg2 ;
   void *argp1 = 0 ;
@@ -13499,7 +13427,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_httphelper_Address_MarshalJSON(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_httphelper_address_marshal_json(int argc, VALUE *argv, VALUE self) {
   httphelper__Address *arg1 = (httphelper__Address *) 0 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   void *argp1 = 0 ;
@@ -13535,7 +13463,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_httphelper_Coins_UnmarshalJSON(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_httphelper_coins_unmarshal_json(int argc, VALUE *argv, VALUE self) {
   httphelper__Coins *arg1 = (httphelper__Coins *) 0 ;
   GoSlice arg2 ;
   GoUint64 temp1 ;
@@ -13572,7 +13500,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_httphelper_Coins_MarshalJSON(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_httphelper_coins_marshal_json(int argc, VALUE *argv, VALUE self) {
   httphelper__Coins *arg1 = (httphelper__Coins *) 0 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoUint64 temp1 ;
@@ -13609,7 +13537,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_httphelper_Coins_Value(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_httphelper_coins_value(int argc, VALUE *argv, VALUE self) {
   httphelper__Coins *arg1 = (httphelper__Coins *) 0 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp1 ;
@@ -13643,115 +13571,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_httphelper_Hours_UnmarshalJSON(int argc, VALUE *argv, VALUE self) {
-  httphelper__Hours *arg1 = (httphelper__Hours *) 0 ;
-  GoSlice arg2 ;
-  GoUint64 temp1 ;
-  GoUint32 result;
-  VALUE vresult = Qnil;
-  
-  {
-    temp1 = 0;
-    arg1 = &temp1;
-  }
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( argv[0], &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_httphelper_Hours_UnmarshalJSON', expecting string");
-    }
-    (&arg2)->data = buffer;
-    (&arg2)->len = size - 1;
-    (&arg2)->cap = size;
-  }
-  result = (GoUint32)SKY_httphelper_Hours_UnmarshalJSON(arg1,arg2);
-  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long( *arg1 ));
-  }
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_SKY_httphelper_Hours_MarshalJSON(int argc, VALUE *argv, VALUE self) {
-  httphelper__Hours *arg1 = (httphelper__Hours *) 0 ;
-  coin__UxArray *arg2 = (coin__UxArray *) 0 ;
-  GoUint64 temp1 ;
-  GoSlice_ temp2 ;
-  GoUint32 result;
-  VALUE vresult = Qnil;
-  
-  {
-    temp1 = 0;
-    arg1 = &temp1;
-  }
-  {
-    temp2.data = NULL;
-    temp2.len = 0;
-    temp2.cap = 0;
-    arg2 = (coin__UxArray *)&temp2;
-  }
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  result = (GoUint32)SKY_httphelper_Hours_MarshalJSON(arg1,arg2);
-  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long( *arg1 ));
-  }
-  {
-    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_FromCharPtrAndSize( arg2->data, arg2->len  ));
-    free( (void*)arg2->data );
-  }
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_SKY_httphelper_Hours_Value(int argc, VALUE *argv, VALUE self) {
-  httphelper__Hours *arg1 = (httphelper__Hours *) 0 ;
-  GoUint64 *arg2 = (GoUint64 *) 0 ;
-  GoUint64 temp1 ;
-  GoUint64 temp2 ;
-  GoUint32 result;
-  VALUE vresult = Qnil;
-  
-  {
-    temp1 = 0;
-    arg1 = &temp1;
-  }
-  {
-    temp2 = 0;
-    arg2 = &temp2;
-  }
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  result = (GoUint32)SKY_httphelper_Hours_Value(arg1,arg2);
-  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long( *arg1 ));
-  }
-  {
-    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long( *arg2 ));
-  }
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_SKY_wallet_NewReadableEntry(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_new_readable_entry(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   wallet__Entry *arg2 = (wallet__Entry *) 0 ;
   ReadableEntry__Handle *arg3 = (ReadableEntry__Handle *) 0 ;
@@ -13794,7 +13614,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_LoadReadableWallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_load_readable_wallet(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   ReadableWallet__Handle *arg2 = (ReadableWallet__Handle *) 0 ;
   Handle temp2 ;
@@ -13829,7 +13649,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_ReadableWallet_Save(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_readable_wallet_save(int argc, VALUE *argv, VALUE self) {
   ReadableWallet__Handle arg1 ;
   GoString arg2 ;
   GoUint32 result;
@@ -13860,7 +13680,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_ReadableWallet_Load(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_readable_wallet_load(int argc, VALUE *argv, VALUE self) {
   ReadableWallet__Handle arg1 ;
   GoString arg2 ;
   GoUint32 result;
@@ -13891,7 +13711,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_ReadableWallet_Erase(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_readable_wallet_erase(int argc, VALUE *argv, VALUE self) {
   ReadableWallet__Handle arg1 ;
   GoUint32 result;
   VALUE vresult = Qnil;
@@ -13911,7 +13731,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_file_InitDataDir(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_file_init_data_dir(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -13949,7 +13769,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_file_UserHome(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_file_user_home(int argc, VALUE *argv, VALUE self) {
   GoString_ *arg1 = (GoString_ *) 0 ;
   GoString temp1 ;
   GoUint32 result;
@@ -13976,7 +13796,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_file_ResolveResourceDirectory(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_file_resolve_resource_directory(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -14014,7 +13834,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_file_DetermineResourcePath(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_file_determine_resource_path(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -14074,7 +13894,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_base58_Hex2Base58(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_base_58_hex_2base_58(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -14113,7 +13933,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_base58_Encode(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_base_58_encode(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -14152,7 +13972,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_base58_Decode(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_base_58_decode(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -14191,7 +14011,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_NewClient(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_new_client(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   Client__Handle *arg2 = (Client__Handle *) 0 ;
   Handle temp2 ;
@@ -14226,7 +14046,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_CSRF(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_csrf(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -14257,7 +14077,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Version(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_version(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   Handle temp2 ;
@@ -14285,7 +14105,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Outputs(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_outputs(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   Handle temp2 ;
@@ -14313,7 +14133,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_OutputsForAddresses(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_outputs_for_addresses(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoSlice arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -14353,7 +14173,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_OutputsForHashes(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_outputs_for_hashes(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoSlice arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -14393,7 +14213,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_CoinSupply(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_coin_supply(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   Handle temp2 ;
@@ -14421,7 +14241,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_BlockByHash(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_block_by_hash(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -14460,7 +14280,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_BlockBySeq(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_block_by_seq(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoUint64 arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -14496,7 +14316,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Blocks(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_blocks(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoSlice arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -14536,7 +14356,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_LastBlocks(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_last_blocks(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoUint64 arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -14572,7 +14392,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_BlockchainMetadata(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_blockchain_metadata(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   Handle temp2 ;
@@ -14600,7 +14420,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_BlockchainProgress(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_blockchain_progress(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   Handle temp2 ;
@@ -14628,7 +14448,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Balance(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_balance(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoSlice arg2 ;
   wallet__BalancePair *arg3 = (wallet__BalancePair *) 0 ;
@@ -14668,7 +14488,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_UxOut(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_ux_out(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -14707,7 +14527,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_AddressUxOuts(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_address_ux_outs(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -14746,7 +14566,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Wallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_wallet(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   WalletResponse__Handle *arg3 = (WalletResponse__Handle *) 0 ;
@@ -14785,7 +14605,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Wallets(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_wallets(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Wallets__Handle *arg2 = (Wallets__Handle *) 0 ;
   Handle temp2 ;
@@ -14813,7 +14633,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_CreateUnencryptedWallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_create_unencrypted_wallet(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -14871,7 +14691,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_CreateEncryptedWallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_create_encrypted_wallet(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -14940,65 +14760,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_NewWalletAddress(int argc, VALUE *argv, VALUE self) {
-  Client__Handle arg1 ;
-  GoString arg2 ;
-  GoInt arg3 ;
-  GoString arg4 ;
-  Strings__Handle *arg5 = (Strings__Handle *) 0 ;
-  long long val3 ;
-  int ecode3 = 0 ;
-  Handle temp5 ;
-  GoUint32 result;
-  VALUE vresult = Qnil;
-  
-  {
-    arg5 = &temp5;
-  }
-  if ((argc < 4) || (argc > 4)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 4)",argc); SWIG_fail;
-  }
-  {
-    SWIG_AsVal_long(argv[0], (long*)&arg1);
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( argv[1], &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_api_Client_NewWalletAddress', expecting string");
-    }
-    (&arg2)->p = buffer;
-    (&arg2)->n = size - 1;
-  }
-  ecode3 = SWIG_AsVal_long_SS_long(argv[2], &val3);
-  if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), Ruby_Format_TypeError( "", "GoInt","SKY_api_Client_NewWalletAddress", 3, argv[2] ));
-  } 
-  arg3 = (GoInt)(val3);
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( argv[3], &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_api_Client_NewWalletAddress', expecting string");
-    }
-    (&arg4)->p = buffer;
-    (&arg4)->n = size - 1;
-  }
-  result = (GoUint32)SKY_api_Client_NewWalletAddress(arg1,arg2,arg3,arg4,arg5);
-  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long(*arg5));
-  }
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_SKY_api_Client_WalletBalance(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_wallet_balance(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   wallet__BalancePair *arg3 = (wallet__BalancePair *) 0 ;
@@ -15037,7 +14799,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Spend(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_spend(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -15106,7 +14868,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_CreateTransaction(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_create_transaction(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   CreateTransactionResponse__Handle *arg3 = (CreateTransactionResponse__Handle *) 0 ;
@@ -15142,7 +14904,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_UpdateWallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_update_wallet(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -15184,7 +14946,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_WalletFolderName(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_wallet_folder_name(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   Handle temp2 ;
@@ -15212,7 +14974,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_NewSeed(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_new_seed(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoInt arg2 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
@@ -15251,7 +15013,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_WalletSeed(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_wallet_seed(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -15304,7 +15066,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_NetworkConnection(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_network_connection(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -15343,7 +15105,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_NetworkConnections(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_network_connections(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   api__NetworkConnectionsFilter *arg2 = (api__NetworkConnectionsFilter *) 0 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -15379,7 +15141,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_NetworkDefaultPeers(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_network_default_peers(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -15411,7 +15173,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_NetworkTrustedPeers(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_network_trusted_peers(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -15443,7 +15205,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_NetworkExchangedPeers(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_network_exchanged_peers(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -15475,7 +15237,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_PendingTransactions(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_pending_transactions(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   Handle temp2 ;
@@ -15503,7 +15265,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Transaction(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_transaction(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -15542,7 +15304,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Transactions(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_transactions(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoSlice arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -15582,7 +15344,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_ConfirmedTransactions(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_confirmed_transactions(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoSlice arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -15622,7 +15384,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_UnconfirmedTransactions(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_unconfirmed_transactions(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoSlice arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -15662,7 +15424,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_InjectTransaction(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_inject_transaction(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Transaction__Handle arg2 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
@@ -15697,7 +15459,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_ResendUnconfirmedTransactions(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_resend_unconfirmed_transactions(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   Handle temp2 ;
@@ -15725,7 +15487,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_RawTransaction(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_raw_transaction(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   GoString_ *arg3 = (GoString_ *) 0 ;
@@ -15767,7 +15529,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_AddressTransactions(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_address_transactions(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -15806,7 +15568,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Richlist(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_richlist(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   api__RichlistParams *arg2 = (api__RichlistParams *) 0 ;
   Handle *arg3 = (Handle *) 0 ;
@@ -15842,7 +15604,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_AddressCount(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_address_count(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
@@ -15871,7 +15633,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_UnloadWallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_unload_wallet(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   GoUint32 result;
@@ -15902,7 +15664,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_Health(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_health(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   Handle *arg2 = (Handle *) 0 ;
   Handle temp2 ;
@@ -15930,7 +15692,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_EncryptWallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_encrypt_wallet(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -15980,7 +15742,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_api_Client_DecryptWallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_api_client_decrypt_wallet(int argc, VALUE *argv, VALUE self) {
   Client__Handle arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -16030,7 +15792,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_NewError(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_new_error(int argc, VALUE *argv, VALUE self) {
   GoInterface arg1 ;
   void *argp1 ;
   int res1 = 0 ;
@@ -16060,7 +15822,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_NewWallet(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_new_wallet(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   Options__Handle arg2 ;
   Wallet__Handle *arg3 = (Wallet__Handle *) 0 ;
@@ -16099,7 +15861,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_Lock(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_lock(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoSlice arg2 ;
   GoString arg3 ;
@@ -16142,7 +15904,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_Unlock(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_unlock(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoSlice arg2 ;
   Wallet__Handle *arg3 = (Wallet__Handle *) 0 ;
@@ -16182,42 +15944,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Load(int argc, VALUE *argv, VALUE self) {
-  GoString arg1 ;
-  Wallet__Handle *arg2 = (Wallet__Handle *) 0 ;
-  Handle temp2 ;
-  GoUint32 result;
-  VALUE vresult = Qnil;
-  
-  {
-    arg2 = &temp2;
-  }
-  if ((argc < 1) || (argc > 1)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 1)",argc); SWIG_fail;
-  }
-  {
-    char* buffer = 0;
-    size_t size = 0;
-    int res = SWIG_AsCharPtrAndSize( argv[0], &buffer, &size, 0 );
-    if (!SWIG_IsOK(res)) {
-      SWIG_exception_fail(SWIG_TypeError, "in method 'SKY_wallet_Load', expecting string");
-    }
-    (&arg1)->p = buffer;
-    (&arg1)->n = size - 1;
-  }
-  result = (GoUint32)SKY_wallet_Load(arg1,arg2);
-  vresult = SWIG_From_unsigned_SS_int((unsigned int)(result));
-  {
-    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_From_long(*arg2));
-  }
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_Save(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_save(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoString arg2 ;
   GoUint32 result;
@@ -16248,7 +15975,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_Validate(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_validate(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoUint32 result;
   VALUE vresult = Qnil;
@@ -16268,7 +15995,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_Type(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_type(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -16299,7 +16026,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_Version(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_version(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -16330,7 +16057,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_Filename(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_filename(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -16361,7 +16088,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_Label(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_label(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -16392,7 +16119,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_IsEncrypted(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_is_encrypted(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoUint8 *arg2 = (GoUint8 *) 0 ;
   GoUint8 temp2 ;
@@ -16422,7 +16149,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_GenerateAddresses(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_generate_addresses(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   GoUint64 arg2 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -16462,7 +16189,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_GetAddresses(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_get_addresses(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   GoSlice_ temp2 ;
@@ -16494,7 +16221,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_GetEntry(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_get_entry(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   wallet__Entry *arg3 = (wallet__Entry *) 0 ;
@@ -16540,7 +16267,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_Wallet_AddEntry(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_wallet_add_entry(int argc, VALUE *argv, VALUE self) {
   Wallet__Handle arg1 ;
   wallet__Entry *arg2 = (wallet__Entry *) 0 ;
   void *argp2 = 0 ;
@@ -16568,7 +16295,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_DistributeSpendHours(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_distribute_spend_hours(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   GoUint64 arg2 ;
   GoUint8 arg3 ;
@@ -16638,7 +16365,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_DistributeCoinHoursProportional(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_distribute_coin_hours_proportional(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoUint64 arg2 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -16686,7 +16413,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_NewUxBalances(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_new_ux_balances(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -16734,7 +16461,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_NewUxBalance(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_new_ux_balance(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   coin__UxOut *arg2 = (coin__UxOut *) 0 ;
   wallet__UxBalance *arg3 = (wallet__UxBalance *) 0 ;
@@ -16774,7 +16501,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_ChooseSpendsMinimizeUxOuts(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_choose_spends_minimize_ux_outs(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoUint64 arg2 ;
   GoUint64 arg3 ;
@@ -16830,7 +16557,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_ChooseSpendsMaximizeUxOuts(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_choose_spends_maximize_ux_outs(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   GoUint64 arg2 ;
   GoUint64 arg3 ;
@@ -16886,7 +16613,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_CLI_Run(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_cli_run(int argc, VALUE *argv, VALUE self) {
   CLI__Handle arg1 ;
   GoUint32 result;
   VALUE vresult = Qnil;
@@ -16906,7 +16633,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_Config_GetCoin(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_config_get_coin(int argc, VALUE *argv, VALUE self) {
   Config__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -16937,7 +16664,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_Config_GetRPCAddress(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_config_get_rpcaddress(int argc, VALUE *argv, VALUE self) {
   Config__Handle arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -16968,7 +16695,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_Getenv(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_getenv(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -17006,7 +16733,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_Setenv(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_setenv(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoString arg2 ;
   GoUint32 result;
@@ -17044,7 +16771,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_fee_VerifyTransactionFee(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_fee_verify_transaction_fee(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoUint64 arg2 ;
   GoUint32 arg3 ;
@@ -17080,7 +16807,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_fee_VerifyTransactionFeeForHours(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_fee_verify_transaction_fee_for_hours(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   GoUint64 arg2 ;
   GoUint32 arg3 ;
@@ -17120,7 +16847,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_fee_RequiredFee(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_fee_required_fee(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   GoUint32 arg2 ;
   GoUint64 *arg3 = (GoUint64 *) 0 ;
@@ -17161,7 +16888,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_fee_RemainingHours(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_fee_remaining_hours(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   GoUint32 arg2 ;
   GoUint64 *arg3 = (GoUint64 *) 0 ;
@@ -17202,7 +16929,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_fee_TransactionFee(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_fee_transaction_fee(int argc, VALUE *argv, VALUE self) {
   Transaction__Handle arg1 ;
   GoUint64 arg2 ;
   coin__UxArray *arg3 = (coin__UxArray *) 0 ;
@@ -17251,7 +16978,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_params_GetDistributionAddresses(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_params_get_distribution_addresses(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoSlice_ temp1 ;
   VALUE vresult = Qnil;
@@ -17277,33 +17004,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_params_GetUnlockedDistributionAddresses(int argc, VALUE *argv, VALUE self) {
-  coin__UxArray *arg1 = (coin__UxArray *) 0 ;
-  GoSlice_ temp1 ;
-  VALUE vresult = Qnil;
-  
-  {
-    temp1.data = NULL;
-    temp1.len = 0;
-    temp1.cap = 0;
-    arg1 = (coin__UxArray *)&temp1;
-  }
-  if ((argc < 0) || (argc > 0)) {
-    rb_raise(rb_eArgError, "wrong # of arguments(%d for 0)",argc); SWIG_fail;
-  }
-  SKY_params_GetUnlockedDistributionAddresses(arg1);
-  {
-    vresult = SWIG_Ruby_AppendOutput(vresult, SWIG_FromCharPtrAndSize( arg1->data, arg1->len  ));
-    free( (void*)arg1->data );
-  }
-  return vresult;
-fail:
-  return Qnil;
-}
-
-
-SWIGINTERN VALUE
-_wrap_SKY_params_GetLockedDistributionAddresses(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_params_get_locked_distribution_addresses(int argc, VALUE *argv, VALUE self) {
   coin__UxArray *arg1 = (coin__UxArray *) 0 ;
   GoSlice_ temp1 ;
   VALUE vresult = Qnil;
@@ -17329,7 +17030,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_GetWalletOutputsFromFile(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_get_wallet_outputs_from_file(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   GoString arg2 ;
   ReadableUnspentOutputsSummary_Handle *arg3 = (ReadableUnspentOutputsSummary_Handle *) 0 ;
@@ -17368,7 +17069,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cli_GetWalletOutputs(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cli_get_wallet_outputs(int argc, VALUE *argv, VALUE self) {
   WebRpcClient__Handle arg1 ;
   Wallet__Handle *arg2 = (Wallet__Handle *) 0 ;
   ReadableUnspentOutputsSummary_Handle *arg3 = (ReadableUnspentOutputsSummary_Handle *) 0 ;
@@ -17404,7 +17105,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_DecodeBase58BitcoinAddress(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_decode_base_58bitcoin_address(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
   void *argp2 = 0 ;
@@ -17439,7 +17140,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_BitcoinAddressFromPubKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_bitcoin_address_from_pub_key(int argc, VALUE *argv, VALUE self) {
   cipher__PubKey *arg1 = (cipher__PubKey *) 0 ;
   cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
   void *argp2 = 0 ;
@@ -17469,7 +17170,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_BitcoinAddressFromSecKey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_bitcoin_address_from_sec_key(int argc, VALUE *argv, VALUE self) {
   cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
   cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
   void *argp2 = 0 ;
@@ -17502,7 +17203,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_BitcoinWalletImportFormatFromSeckey(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_bitcoin_wallet_import_format_from_seckey(int argc, VALUE *argv, VALUE self) {
   cipher__SecKey *arg1 = (cipher__SecKey *) 0 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   GoString temp2 ;
@@ -17536,7 +17237,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_BitcoinAddressFromBytes(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_bitcoin_address_from_bytes(int argc, VALUE *argv, VALUE self) {
   GoSlice arg1 ;
   cipher__BitcoinAddress *arg2 = (cipher__BitcoinAddress *) 0 ;
   void *argp2 = 0 ;
@@ -17572,7 +17273,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_SecKeyFromBitcoinWalletImportFormat(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_sec_key_from_bitcoin_wallet_import_format(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   cipher__SecKey *arg2 = (cipher__SecKey *) 0 ;
   GoUint32 result;
@@ -17608,7 +17309,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_BitcoinAddress_Null(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_bitcoin_address_null(int argc, VALUE *argv, VALUE self) {
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -17632,7 +17333,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_BitcoinAddress_Bytes(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_bitcoin_address_bytes(int argc, VALUE *argv, VALUE self) {
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
   coin__UxArray *arg2 = (coin__UxArray *) 0 ;
   void *argp1 = 0 ;
@@ -17666,7 +17367,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_BitcoinAddress_Verify(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_bitcoin_address_verify(int argc, VALUE *argv, VALUE self) {
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
   cipher__PubKey *arg2 = (cipher__PubKey *) 0 ;
   void *argp1 = 0 ;
@@ -17699,7 +17400,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_BitcoinAddress_String(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_bitcoin_address_string(int argc, VALUE *argv, VALUE self) {
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   void *argp1 = 0 ;
@@ -17732,7 +17433,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_cipher_BitcoinAddress_Checksum(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_cipher_bitcoin_address_checksum(int argc, VALUE *argv, VALUE self) {
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
   cipher__Checksum *arg2 = (cipher__Checksum *) 0 ;
   void *argp1 = 0 ;
@@ -17762,7 +17463,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_wallet_CreateOptionsHandle(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_wallet_create_options_handle(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoString arg2 ;
   GoString arg3 ;
@@ -17857,7 +17558,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_droplet_FromString(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_droplet_from_string(int argc, VALUE *argv, VALUE self) {
   GoString arg1 ;
   GoUint64 *arg2 = (GoUint64 *) 0 ;
   GoUint64 temp2 ;
@@ -17893,7 +17594,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_SKY_droplet_ToString(int argc, VALUE *argv, VALUE self) {
+_wrap_sky_droplet_to_string(int argc, VALUE *argv, VALUE self) {
   GoUint64 arg1 ;
   GoString_ *arg2 = (GoString_ *) 0 ;
   unsigned long long val1 ;
@@ -17927,10 +17628,10 @@ fail:
 }
 
 
-static swig_class SwigClassApi__RichlistParams;
+static swig_class SwigClassApiRichlistParams;
 
 SWIGINTERN VALUE
-_wrap_api__RichlistParams_N_set(int argc, VALUE *argv, VALUE self) {
+_wrap_ApiRichlistParams_N_set(int argc, VALUE *argv, VALUE self) {
   api__RichlistParams *arg1 = (api__RichlistParams *) 0 ;
   GoInt_ arg2 ;
   void *argp1 = 0 ;
@@ -17959,7 +17660,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_api__RichlistParams_N_get(int argc, VALUE *argv, VALUE self) {
+_wrap_ApiRichlistParams_N_get(int argc, VALUE *argv, VALUE self) {
   api__RichlistParams *arg1 = (api__RichlistParams *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -17983,7 +17684,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_api__RichlistParams_IncludeDistribution_set(int argc, VALUE *argv, VALUE self) {
+_wrap_ApiRichlistParams_IncludeDistribution_set(int argc, VALUE *argv, VALUE self) {
   api__RichlistParams *arg1 = (api__RichlistParams *) 0 ;
   BOOL arg2 ;
   void *argp1 = 0 ;
@@ -18012,7 +17713,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_api__RichlistParams_IncludeDistribution_get(int argc, VALUE *argv, VALUE self) {
+_wrap_ApiRichlistParams_IncludeDistribution_get(int argc, VALUE *argv, VALUE self) {
   api__RichlistParams *arg1 = (api__RichlistParams *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18037,9 +17738,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_api__RichlistParams_allocate(VALUE self)
+_wrap_ApiRichlistParams_allocate(VALUE self)
 #else
-_wrap_api__RichlistParams_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_ApiRichlistParams_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_api__RichlistParams);
@@ -18051,7 +17752,7 @@ _wrap_api__RichlistParams_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_api__RichlistParams(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ApiRichlistParams(int argc, VALUE *argv, VALUE self) {
   api__RichlistParams *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -18071,10 +17772,10 @@ free_api__RichlistParams(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassApi__NetworkConnectionsFilter;
+static swig_class SwigClassApiNetworkConnectionsFilter;
 
 SWIGINTERN VALUE
-_wrap_api__NetworkConnectionsFilter_States_set(int argc, VALUE *argv, VALUE self) {
+_wrap_ApiNetworkConnectionsFilter_States_set(int argc, VALUE *argv, VALUE self) {
   api__NetworkConnectionsFilter *arg1 = (api__NetworkConnectionsFilter *) 0 ;
   GoString_ arg2 ;
   void *argp1 = 0 ;
@@ -18106,7 +17807,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_api__NetworkConnectionsFilter_States_get(int argc, VALUE *argv, VALUE self) {
+_wrap_ApiNetworkConnectionsFilter_States_get(int argc, VALUE *argv, VALUE self) {
   api__NetworkConnectionsFilter *arg1 = (api__NetworkConnectionsFilter *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18130,7 +17831,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_api__NetworkConnectionsFilter_Direction_set(int argc, VALUE *argv, VALUE self) {
+_wrap_ApiNetworkConnectionsFilter_Direction_set(int argc, VALUE *argv, VALUE self) {
   api__NetworkConnectionsFilter *arg1 = (api__NetworkConnectionsFilter *) 0 ;
   GoString_ arg2 ;
   void *argp1 = 0 ;
@@ -18162,7 +17863,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_api__NetworkConnectionsFilter_Direction_get(int argc, VALUE *argv, VALUE self) {
+_wrap_ApiNetworkConnectionsFilter_Direction_get(int argc, VALUE *argv, VALUE self) {
   api__NetworkConnectionsFilter *arg1 = (api__NetworkConnectionsFilter *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18187,9 +17888,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_api__NetworkConnectionsFilter_allocate(VALUE self)
+_wrap_ApiNetworkConnectionsFilter_allocate(VALUE self)
 #else
-_wrap_api__NetworkConnectionsFilter_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_ApiNetworkConnectionsFilter_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_api__NetworkConnectionsFilter);
@@ -18201,7 +17902,7 @@ _wrap_api__NetworkConnectionsFilter_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_api__NetworkConnectionsFilter(int argc, VALUE *argv, VALUE self) {
+_wrap_new_ApiNetworkConnectionsFilter(int argc, VALUE *argv, VALUE self) {
   api__NetworkConnectionsFilter *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -18221,10 +17922,10 @@ free_api__NetworkConnectionsFilter(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher__Address;
+static swig_class SwigClassCipherAddress;
 
 SWIGINTERN VALUE
-_wrap_cipher__Address_Version_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherAddress_Version_set(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   GoUint8_ arg2 ;
   void *argp1 = 0 ;
@@ -18253,7 +17954,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher__Address_Version_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherAddress_Version_get(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18277,7 +17978,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher__Address_Key_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherAddress_Key_set(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -18313,7 +18014,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher__Address_Key_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherAddress_Key_get(int argc, VALUE *argv, VALUE self) {
   cipher__Address *arg1 = (cipher__Address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18338,9 +18039,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher__Address_allocate(VALUE self)
+_wrap_CipherAddress_allocate(VALUE self)
 #else
-_wrap_cipher__Address_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherAddress_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher__Address);
@@ -18352,7 +18053,7 @@ _wrap_cipher__Address_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher__Address(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherAddress(int argc, VALUE *argv, VALUE self) {
   cipher__Address *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -18372,10 +18073,10 @@ free_cipher__Address(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCipher__BitcoinAddress;
+static swig_class SwigClassCipherBitcoinAddress;
 
 SWIGINTERN VALUE
-_wrap_cipher__BitcoinAddress_Version_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherBitcoinAddress_Version_set(int argc, VALUE *argv, VALUE self) {
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
   GoUint8_ arg2 ;
   void *argp1 = 0 ;
@@ -18404,7 +18105,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher__BitcoinAddress_Version_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherBitcoinAddress_Version_get(int argc, VALUE *argv, VALUE self) {
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18428,7 +18129,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher__BitcoinAddress_Key_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherBitcoinAddress_Key_set(int argc, VALUE *argv, VALUE self) {
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -18464,7 +18165,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cipher__BitcoinAddress_Key_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CipherBitcoinAddress_Key_get(int argc, VALUE *argv, VALUE self) {
   cipher__BitcoinAddress *arg1 = (cipher__BitcoinAddress *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18489,9 +18190,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cipher__BitcoinAddress_allocate(VALUE self)
+_wrap_CipherBitcoinAddress_allocate(VALUE self)
 #else
-_wrap_cipher__BitcoinAddress_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CipherBitcoinAddress_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cipher__BitcoinAddress);
@@ -18503,7 +18204,7 @@ _wrap_cipher__BitcoinAddress_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cipher__BitcoinAddress(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CipherBitcoinAddress(int argc, VALUE *argv, VALUE self) {
   cipher__BitcoinAddress *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -18523,10 +18224,10 @@ free_cipher__BitcoinAddress(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassEncrypt__ScryptChacha20poly1305;
+static swig_class SwigClassEncryptScryptChacha20poly1305;
 
 SWIGINTERN VALUE
-_wrap_encrypt__ScryptChacha20poly1305_N_set(int argc, VALUE *argv, VALUE self) {
+_wrap_EncryptScryptChacha20poly1305_N_set(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
   GoInt_ arg2 ;
   void *argp1 = 0 ;
@@ -18555,7 +18256,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_encrypt__ScryptChacha20poly1305_N_get(int argc, VALUE *argv, VALUE self) {
+_wrap_EncryptScryptChacha20poly1305_N_get(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18579,7 +18280,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_encrypt__ScryptChacha20poly1305_R_set(int argc, VALUE *argv, VALUE self) {
+_wrap_EncryptScryptChacha20poly1305_R_set(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
   GoInt_ arg2 ;
   void *argp1 = 0 ;
@@ -18608,7 +18309,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_encrypt__ScryptChacha20poly1305_R_get(int argc, VALUE *argv, VALUE self) {
+_wrap_EncryptScryptChacha20poly1305_R_get(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18632,7 +18333,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_encrypt__ScryptChacha20poly1305_P_set(int argc, VALUE *argv, VALUE self) {
+_wrap_EncryptScryptChacha20poly1305_P_set(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
   GoInt_ arg2 ;
   void *argp1 = 0 ;
@@ -18661,7 +18362,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_encrypt__ScryptChacha20poly1305_P_get(int argc, VALUE *argv, VALUE self) {
+_wrap_EncryptScryptChacha20poly1305_P_get(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18685,7 +18386,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_encrypt__ScryptChacha20poly1305_KeyLen_set(int argc, VALUE *argv, VALUE self) {
+_wrap_EncryptScryptChacha20poly1305_KeyLen_set(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
   GoInt_ arg2 ;
   void *argp1 = 0 ;
@@ -18714,7 +18415,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_encrypt__ScryptChacha20poly1305_KeyLen_get(int argc, VALUE *argv, VALUE self) {
+_wrap_EncryptScryptChacha20poly1305_KeyLen_get(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *arg1 = (encrypt__ScryptChacha20poly1305 *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18739,9 +18440,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_encrypt__ScryptChacha20poly1305_allocate(VALUE self)
+_wrap_EncryptScryptChacha20poly1305_allocate(VALUE self)
 #else
-_wrap_encrypt__ScryptChacha20poly1305_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_EncryptScryptChacha20poly1305_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_encrypt__ScryptChacha20poly1305);
@@ -18753,7 +18454,7 @@ _wrap_encrypt__ScryptChacha20poly1305_allocate(int argc, VALUE *argv, VALUE self
 
 
 SWIGINTERN VALUE
-_wrap_new_encrypt__ScryptChacha20poly1305(int argc, VALUE *argv, VALUE self) {
+_wrap_new_EncryptScryptChacha20poly1305(int argc, VALUE *argv, VALUE self) {
   encrypt__ScryptChacha20poly1305 *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -18773,10 +18474,10 @@ free_encrypt__ScryptChacha20poly1305(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassSecp256k1go__Field;
+static swig_class SwigClassSecp256k1goField;
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__Field_n_set(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goField_n_set(int argc, VALUE *argv, VALUE self) {
   secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
   GoUint32_ *arg2 ;
   void *argp1 = 0 ;
@@ -18812,7 +18513,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__Field_n_get(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goField_n_get(int argc, VALUE *argv, VALUE self) {
   secp256k1go__Field *arg1 = (secp256k1go__Field *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18837,9 +18538,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_secp256k1go__Field_allocate(VALUE self)
+_wrap_Secp256k1goField_allocate(VALUE self)
 #else
-_wrap_secp256k1go__Field_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_Secp256k1goField_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_secp256k1go__Field);
@@ -18851,7 +18552,7 @@ _wrap_secp256k1go__Field_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_secp256k1go__Field(int argc, VALUE *argv, VALUE self) {
+_wrap_new_Secp256k1goField(int argc, VALUE *argv, VALUE self) {
   secp256k1go__Field *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -18871,10 +18572,10 @@ free_secp256k1go__Field(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassSecp256k1go__XY;
+static swig_class SwigClassSecp256k1goXY;
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XY_X_set(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXY_X_set(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
   secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
   void *argp1 = 0 ;
@@ -18903,7 +18604,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XY_X_get(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXY_X_get(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18927,7 +18628,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XY_Y_set(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXY_Y_set(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
   secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
   void *argp1 = 0 ;
@@ -18956,7 +18657,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XY_Y_get(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXY_Y_get(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -18980,7 +18681,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XY_Infinity_set(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXY_Infinity_set(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
   BOOL arg2 ;
   void *argp1 = 0 ;
@@ -19009,7 +18710,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XY_Infinity_get(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXY_Infinity_get(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XY *arg1 = (secp256k1go__XY *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19034,9 +18735,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_secp256k1go__XY_allocate(VALUE self)
+_wrap_Secp256k1goXY_allocate(VALUE self)
 #else
-_wrap_secp256k1go__XY_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_Secp256k1goXY_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_secp256k1go__XY);
@@ -19048,7 +18749,7 @@ _wrap_secp256k1go__XY_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_secp256k1go__XY(int argc, VALUE *argv, VALUE self) {
+_wrap_new_Secp256k1goXY(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XY *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -19068,10 +18769,10 @@ free_secp256k1go__XY(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassSecp256k1go__XYZ;
+static swig_class SwigClassSecp256k1goXYZ;
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XYZ_X_set(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXYZ_X_set(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
   secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
   void *argp1 = 0 ;
@@ -19100,7 +18801,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XYZ_X_get(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXYZ_X_get(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19124,7 +18825,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XYZ_Y_set(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXYZ_Y_set(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
   secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
   void *argp1 = 0 ;
@@ -19153,7 +18854,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XYZ_Y_get(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXYZ_Y_get(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19177,7 +18878,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XYZ_Z_set(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXYZ_Z_set(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
   secp256k1go__Field *arg2 = (secp256k1go__Field *) 0 ;
   void *argp1 = 0 ;
@@ -19206,7 +18907,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XYZ_Z_get(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXYZ_Z_get(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19230,7 +18931,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XYZ_Infinity_set(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXYZ_Infinity_set(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
   BOOL arg2 ;
   void *argp1 = 0 ;
@@ -19259,7 +18960,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_secp256k1go__XYZ_Infinity_get(int argc, VALUE *argv, VALUE self) {
+_wrap_Secp256k1goXYZ_Infinity_get(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XYZ *arg1 = (secp256k1go__XYZ *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19284,9 +18985,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_secp256k1go__XYZ_allocate(VALUE self)
+_wrap_Secp256k1goXYZ_allocate(VALUE self)
 #else
-_wrap_secp256k1go__XYZ_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_Secp256k1goXYZ_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_secp256k1go__XYZ);
@@ -19298,7 +18999,7 @@ _wrap_secp256k1go__XYZ_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_secp256k1go__XYZ(int argc, VALUE *argv, VALUE self) {
+_wrap_new_Secp256k1goXYZ(int argc, VALUE *argv, VALUE self) {
   secp256k1go__XYZ *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -19318,10 +19019,10 @@ free_secp256k1go__XYZ(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCli__SendAmount;
+static swig_class SwigClassCliSendAmount;
 
 SWIGINTERN VALUE
-_wrap_cli__SendAmount_Addr_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CliSendAmount_Addr_set(int argc, VALUE *argv, VALUE self) {
   cli__SendAmount *arg1 = (cli__SendAmount *) 0 ;
   GoString_ arg2 ;
   void *argp1 = 0 ;
@@ -19353,7 +19054,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cli__SendAmount_Addr_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CliSendAmount_Addr_get(int argc, VALUE *argv, VALUE self) {
   cli__SendAmount *arg1 = (cli__SendAmount *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19377,7 +19078,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cli__SendAmount_Coins_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CliSendAmount_Coins_set(int argc, VALUE *argv, VALUE self) {
   cli__SendAmount *arg1 = (cli__SendAmount *) 0 ;
   GoInt64_ arg2 ;
   void *argp1 = 0 ;
@@ -19406,7 +19107,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_cli__SendAmount_Coins_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CliSendAmount_Coins_get(int argc, VALUE *argv, VALUE self) {
   cli__SendAmount *arg1 = (cli__SendAmount *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19431,9 +19132,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_cli__SendAmount_allocate(VALUE self)
+_wrap_CliSendAmount_allocate(VALUE self)
 #else
-_wrap_cli__SendAmount_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CliSendAmount_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_cli__SendAmount);
@@ -19445,7 +19146,7 @@ _wrap_cli__SendAmount_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_cli__SendAmount(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CliSendAmount(int argc, VALUE *argv, VALUE self) {
   cli__SendAmount *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -19465,10 +19166,10 @@ free_cli__SendAmount(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCoin__Transaction;
+static swig_class SwigClassCoinTransaction;
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_Length_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_Length_set(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   GoInt32_ arg2 ;
   void *argp1 = 0 ;
@@ -19497,7 +19198,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_Length_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_Length_get(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19521,7 +19222,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_Type_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_Type_set(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   GoInt8_ arg2 ;
   void *argp1 = 0 ;
@@ -19550,7 +19251,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_Type_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_Type_get(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19574,7 +19275,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_InnerHash_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_InnerHash_set(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -19610,7 +19311,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_InnerHash_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_InnerHash_get(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19634,7 +19335,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_Sigs_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_Sigs_set(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   GoSlice_ arg2 ;
   void *argp1 = 0 ;
@@ -19669,7 +19370,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_Sigs_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_Sigs_get(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19693,7 +19394,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_In_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_In_set(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   GoSlice_ arg2 ;
   void *argp1 = 0 ;
@@ -19728,7 +19429,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_In_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_In_get(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19752,7 +19453,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_Out_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_Out_set(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   GoSlice_ arg2 ;
   void *argp1 = 0 ;
@@ -19787,7 +19488,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Transaction_Out_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransaction_Out_get(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *arg1 = (coin__Transaction *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19812,9 +19513,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_coin__Transaction_allocate(VALUE self)
+_wrap_CoinTransaction_allocate(VALUE self)
 #else
-_wrap_coin__Transaction_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CoinTransaction_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_coin__Transaction);
@@ -19826,7 +19527,7 @@ _wrap_coin__Transaction_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_coin__Transaction(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CoinTransaction(int argc, VALUE *argv, VALUE self) {
   coin__Transaction *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -19846,10 +19547,10 @@ free_coin__Transaction(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCoin__TransactionOutput;
+static swig_class SwigClassCoinTransactionOutput;
 
 SWIGINTERN VALUE
-_wrap_coin__TransactionOutput_Address_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransactionOutput_Address_set(int argc, VALUE *argv, VALUE self) {
   coin__TransactionOutput *arg1 = (coin__TransactionOutput *) 0 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   void *argp1 = 0 ;
@@ -19878,7 +19579,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__TransactionOutput_Address_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransactionOutput_Address_get(int argc, VALUE *argv, VALUE self) {
   coin__TransactionOutput *arg1 = (coin__TransactionOutput *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19902,7 +19603,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__TransactionOutput_Coins_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransactionOutput_Coins_set(int argc, VALUE *argv, VALUE self) {
   coin__TransactionOutput *arg1 = (coin__TransactionOutput *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -19931,7 +19632,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__TransactionOutput_Coins_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransactionOutput_Coins_get(int argc, VALUE *argv, VALUE self) {
   coin__TransactionOutput *arg1 = (coin__TransactionOutput *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -19955,7 +19656,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__TransactionOutput_Hours_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransactionOutput_Hours_set(int argc, VALUE *argv, VALUE self) {
   coin__TransactionOutput *arg1 = (coin__TransactionOutput *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -19984,7 +19685,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__TransactionOutput_Hours_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinTransactionOutput_Hours_get(int argc, VALUE *argv, VALUE self) {
   coin__TransactionOutput *arg1 = (coin__TransactionOutput *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20009,9 +19710,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_coin__TransactionOutput_allocate(VALUE self)
+_wrap_CoinTransactionOutput_allocate(VALUE self)
 #else
-_wrap_coin__TransactionOutput_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CoinTransactionOutput_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_coin__TransactionOutput);
@@ -20023,7 +19724,7 @@ _wrap_coin__TransactionOutput_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_coin__TransactionOutput(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CoinTransactionOutput(int argc, VALUE *argv, VALUE self) {
   coin__TransactionOutput *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -20043,10 +19744,10 @@ free_coin__TransactionOutput(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCoin__BlockHeader;
+static swig_class SwigClassCoinBlockHeader;
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_Version_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_Version_set(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   GoUint32_ arg2 ;
   void *argp1 = 0 ;
@@ -20075,7 +19776,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_Version_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_Version_get(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20099,7 +19800,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_Time_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_Time_set(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -20128,7 +19829,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_Time_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_Time_get(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20152,7 +19853,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_BkSeq_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_BkSeq_set(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -20181,7 +19882,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_BkSeq_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_BkSeq_get(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20205,7 +19906,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_Fee_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_Fee_set(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -20234,7 +19935,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_Fee_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_Fee_get(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20258,7 +19959,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_PrevHash_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_PrevHash_set(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -20294,7 +19995,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_PrevHash_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_PrevHash_get(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20318,7 +20019,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_BodyHash_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_BodyHash_set(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -20354,7 +20055,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_BodyHash_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_BodyHash_get(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20378,7 +20079,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_UxHash_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_UxHash_set(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -20414,7 +20115,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockHeader_UxHash_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockHeader_UxHash_get(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *arg1 = (coin__BlockHeader *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20439,9 +20140,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_coin__BlockHeader_allocate(VALUE self)
+_wrap_CoinBlockHeader_allocate(VALUE self)
 #else
-_wrap_coin__BlockHeader_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CoinBlockHeader_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_coin__BlockHeader);
@@ -20453,7 +20154,7 @@ _wrap_coin__BlockHeader_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_coin__BlockHeader(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CoinBlockHeader(int argc, VALUE *argv, VALUE self) {
   coin__BlockHeader *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -20473,10 +20174,10 @@ free_coin__BlockHeader(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCoin__BlockBody;
+static swig_class SwigClassCoinBlockBody;
 
 SWIGINTERN VALUE
-_wrap_coin__BlockBody_Transactions_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockBody_Transactions_set(int argc, VALUE *argv, VALUE self) {
   coin__BlockBody *arg1 = (coin__BlockBody *) 0 ;
   coin__Transactions arg2 ;
   void *argp1 = 0 ;
@@ -20511,7 +20212,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__BlockBody_Transactions_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlockBody_Transactions_get(int argc, VALUE *argv, VALUE self) {
   coin__BlockBody *arg1 = (coin__BlockBody *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20536,9 +20237,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_coin__BlockBody_allocate(VALUE self)
+_wrap_CoinBlockBody_allocate(VALUE self)
 #else
-_wrap_coin__BlockBody_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CoinBlockBody_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_coin__BlockBody);
@@ -20550,7 +20251,7 @@ _wrap_coin__BlockBody_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_coin__BlockBody(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CoinBlockBody(int argc, VALUE *argv, VALUE self) {
   coin__BlockBody *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -20570,10 +20271,10 @@ free_coin__BlockBody(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCoin__Block;
+static swig_class SwigClassCoinBlock;
 
 SWIGINTERN VALUE
-_wrap_coin__Block_Head_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlock_Head_set(int argc, VALUE *argv, VALUE self) {
   coin__Block *arg1 = (coin__Block *) 0 ;
   coin__BlockHeader *arg2 = (coin__BlockHeader *) 0 ;
   void *argp1 = 0 ;
@@ -20602,7 +20303,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Block_Head_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlock_Head_get(int argc, VALUE *argv, VALUE self) {
   coin__Block *arg1 = (coin__Block *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20626,7 +20327,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Block_Body_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlock_Body_set(int argc, VALUE *argv, VALUE self) {
   coin__Block *arg1 = (coin__Block *) 0 ;
   coin__BlockBody *arg2 = (coin__BlockBody *) 0 ;
   void *argp1 = 0 ;
@@ -20655,7 +20356,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__Block_Body_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinBlock_Body_get(int argc, VALUE *argv, VALUE self) {
   coin__Block *arg1 = (coin__Block *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20680,9 +20381,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_coin__Block_allocate(VALUE self)
+_wrap_CoinBlock_allocate(VALUE self)
 #else
-_wrap_coin__Block_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CoinBlock_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_coin__Block);
@@ -20694,7 +20395,7 @@ _wrap_coin__Block_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_coin__Block(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CoinBlock(int argc, VALUE *argv, VALUE self) {
   coin__Block *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -20714,10 +20415,10 @@ free_coin__Block(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCoin__SignedBlock;
+static swig_class SwigClassCoinSignedBlock;
 
 SWIGINTERN VALUE
-_wrap_coin__SignedBlock__unnamed_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinSignedBlock__unnamed_set(int argc, VALUE *argv, VALUE self) {
   coin__SignedBlock *arg1 = (coin__SignedBlock *) 0 ;
   coin__Block *arg2 = (coin__Block *) 0 ;
   void *argp1 = 0 ;
@@ -20746,7 +20447,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__SignedBlock__unnamed_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinSignedBlock__unnamed_get(int argc, VALUE *argv, VALUE self) {
   coin__SignedBlock *arg1 = (coin__SignedBlock *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20770,7 +20471,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__SignedBlock_Sig_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinSignedBlock_Sig_set(int argc, VALUE *argv, VALUE self) {
   coin__SignedBlock *arg1 = (coin__SignedBlock *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -20806,7 +20507,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__SignedBlock_Sig_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinSignedBlock_Sig_get(int argc, VALUE *argv, VALUE self) {
   coin__SignedBlock *arg1 = (coin__SignedBlock *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20831,9 +20532,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_coin__SignedBlock_allocate(VALUE self)
+_wrap_CoinSignedBlock_allocate(VALUE self)
 #else
-_wrap_coin__SignedBlock_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CoinSignedBlock_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_coin__SignedBlock);
@@ -20845,7 +20546,7 @@ _wrap_coin__SignedBlock_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_coin__SignedBlock(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CoinSignedBlock(int argc, VALUE *argv, VALUE self) {
   coin__SignedBlock *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -20865,10 +20566,10 @@ free_coin__SignedBlock(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCoin__UxHead;
+static swig_class SwigClassCoinUxHead;
 
 SWIGINTERN VALUE
-_wrap_coin__UxHead_Time_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxHead_Time_set(int argc, VALUE *argv, VALUE self) {
   coin__UxHead *arg1 = (coin__UxHead *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -20897,7 +20598,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxHead_Time_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxHead_Time_get(int argc, VALUE *argv, VALUE self) {
   coin__UxHead *arg1 = (coin__UxHead *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20921,7 +20622,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxHead_BkSeq_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxHead_BkSeq_set(int argc, VALUE *argv, VALUE self) {
   coin__UxHead *arg1 = (coin__UxHead *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -20950,7 +20651,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxHead_BkSeq_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxHead_BkSeq_get(int argc, VALUE *argv, VALUE self) {
   coin__UxHead *arg1 = (coin__UxHead *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -20975,9 +20676,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_coin__UxHead_allocate(VALUE self)
+_wrap_CoinUxHead_allocate(VALUE self)
 #else
-_wrap_coin__UxHead_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CoinUxHead_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_coin__UxHead);
@@ -20989,7 +20690,7 @@ _wrap_coin__UxHead_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_coin__UxHead(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CoinUxHead(int argc, VALUE *argv, VALUE self) {
   coin__UxHead *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -21009,10 +20710,10 @@ free_coin__UxHead(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCoin__UxBody;
+static swig_class SwigClassCoinUxBody;
 
 SWIGINTERN VALUE
-_wrap_coin__UxBody_SrcTransaction_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxBody_SrcTransaction_set(int argc, VALUE *argv, VALUE self) {
   coin__UxBody *arg1 = (coin__UxBody *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -21048,7 +20749,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxBody_SrcTransaction_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxBody_SrcTransaction_get(int argc, VALUE *argv, VALUE self) {
   coin__UxBody *arg1 = (coin__UxBody *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21072,7 +20773,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxBody_Address_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxBody_Address_set(int argc, VALUE *argv, VALUE self) {
   coin__UxBody *arg1 = (coin__UxBody *) 0 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   void *argp1 = 0 ;
@@ -21101,7 +20802,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxBody_Address_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxBody_Address_get(int argc, VALUE *argv, VALUE self) {
   coin__UxBody *arg1 = (coin__UxBody *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21125,7 +20826,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxBody_Coins_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxBody_Coins_set(int argc, VALUE *argv, VALUE self) {
   coin__UxBody *arg1 = (coin__UxBody *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -21154,7 +20855,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxBody_Coins_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxBody_Coins_get(int argc, VALUE *argv, VALUE self) {
   coin__UxBody *arg1 = (coin__UxBody *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21178,7 +20879,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxBody_Hours_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxBody_Hours_set(int argc, VALUE *argv, VALUE self) {
   coin__UxBody *arg1 = (coin__UxBody *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -21207,7 +20908,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxBody_Hours_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxBody_Hours_get(int argc, VALUE *argv, VALUE self) {
   coin__UxBody *arg1 = (coin__UxBody *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21232,9 +20933,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_coin__UxBody_allocate(VALUE self)
+_wrap_CoinUxBody_allocate(VALUE self)
 #else
-_wrap_coin__UxBody_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CoinUxBody_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_coin__UxBody);
@@ -21246,7 +20947,7 @@ _wrap_coin__UxBody_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_coin__UxBody(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CoinUxBody(int argc, VALUE *argv, VALUE self) {
   coin__UxBody *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -21266,10 +20967,10 @@ free_coin__UxBody(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassCoin__UxOut;
+static swig_class SwigClassCoinUxOut;
 
 SWIGINTERN VALUE
-_wrap_coin__UxOut_Head_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxOut_Head_set(int argc, VALUE *argv, VALUE self) {
   coin__UxOut *arg1 = (coin__UxOut *) 0 ;
   coin__UxHead *arg2 = (coin__UxHead *) 0 ;
   void *argp1 = 0 ;
@@ -21298,7 +20999,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxOut_Head_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxOut_Head_get(int argc, VALUE *argv, VALUE self) {
   coin__UxOut *arg1 = (coin__UxOut *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21322,7 +21023,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxOut_Body_set(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxOut_Body_set(int argc, VALUE *argv, VALUE self) {
   coin__UxOut *arg1 = (coin__UxOut *) 0 ;
   coin__UxBody *arg2 = (coin__UxBody *) 0 ;
   void *argp1 = 0 ;
@@ -21351,7 +21052,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_coin__UxOut_Body_get(int argc, VALUE *argv, VALUE self) {
+_wrap_CoinUxOut_Body_get(int argc, VALUE *argv, VALUE self) {
   coin__UxOut *arg1 = (coin__UxOut *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21376,9 +21077,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_coin__UxOut_allocate(VALUE self)
+_wrap_CoinUxOut_allocate(VALUE self)
 #else
-_wrap_coin__UxOut_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_CoinUxOut_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_coin__UxOut);
@@ -21390,7 +21091,7 @@ _wrap_coin__UxOut_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_coin__UxOut(int argc, VALUE *argv, VALUE self) {
+_wrap_new_CoinUxOut(int argc, VALUE *argv, VALUE self) {
   coin__UxOut *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -21410,10 +21111,10 @@ free_coin__UxOut(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassHttphelper__Address;
+static swig_class SwigClassHttphelperAddress;
 
 SWIGINTERN VALUE
-_wrap_httphelper__Address__unnamed_set(int argc, VALUE *argv, VALUE self) {
+_wrap_HttphelperAddress__unnamed_set(int argc, VALUE *argv, VALUE self) {
   httphelper__Address *arg1 = (httphelper__Address *) 0 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   void *argp1 = 0 ;
@@ -21442,7 +21143,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_httphelper__Address__unnamed_get(int argc, VALUE *argv, VALUE self) {
+_wrap_HttphelperAddress__unnamed_get(int argc, VALUE *argv, VALUE self) {
   httphelper__Address *arg1 = (httphelper__Address *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21467,9 +21168,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_httphelper__Address_allocate(VALUE self)
+_wrap_HttphelperAddress_allocate(VALUE self)
 #else
-_wrap_httphelper__Address_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_HttphelperAddress_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_httphelper__Address);
@@ -21481,7 +21182,7 @@ _wrap_httphelper__Address_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_httphelper__Address(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HttphelperAddress(int argc, VALUE *argv, VALUE self) {
   httphelper__Address *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -21501,10 +21202,10 @@ free_httphelper__Address(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassHttphelper__SHA256;
+static swig_class SwigClassHttphelperSHA256;
 
 SWIGINTERN VALUE
-_wrap_httphelper__SHA256__unnamed_set(int argc, VALUE *argv, VALUE self) {
+_wrap_HttphelperSHA256__unnamed_set(int argc, VALUE *argv, VALUE self) {
   httphelper__SHA256 *arg1 = (httphelper__SHA256 *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -21540,7 +21241,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_httphelper__SHA256__unnamed_get(int argc, VALUE *argv, VALUE self) {
+_wrap_HttphelperSHA256__unnamed_get(int argc, VALUE *argv, VALUE self) {
   httphelper__SHA256 *arg1 = (httphelper__SHA256 *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21565,9 +21266,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_httphelper__SHA256_allocate(VALUE self)
+_wrap_HttphelperSHA256_allocate(VALUE self)
 #else
-_wrap_httphelper__SHA256_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_HttphelperSHA256_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_httphelper__SHA256);
@@ -21579,7 +21280,7 @@ _wrap_httphelper__SHA256_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_httphelper__SHA256(int argc, VALUE *argv, VALUE self) {
+_wrap_new_HttphelperSHA256(int argc, VALUE *argv, VALUE self) {
   httphelper__SHA256 *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -21599,10 +21300,10 @@ free_httphelper__SHA256(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassWallet__Balance;
+static swig_class SwigClassWalletBalance;
 
 SWIGINTERN VALUE
-_wrap_wallet__Balance_Coins_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletBalance_Coins_set(int argc, VALUE *argv, VALUE self) {
   wallet__Balance *arg1 = (wallet__Balance *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -21631,7 +21332,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Balance_Coins_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletBalance_Coins_get(int argc, VALUE *argv, VALUE self) {
   wallet__Balance *arg1 = (wallet__Balance *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21655,7 +21356,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Balance_Hours_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletBalance_Hours_set(int argc, VALUE *argv, VALUE self) {
   wallet__Balance *arg1 = (wallet__Balance *) 0 ;
   GoUint64_ arg2 ;
   void *argp1 = 0 ;
@@ -21684,7 +21385,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Balance_Hours_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletBalance_Hours_get(int argc, VALUE *argv, VALUE self) {
   wallet__Balance *arg1 = (wallet__Balance *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21709,9 +21410,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_wallet__Balance_allocate(VALUE self)
+_wrap_WalletBalance_allocate(VALUE self)
 #else
-_wrap_wallet__Balance_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_WalletBalance_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_wallet__Balance);
@@ -21723,7 +21424,7 @@ _wrap_wallet__Balance_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_wallet__Balance(int argc, VALUE *argv, VALUE self) {
+_wrap_new_WalletBalance(int argc, VALUE *argv, VALUE self) {
   wallet__Balance *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -21743,10 +21444,10 @@ free_wallet__Balance(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassWallet__BalancePair;
+static swig_class SwigClassWalletBalancePair;
 
 SWIGINTERN VALUE
-_wrap_wallet__BalancePair_Confirmed_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletBalancePair_Confirmed_set(int argc, VALUE *argv, VALUE self) {
   wallet__BalancePair *arg1 = (wallet__BalancePair *) 0 ;
   wallet__Balance *arg2 = (wallet__Balance *) 0 ;
   void *argp1 = 0 ;
@@ -21775,7 +21476,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__BalancePair_Confirmed_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletBalancePair_Confirmed_get(int argc, VALUE *argv, VALUE self) {
   wallet__BalancePair *arg1 = (wallet__BalancePair *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21799,7 +21500,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__BalancePair_Predicted_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletBalancePair_Predicted_set(int argc, VALUE *argv, VALUE self) {
   wallet__BalancePair *arg1 = (wallet__BalancePair *) 0 ;
   wallet__Balance *arg2 = (wallet__Balance *) 0 ;
   void *argp1 = 0 ;
@@ -21828,7 +21529,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__BalancePair_Predicted_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletBalancePair_Predicted_get(int argc, VALUE *argv, VALUE self) {
   wallet__BalancePair *arg1 = (wallet__BalancePair *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21853,9 +21554,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_wallet__BalancePair_allocate(VALUE self)
+_wrap_WalletBalancePair_allocate(VALUE self)
 #else
-_wrap_wallet__BalancePair_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_WalletBalancePair_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_wallet__BalancePair);
@@ -21867,7 +21568,7 @@ _wrap_wallet__BalancePair_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_wallet__BalancePair(int argc, VALUE *argv, VALUE self) {
+_wrap_new_WalletBalancePair(int argc, VALUE *argv, VALUE self) {
   wallet__BalancePair *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -21887,10 +21588,10 @@ free_wallet__BalancePair(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassWallet__Entry;
+static swig_class SwigClassWalletEntry;
 
 SWIGINTERN VALUE
-_wrap_wallet__Entry_Address_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletEntry_Address_set(int argc, VALUE *argv, VALUE self) {
   wallet__Entry *arg1 = (wallet__Entry *) 0 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   void *argp1 = 0 ;
@@ -21919,7 +21620,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Entry_Address_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletEntry_Address_get(int argc, VALUE *argv, VALUE self) {
   wallet__Entry *arg1 = (wallet__Entry *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -21943,7 +21644,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Entry_Public_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletEntry_Public_set(int argc, VALUE *argv, VALUE self) {
   wallet__Entry *arg1 = (wallet__Entry *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -21979,7 +21680,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Entry_Public_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletEntry_Public_get(int argc, VALUE *argv, VALUE self) {
   wallet__Entry *arg1 = (wallet__Entry *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22003,7 +21704,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Entry_Secret_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletEntry_Secret_set(int argc, VALUE *argv, VALUE self) {
   wallet__Entry *arg1 = (wallet__Entry *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -22039,7 +21740,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Entry_Secret_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletEntry_Secret_get(int argc, VALUE *argv, VALUE self) {
   wallet__Entry *arg1 = (wallet__Entry *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22064,9 +21765,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_wallet__Entry_allocate(VALUE self)
+_wrap_WalletEntry_allocate(VALUE self)
 #else
-_wrap_wallet__Entry_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_WalletEntry_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_wallet__Entry);
@@ -22078,7 +21779,7 @@ _wrap_wallet__Entry_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_wallet__Entry(int argc, VALUE *argv, VALUE self) {
+_wrap_new_WalletEntry(int argc, VALUE *argv, VALUE self) {
   wallet__Entry *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -22098,10 +21799,10 @@ free_wallet__Entry(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassWallet__Note;
+static swig_class SwigClassWalletNote;
 
 SWIGINTERN VALUE
-_wrap_wallet__Note_TxID_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletNote_TxID_set(int argc, VALUE *argv, VALUE self) {
   wallet__Note *arg1 = (wallet__Note *) 0 ;
   GoString_ arg2 ;
   void *argp1 = 0 ;
@@ -22133,7 +21834,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Note_TxID_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletNote_TxID_get(int argc, VALUE *argv, VALUE self) {
   wallet__Note *arg1 = (wallet__Note *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22157,7 +21858,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Note_Value_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletNote_Value_set(int argc, VALUE *argv, VALUE self) {
   wallet__Note *arg1 = (wallet__Note *) 0 ;
   GoString_ arg2 ;
   void *argp1 = 0 ;
@@ -22189,7 +21890,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__Note_Value_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletNote_Value_get(int argc, VALUE *argv, VALUE self) {
   wallet__Note *arg1 = (wallet__Note *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22214,9 +21915,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_wallet__Note_allocate(VALUE self)
+_wrap_WalletNote_allocate(VALUE self)
 #else
-_wrap_wallet__Note_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_WalletNote_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_wallet__Note);
@@ -22228,7 +21929,7 @@ _wrap_wallet__Note_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_wallet__Note(int argc, VALUE *argv, VALUE self) {
+_wrap_new_WalletNote(int argc, VALUE *argv, VALUE self) {
   wallet__Note *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -22248,10 +21949,10 @@ free_wallet__Note(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassWallet__ReadableNote;
+static swig_class SwigClassWalletReadableNote;
 
 SWIGINTERN VALUE
-_wrap_wallet__ReadableNote_TransactionID_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletReadableNote_TransactionID_set(int argc, VALUE *argv, VALUE self) {
   wallet__ReadableNote *arg1 = (wallet__ReadableNote *) 0 ;
   GoString_ arg2 ;
   void *argp1 = 0 ;
@@ -22283,7 +21984,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__ReadableNote_TransactionID_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletReadableNote_TransactionID_get(int argc, VALUE *argv, VALUE self) {
   wallet__ReadableNote *arg1 = (wallet__ReadableNote *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22307,7 +22008,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__ReadableNote_ActualNote_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletReadableNote_ActualNote_set(int argc, VALUE *argv, VALUE self) {
   wallet__ReadableNote *arg1 = (wallet__ReadableNote *) 0 ;
   GoString_ arg2 ;
   void *argp1 = 0 ;
@@ -22339,7 +22040,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__ReadableNote_ActualNote_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletReadableNote_ActualNote_get(int argc, VALUE *argv, VALUE self) {
   wallet__ReadableNote *arg1 = (wallet__ReadableNote *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22364,9 +22065,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_wallet__ReadableNote_allocate(VALUE self)
+_wrap_WalletReadableNote_allocate(VALUE self)
 #else
-_wrap_wallet__ReadableNote_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_WalletReadableNote_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_wallet__ReadableNote);
@@ -22378,7 +22079,7 @@ _wrap_wallet__ReadableNote_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_wallet__ReadableNote(int argc, VALUE *argv, VALUE self) {
+_wrap_new_WalletReadableNote(int argc, VALUE *argv, VALUE self) {
   wallet__ReadableNote *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -22398,10 +22099,10 @@ free_wallet__ReadableNote(void *self) {
     free((char *) arg1);
 }
 
-static swig_class SwigClassWallet__UxBalance;
+static swig_class SwigClassWalletUxBalance;
 
 SWIGINTERN VALUE
-_wrap_wallet__UxBalance_Hash_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletUxBalance_Hash_set(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   GoUint8_ *arg2 ;
   void *argp1 = 0 ;
@@ -22437,7 +22138,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__UxBalance_Hash_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletUxBalance_Hash_get(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22461,7 +22162,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__UxBalance_BkSeq_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletUxBalance_BkSeq_set(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   GoInt64_ arg2 ;
   void *argp1 = 0 ;
@@ -22490,7 +22191,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__UxBalance_BkSeq_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletUxBalance_BkSeq_get(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22514,7 +22215,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__UxBalance_Address_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletUxBalance_Address_set(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   cipher__Address *arg2 = (cipher__Address *) 0 ;
   void *argp1 = 0 ;
@@ -22543,7 +22244,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__UxBalance_Address_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletUxBalance_Address_get(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22567,7 +22268,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__UxBalance_Coins_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletUxBalance_Coins_set(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   GoInt64_ arg2 ;
   void *argp1 = 0 ;
@@ -22596,7 +22297,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__UxBalance_Coins_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletUxBalance_Coins_get(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22620,7 +22321,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__UxBalance_Hours_set(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletUxBalance_Hours_set(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   GoInt64_ arg2 ;
   void *argp1 = 0 ;
@@ -22649,7 +22350,7 @@ fail:
 
 
 SWIGINTERN VALUE
-_wrap_wallet__UxBalance_Hours_get(int argc, VALUE *argv, VALUE self) {
+_wrap_WalletUxBalance_Hours_get(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *arg1 = (wallet__UxBalance *) 0 ;
   void *argp1 = 0 ;
   int res1 = 0 ;
@@ -22674,9 +22375,9 @@ fail:
 
 SWIGINTERN VALUE
 #ifdef HAVE_RB_DEFINE_ALLOC_FUNC
-_wrap_wallet__UxBalance_allocate(VALUE self)
+_wrap_WalletUxBalance_allocate(VALUE self)
 #else
-_wrap_wallet__UxBalance_allocate(int argc, VALUE *argv, VALUE self)
+_wrap_WalletUxBalance_allocate(int argc, VALUE *argv, VALUE self)
 #endif
 {
   VALUE vresult = SWIG_NewClassInstance(self, SWIGTYPE_p_wallet__UxBalance);
@@ -22688,7 +22389,7 @@ _wrap_wallet__UxBalance_allocate(int argc, VALUE *argv, VALUE self)
 
 
 SWIGINTERN VALUE
-_wrap_new_wallet__UxBalance(int argc, VALUE *argv, VALUE self) {
+_wrap_new_WalletUxBalance(int argc, VALUE *argv, VALUE self) {
   wallet__UxBalance *result = 0 ;
   
   if ((argc < 0) || (argc > 0)) {
@@ -23359,7 +23060,6 @@ SWIGEXPORT void Init_skycoin(void) {
   size_t i;
   
   SWIG_InitRuntime();
-  mSkycoin = rb_define_module("Skycoin");
   
   SWIG_InitializeModule(0);
   for (i = 0; i < swig_module.size; i++) {
@@ -23367,156 +23067,156 @@ SWIGEXPORT void Init_skycoin(void) {
   }
   
   SWIG_RubyInitializeTrackings();
-  rb_define_module_function(mSkycoin, "equalSlices", _wrap_equalSlices, -1);
-  rb_define_module_function(mSkycoin, "equalTransactions", _wrap_equalTransactions, -1);
-  rb_define_module_function(mSkycoin, "equalTransactionsArrays", _wrap_equalTransactionsArrays, -1);
-  rb_define_module_function(mSkycoin, "equalBlockHeaders", _wrap_equalBlockHeaders, -1);
+  rb_define_global_function("equal_slices", _wrap_equal_slices, -1);
+  rb_define_global_function("equal_transactions", _wrap_equal_transactions, -1);
+  rb_define_global_function("equal_transactions_arrays", _wrap_equal_transactions_arrays, -1);
+  rb_define_global_function("equal_block_headers", _wrap_equal_block_headers, -1);
   
-  SwigClassCipher_PubKey.klass = rb_define_class_under(mSkycoin, "Cipher_PubKey", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher_PubKey, (void *) &SwigClassCipher_PubKey);
-  rb_define_alloc_func(SwigClassCipher_PubKey.klass, _wrap_cipher_PubKey_allocate);
-  rb_define_method(SwigClassCipher_PubKey.klass, "initialize", _wrap_new_cipher_PubKey, -1);
-  rb_define_method(SwigClassCipher_PubKey.klass, "data=", _wrap_cipher_PubKey_data_set, -1);
-  rb_define_method(SwigClassCipher_PubKey.klass, "data", _wrap_cipher_PubKey_data_get, -1);
-  SwigClassCipher_PubKey.mark = 0;
-  SwigClassCipher_PubKey.destroy = (void (*)(void *)) free_cipher_PubKey;
-  SwigClassCipher_PubKey.trackObjects = 0;
+  SwigClassCipherPubKey.klass = rb_define_class("CipherPubKey", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher_PubKey, (void *) &SwigClassCipherPubKey);
+  rb_define_alloc_func(SwigClassCipherPubKey.klass, _wrap_CipherPubKey_allocate);
+  rb_define_method(SwigClassCipherPubKey.klass, "initialize", _wrap_new_CipherPubKey, -1);
+  rb_define_method(SwigClassCipherPubKey.klass, "data=", _wrap_CipherPubKey_data_set, -1);
+  rb_define_method(SwigClassCipherPubKey.klass, "data", _wrap_CipherPubKey_data_get, -1);
+  SwigClassCipherPubKey.mark = 0;
+  SwigClassCipherPubKey.destroy = (void (*)(void *)) free_cipher_PubKey;
+  SwigClassCipherPubKey.trackObjects = 0;
   
-  SwigClassCipher_SecKey.klass = rb_define_class_under(mSkycoin, "Cipher_SecKey", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher_SecKey, (void *) &SwigClassCipher_SecKey);
-  rb_define_alloc_func(SwigClassCipher_SecKey.klass, _wrap_cipher_SecKey_allocate);
-  rb_define_method(SwigClassCipher_SecKey.klass, "initialize", _wrap_new_cipher_SecKey, -1);
-  rb_define_method(SwigClassCipher_SecKey.klass, "data=", _wrap_cipher_SecKey_data_set, -1);
-  rb_define_method(SwigClassCipher_SecKey.klass, "data", _wrap_cipher_SecKey_data_get, -1);
-  SwigClassCipher_SecKey.mark = 0;
-  SwigClassCipher_SecKey.destroy = (void (*)(void *)) free_cipher_SecKey;
-  SwigClassCipher_SecKey.trackObjects = 0;
+  SwigClassCipherSecKey.klass = rb_define_class("CipherSecKey", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher_SecKey, (void *) &SwigClassCipherSecKey);
+  rb_define_alloc_func(SwigClassCipherSecKey.klass, _wrap_CipherSecKey_allocate);
+  rb_define_method(SwigClassCipherSecKey.klass, "initialize", _wrap_new_CipherSecKey, -1);
+  rb_define_method(SwigClassCipherSecKey.klass, "data=", _wrap_CipherSecKey_data_set, -1);
+  rb_define_method(SwigClassCipherSecKey.klass, "data", _wrap_CipherSecKey_data_get, -1);
+  SwigClassCipherSecKey.mark = 0;
+  SwigClassCipherSecKey.destroy = (void (*)(void *)) free_cipher_SecKey;
+  SwigClassCipherSecKey.trackObjects = 0;
   
-  SwigClassCipher_Ripemd160.klass = rb_define_class_under(mSkycoin, "Cipher_Ripemd160", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher_Ripemd160, (void *) &SwigClassCipher_Ripemd160);
-  rb_define_alloc_func(SwigClassCipher_Ripemd160.klass, _wrap_cipher_Ripemd160_allocate);
-  rb_define_method(SwigClassCipher_Ripemd160.klass, "initialize", _wrap_new_cipher_Ripemd160, -1);
-  rb_define_method(SwigClassCipher_Ripemd160.klass, "data=", _wrap_cipher_Ripemd160_data_set, -1);
-  rb_define_method(SwigClassCipher_Ripemd160.klass, "data", _wrap_cipher_Ripemd160_data_get, -1);
-  SwigClassCipher_Ripemd160.mark = 0;
-  SwigClassCipher_Ripemd160.destroy = (void (*)(void *)) free_cipher_Ripemd160;
-  SwigClassCipher_Ripemd160.trackObjects = 0;
+  SwigClassCipherRipemd160.klass = rb_define_class("CipherRipemd160", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher_Ripemd160, (void *) &SwigClassCipherRipemd160);
+  rb_define_alloc_func(SwigClassCipherRipemd160.klass, _wrap_CipherRipemd160_allocate);
+  rb_define_method(SwigClassCipherRipemd160.klass, "initialize", _wrap_new_CipherRipemd160, -1);
+  rb_define_method(SwigClassCipherRipemd160.klass, "data=", _wrap_CipherRipemd160_data_set, -1);
+  rb_define_method(SwigClassCipherRipemd160.klass, "data", _wrap_CipherRipemd160_data_get, -1);
+  SwigClassCipherRipemd160.mark = 0;
+  SwigClassCipherRipemd160.destroy = (void (*)(void *)) free_cipher_Ripemd160;
+  SwigClassCipherRipemd160.trackObjects = 0;
   
-  SwigClassCipher_Sig.klass = rb_define_class_under(mSkycoin, "Cipher_Sig", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher_Sig, (void *) &SwigClassCipher_Sig);
-  rb_define_alloc_func(SwigClassCipher_Sig.klass, _wrap_cipher_Sig_allocate);
-  rb_define_method(SwigClassCipher_Sig.klass, "initialize", _wrap_new_cipher_Sig, -1);
-  rb_define_method(SwigClassCipher_Sig.klass, "data=", _wrap_cipher_Sig_data_set, -1);
-  rb_define_method(SwigClassCipher_Sig.klass, "data", _wrap_cipher_Sig_data_get, -1);
-  SwigClassCipher_Sig.mark = 0;
-  SwigClassCipher_Sig.destroy = (void (*)(void *)) free_cipher_Sig;
-  SwigClassCipher_Sig.trackObjects = 0;
+  SwigClassCipherSig.klass = rb_define_class("CipherSig", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher_Sig, (void *) &SwigClassCipherSig);
+  rb_define_alloc_func(SwigClassCipherSig.klass, _wrap_CipherSig_allocate);
+  rb_define_method(SwigClassCipherSig.klass, "initialize", _wrap_new_CipherSig, -1);
+  rb_define_method(SwigClassCipherSig.klass, "data=", _wrap_CipherSig_data_set, -1);
+  rb_define_method(SwigClassCipherSig.klass, "data", _wrap_CipherSig_data_get, -1);
+  SwigClassCipherSig.mark = 0;
+  SwigClassCipherSig.destroy = (void (*)(void *)) free_cipher_Sig;
+  SwigClassCipherSig.trackObjects = 0;
   
-  SwigClassCipher_SHA256.klass = rb_define_class_under(mSkycoin, "Cipher_SHA256", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher_SHA256, (void *) &SwigClassCipher_SHA256);
-  rb_define_alloc_func(SwigClassCipher_SHA256.klass, _wrap_cipher_SHA256_allocate);
-  rb_define_method(SwigClassCipher_SHA256.klass, "initialize", _wrap_new_cipher_SHA256, -1);
-  rb_define_method(SwigClassCipher_SHA256.klass, "data=", _wrap_cipher_SHA256_data_set, -1);
-  rb_define_method(SwigClassCipher_SHA256.klass, "data", _wrap_cipher_SHA256_data_get, -1);
-  SwigClassCipher_SHA256.mark = 0;
-  SwigClassCipher_SHA256.destroy = (void (*)(void *)) free_cipher_SHA256;
-  SwigClassCipher_SHA256.trackObjects = 0;
+  SwigClassCipherSHA256.klass = rb_define_class("CipherSHA256", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher_SHA256, (void *) &SwigClassCipherSHA256);
+  rb_define_alloc_func(SwigClassCipherSHA256.klass, _wrap_CipherSHA256_allocate);
+  rb_define_method(SwigClassCipherSHA256.klass, "initialize", _wrap_new_CipherSHA256, -1);
+  rb_define_method(SwigClassCipherSHA256.klass, "data=", _wrap_CipherSHA256_data_set, -1);
+  rb_define_method(SwigClassCipherSHA256.klass, "data", _wrap_CipherSHA256_data_get, -1);
+  SwigClassCipherSHA256.mark = 0;
+  SwigClassCipherSHA256.destroy = (void (*)(void *)) free_cipher_SHA256;
+  SwigClassCipherSHA256.trackObjects = 0;
   
-  SwigClassCipher_Checksum.klass = rb_define_class_under(mSkycoin, "Cipher_Checksum", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher_Checksum, (void *) &SwigClassCipher_Checksum);
-  rb_define_alloc_func(SwigClassCipher_Checksum.klass, _wrap_cipher_Checksum_allocate);
-  rb_define_method(SwigClassCipher_Checksum.klass, "initialize", _wrap_new_cipher_Checksum, -1);
-  rb_define_method(SwigClassCipher_Checksum.klass, "data=", _wrap_cipher_Checksum_data_set, -1);
-  rb_define_method(SwigClassCipher_Checksum.klass, "data", _wrap_cipher_Checksum_data_get, -1);
-  SwigClassCipher_Checksum.mark = 0;
-  SwigClassCipher_Checksum.destroy = (void (*)(void *)) free_cipher_Checksum;
-  SwigClassCipher_Checksum.trackObjects = 0;
+  SwigClassCipherChecksum.klass = rb_define_class("CipherChecksum", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher_Checksum, (void *) &SwigClassCipherChecksum);
+  rb_define_alloc_func(SwigClassCipherChecksum.klass, _wrap_CipherChecksum_allocate);
+  rb_define_method(SwigClassCipherChecksum.klass, "initialize", _wrap_new_CipherChecksum, -1);
+  rb_define_method(SwigClassCipherChecksum.klass, "data=", _wrap_CipherChecksum_data_set, -1);
+  rb_define_method(SwigClassCipherChecksum.klass, "data", _wrap_CipherChecksum_data_get, -1);
+  SwigClassCipherChecksum.mark = 0;
+  SwigClassCipherChecksum.destroy = (void (*)(void *)) free_cipher_Checksum;
+  SwigClassCipherChecksum.trackObjects = 0;
   
-  SwigClassCipher_SecKeys.klass = rb_define_class_under(mSkycoin, "Cipher_SecKeys", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher_SecKeys, (void *) &SwigClassCipher_SecKeys);
-  rb_define_alloc_func(SwigClassCipher_SecKeys.klass, _wrap_cipher_SecKeys_allocate);
-  rb_define_method(SwigClassCipher_SecKeys.klass, "initialize", _wrap_new_cipher_SecKeys, -1);
-  rb_define_method(SwigClassCipher_SecKeys.klass, "data=", _wrap_cipher_SecKeys_data_set, -1);
-  rb_define_method(SwigClassCipher_SecKeys.klass, "data", _wrap_cipher_SecKeys_data_get, -1);
-  rb_define_method(SwigClassCipher_SecKeys.klass, "count=", _wrap_cipher_SecKeys_count_set, -1);
-  rb_define_method(SwigClassCipher_SecKeys.klass, "count", _wrap_cipher_SecKeys_count_get, -1);
-  SwigClassCipher_SecKeys.mark = 0;
-  SwigClassCipher_SecKeys.destroy = (void (*)(void *)) free_cipher_SecKeys;
-  SwigClassCipher_SecKeys.trackObjects = 0;
+  SwigClassCipherSecKeys.klass = rb_define_class("CipherSecKeys", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher_SecKeys, (void *) &SwigClassCipherSecKeys);
+  rb_define_alloc_func(SwigClassCipherSecKeys.klass, _wrap_CipherSecKeys_allocate);
+  rb_define_method(SwigClassCipherSecKeys.klass, "initialize", _wrap_new_CipherSecKeys, -1);
+  rb_define_method(SwigClassCipherSecKeys.klass, "data=", _wrap_CipherSecKeys_data_set, -1);
+  rb_define_method(SwigClassCipherSecKeys.klass, "data", _wrap_CipherSecKeys_data_get, -1);
+  rb_define_method(SwigClassCipherSecKeys.klass, "count=", _wrap_CipherSecKeys_count_set, -1);
+  rb_define_method(SwigClassCipherSecKeys.klass, "count", _wrap_CipherSecKeys_count_get, -1);
+  SwigClassCipherSecKeys.mark = 0;
+  SwigClassCipherSecKeys.destroy = (void (*)(void *)) free_cipher_SecKeys;
+  SwigClassCipherSecKeys.trackObjects = 0;
   
-  SwigClassCipher_PubKeys.klass = rb_define_class_under(mSkycoin, "Cipher_PubKeys", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher_PubKeys, (void *) &SwigClassCipher_PubKeys);
-  rb_define_alloc_func(SwigClassCipher_PubKeys.klass, _wrap_cipher_PubKeys_allocate);
-  rb_define_method(SwigClassCipher_PubKeys.klass, "initialize", _wrap_new_cipher_PubKeys, -1);
-  rb_define_method(SwigClassCipher_PubKeys.klass, "data=", _wrap_cipher_PubKeys_data_set, -1);
-  rb_define_method(SwigClassCipher_PubKeys.klass, "data", _wrap_cipher_PubKeys_data_get, -1);
-  rb_define_method(SwigClassCipher_PubKeys.klass, "count=", _wrap_cipher_PubKeys_count_set, -1);
-  rb_define_method(SwigClassCipher_PubKeys.klass, "count", _wrap_cipher_PubKeys_count_get, -1);
-  SwigClassCipher_PubKeys.mark = 0;
-  SwigClassCipher_PubKeys.destroy = (void (*)(void *)) free_cipher_PubKeys;
-  SwigClassCipher_PubKeys.trackObjects = 0;
+  SwigClassCipherPubKeys.klass = rb_define_class("CipherPubKeys", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher_PubKeys, (void *) &SwigClassCipherPubKeys);
+  rb_define_alloc_func(SwigClassCipherPubKeys.klass, _wrap_CipherPubKeys_allocate);
+  rb_define_method(SwigClassCipherPubKeys.klass, "initialize", _wrap_new_CipherPubKeys, -1);
+  rb_define_method(SwigClassCipherPubKeys.klass, "data=", _wrap_CipherPubKeys_data_set, -1);
+  rb_define_method(SwigClassCipherPubKeys.klass, "data", _wrap_CipherPubKeys_data_get, -1);
+  rb_define_method(SwigClassCipherPubKeys.klass, "count=", _wrap_CipherPubKeys_count_set, -1);
+  rb_define_method(SwigClassCipherPubKeys.klass, "count", _wrap_CipherPubKeys_count_get, -1);
+  SwigClassCipherPubKeys.mark = 0;
+  SwigClassCipherPubKeys.destroy = (void (*)(void *)) free_cipher_PubKeys;
+  SwigClassCipherPubKeys.trackObjects = 0;
   
-  SwigClassCipher_SHA256s.klass = rb_define_class_under(mSkycoin, "Cipher_SHA256s", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher_SHA256s, (void *) &SwigClassCipher_SHA256s);
-  rb_define_alloc_func(SwigClassCipher_SHA256s.klass, _wrap_cipher_SHA256s_allocate);
-  rb_define_method(SwigClassCipher_SHA256s.klass, "initialize", _wrap_new_cipher_SHA256s, -1);
-  rb_define_method(SwigClassCipher_SHA256s.klass, "data=", _wrap_cipher_SHA256s_data_set, -1);
-  rb_define_method(SwigClassCipher_SHA256s.klass, "data", _wrap_cipher_SHA256s_data_get, -1);
-  rb_define_method(SwigClassCipher_SHA256s.klass, "count=", _wrap_cipher_SHA256s_count_set, -1);
-  rb_define_method(SwigClassCipher_SHA256s.klass, "count", _wrap_cipher_SHA256s_count_get, -1);
-  SwigClassCipher_SHA256s.mark = 0;
-  SwigClassCipher_SHA256s.destroy = (void (*)(void *)) free_cipher_SHA256s;
-  SwigClassCipher_SHA256s.trackObjects = 0;
+  SwigClassCipherSHA256s.klass = rb_define_class("CipherSHA256s", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher_SHA256s, (void *) &SwigClassCipherSHA256s);
+  rb_define_alloc_func(SwigClassCipherSHA256s.klass, _wrap_CipherSHA256s_allocate);
+  rb_define_method(SwigClassCipherSHA256s.klass, "initialize", _wrap_new_CipherSHA256s, -1);
+  rb_define_method(SwigClassCipherSHA256s.klass, "data=", _wrap_CipherSHA256s_data_set, -1);
+  rb_define_method(SwigClassCipherSHA256s.klass, "data", _wrap_CipherSHA256s_data_get, -1);
+  rb_define_method(SwigClassCipherSHA256s.klass, "count=", _wrap_CipherSHA256s_count_set, -1);
+  rb_define_method(SwigClassCipherSHA256s.klass, "count", _wrap_CipherSHA256s_count_get, -1);
+  SwigClassCipherSHA256s.mark = 0;
+  SwigClassCipherSHA256s.destroy = (void (*)(void *)) free_cipher_SHA256s;
+  SwigClassCipherSHA256s.trackObjects = 0;
   
-  SwigClassCoin_UxOutArray.klass = rb_define_class_under(mSkycoin, "Coin_UxOutArray", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_coin_UxOutArray, (void *) &SwigClassCoin_UxOutArray);
-  rb_define_alloc_func(SwigClassCoin_UxOutArray.klass, _wrap_coin_UxOutArray_allocate);
-  rb_define_method(SwigClassCoin_UxOutArray.klass, "initialize", _wrap_new_coin_UxOutArray, -1);
-  rb_define_method(SwigClassCoin_UxOutArray.klass, "data=", _wrap_coin_UxOutArray_data_set, -1);
-  rb_define_method(SwigClassCoin_UxOutArray.klass, "data", _wrap_coin_UxOutArray_data_get, -1);
-  rb_define_method(SwigClassCoin_UxOutArray.klass, "count=", _wrap_coin_UxOutArray_count_set, -1);
-  rb_define_method(SwigClassCoin_UxOutArray.klass, "count", _wrap_coin_UxOutArray_count_get, -1);
-  SwigClassCoin_UxOutArray.mark = 0;
-  SwigClassCoin_UxOutArray.destroy = (void (*)(void *)) free_coin_UxOutArray;
-  SwigClassCoin_UxOutArray.trackObjects = 0;
+  SwigClassCoinUxOutArray.klass = rb_define_class("CoinUxOutArray", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_coin_UxOutArray, (void *) &SwigClassCoinUxOutArray);
+  rb_define_alloc_func(SwigClassCoinUxOutArray.klass, _wrap_CoinUxOutArray_allocate);
+  rb_define_method(SwigClassCoinUxOutArray.klass, "initialize", _wrap_new_CoinUxOutArray, -1);
+  rb_define_method(SwigClassCoinUxOutArray.klass, "data=", _wrap_CoinUxOutArray_data_set, -1);
+  rb_define_method(SwigClassCoinUxOutArray.klass, "data", _wrap_CoinUxOutArray_data_get, -1);
+  rb_define_method(SwigClassCoinUxOutArray.klass, "count=", _wrap_CoinUxOutArray_count_set, -1);
+  rb_define_method(SwigClassCoinUxOutArray.klass, "count", _wrap_CoinUxOutArray_count_get, -1);
+  SwigClassCoinUxOutArray.mark = 0;
+  SwigClassCoinUxOutArray.destroy = (void (*)(void *)) free_coin_UxOutArray;
+  SwigClassCoinUxOutArray.trackObjects = 0;
   
-  SwigClassCipher_Addresses.klass = rb_define_class_under(mSkycoin, "Cipher_Addresses", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher_Addresses, (void *) &SwigClassCipher_Addresses);
-  rb_define_alloc_func(SwigClassCipher_Addresses.klass, _wrap_cipher_Addresses_allocate);
-  rb_define_method(SwigClassCipher_Addresses.klass, "initialize", _wrap_new_cipher_Addresses, -1);
-  rb_define_method(SwigClassCipher_Addresses.klass, "data=", _wrap_cipher_Addresses_data_set, -1);
-  rb_define_method(SwigClassCipher_Addresses.klass, "data", _wrap_cipher_Addresses_data_get, -1);
-  rb_define_method(SwigClassCipher_Addresses.klass, "count=", _wrap_cipher_Addresses_count_set, -1);
-  rb_define_method(SwigClassCipher_Addresses.klass, "count", _wrap_cipher_Addresses_count_get, -1);
-  SwigClassCipher_Addresses.mark = 0;
-  SwigClassCipher_Addresses.destroy = (void (*)(void *)) free_cipher_Addresses;
-  SwigClassCipher_Addresses.trackObjects = 0;
+  SwigClassCipherAddresses.klass = rb_define_class("CipherAddresses", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher_Addresses, (void *) &SwigClassCipherAddresses);
+  rb_define_alloc_func(SwigClassCipherAddresses.klass, _wrap_CipherAddresses_allocate);
+  rb_define_method(SwigClassCipherAddresses.klass, "initialize", _wrap_new_CipherAddresses, -1);
+  rb_define_method(SwigClassCipherAddresses.klass, "data=", _wrap_CipherAddresses_data_set, -1);
+  rb_define_method(SwigClassCipherAddresses.klass, "data", _wrap_CipherAddresses_data_get, -1);
+  rb_define_method(SwigClassCipherAddresses.klass, "count=", _wrap_CipherAddresses_count_set, -1);
+  rb_define_method(SwigClassCipherAddresses.klass, "count", _wrap_CipherAddresses_count_get, -1);
+  SwigClassCipherAddresses.mark = 0;
+  SwigClassCipherAddresses.destroy = (void (*)(void *)) free_cipher_Addresses;
+  SwigClassCipherAddresses.trackObjects = 0;
   
-  SwigClassFee_Calculator.klass = rb_define_class_under(mSkycoin, "Fee_Calculator", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_Fee_Calculator, (void *) &SwigClassFee_Calculator);
-  rb_define_alloc_func(SwigClassFee_Calculator.klass, _wrap_Fee_Calculator_allocate);
-  rb_define_method(SwigClassFee_Calculator.klass, "initialize", _wrap_new_Fee_Calculator, -1);
-  rb_define_method(SwigClassFee_Calculator.klass, "callback=", _wrap_Fee_Calculator_callback_set, -1);
-  rb_define_method(SwigClassFee_Calculator.klass, "callback", _wrap_Fee_Calculator_callback_get, -1);
-  rb_define_method(SwigClassFee_Calculator.klass, "context=", _wrap_Fee_Calculator_context_set, -1);
-  rb_define_method(SwigClassFee_Calculator.klass, "context", _wrap_Fee_Calculator_context_get, -1);
-  SwigClassFee_Calculator.mark = 0;
-  SwigClassFee_Calculator.destroy = (void (*)(void *)) free_Fee_Calculator;
-  SwigClassFee_Calculator.trackObjects = 0;
+  SwigClassFeeCalculator.klass = rb_define_class("FeeCalculator", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_Fee_Calculator, (void *) &SwigClassFeeCalculator);
+  rb_define_alloc_func(SwigClassFeeCalculator.klass, _wrap_FeeCalculator_allocate);
+  rb_define_method(SwigClassFeeCalculator.klass, "initialize", _wrap_new_FeeCalculator, -1);
+  rb_define_method(SwigClassFeeCalculator.klass, "callback=", _wrap_FeeCalculator_callback_set, -1);
+  rb_define_method(SwigClassFeeCalculator.klass, "callback", _wrap_FeeCalculator_callback_get, -1);
+  rb_define_method(SwigClassFeeCalculator.klass, "context=", _wrap_FeeCalculator_context_set, -1);
+  rb_define_method(SwigClassFeeCalculator.klass, "context", _wrap_FeeCalculator_context_get, -1);
+  SwigClassFeeCalculator.mark = 0;
+  SwigClassFeeCalculator.destroy = (void (*)(void *)) free_Fee_Calculator;
+  SwigClassFeeCalculator.trackObjects = 0;
   
-  SwigClass_GoString_.klass = rb_define_class_under(mSkycoin, "_GoString_", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p__GoString_, (void *) &SwigClass_GoString_);
-  rb_define_alloc_func(SwigClass_GoString_.klass, _wrap__GoString__allocate);
-  rb_define_method(SwigClass_GoString_.klass, "initialize", _wrap_new__GoString_, -1);
-  rb_define_method(SwigClass_GoString_.klass, "p=", _wrap__GoString__p_set, -1);
-  rb_define_method(SwigClass_GoString_.klass, "p", _wrap__GoString__p_get, -1);
-  rb_define_method(SwigClass_GoString_.klass, "n=", _wrap__GoString__n_set, -1);
-  rb_define_method(SwigClass_GoString_.klass, "n", _wrap__GoString__n_get, -1);
-  SwigClass_GoString_.mark = 0;
-  SwigClass_GoString_.destroy = (void (*)(void *)) free__GoString_;
-  SwigClass_GoString_.trackObjects = 0;
+  SwigClassGoString.klass = rb_define_class("GoString", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p__GoString_, (void *) &SwigClassGoString);
+  rb_define_alloc_func(SwigClassGoString.klass, _wrap_GoString_allocate);
+  rb_define_method(SwigClassGoString.klass, "initialize", _wrap_new_GoString, -1);
+  rb_define_method(SwigClassGoString.klass, "p=", _wrap_GoString_p_set, -1);
+  rb_define_method(SwigClassGoString.klass, "p", _wrap_GoString_p_get, -1);
+  rb_define_method(SwigClassGoString.klass, "n=", _wrap_GoString_n_set, -1);
+  rb_define_method(SwigClassGoString.klass, "n", _wrap_GoString_n_get, -1);
+  SwigClassGoString.mark = 0;
+  SwigClassGoString.destroy = (void (*)(void *)) free__GoString_;
+  SwigClassGoString.trackObjects = 0;
   
-  SwigClassGoInterface.klass = rb_define_class_under(mSkycoin, "GoInterface", rb_cObject);
+  SwigClassGoInterface.klass = rb_define_class("GoInterface", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_GoInterface, (void *) &SwigClassGoInterface);
   rb_define_alloc_func(SwigClassGoInterface.klass, _wrap_GoInterface_allocate);
   rb_define_method(SwigClassGoInterface.klass, "initialize", _wrap_new_GoInterface, -1);
@@ -23528,7 +23228,7 @@ SWIGEXPORT void Init_skycoin(void) {
   SwigClassGoInterface.destroy = (void (*)(void *)) free_GoInterface;
   SwigClassGoInterface.trackObjects = 0;
   
-  SwigClassGoSlice.klass = rb_define_class_under(mSkycoin, "GoSlice", rb_cObject);
+  SwigClassGoSlice.klass = rb_define_class("GoSlice", rb_cObject);
   SWIG_TypeClientData(SWIGTYPE_p_GoSlice, (void *) &SwigClassGoSlice);
   rb_define_alloc_func(SwigClassGoSlice.klass, _wrap_GoSlice_allocate);
   rb_define_method(SwigClassGoSlice.klass, "initialize", _wrap_new_GoSlice, -1);
@@ -23541,897 +23241,889 @@ SWIGEXPORT void Init_skycoin(void) {
   SwigClassGoSlice.mark = 0;
   SwigClassGoSlice.destroy = (void (*)(void *)) free_GoSlice;
   SwigClassGoSlice.trackObjects = 0;
-  rb_define_module_function(mSkycoin, "SKY_wallet_CryptoTypeFromString", _wrap_SKY_wallet_CryptoTypeFromString, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Create_Transaction", _wrap_SKY_coin_Create_Transaction, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_Copy", _wrap_SKY_coin_Transaction_Copy, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_GetTransactionObject", _wrap_SKY_coin_GetTransactionObject, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_ResetInputs", _wrap_SKY_coin_Transaction_ResetInputs, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_GetInputsCount", _wrap_SKY_coin_Transaction_GetInputsCount, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_GetInputAt", _wrap_SKY_coin_Transaction_GetInputAt, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_SetInputAt", _wrap_SKY_coin_Transaction_SetInputAt, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_GetOutputsCount", _wrap_SKY_coin_Transaction_GetOutputsCount, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_GetOutputAt", _wrap_SKY_coin_Transaction_GetOutputAt, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_SetOutputAt", _wrap_SKY_coin_Transaction_SetOutputAt, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_GetSignaturesCount", _wrap_SKY_coin_Transaction_GetSignaturesCount, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_GetSignatureAt", _wrap_SKY_coin_Transaction_GetSignatureAt, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_SetSignatureAt", _wrap_SKY_coin_Transaction_SetSignatureAt, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_PushSignature", _wrap_SKY_coin_Transaction_PushSignature, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_ResetOutputs", _wrap_SKY_coin_Transaction_ResetOutputs, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_ResetSignatures", _wrap_SKY_coin_Transaction_ResetSignatures, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_Verify", _wrap_SKY_coin_Transaction_Verify, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_VerifyInput", _wrap_SKY_coin_Transaction_VerifyInput, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_PushInput", _wrap_SKY_coin_Transaction_PushInput, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_TransactionOutput_UxID", _wrap_SKY_coin_TransactionOutput_UxID, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_PushOutput", _wrap_SKY_coin_Transaction_PushOutput, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_SignInputs", _wrap_SKY_coin_Transaction_SignInputs, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_Size", _wrap_SKY_coin_Transaction_Size, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_Hash", _wrap_SKY_coin_Transaction_Hash, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_SizeHash", _wrap_SKY_coin_Transaction_SizeHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_TxID", _wrap_SKY_coin_Transaction_TxID, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_TxIDHex", _wrap_SKY_coin_Transaction_TxIDHex, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_UpdateHeader", _wrap_SKY_coin_Transaction_UpdateHeader, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_HashInner", _wrap_SKY_coin_Transaction_HashInner, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_Serialize", _wrap_SKY_coin_Transaction_Serialize, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_TransactionDeserialize", _wrap_SKY_coin_TransactionDeserialize, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transaction_OutputHours", _wrap_SKY_coin_Transaction_OutputHours, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Create_Transactions", _wrap_SKY_coin_Create_Transactions, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_GetTransactionsObject", _wrap_SKY_coin_GetTransactionsObject, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transactions_Length", _wrap_SKY_coin_Transactions_Length, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transactions_Add", _wrap_SKY_coin_Transactions_Add, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transactions_Fees", _wrap_SKY_coin_Transactions_Fees, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transactions_GetAt", _wrap_SKY_coin_Transactions_GetAt, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transactions_Hashes", _wrap_SKY_coin_Transactions_Hashes, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transactions_Size", _wrap_SKY_coin_Transactions_Size, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Transactions_TruncateBytesTo", _wrap_SKY_coin_Transactions_TruncateBytesTo, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_SortTransactions", _wrap_SKY_coin_SortTransactions, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_NewSortableTransactions", _wrap_SKY_coin_NewSortableTransactions, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_SortableTransactions_Sort", _wrap_SKY_coin_SortableTransactions_Sort, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_SortableTransactions_Len", _wrap_SKY_coin_SortableTransactions_Len, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_SortableTransactions_Less", _wrap_SKY_coin_SortableTransactions_Less, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_SortableTransactions_Swap", _wrap_SKY_coin_SortableTransactions_Swap, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_VerifyTransactionCoinsSpending", _wrap_SKY_coin_VerifyTransactionCoinsSpending, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_VerifyTransactionHoursSpending", _wrap_SKY_coin_VerifyTransactionHoursSpending, -1);
-  rb_define_module_function(mSkycoin, "SKY_encrypt_ScryptChacha20poly1305_Encrypt", _wrap_SKY_encrypt_ScryptChacha20poly1305_Encrypt, -1);
-  rb_define_module_function(mSkycoin, "SKY_encrypt_ScryptChacha20poly1305_Decrypt", _wrap_SKY_encrypt_ScryptChacha20poly1305_Decrypt, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_LoadConfig", _wrap_SKY_cli_LoadConfig, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_Config_FullWalletPath", _wrap_SKY_cli_Config_FullWalletPath, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_Config_FullDBPath", _wrap_SKY_cli_Config_FullDBPath, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_NewCLI", _wrap_SKY_cli_NewCLI, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_NewPasswordReader", _wrap_SKY_cli_NewPasswordReader, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_PasswordFromBytes_Password", _wrap_SKY_cli_PasswordFromBytes_Password, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_PasswordFromTerm_Password", _wrap_SKY_cli_PasswordFromTerm_Password, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_GenerateWallet", _wrap_SKY_cli_GenerateWallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_MakeAlphanumericSeed", _wrap_SKY_cli_MakeAlphanumericSeed, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_CheckWalletBalance", _wrap_SKY_cli_CheckWalletBalance, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_GetBalanceOfAddresses", _wrap_SKY_cli_GetBalanceOfAddresses, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_RandByte", _wrap_SKY_cipher_RandByte, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_NewPubKey", _wrap_SKY_cipher_NewPubKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_PubKeyFromHex", _wrap_SKY_cipher_PubKeyFromHex, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_PubKeyFromSecKey", _wrap_SKY_cipher_PubKeyFromSecKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_PubKeyFromSig", _wrap_SKY_cipher_PubKeyFromSig, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_PubKey_Verify", _wrap_SKY_cipher_PubKey_Verify, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_PubKey_Hex", _wrap_SKY_cipher_PubKey_Hex, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_PubKeyRipemd160", _wrap_SKY_cipher_PubKeyRipemd160, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_NewSecKey", _wrap_SKY_cipher_NewSecKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SecKeyFromHex", _wrap_SKY_cipher_SecKeyFromHex, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SecKey_Verify", _wrap_SKY_cipher_SecKey_Verify, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SecKey_Hex", _wrap_SKY_cipher_SecKey_Hex, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_ECDH", _wrap_SKY_cipher_ECDH, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_NewSig", _wrap_SKY_cipher_NewSig, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SigFromHex", _wrap_SKY_cipher_SigFromHex, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_Sig_Hex", _wrap_SKY_cipher_Sig_Hex, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SignHash", _wrap_SKY_cipher_SignHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_VerifyAddressSignedHash", _wrap_SKY_cipher_VerifyAddressSignedHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_VerifySignedHash", _wrap_SKY_cipher_VerifySignedHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_VerifyPubKeySignedHash", _wrap_SKY_cipher_VerifyPubKeySignedHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_GenerateKeyPair", _wrap_SKY_cipher_GenerateKeyPair, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_GenerateDeterministicKeyPair", _wrap_SKY_cipher_GenerateDeterministicKeyPair, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_DeterministicKeyPairIterator", _wrap_SKY_cipher_DeterministicKeyPairIterator, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_GenerateDeterministicKeyPairs", _wrap_SKY_cipher_GenerateDeterministicKeyPairs, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_GenerateDeterministicKeyPairsSeed", _wrap_SKY_cipher_GenerateDeterministicKeyPairsSeed, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_CheckSecKey", _wrap_SKY_cipher_CheckSecKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_CheckSecKeyHash", _wrap_SKY_cipher_CheckSecKeyHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_map_Get", _wrap_SKY_map_Get, -1);
-  rb_define_module_function(mSkycoin, "SKY_map_HasKey", _wrap_SKY_map_HasKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_map_Close", _wrap_SKY_map_Close, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_GenerateAddressesInFile", _wrap_SKY_cli_GenerateAddressesInFile, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_FormatAddressesAsJSON", _wrap_SKY_cli_FormatAddressesAsJSON, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_FormatAddressesAsJoinedArray", _wrap_SKY_cli_FormatAddressesAsJoinedArray, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_AddressesToStrings", _wrap_SKY_cli_AddressesToStrings, -1);
-  rb_define_module_function(mSkycoin, "SKY_logging_EnableColors", _wrap_SKY_logging_EnableColors, -1);
-  rb_define_module_function(mSkycoin, "SKY_logging_DisableColors", _wrap_SKY_logging_DisableColors, -1);
-  rb_define_module_function(mSkycoin, "SKY_logging_Disable", _wrap_SKY_logging_Disable, -1);
-  rb_define_module_function(mSkycoin, "SKY_certutil_NewTLSCertPair", _wrap_SKY_certutil_NewTLSCertPair, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_NewWalletResponse", _wrap_SKY_api_NewWalletResponse, -1);
-  rb_define_module_function(mSkycoin, "SKY_apputil_CatchInterruptPanic", _wrap_SKY_apputil_CatchInterruptPanic, -1);
-  rb_define_module_function(mSkycoin, "SKY_apputil_CatchDebug", _wrap_SKY_apputil_CatchDebug, -1);
-  rb_define_module_function(mSkycoin, "SKY_apputil_PrintProgramStatus", _wrap_SKY_apputil_PrintProgramStatus, -1);
-  rb_define_module_function(mSkycoin, "SKY_params_DropletPrecisionToDivisor", _wrap_SKY_params_DropletPrecisionToDivisor, -1);
-  rb_define_module_function(mSkycoin, "SKY_params_DropletPrecisionCheck", _wrap_SKY_params_DropletPrecisionCheck, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_DecodeBase58Address", _wrap_SKY_cipher_DecodeBase58Address, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_AddressFromBytes", _wrap_SKY_cipher_AddressFromBytes, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_AddressFromPubKey", _wrap_SKY_cipher_AddressFromPubKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_AddressFromSecKey", _wrap_SKY_cipher_AddressFromSecKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_Address_Null", _wrap_SKY_cipher_Address_Null, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_Address_Bytes", _wrap_SKY_cipher_Address_Bytes, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_Address_Verify", _wrap_SKY_cipher_Address_Verify, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_Address_String", _wrap_SKY_cipher_Address_String, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_Address_Checksum", _wrap_SKY_cipher_Address_Checksum, -1);
-  rb_define_module_function(mSkycoin, "SKY_testutil_MakeAddress", _wrap_SKY_testutil_MakeAddress, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_NewBlock", _wrap_SKY_coin_NewBlock, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_SignedBlock_VerifySignature", _wrap_SKY_coin_SignedBlock_VerifySignature, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_NewGenesisBlock", _wrap_SKY_coin_NewGenesisBlock, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Block_HashHeader", _wrap_SKY_coin_Block_HashHeader, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Block_PreHashHeader", _wrap_SKY_coin_Block_PreHashHeader, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Block_Time", _wrap_SKY_coin_Block_Time, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Block_Seq", _wrap_SKY_coin_Block_Seq, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Block_HashBody", _wrap_SKY_coin_Block_HashBody, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Block_Size", _wrap_SKY_coin_Block_Size, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Block_String", _wrap_SKY_coin_Block_String, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Block_GetTransaction", _wrap_SKY_coin_Block_GetTransaction, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_NewBlockHeader", _wrap_SKY_coin_NewBlockHeader, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockHeader_Hash", _wrap_SKY_coin_BlockHeader_Hash, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockHeader_Bytes", _wrap_SKY_coin_BlockHeader_Bytes, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockHeader_String", _wrap_SKY_coin_BlockHeader_String, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockBody_Hash", _wrap_SKY_coin_BlockBody_Hash, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockBody_Size", _wrap_SKY_coin_BlockBody_Size, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockBody_Bytes", _wrap_SKY_coin_BlockBody_Bytes, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_CreateUnspents", _wrap_SKY_coin_CreateUnspents, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_CreateUnspent", _wrap_SKY_coin_CreateUnspent, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_GetBlockObject", _wrap_SKY_coin_GetBlockObject, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_GetBlockBody", _wrap_SKY_coin_GetBlockBody, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_NewEmptyBlock", _wrap_SKY_coin_NewEmptyBlock, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Block_GetBlockHeader", _wrap_SKY_coin_Block_GetBlockHeader, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_GetBlockHeaderObject", _wrap_SKY_coin_GetBlockHeaderObject, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockHeader_Time", _wrap_SKY_coin_BlockHeader_Time, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockHeader_BkSeq", _wrap_SKY_coin_BlockHeader_BkSeq, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockHeader_UxHash", _wrap_SKY_coin_BlockHeader_UxHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockHeader_Fee", _wrap_SKY_coin_BlockHeader_Fee, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_BlockBody_Transactions", _wrap_SKY_coin_BlockBody_Transactions, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Entry_Verify", _wrap_SKY_wallet_Entry_Verify, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Entry_VerifyPublic", _wrap_SKY_wallet_Entry_VerifyPublic, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_NewCreateTransactionResponse", _wrap_SKY_api_NewCreateTransactionResponse, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_NewCreatedTransaction", _wrap_SKY_api_NewCreatedTransaction, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_CreatedTransaction_ToTransaction", _wrap_SKY_api_CreatedTransaction_ToTransaction, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_NewCreatedTransactionOutput", _wrap_SKY_api_NewCreatedTransactionOutput, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_NewCreatedTransactionInput", _wrap_SKY_api_NewCreatedTransactionInput, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_AddPrivateKey", _wrap_SKY_cli_AddPrivateKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_AddPrivateKeyToFile", _wrap_SKY_cli_AddPrivateKeyToFile, -1);
-  rb_define_module_function(mSkycoin, "SKY_bip39_NewDefaultMnemomic", _wrap_SKY_bip39_NewDefaultMnemomic, -1);
-  rb_define_module_function(mSkycoin, "SKY_bip39_NewEntropy", _wrap_SKY_bip39_NewEntropy, -1);
-  rb_define_module_function(mSkycoin, "SKY_bip39_NewMnemonic", _wrap_SKY_bip39_NewMnemonic, -1);
-  rb_define_module_function(mSkycoin, "SKY_bip39_MnemonicToByteArray", _wrap_SKY_bip39_MnemonicToByteArray, -1);
-  rb_define_module_function(mSkycoin, "SKY_bip39_IsMnemonicValid", _wrap_SKY_bip39_IsMnemonicValid, -1);
-  rb_define_module_function(mSkycoin, "SKY_JsonEncode_Handle", _wrap_SKY_JsonEncode_Handle, -1);
-  rb_define_module_function(mSkycoin, "SKY_Handle_Progress_GetCurrent", _wrap_SKY_Handle_Progress_GetCurrent, -1);
-  rb_define_module_function(mSkycoin, "SKY_Handle_Block_GetHeadSeq", _wrap_SKY_Handle_Block_GetHeadSeq, -1);
-  rb_define_module_function(mSkycoin, "SKY_Handle_Block_GetHeadHash", _wrap_SKY_Handle_Block_GetHeadHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_Handle_Block_GetPreviousBlockHash", _wrap_SKY_Handle_Block_GetPreviousBlockHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_Handle_Blocks_GetAt", _wrap_SKY_Handle_Blocks_GetAt, -1);
-  rb_define_module_function(mSkycoin, "SKY_Handle_Blocks_GetCount", _wrap_SKY_Handle_Blocks_GetCount, -1);
-  rb_define_module_function(mSkycoin, "SKY_Handle_Connections_GetCount", _wrap_SKY_Handle_Connections_GetCount, -1);
-  rb_define_module_function(mSkycoin, "SKY_Handle_Strings_GetCount", _wrap_SKY_Handle_Strings_GetCount, -1);
-  rb_define_module_function(mSkycoin, "SKY_Handle_Strings_Sort", _wrap_SKY_Handle_Strings_Sort, -1);
-  rb_define_module_function(mSkycoin, "SKY_Handle_Strings_GetAt", _wrap_SKY_Handle_Strings_GetAt, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_Client_GetWalletDir", _wrap_SKY_api_Handle_Client_GetWalletDir, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_Client_GetWalletFileName", _wrap_SKY_api_Handle_Client_GetWalletFileName, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_Client_GetWalletLabel", _wrap_SKY_api_Handle_Client_GetWalletLabel, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_Client_GetWalletFullPath", _wrap_SKY_api_Handle_Client_GetWalletFullPath, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_GetWalletMeta", _wrap_SKY_api_Handle_GetWalletMeta, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_GetWalletEntriesCount", _wrap_SKY_api_Handle_GetWalletEntriesCount, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_Client_GetWalletResponseEntriesCount", _wrap_SKY_api_Handle_Client_GetWalletResponseEntriesCount, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_WalletGetEntry", _wrap_SKY_api_Handle_WalletGetEntry, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_WalletResponseGetEntry", _wrap_SKY_api_Handle_WalletResponseGetEntry, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_WalletResponseIsEncrypted", _wrap_SKY_api_Handle_WalletResponseIsEncrypted, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_WalletResponseGetCryptoType", _wrap_SKY_api_Handle_WalletResponseGetCryptoType, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_WalletsResponseGetCount", _wrap_SKY_api_Handle_WalletsResponseGetCount, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_WalletsResponseGetAt", _wrap_SKY_api_Handle_WalletsResponseGetAt, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_GetWalletFolderAddress", _wrap_SKY_api_Handle_GetWalletFolderAddress, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_GetWalletSeed", _wrap_SKY_api_Handle_GetWalletSeed, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_GetWalletLastSeed", _wrap_SKY_api_Handle_GetWalletLastSeed, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Handle_GetBuildInfoData", _wrap_SKY_api_Handle_GetBuildInfoData, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_AddUint64", _wrap_SKY_coin_AddUint64, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Uint64ToInt64", _wrap_SKY_coin_Uint64ToInt64, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_Int64ToUint64", _wrap_SKY_coin_Int64ToUint64, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_IntToUint32", _wrap_SKY_coin_IntToUint32, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_NewBalance", _wrap_SKY_wallet_NewBalance, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_NewBalanceFromUxOut", _wrap_SKY_wallet_NewBalanceFromUxOut, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Balance_Add", _wrap_SKY_wallet_Balance_Add, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Balance_Sub", _wrap_SKY_wallet_Balance_Sub, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Balance_Equals", _wrap_SKY_wallet_Balance_Equals, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Balance_IsZero", _wrap_SKY_wallet_Balance_IsZero, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_CreateRawTxFromWallet", _wrap_SKY_cli_CreateRawTxFromWallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_CreateRawTxFromAddress", _wrap_SKY_cli_CreateRawTxFromAddress, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_CreateRawTx", _wrap_SKY_cli_CreateRawTx, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_NewTransaction", _wrap_SKY_cli_NewTransaction, -1);
-  rb_define_module_function(mSkycoin, "SKY_iputil_LocalhostIP", _wrap_SKY_iputil_LocalhostIP, -1);
-  rb_define_module_function(mSkycoin, "SKY_iputil_IsLocalhost", _wrap_SKY_iputil_IsLocalhost, -1);
-  rb_define_module_function(mSkycoin, "SKY_iputil_SplitAddr", _wrap_SKY_iputil_SplitAddr, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxOut_Hash", _wrap_SKY_coin_UxOut_Hash, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxOut_SnapshotHash", _wrap_SKY_coin_UxOut_SnapshotHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxBody_Hash", _wrap_SKY_coin_UxBody_Hash, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxOut_CoinHours", _wrap_SKY_coin_UxOut_CoinHours, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxArray_Hashes", _wrap_SKY_coin_UxArray_Hashes, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxArray_HasDupes", _wrap_SKY_coin_UxArray_HasDupes, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxArray_Sort", _wrap_SKY_coin_UxArray_Sort, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxArray_Len", _wrap_SKY_coin_UxArray_Len, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxArray_Less", _wrap_SKY_coin_UxArray_Less, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxArray_Swap", _wrap_SKY_coin_UxArray_Swap, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxArray_Coins", _wrap_SKY_coin_UxArray_Coins, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxArray_CoinHours", _wrap_SKY_coin_UxArray_CoinHours, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxArray_Sub", _wrap_SKY_coin_UxArray_Sub, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_UxArray_Add", _wrap_SKY_coin_UxArray_Add, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_NewAddressUxOuts", _wrap_SKY_coin_NewAddressUxOuts, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_AddressUxOuts_Keys", _wrap_SKY_coin_AddressUxOuts_Keys, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_AddressUxOuts_Flatten", _wrap_SKY_coin_AddressUxOuts_Flatten, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_AddressUxOuts_Sub", _wrap_SKY_coin_AddressUxOuts_Sub, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_AddressUxOuts_Add", _wrap_SKY_coin_AddressUxOuts_Add, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_AddressUxOuts_Get", _wrap_SKY_coin_AddressUxOuts_Get, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_AddressUxOuts_HasKey", _wrap_SKY_coin_AddressUxOuts_HasKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_AddressUxOuts_GetOutputLength", _wrap_SKY_coin_AddressUxOuts_GetOutputLength, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_AddressUxOuts_Length", _wrap_SKY_coin_AddressUxOuts_Length, -1);
-  rb_define_module_function(mSkycoin, "SKY_coin_AddressUxOuts_Set", _wrap_SKY_coin_AddressUxOuts_Set, -1);
-  rb_define_module_function(mSkycoin, "SKY_webrpc_NewClient", _wrap_SKY_webrpc_NewClient, -1);
-  rb_define_module_function(mSkycoin, "SKY_webrpc_Client_CSRF", _wrap_SKY_webrpc_Client_CSRF, -1);
-  rb_define_module_function(mSkycoin, "SKY_webrpc_Client_InjectTransaction", _wrap_SKY_webrpc_Client_InjectTransaction, -1);
-  rb_define_module_function(mSkycoin, "SKY_webrpc_Client_GetStatus", _wrap_SKY_webrpc_Client_GetStatus, -1);
-  rb_define_module_function(mSkycoin, "SKY_webrpc_Client_GetTransactionByID", _wrap_SKY_webrpc_Client_GetTransactionByID, -1);
-  rb_define_module_function(mSkycoin, "SKY_webrpc_Client_GetAddressUxOuts", _wrap_SKY_webrpc_Client_GetAddressUxOuts, -1);
-  rb_define_module_function(mSkycoin, "SKY_webrpc_Client_GetBlocksInRange", _wrap_SKY_webrpc_Client_GetBlocksInRange, -1);
-  rb_define_module_function(mSkycoin, "SKY_webrpc_Client_GetBlocksBySeq", _wrap_SKY_webrpc_Client_GetBlocksBySeq, -1);
-  rb_define_module_function(mSkycoin, "SKY_webrpc_Client_GetLastBlocks", _wrap_SKY_webrpc_Client_GetLastBlocks, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_Ripemd160_Set", _wrap_SKY_cipher_Ripemd160_Set, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_HashRipemd160", _wrap_SKY_cipher_HashRipemd160, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SHA256_Set", _wrap_SKY_cipher_SHA256_Set, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SHA256_Hex", _wrap_SKY_cipher_SHA256_Hex, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SHA256_Xor", _wrap_SKY_cipher_SHA256_Xor, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SumSHA256", _wrap_SKY_cipher_SumSHA256, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SHA256FromHex", _wrap_SKY_cipher_SHA256FromHex, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_DoubleSHA256", _wrap_SKY_cipher_DoubleSHA256, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_AddSHA256", _wrap_SKY_cipher_AddSHA256, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_Merkle", _wrap_SKY_cipher_Merkle, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SHA256_Null", _wrap_SKY_cipher_SHA256_Null, -1);
-  rb_define_module_function(mSkycoin, "SKY_handle_close", _wrap_SKY_handle_close, -1);
-  rb_define_module_function(mSkycoin, "SKY_handle_copy", _wrap_SKY_handle_copy, -1);
-  rb_define_module_function(mSkycoin, "SKY_httphelper_Address_UnmarshalJSON", _wrap_SKY_httphelper_Address_UnmarshalJSON, -1);
-  rb_define_module_function(mSkycoin, "SKY_httphelper_Address_MarshalJSON", _wrap_SKY_httphelper_Address_MarshalJSON, -1);
-  rb_define_module_function(mSkycoin, "SKY_httphelper_Coins_UnmarshalJSON", _wrap_SKY_httphelper_Coins_UnmarshalJSON, -1);
-  rb_define_module_function(mSkycoin, "SKY_httphelper_Coins_MarshalJSON", _wrap_SKY_httphelper_Coins_MarshalJSON, -1);
-  rb_define_module_function(mSkycoin, "SKY_httphelper_Coins_Value", _wrap_SKY_httphelper_Coins_Value, -1);
-  rb_define_module_function(mSkycoin, "SKY_httphelper_Hours_UnmarshalJSON", _wrap_SKY_httphelper_Hours_UnmarshalJSON, -1);
-  rb_define_module_function(mSkycoin, "SKY_httphelper_Hours_MarshalJSON", _wrap_SKY_httphelper_Hours_MarshalJSON, -1);
-  rb_define_module_function(mSkycoin, "SKY_httphelper_Hours_Value", _wrap_SKY_httphelper_Hours_Value, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_NewReadableEntry", _wrap_SKY_wallet_NewReadableEntry, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_LoadReadableWallet", _wrap_SKY_wallet_LoadReadableWallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_ReadableWallet_Save", _wrap_SKY_wallet_ReadableWallet_Save, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_ReadableWallet_Load", _wrap_SKY_wallet_ReadableWallet_Load, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_ReadableWallet_Erase", _wrap_SKY_wallet_ReadableWallet_Erase, -1);
-  rb_define_module_function(mSkycoin, "SKY_file_InitDataDir", _wrap_SKY_file_InitDataDir, -1);
-  rb_define_module_function(mSkycoin, "SKY_file_UserHome", _wrap_SKY_file_UserHome, -1);
-  rb_define_module_function(mSkycoin, "SKY_file_ResolveResourceDirectory", _wrap_SKY_file_ResolveResourceDirectory, -1);
-  rb_define_module_function(mSkycoin, "SKY_file_DetermineResourcePath", _wrap_SKY_file_DetermineResourcePath, -1);
-  rb_define_module_function(mSkycoin, "SKY_base58_Hex2Base58", _wrap_SKY_base58_Hex2Base58, -1);
-  rb_define_module_function(mSkycoin, "SKY_base58_Encode", _wrap_SKY_base58_Encode, -1);
-  rb_define_module_function(mSkycoin, "SKY_base58_Decode", _wrap_SKY_base58_Decode, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_NewClient", _wrap_SKY_api_NewClient, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_CSRF", _wrap_SKY_api_Client_CSRF, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Version", _wrap_SKY_api_Client_Version, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Outputs", _wrap_SKY_api_Client_Outputs, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_OutputsForAddresses", _wrap_SKY_api_Client_OutputsForAddresses, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_OutputsForHashes", _wrap_SKY_api_Client_OutputsForHashes, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_CoinSupply", _wrap_SKY_api_Client_CoinSupply, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_BlockByHash", _wrap_SKY_api_Client_BlockByHash, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_BlockBySeq", _wrap_SKY_api_Client_BlockBySeq, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Blocks", _wrap_SKY_api_Client_Blocks, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_LastBlocks", _wrap_SKY_api_Client_LastBlocks, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_BlockchainMetadata", _wrap_SKY_api_Client_BlockchainMetadata, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_BlockchainProgress", _wrap_SKY_api_Client_BlockchainProgress, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Balance", _wrap_SKY_api_Client_Balance, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_UxOut", _wrap_SKY_api_Client_UxOut, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_AddressUxOuts", _wrap_SKY_api_Client_AddressUxOuts, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Wallet", _wrap_SKY_api_Client_Wallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Wallets", _wrap_SKY_api_Client_Wallets, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_CreateUnencryptedWallet", _wrap_SKY_api_Client_CreateUnencryptedWallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_CreateEncryptedWallet", _wrap_SKY_api_Client_CreateEncryptedWallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_NewWalletAddress", _wrap_SKY_api_Client_NewWalletAddress, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_WalletBalance", _wrap_SKY_api_Client_WalletBalance, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Spend", _wrap_SKY_api_Client_Spend, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_CreateTransaction", _wrap_SKY_api_Client_CreateTransaction, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_UpdateWallet", _wrap_SKY_api_Client_UpdateWallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_WalletFolderName", _wrap_SKY_api_Client_WalletFolderName, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_NewSeed", _wrap_SKY_api_Client_NewSeed, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_WalletSeed", _wrap_SKY_api_Client_WalletSeed, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_NetworkConnection", _wrap_SKY_api_Client_NetworkConnection, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_NetworkConnections", _wrap_SKY_api_Client_NetworkConnections, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_NetworkDefaultPeers", _wrap_SKY_api_Client_NetworkDefaultPeers, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_NetworkTrustedPeers", _wrap_SKY_api_Client_NetworkTrustedPeers, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_NetworkExchangedPeers", _wrap_SKY_api_Client_NetworkExchangedPeers, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_PendingTransactions", _wrap_SKY_api_Client_PendingTransactions, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Transaction", _wrap_SKY_api_Client_Transaction, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Transactions", _wrap_SKY_api_Client_Transactions, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_ConfirmedTransactions", _wrap_SKY_api_Client_ConfirmedTransactions, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_UnconfirmedTransactions", _wrap_SKY_api_Client_UnconfirmedTransactions, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_InjectTransaction", _wrap_SKY_api_Client_InjectTransaction, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_ResendUnconfirmedTransactions", _wrap_SKY_api_Client_ResendUnconfirmedTransactions, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_RawTransaction", _wrap_SKY_api_Client_RawTransaction, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_AddressTransactions", _wrap_SKY_api_Client_AddressTransactions, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Richlist", _wrap_SKY_api_Client_Richlist, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_AddressCount", _wrap_SKY_api_Client_AddressCount, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_UnloadWallet", _wrap_SKY_api_Client_UnloadWallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_Health", _wrap_SKY_api_Client_Health, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_EncryptWallet", _wrap_SKY_api_Client_EncryptWallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_api_Client_DecryptWallet", _wrap_SKY_api_Client_DecryptWallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_NewError", _wrap_SKY_wallet_NewError, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_NewWallet", _wrap_SKY_wallet_NewWallet, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_Lock", _wrap_SKY_wallet_Wallet_Lock, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_Unlock", _wrap_SKY_wallet_Wallet_Unlock, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Load", _wrap_SKY_wallet_Load, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_Save", _wrap_SKY_wallet_Wallet_Save, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_Validate", _wrap_SKY_wallet_Wallet_Validate, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_Type", _wrap_SKY_wallet_Wallet_Type, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_Version", _wrap_SKY_wallet_Wallet_Version, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_Filename", _wrap_SKY_wallet_Wallet_Filename, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_Label", _wrap_SKY_wallet_Wallet_Label, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_IsEncrypted", _wrap_SKY_wallet_Wallet_IsEncrypted, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_GenerateAddresses", _wrap_SKY_wallet_Wallet_GenerateAddresses, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_GetAddresses", _wrap_SKY_wallet_Wallet_GetAddresses, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_GetEntry", _wrap_SKY_wallet_Wallet_GetEntry, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_Wallet_AddEntry", _wrap_SKY_wallet_Wallet_AddEntry, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_DistributeSpendHours", _wrap_SKY_wallet_DistributeSpendHours, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_DistributeCoinHoursProportional", _wrap_SKY_wallet_DistributeCoinHoursProportional, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_NewUxBalances", _wrap_SKY_wallet_NewUxBalances, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_NewUxBalance", _wrap_SKY_wallet_NewUxBalance, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_ChooseSpendsMinimizeUxOuts", _wrap_SKY_wallet_ChooseSpendsMinimizeUxOuts, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_ChooseSpendsMaximizeUxOuts", _wrap_SKY_wallet_ChooseSpendsMaximizeUxOuts, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_CLI_Run", _wrap_SKY_cli_CLI_Run, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_Config_GetCoin", _wrap_SKY_cli_Config_GetCoin, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_Config_GetRPCAddress", _wrap_SKY_cli_Config_GetRPCAddress, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_Getenv", _wrap_SKY_cli_Getenv, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_Setenv", _wrap_SKY_cli_Setenv, -1);
-  rb_define_module_function(mSkycoin, "SKY_fee_VerifyTransactionFee", _wrap_SKY_fee_VerifyTransactionFee, -1);
-  rb_define_module_function(mSkycoin, "SKY_fee_VerifyTransactionFeeForHours", _wrap_SKY_fee_VerifyTransactionFeeForHours, -1);
-  rb_define_module_function(mSkycoin, "SKY_fee_RequiredFee", _wrap_SKY_fee_RequiredFee, -1);
-  rb_define_module_function(mSkycoin, "SKY_fee_RemainingHours", _wrap_SKY_fee_RemainingHours, -1);
-  rb_define_module_function(mSkycoin, "SKY_fee_TransactionFee", _wrap_SKY_fee_TransactionFee, -1);
-  rb_define_module_function(mSkycoin, "SKY_params_GetDistributionAddresses", _wrap_SKY_params_GetDistributionAddresses, -1);
-  rb_define_module_function(mSkycoin, "SKY_params_GetUnlockedDistributionAddresses", _wrap_SKY_params_GetUnlockedDistributionAddresses, -1);
-  rb_define_module_function(mSkycoin, "SKY_params_GetLockedDistributionAddresses", _wrap_SKY_params_GetLockedDistributionAddresses, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_GetWalletOutputsFromFile", _wrap_SKY_cli_GetWalletOutputsFromFile, -1);
-  rb_define_module_function(mSkycoin, "SKY_cli_GetWalletOutputs", _wrap_SKY_cli_GetWalletOutputs, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_DecodeBase58BitcoinAddress", _wrap_SKY_cipher_DecodeBase58BitcoinAddress, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_BitcoinAddressFromPubKey", _wrap_SKY_cipher_BitcoinAddressFromPubKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_BitcoinAddressFromSecKey", _wrap_SKY_cipher_BitcoinAddressFromSecKey, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_BitcoinWalletImportFormatFromSeckey", _wrap_SKY_cipher_BitcoinWalletImportFormatFromSeckey, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_BitcoinAddressFromBytes", _wrap_SKY_cipher_BitcoinAddressFromBytes, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_SecKeyFromBitcoinWalletImportFormat", _wrap_SKY_cipher_SecKeyFromBitcoinWalletImportFormat, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_BitcoinAddress_Null", _wrap_SKY_cipher_BitcoinAddress_Null, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_BitcoinAddress_Bytes", _wrap_SKY_cipher_BitcoinAddress_Bytes, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_BitcoinAddress_Verify", _wrap_SKY_cipher_BitcoinAddress_Verify, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_BitcoinAddress_String", _wrap_SKY_cipher_BitcoinAddress_String, -1);
-  rb_define_module_function(mSkycoin, "SKY_cipher_BitcoinAddress_Checksum", _wrap_SKY_cipher_BitcoinAddress_Checksum, -1);
-  rb_define_module_function(mSkycoin, "SKY_wallet_CreateOptionsHandle", _wrap_SKY_wallet_CreateOptionsHandle, -1);
-  rb_define_module_function(mSkycoin, "SKY_droplet_FromString", _wrap_SKY_droplet_FromString, -1);
-  rb_define_module_function(mSkycoin, "SKY_droplet_ToString", _wrap_SKY_droplet_ToString, -1);
+  rb_define_global_function("sky_wallet_crypto_type_from_string", _wrap_sky_wallet_crypto_type_from_string, -1);
+  rb_define_global_function("sky_coin_create_transaction", _wrap_sky_coin_create_transaction, -1);
+  rb_define_global_function("sky_coin_transaction_copy", _wrap_sky_coin_transaction_copy, -1);
+  rb_define_global_function("sky_coin_get_transaction_object", _wrap_sky_coin_get_transaction_object, -1);
+  rb_define_global_function("sky_coin_transaction_reset_inputs", _wrap_sky_coin_transaction_reset_inputs, -1);
+  rb_define_global_function("sky_coin_transaction_get_inputs_count", _wrap_sky_coin_transaction_get_inputs_count, -1);
+  rb_define_global_function("sky_coin_transaction_get_input_at", _wrap_sky_coin_transaction_get_input_at, -1);
+  rb_define_global_function("sky_coin_transaction_set_input_at", _wrap_sky_coin_transaction_set_input_at, -1);
+  rb_define_global_function("sky_coin_transaction_get_outputs_count", _wrap_sky_coin_transaction_get_outputs_count, -1);
+  rb_define_global_function("sky_coin_transaction_get_output_at", _wrap_sky_coin_transaction_get_output_at, -1);
+  rb_define_global_function("sky_coin_transaction_set_output_at", _wrap_sky_coin_transaction_set_output_at, -1);
+  rb_define_global_function("sky_coin_transaction_get_signatures_count", _wrap_sky_coin_transaction_get_signatures_count, -1);
+  rb_define_global_function("sky_coin_transaction_get_signature_at", _wrap_sky_coin_transaction_get_signature_at, -1);
+  rb_define_global_function("sky_coin_transaction_set_signature_at", _wrap_sky_coin_transaction_set_signature_at, -1);
+  rb_define_global_function("sky_coin_transaction_push_signature", _wrap_sky_coin_transaction_push_signature, -1);
+  rb_define_global_function("sky_coin_transaction_reset_outputs", _wrap_sky_coin_transaction_reset_outputs, -1);
+  rb_define_global_function("sky_coin_transaction_reset_signatures", _wrap_sky_coin_transaction_reset_signatures, -1);
+  rb_define_global_function("sky_coin_transaction_verify", _wrap_sky_coin_transaction_verify, -1);
+  rb_define_global_function("sky_coin_transaction_verify_input", _wrap_sky_coin_transaction_verify_input, -1);
+  rb_define_global_function("sky_coin_transaction_push_input", _wrap_sky_coin_transaction_push_input, -1);
+  rb_define_global_function("sky_coin_transaction_output_ux_id", _wrap_sky_coin_transaction_output_ux_id, -1);
+  rb_define_global_function("sky_coin_transaction_push_output", _wrap_sky_coin_transaction_push_output, -1);
+  rb_define_global_function("sky_coin_transaction_sign_inputs", _wrap_sky_coin_transaction_sign_inputs, -1);
+  rb_define_global_function("sky_coin_transaction_size", _wrap_sky_coin_transaction_size, -1);
+  rb_define_global_function("sky_coin_transaction_hash", _wrap_sky_coin_transaction_hash, -1);
+  rb_define_global_function("sky_coin_transaction_size_hash", _wrap_sky_coin_transaction_size_hash, -1);
+  rb_define_global_function("sky_coin_transaction_tx_id", _wrap_sky_coin_transaction_tx_id, -1);
+  rb_define_global_function("sky_coin_transaction_tx_idhex", _wrap_sky_coin_transaction_tx_idhex, -1);
+  rb_define_global_function("sky_coin_transaction_update_header", _wrap_sky_coin_transaction_update_header, -1);
+  rb_define_global_function("sky_coin_transaction_hash_inner", _wrap_sky_coin_transaction_hash_inner, -1);
+  rb_define_global_function("sky_coin_transaction_serialize", _wrap_sky_coin_transaction_serialize, -1);
+  rb_define_global_function("sky_coin_transaction_deserialize", _wrap_sky_coin_transaction_deserialize, -1);
+  rb_define_global_function("sky_coin_transaction_output_hours", _wrap_sky_coin_transaction_output_hours, -1);
+  rb_define_global_function("sky_coin_create_transactions", _wrap_sky_coin_create_transactions, -1);
+  rb_define_global_function("sky_coin_get_transactions_object", _wrap_sky_coin_get_transactions_object, -1);
+  rb_define_global_function("sky_coin_transactions_length", _wrap_sky_coin_transactions_length, -1);
+  rb_define_global_function("sky_coin_transactions_add", _wrap_sky_coin_transactions_add, -1);
+  rb_define_global_function("sky_coin_transactions_fees", _wrap_sky_coin_transactions_fees, -1);
+  rb_define_global_function("sky_coin_transactions_get_at", _wrap_sky_coin_transactions_get_at, -1);
+  rb_define_global_function("sky_coin_transactions_hashes", _wrap_sky_coin_transactions_hashes, -1);
+  rb_define_global_function("sky_coin_transactions_size", _wrap_sky_coin_transactions_size, -1);
+  rb_define_global_function("sky_coin_transactions_truncate_bytes_to", _wrap_sky_coin_transactions_truncate_bytes_to, -1);
+  rb_define_global_function("sky_coin_sort_transactions", _wrap_sky_coin_sort_transactions, -1);
+  rb_define_global_function("sky_coin_new_sortable_transactions", _wrap_sky_coin_new_sortable_transactions, -1);
+  rb_define_global_function("sky_coin_sortable_transactions_sort", _wrap_sky_coin_sortable_transactions_sort, -1);
+  rb_define_global_function("sky_coin_sortable_transactions_len", _wrap_sky_coin_sortable_transactions_len, -1);
+  rb_define_global_function("sky_coin_sortable_transactions_less", _wrap_sky_coin_sortable_transactions_less, -1);
+  rb_define_global_function("sky_coin_sortable_transactions_swap", _wrap_sky_coin_sortable_transactions_swap, -1);
+  rb_define_global_function("sky_coin_verify_transaction_coins_spending", _wrap_sky_coin_verify_transaction_coins_spending, -1);
+  rb_define_global_function("sky_coin_verify_transaction_hours_spending", _wrap_sky_coin_verify_transaction_hours_spending, -1);
+  rb_define_global_function("sky_encrypt_scrypt_chacha_20poly_1305_encrypt", _wrap_sky_encrypt_scrypt_chacha_20poly_1305_encrypt, -1);
+  rb_define_global_function("sky_encrypt_scrypt_chacha_20poly_1305_decrypt", _wrap_sky_encrypt_scrypt_chacha_20poly_1305_decrypt, -1);
+  rb_define_global_function("sky_cli_load_config", _wrap_sky_cli_load_config, -1);
+  rb_define_global_function("sky_cli_config_full_wallet_path", _wrap_sky_cli_config_full_wallet_path, -1);
+  rb_define_global_function("sky_cli_config_full_dbpath", _wrap_sky_cli_config_full_dbpath, -1);
+  rb_define_global_function("sky_cli_new_cli", _wrap_sky_cli_new_cli, -1);
+  rb_define_global_function("sky_cli_new_password_reader", _wrap_sky_cli_new_password_reader, -1);
+  rb_define_global_function("sky_cli_password_from_bytes_password", _wrap_sky_cli_password_from_bytes_password, -1);
+  rb_define_global_function("sky_cli_password_from_term_password", _wrap_sky_cli_password_from_term_password, -1);
+  rb_define_global_function("sky_cli_generate_wallet", _wrap_sky_cli_generate_wallet, -1);
+  rb_define_global_function("sky_cli_make_alphanumeric_seed", _wrap_sky_cli_make_alphanumeric_seed, -1);
+  rb_define_global_function("sky_cli_check_wallet_balance", _wrap_sky_cli_check_wallet_balance, -1);
+  rb_define_global_function("sky_cli_get_balance_of_addresses", _wrap_sky_cli_get_balance_of_addresses, -1);
+  rb_define_global_function("sky_cipher_rand_byte", _wrap_sky_cipher_rand_byte, -1);
+  rb_define_global_function("sky_cipher_new_pub_key", _wrap_sky_cipher_new_pub_key, -1);
+  rb_define_global_function("sky_cipher_pub_key_from_hex", _wrap_sky_cipher_pub_key_from_hex, -1);
+  rb_define_global_function("sky_cipher_pub_key_from_sec_key", _wrap_sky_cipher_pub_key_from_sec_key, -1);
+  rb_define_global_function("sky_cipher_pub_key_from_sig", _wrap_sky_cipher_pub_key_from_sig, -1);
+  rb_define_global_function("sky_cipher_pub_key_verify", _wrap_sky_cipher_pub_key_verify, -1);
+  rb_define_global_function("sky_cipher_pub_key_hex", _wrap_sky_cipher_pub_key_hex, -1);
+  rb_define_global_function("sky_cipher_pub_key_ripemd_160", _wrap_sky_cipher_pub_key_ripemd_160, -1);
+  rb_define_global_function("sky_cipher_new_sec_key", _wrap_sky_cipher_new_sec_key, -1);
+  rb_define_global_function("sky_cipher_sec_key_from_hex", _wrap_sky_cipher_sec_key_from_hex, -1);
+  rb_define_global_function("sky_cipher_sec_key_verify", _wrap_sky_cipher_sec_key_verify, -1);
+  rb_define_global_function("sky_cipher_sec_key_hex", _wrap_sky_cipher_sec_key_hex, -1);
+  rb_define_global_function("sky_cipher_ecdh", _wrap_sky_cipher_ecdh, -1);
+  rb_define_global_function("sky_cipher_new_sig", _wrap_sky_cipher_new_sig, -1);
+  rb_define_global_function("sky_cipher_sig_from_hex", _wrap_sky_cipher_sig_from_hex, -1);
+  rb_define_global_function("sky_cipher_sig_hex", _wrap_sky_cipher_sig_hex, -1);
+  rb_define_global_function("sky_cipher_sign_hash", _wrap_sky_cipher_sign_hash, -1);
+  rb_define_global_function("sky_cipher_verify_address_signed_hash", _wrap_sky_cipher_verify_address_signed_hash, -1);
+  rb_define_global_function("sky_cipher_verify_signed_hash", _wrap_sky_cipher_verify_signed_hash, -1);
+  rb_define_global_function("sky_cipher_verify_pub_key_signed_hash", _wrap_sky_cipher_verify_pub_key_signed_hash, -1);
+  rb_define_global_function("sky_cipher_generate_key_pair", _wrap_sky_cipher_generate_key_pair, -1);
+  rb_define_global_function("sky_cipher_generate_deterministic_key_pair", _wrap_sky_cipher_generate_deterministic_key_pair, -1);
+  rb_define_global_function("sky_cipher_deterministic_key_pair_iterator", _wrap_sky_cipher_deterministic_key_pair_iterator, -1);
+  rb_define_global_function("sky_cipher_generate_deterministic_key_pairs", _wrap_sky_cipher_generate_deterministic_key_pairs, -1);
+  rb_define_global_function("sky_cipher_generate_deterministic_key_pairs_seed", _wrap_sky_cipher_generate_deterministic_key_pairs_seed, -1);
+  rb_define_global_function("sky_cipher_check_sec_key", _wrap_sky_cipher_check_sec_key, -1);
+  rb_define_global_function("sky_cipher_check_sec_key_hash", _wrap_sky_cipher_check_sec_key_hash, -1);
+  rb_define_global_function("sky_map_get", _wrap_sky_map_get, -1);
+  rb_define_global_function("sky_map_has_key", _wrap_sky_map_has_key, -1);
+  rb_define_global_function("sky_map_close", _wrap_sky_map_close, -1);
+  rb_define_global_function("sky_cli_generate_addresses_in_file", _wrap_sky_cli_generate_addresses_in_file, -1);
+  rb_define_global_function("sky_cli_format_addresses_as_json", _wrap_sky_cli_format_addresses_as_json, -1);
+  rb_define_global_function("sky_cli_format_addresses_as_joined_array", _wrap_sky_cli_format_addresses_as_joined_array, -1);
+  rb_define_global_function("sky_cli_addresses_to_strings", _wrap_sky_cli_addresses_to_strings, -1);
+  rb_define_global_function("sky_logging_enable_colors", _wrap_sky_logging_enable_colors, -1);
+  rb_define_global_function("sky_logging_disable_colors", _wrap_sky_logging_disable_colors, -1);
+  rb_define_global_function("sky_logging_disable", _wrap_sky_logging_disable, -1);
+  rb_define_global_function("sky_certutil_new_tlscert_pair", _wrap_sky_certutil_new_tlscert_pair, -1);
+  rb_define_global_function("sky_api_new_wallet_response", _wrap_sky_api_new_wallet_response, -1);
+  rb_define_global_function("sky_apputil_catch_interrupt_panic", _wrap_sky_apputil_catch_interrupt_panic, -1);
+  rb_define_global_function("sky_apputil_catch_debug", _wrap_sky_apputil_catch_debug, -1);
+  rb_define_global_function("sky_apputil_print_program_status", _wrap_sky_apputil_print_program_status, -1);
+  rb_define_global_function("sky_params_droplet_precision_to_divisor", _wrap_sky_params_droplet_precision_to_divisor, -1);
+  rb_define_global_function("sky_params_droplet_precision_check", _wrap_sky_params_droplet_precision_check, -1);
+  rb_define_global_function("sky_cipher_decode_base_58address", _wrap_sky_cipher_decode_base_58address, -1);
+  rb_define_global_function("sky_cipher_address_from_bytes", _wrap_sky_cipher_address_from_bytes, -1);
+  rb_define_global_function("sky_cipher_address_from_pub_key", _wrap_sky_cipher_address_from_pub_key, -1);
+  rb_define_global_function("sky_cipher_address_from_sec_key", _wrap_sky_cipher_address_from_sec_key, -1);
+  rb_define_global_function("sky_cipher_address_null", _wrap_sky_cipher_address_null, -1);
+  rb_define_global_function("sky_cipher_address_bytes", _wrap_sky_cipher_address_bytes, -1);
+  rb_define_global_function("sky_cipher_address_verify", _wrap_sky_cipher_address_verify, -1);
+  rb_define_global_function("sky_cipher_address_string", _wrap_sky_cipher_address_string, -1);
+  rb_define_global_function("sky_cipher_address_checksum", _wrap_sky_cipher_address_checksum, -1);
+  rb_define_global_function("sky_testutil_make_address", _wrap_sky_testutil_make_address, -1);
+  rb_define_global_function("sky_coin_new_block", _wrap_sky_coin_new_block, -1);
+  rb_define_global_function("sky_coin_signed_block_verify_signature", _wrap_sky_coin_signed_block_verify_signature, -1);
+  rb_define_global_function("sky_coin_new_genesis_block", _wrap_sky_coin_new_genesis_block, -1);
+  rb_define_global_function("sky_coin_block_hash_header", _wrap_sky_coin_block_hash_header, -1);
+  rb_define_global_function("sky_coin_block_pre_hash_header", _wrap_sky_coin_block_pre_hash_header, -1);
+  rb_define_global_function("sky_coin_block_time", _wrap_sky_coin_block_time, -1);
+  rb_define_global_function("sky_coin_block_seq", _wrap_sky_coin_block_seq, -1);
+  rb_define_global_function("sky_coin_block_hash_body", _wrap_sky_coin_block_hash_body, -1);
+  rb_define_global_function("sky_coin_block_size", _wrap_sky_coin_block_size, -1);
+  rb_define_global_function("sky_coin_block_string", _wrap_sky_coin_block_string, -1);
+  rb_define_global_function("sky_coin_block_get_transaction", _wrap_sky_coin_block_get_transaction, -1);
+  rb_define_global_function("sky_coin_new_block_header", _wrap_sky_coin_new_block_header, -1);
+  rb_define_global_function("sky_coin_block_header_hash", _wrap_sky_coin_block_header_hash, -1);
+  rb_define_global_function("sky_coin_block_header_bytes", _wrap_sky_coin_block_header_bytes, -1);
+  rb_define_global_function("sky_coin_block_header_string", _wrap_sky_coin_block_header_string, -1);
+  rb_define_global_function("sky_coin_block_body_hash", _wrap_sky_coin_block_body_hash, -1);
+  rb_define_global_function("sky_coin_block_body_size", _wrap_sky_coin_block_body_size, -1);
+  rb_define_global_function("sky_coin_block_body_bytes", _wrap_sky_coin_block_body_bytes, -1);
+  rb_define_global_function("sky_coin_create_unspents", _wrap_sky_coin_create_unspents, -1);
+  rb_define_global_function("sky_coin_create_unspent", _wrap_sky_coin_create_unspent, -1);
+  rb_define_global_function("sky_coin_get_block_object", _wrap_sky_coin_get_block_object, -1);
+  rb_define_global_function("sky_coin_get_block_body", _wrap_sky_coin_get_block_body, -1);
+  rb_define_global_function("sky_coin_new_empty_block", _wrap_sky_coin_new_empty_block, -1);
+  rb_define_global_function("sky_coin_block_get_block_header", _wrap_sky_coin_block_get_block_header, -1);
+  rb_define_global_function("sky_coin_get_block_header_object", _wrap_sky_coin_get_block_header_object, -1);
+  rb_define_global_function("sky_coin_block_header_time", _wrap_sky_coin_block_header_time, -1);
+  rb_define_global_function("sky_coin_block_header_bk_seq", _wrap_sky_coin_block_header_bk_seq, -1);
+  rb_define_global_function("sky_coin_block_header_ux_hash", _wrap_sky_coin_block_header_ux_hash, -1);
+  rb_define_global_function("sky_coin_block_header_fee", _wrap_sky_coin_block_header_fee, -1);
+  rb_define_global_function("sky_coin_block_body_transactions", _wrap_sky_coin_block_body_transactions, -1);
+  rb_define_global_function("sky_wallet_entry_verify", _wrap_sky_wallet_entry_verify, -1);
+  rb_define_global_function("sky_wallet_entry_verify_public", _wrap_sky_wallet_entry_verify_public, -1);
+  rb_define_global_function("sky_api_new_create_transaction_response", _wrap_sky_api_new_create_transaction_response, -1);
+  rb_define_global_function("sky_api_new_created_transaction", _wrap_sky_api_new_created_transaction, -1);
+  rb_define_global_function("sky_api_created_transaction_to_transaction", _wrap_sky_api_created_transaction_to_transaction, -1);
+  rb_define_global_function("sky_api_new_created_transaction_output", _wrap_sky_api_new_created_transaction_output, -1);
+  rb_define_global_function("sky_api_new_created_transaction_input", _wrap_sky_api_new_created_transaction_input, -1);
+  rb_define_global_function("sky_cli_add_private_key", _wrap_sky_cli_add_private_key, -1);
+  rb_define_global_function("sky_cli_add_private_key_to_file", _wrap_sky_cli_add_private_key_to_file, -1);
+  rb_define_global_function("sky_bip_39_new_default_mnemomic", _wrap_sky_bip_39_new_default_mnemomic, -1);
+  rb_define_global_function("sky_bip_39_new_entropy", _wrap_sky_bip_39_new_entropy, -1);
+  rb_define_global_function("sky_bip_39_new_mnemonic", _wrap_sky_bip_39_new_mnemonic, -1);
+  rb_define_global_function("sky_bip_39_mnemonic_to_byte_array", _wrap_sky_bip_39_mnemonic_to_byte_array, -1);
+  rb_define_global_function("sky_bip_39_is_mnemonic_valid", _wrap_sky_bip_39_is_mnemonic_valid, -1);
+  rb_define_global_function("sky_json_encode_handle", _wrap_sky_json_encode_handle, -1);
+  rb_define_global_function("sky_handle_progress_get_current", _wrap_sky_handle_progress_get_current, -1);
+  rb_define_global_function("sky_handle_block_get_head_seq", _wrap_sky_handle_block_get_head_seq, -1);
+  rb_define_global_function("sky_handle_block_get_head_hash", _wrap_sky_handle_block_get_head_hash, -1);
+  rb_define_global_function("sky_handle_block_get_previous_block_hash", _wrap_sky_handle_block_get_previous_block_hash, -1);
+  rb_define_global_function("sky_handle_blocks_get_at", _wrap_sky_handle_blocks_get_at, -1);
+  rb_define_global_function("sky_handle_blocks_get_count", _wrap_sky_handle_blocks_get_count, -1);
+  rb_define_global_function("sky_handle_connections_get_count", _wrap_sky_handle_connections_get_count, -1);
+  rb_define_global_function("sky_handle_strings_get_count", _wrap_sky_handle_strings_get_count, -1);
+  rb_define_global_function("sky_handle_strings_sort", _wrap_sky_handle_strings_sort, -1);
+  rb_define_global_function("sky_handle_strings_get_at", _wrap_sky_handle_strings_get_at, -1);
+  rb_define_global_function("sky_api_handle_client_get_wallet_dir", _wrap_sky_api_handle_client_get_wallet_dir, -1);
+  rb_define_global_function("sky_api_handle_client_get_wallet_file_name", _wrap_sky_api_handle_client_get_wallet_file_name, -1);
+  rb_define_global_function("sky_api_handle_client_get_wallet_label", _wrap_sky_api_handle_client_get_wallet_label, -1);
+  rb_define_global_function("sky_api_handle_client_get_wallet_full_path", _wrap_sky_api_handle_client_get_wallet_full_path, -1);
+  rb_define_global_function("sky_api_handle_get_wallet_meta", _wrap_sky_api_handle_get_wallet_meta, -1);
+  rb_define_global_function("sky_api_handle_get_wallet_entries_count", _wrap_sky_api_handle_get_wallet_entries_count, -1);
+  rb_define_global_function("sky_api_handle_client_get_wallet_response_entries_count", _wrap_sky_api_handle_client_get_wallet_response_entries_count, -1);
+  rb_define_global_function("sky_api_handle_wallet_get_entry", _wrap_sky_api_handle_wallet_get_entry, -1);
+  rb_define_global_function("sky_api_handle_wallet_response_get_entry", _wrap_sky_api_handle_wallet_response_get_entry, -1);
+  rb_define_global_function("sky_api_handle_wallet_response_is_encrypted", _wrap_sky_api_handle_wallet_response_is_encrypted, -1);
+  rb_define_global_function("sky_api_handle_wallet_response_get_crypto_type", _wrap_sky_api_handle_wallet_response_get_crypto_type, -1);
+  rb_define_global_function("sky_api_handle_wallets_response_get_count", _wrap_sky_api_handle_wallets_response_get_count, -1);
+  rb_define_global_function("sky_api_handle_wallets_response_get_at", _wrap_sky_api_handle_wallets_response_get_at, -1);
+  rb_define_global_function("sky_api_handle_get_wallet_folder_address", _wrap_sky_api_handle_get_wallet_folder_address, -1);
+  rb_define_global_function("sky_api_handle_get_wallet_seed", _wrap_sky_api_handle_get_wallet_seed, -1);
+  rb_define_global_function("sky_api_handle_get_wallet_last_seed", _wrap_sky_api_handle_get_wallet_last_seed, -1);
+  rb_define_global_function("sky_api_handle_get_build_info_data", _wrap_sky_api_handle_get_build_info_data, -1);
+  rb_define_global_function("sky_coin_add_uint_64", _wrap_sky_coin_add_uint_64, -1);
+  rb_define_global_function("sky_coin_uint_64to_int_64", _wrap_sky_coin_uint_64to_int_64, -1);
+  rb_define_global_function("sky_coin_int_64to_uint_64", _wrap_sky_coin_int_64to_uint_64, -1);
+  rb_define_global_function("sky_coin_int_to_uint_32", _wrap_sky_coin_int_to_uint_32, -1);
+  rb_define_global_function("sky_wallet_new_balance", _wrap_sky_wallet_new_balance, -1);
+  rb_define_global_function("sky_wallet_balance_add", _wrap_sky_wallet_balance_add, -1);
+  rb_define_global_function("sky_wallet_balance_sub", _wrap_sky_wallet_balance_sub, -1);
+  rb_define_global_function("sky_wallet_balance_equals", _wrap_sky_wallet_balance_equals, -1);
+  rb_define_global_function("sky_wallet_balance_is_zero", _wrap_sky_wallet_balance_is_zero, -1);
+  rb_define_global_function("sky_cli_create_raw_tx_from_wallet", _wrap_sky_cli_create_raw_tx_from_wallet, -1);
+  rb_define_global_function("sky_cli_create_raw_tx_from_address", _wrap_sky_cli_create_raw_tx_from_address, -1);
+  rb_define_global_function("sky_cli_create_raw_tx", _wrap_sky_cli_create_raw_tx, -1);
+  rb_define_global_function("sky_cli_new_transaction", _wrap_sky_cli_new_transaction, -1);
+  rb_define_global_function("sky_iputil_localhost_ip", _wrap_sky_iputil_localhost_ip, -1);
+  rb_define_global_function("sky_iputil_is_localhost", _wrap_sky_iputil_is_localhost, -1);
+  rb_define_global_function("sky_iputil_split_addr", _wrap_sky_iputil_split_addr, -1);
+  rb_define_global_function("sky_coin_ux_out_hash", _wrap_sky_coin_ux_out_hash, -1);
+  rb_define_global_function("sky_coin_ux_out_snapshot_hash", _wrap_sky_coin_ux_out_snapshot_hash, -1);
+  rb_define_global_function("sky_coin_ux_body_hash", _wrap_sky_coin_ux_body_hash, -1);
+  rb_define_global_function("sky_coin_ux_out_coin_hours", _wrap_sky_coin_ux_out_coin_hours, -1);
+  rb_define_global_function("sky_coin_ux_array_hashes", _wrap_sky_coin_ux_array_hashes, -1);
+  rb_define_global_function("sky_coin_ux_array_has_dupes", _wrap_sky_coin_ux_array_has_dupes, -1);
+  rb_define_global_function("sky_coin_ux_array_sort", _wrap_sky_coin_ux_array_sort, -1);
+  rb_define_global_function("sky_coin_ux_array_len", _wrap_sky_coin_ux_array_len, -1);
+  rb_define_global_function("sky_coin_ux_array_less", _wrap_sky_coin_ux_array_less, -1);
+  rb_define_global_function("sky_coin_ux_array_swap", _wrap_sky_coin_ux_array_swap, -1);
+  rb_define_global_function("sky_coin_ux_array_coins", _wrap_sky_coin_ux_array_coins, -1);
+  rb_define_global_function("sky_coin_ux_array_coin_hours", _wrap_sky_coin_ux_array_coin_hours, -1);
+  rb_define_global_function("sky_coin_ux_array_sub", _wrap_sky_coin_ux_array_sub, -1);
+  rb_define_global_function("sky_coin_ux_array_add", _wrap_sky_coin_ux_array_add, -1);
+  rb_define_global_function("sky_coin_new_address_ux_outs", _wrap_sky_coin_new_address_ux_outs, -1);
+  rb_define_global_function("sky_coin_address_ux_outs_keys", _wrap_sky_coin_address_ux_outs_keys, -1);
+  rb_define_global_function("sky_coin_address_ux_outs_flatten", _wrap_sky_coin_address_ux_outs_flatten, -1);
+  rb_define_global_function("sky_coin_address_ux_outs_sub", _wrap_sky_coin_address_ux_outs_sub, -1);
+  rb_define_global_function("sky_coin_address_ux_outs_get", _wrap_sky_coin_address_ux_outs_get, -1);
+  rb_define_global_function("sky_coin_address_ux_outs_has_key", _wrap_sky_coin_address_ux_outs_has_key, -1);
+  rb_define_global_function("sky_coin_address_ux_outs_get_output_length", _wrap_sky_coin_address_ux_outs_get_output_length, -1);
+  rb_define_global_function("sky_coin_address_ux_outs_length", _wrap_sky_coin_address_ux_outs_length, -1);
+  rb_define_global_function("sky_coin_address_ux_outs_set", _wrap_sky_coin_address_ux_outs_set, -1);
+  rb_define_global_function("sky_webrpc_new_client", _wrap_sky_webrpc_new_client, -1);
+  rb_define_global_function("sky_webrpc_client_csrf", _wrap_sky_webrpc_client_csrf, -1);
+  rb_define_global_function("sky_webrpc_client_inject_transaction", _wrap_sky_webrpc_client_inject_transaction, -1);
+  rb_define_global_function("sky_webrpc_client_get_status", _wrap_sky_webrpc_client_get_status, -1);
+  rb_define_global_function("sky_webrpc_client_get_transaction_by_id", _wrap_sky_webrpc_client_get_transaction_by_id, -1);
+  rb_define_global_function("sky_webrpc_client_get_address_ux_outs", _wrap_sky_webrpc_client_get_address_ux_outs, -1);
+  rb_define_global_function("sky_webrpc_client_get_blocks_in_range", _wrap_sky_webrpc_client_get_blocks_in_range, -1);
+  rb_define_global_function("sky_webrpc_client_get_blocks_by_seq", _wrap_sky_webrpc_client_get_blocks_by_seq, -1);
+  rb_define_global_function("sky_webrpc_client_get_last_blocks", _wrap_sky_webrpc_client_get_last_blocks, -1);
+  rb_define_global_function("sky_cipher_ripemd_160_set", _wrap_sky_cipher_ripemd_160_set, -1);
+  rb_define_global_function("sky_cipher_hash_ripemd_160", _wrap_sky_cipher_hash_ripemd_160, -1);
+  rb_define_global_function("sky_cipher_sha_256_set", _wrap_sky_cipher_sha_256_set, -1);
+  rb_define_global_function("sky_cipher_sha_256_hex", _wrap_sky_cipher_sha_256_hex, -1);
+  rb_define_global_function("sky_cipher_sha_256_xor", _wrap_sky_cipher_sha_256_xor, -1);
+  rb_define_global_function("sky_cipher_sum_sha_256", _wrap_sky_cipher_sum_sha_256, -1);
+  rb_define_global_function("sky_cipher_sha_256from_hex", _wrap_sky_cipher_sha_256from_hex, -1);
+  rb_define_global_function("sky_cipher_double_sha_256", _wrap_sky_cipher_double_sha_256, -1);
+  rb_define_global_function("sky_cipher_add_sha_256", _wrap_sky_cipher_add_sha_256, -1);
+  rb_define_global_function("sky_cipher_merkle", _wrap_sky_cipher_merkle, -1);
+  rb_define_global_function("sky_cipher_sha_256_null", _wrap_sky_cipher_sha_256_null, -1);
+  rb_define_global_function("sky_handle_close", _wrap_sky_handle_close, -1);
+  rb_define_global_function("sky_handle_copy", _wrap_sky_handle_copy, -1);
+  rb_define_global_function("sky_httphelper_address_unmarshal_json", _wrap_sky_httphelper_address_unmarshal_json, -1);
+  rb_define_global_function("sky_httphelper_address_marshal_json", _wrap_sky_httphelper_address_marshal_json, -1);
+  rb_define_global_function("sky_httphelper_coins_unmarshal_json", _wrap_sky_httphelper_coins_unmarshal_json, -1);
+  rb_define_global_function("sky_httphelper_coins_marshal_json", _wrap_sky_httphelper_coins_marshal_json, -1);
+  rb_define_global_function("sky_httphelper_coins_value", _wrap_sky_httphelper_coins_value, -1);
+  rb_define_global_function("sky_wallet_new_readable_entry", _wrap_sky_wallet_new_readable_entry, -1);
+  rb_define_global_function("sky_wallet_load_readable_wallet", _wrap_sky_wallet_load_readable_wallet, -1);
+  rb_define_global_function("sky_wallet_readable_wallet_save", _wrap_sky_wallet_readable_wallet_save, -1);
+  rb_define_global_function("sky_wallet_readable_wallet_load", _wrap_sky_wallet_readable_wallet_load, -1);
+  rb_define_global_function("sky_wallet_readable_wallet_erase", _wrap_sky_wallet_readable_wallet_erase, -1);
+  rb_define_global_function("sky_file_init_data_dir", _wrap_sky_file_init_data_dir, -1);
+  rb_define_global_function("sky_file_user_home", _wrap_sky_file_user_home, -1);
+  rb_define_global_function("sky_file_resolve_resource_directory", _wrap_sky_file_resolve_resource_directory, -1);
+  rb_define_global_function("sky_file_determine_resource_path", _wrap_sky_file_determine_resource_path, -1);
+  rb_define_global_function("sky_base_58_hex_2base_58", _wrap_sky_base_58_hex_2base_58, -1);
+  rb_define_global_function("sky_base_58_encode", _wrap_sky_base_58_encode, -1);
+  rb_define_global_function("sky_base_58_decode", _wrap_sky_base_58_decode, -1);
+  rb_define_global_function("sky_api_new_client", _wrap_sky_api_new_client, -1);
+  rb_define_global_function("sky_api_client_csrf", _wrap_sky_api_client_csrf, -1);
+  rb_define_global_function("sky_api_client_version", _wrap_sky_api_client_version, -1);
+  rb_define_global_function("sky_api_client_outputs", _wrap_sky_api_client_outputs, -1);
+  rb_define_global_function("sky_api_client_outputs_for_addresses", _wrap_sky_api_client_outputs_for_addresses, -1);
+  rb_define_global_function("sky_api_client_outputs_for_hashes", _wrap_sky_api_client_outputs_for_hashes, -1);
+  rb_define_global_function("sky_api_client_coin_supply", _wrap_sky_api_client_coin_supply, -1);
+  rb_define_global_function("sky_api_client_block_by_hash", _wrap_sky_api_client_block_by_hash, -1);
+  rb_define_global_function("sky_api_client_block_by_seq", _wrap_sky_api_client_block_by_seq, -1);
+  rb_define_global_function("sky_api_client_blocks", _wrap_sky_api_client_blocks, -1);
+  rb_define_global_function("sky_api_client_last_blocks", _wrap_sky_api_client_last_blocks, -1);
+  rb_define_global_function("sky_api_client_blockchain_metadata", _wrap_sky_api_client_blockchain_metadata, -1);
+  rb_define_global_function("sky_api_client_blockchain_progress", _wrap_sky_api_client_blockchain_progress, -1);
+  rb_define_global_function("sky_api_client_balance", _wrap_sky_api_client_balance, -1);
+  rb_define_global_function("sky_api_client_ux_out", _wrap_sky_api_client_ux_out, -1);
+  rb_define_global_function("sky_api_client_address_ux_outs", _wrap_sky_api_client_address_ux_outs, -1);
+  rb_define_global_function("sky_api_client_wallet", _wrap_sky_api_client_wallet, -1);
+  rb_define_global_function("sky_api_client_wallets", _wrap_sky_api_client_wallets, -1);
+  rb_define_global_function("sky_api_client_create_unencrypted_wallet", _wrap_sky_api_client_create_unencrypted_wallet, -1);
+  rb_define_global_function("sky_api_client_create_encrypted_wallet", _wrap_sky_api_client_create_encrypted_wallet, -1);
+  rb_define_global_function("sky_api_client_wallet_balance", _wrap_sky_api_client_wallet_balance, -1);
+  rb_define_global_function("sky_api_client_spend", _wrap_sky_api_client_spend, -1);
+  rb_define_global_function("sky_api_client_create_transaction", _wrap_sky_api_client_create_transaction, -1);
+  rb_define_global_function("sky_api_client_update_wallet", _wrap_sky_api_client_update_wallet, -1);
+  rb_define_global_function("sky_api_client_wallet_folder_name", _wrap_sky_api_client_wallet_folder_name, -1);
+  rb_define_global_function("sky_api_client_new_seed", _wrap_sky_api_client_new_seed, -1);
+  rb_define_global_function("sky_api_client_wallet_seed", _wrap_sky_api_client_wallet_seed, -1);
+  rb_define_global_function("sky_api_client_network_connection", _wrap_sky_api_client_network_connection, -1);
+  rb_define_global_function("sky_api_client_network_connections", _wrap_sky_api_client_network_connections, -1);
+  rb_define_global_function("sky_api_client_network_default_peers", _wrap_sky_api_client_network_default_peers, -1);
+  rb_define_global_function("sky_api_client_network_trusted_peers", _wrap_sky_api_client_network_trusted_peers, -1);
+  rb_define_global_function("sky_api_client_network_exchanged_peers", _wrap_sky_api_client_network_exchanged_peers, -1);
+  rb_define_global_function("sky_api_client_pending_transactions", _wrap_sky_api_client_pending_transactions, -1);
+  rb_define_global_function("sky_api_client_transaction", _wrap_sky_api_client_transaction, -1);
+  rb_define_global_function("sky_api_client_transactions", _wrap_sky_api_client_transactions, -1);
+  rb_define_global_function("sky_api_client_confirmed_transactions", _wrap_sky_api_client_confirmed_transactions, -1);
+  rb_define_global_function("sky_api_client_unconfirmed_transactions", _wrap_sky_api_client_unconfirmed_transactions, -1);
+  rb_define_global_function("sky_api_client_inject_transaction", _wrap_sky_api_client_inject_transaction, -1);
+  rb_define_global_function("sky_api_client_resend_unconfirmed_transactions", _wrap_sky_api_client_resend_unconfirmed_transactions, -1);
+  rb_define_global_function("sky_api_client_raw_transaction", _wrap_sky_api_client_raw_transaction, -1);
+  rb_define_global_function("sky_api_client_address_transactions", _wrap_sky_api_client_address_transactions, -1);
+  rb_define_global_function("sky_api_client_richlist", _wrap_sky_api_client_richlist, -1);
+  rb_define_global_function("sky_api_client_address_count", _wrap_sky_api_client_address_count, -1);
+  rb_define_global_function("sky_api_client_unload_wallet", _wrap_sky_api_client_unload_wallet, -1);
+  rb_define_global_function("sky_api_client_health", _wrap_sky_api_client_health, -1);
+  rb_define_global_function("sky_api_client_encrypt_wallet", _wrap_sky_api_client_encrypt_wallet, -1);
+  rb_define_global_function("sky_api_client_decrypt_wallet", _wrap_sky_api_client_decrypt_wallet, -1);
+  rb_define_global_function("sky_wallet_new_error", _wrap_sky_wallet_new_error, -1);
+  rb_define_global_function("sky_wallet_new_wallet", _wrap_sky_wallet_new_wallet, -1);
+  rb_define_global_function("sky_wallet_wallet_lock", _wrap_sky_wallet_wallet_lock, -1);
+  rb_define_global_function("sky_wallet_wallet_unlock", _wrap_sky_wallet_wallet_unlock, -1);
+  rb_define_global_function("sky_wallet_wallet_save", _wrap_sky_wallet_wallet_save, -1);
+  rb_define_global_function("sky_wallet_wallet_validate", _wrap_sky_wallet_wallet_validate, -1);
+  rb_define_global_function("sky_wallet_wallet_type", _wrap_sky_wallet_wallet_type, -1);
+  rb_define_global_function("sky_wallet_wallet_version", _wrap_sky_wallet_wallet_version, -1);
+  rb_define_global_function("sky_wallet_wallet_filename", _wrap_sky_wallet_wallet_filename, -1);
+  rb_define_global_function("sky_wallet_wallet_label", _wrap_sky_wallet_wallet_label, -1);
+  rb_define_global_function("sky_wallet_wallet_is_encrypted", _wrap_sky_wallet_wallet_is_encrypted, -1);
+  rb_define_global_function("sky_wallet_wallet_generate_addresses", _wrap_sky_wallet_wallet_generate_addresses, -1);
+  rb_define_global_function("sky_wallet_wallet_get_addresses", _wrap_sky_wallet_wallet_get_addresses, -1);
+  rb_define_global_function("sky_wallet_wallet_get_entry", _wrap_sky_wallet_wallet_get_entry, -1);
+  rb_define_global_function("sky_wallet_wallet_add_entry", _wrap_sky_wallet_wallet_add_entry, -1);
+  rb_define_global_function("sky_wallet_distribute_spend_hours", _wrap_sky_wallet_distribute_spend_hours, -1);
+  rb_define_global_function("sky_wallet_distribute_coin_hours_proportional", _wrap_sky_wallet_distribute_coin_hours_proportional, -1);
+  rb_define_global_function("sky_wallet_new_ux_balances", _wrap_sky_wallet_new_ux_balances, -1);
+  rb_define_global_function("sky_wallet_new_ux_balance", _wrap_sky_wallet_new_ux_balance, -1);
+  rb_define_global_function("sky_wallet_choose_spends_minimize_ux_outs", _wrap_sky_wallet_choose_spends_minimize_ux_outs, -1);
+  rb_define_global_function("sky_wallet_choose_spends_maximize_ux_outs", _wrap_sky_wallet_choose_spends_maximize_ux_outs, -1);
+  rb_define_global_function("sky_cli_cli_run", _wrap_sky_cli_cli_run, -1);
+  rb_define_global_function("sky_cli_config_get_coin", _wrap_sky_cli_config_get_coin, -1);
+  rb_define_global_function("sky_cli_config_get_rpcaddress", _wrap_sky_cli_config_get_rpcaddress, -1);
+  rb_define_global_function("sky_cli_getenv", _wrap_sky_cli_getenv, -1);
+  rb_define_global_function("sky_cli_setenv", _wrap_sky_cli_setenv, -1);
+  rb_define_global_function("sky_fee_verify_transaction_fee", _wrap_sky_fee_verify_transaction_fee, -1);
+  rb_define_global_function("sky_fee_verify_transaction_fee_for_hours", _wrap_sky_fee_verify_transaction_fee_for_hours, -1);
+  rb_define_global_function("sky_fee_required_fee", _wrap_sky_fee_required_fee, -1);
+  rb_define_global_function("sky_fee_remaining_hours", _wrap_sky_fee_remaining_hours, -1);
+  rb_define_global_function("sky_fee_transaction_fee", _wrap_sky_fee_transaction_fee, -1);
+  rb_define_global_function("sky_params_get_distribution_addresses", _wrap_sky_params_get_distribution_addresses, -1);
+  rb_define_global_function("sky_params_get_locked_distribution_addresses", _wrap_sky_params_get_locked_distribution_addresses, -1);
+  rb_define_global_function("sky_cli_get_wallet_outputs_from_file", _wrap_sky_cli_get_wallet_outputs_from_file, -1);
+  rb_define_global_function("sky_cli_get_wallet_outputs", _wrap_sky_cli_get_wallet_outputs, -1);
+  rb_define_global_function("sky_cipher_decode_base_58bitcoin_address", _wrap_sky_cipher_decode_base_58bitcoin_address, -1);
+  rb_define_global_function("sky_cipher_bitcoin_address_from_pub_key", _wrap_sky_cipher_bitcoin_address_from_pub_key, -1);
+  rb_define_global_function("sky_cipher_bitcoin_address_from_sec_key", _wrap_sky_cipher_bitcoin_address_from_sec_key, -1);
+  rb_define_global_function("sky_cipher_bitcoin_wallet_import_format_from_seckey", _wrap_sky_cipher_bitcoin_wallet_import_format_from_seckey, -1);
+  rb_define_global_function("sky_cipher_bitcoin_address_from_bytes", _wrap_sky_cipher_bitcoin_address_from_bytes, -1);
+  rb_define_global_function("sky_cipher_sec_key_from_bitcoin_wallet_import_format", _wrap_sky_cipher_sec_key_from_bitcoin_wallet_import_format, -1);
+  rb_define_global_function("sky_cipher_bitcoin_address_null", _wrap_sky_cipher_bitcoin_address_null, -1);
+  rb_define_global_function("sky_cipher_bitcoin_address_bytes", _wrap_sky_cipher_bitcoin_address_bytes, -1);
+  rb_define_global_function("sky_cipher_bitcoin_address_verify", _wrap_sky_cipher_bitcoin_address_verify, -1);
+  rb_define_global_function("sky_cipher_bitcoin_address_string", _wrap_sky_cipher_bitcoin_address_string, -1);
+  rb_define_global_function("sky_cipher_bitcoin_address_checksum", _wrap_sky_cipher_bitcoin_address_checksum, -1);
+  rb_define_global_function("sky_wallet_create_options_handle", _wrap_sky_wallet_create_options_handle, -1);
+  rb_define_global_function("sky_droplet_from_string", _wrap_sky_droplet_from_string, -1);
+  rb_define_global_function("sky_droplet_to_string", _wrap_sky_droplet_to_string, -1);
   
-  SwigClassApi__RichlistParams.klass = rb_define_class_under(mSkycoin, "Api__RichlistParams", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_api__RichlistParams, (void *) &SwigClassApi__RichlistParams);
-  rb_define_alloc_func(SwigClassApi__RichlistParams.klass, _wrap_api__RichlistParams_allocate);
-  rb_define_method(SwigClassApi__RichlistParams.klass, "initialize", _wrap_new_api__RichlistParams, -1);
-  rb_define_method(SwigClassApi__RichlistParams.klass, "N=", _wrap_api__RichlistParams_N_set, -1);
-  rb_define_method(SwigClassApi__RichlistParams.klass, "N", _wrap_api__RichlistParams_N_get, -1);
-  rb_define_method(SwigClassApi__RichlistParams.klass, "IncludeDistribution=", _wrap_api__RichlistParams_IncludeDistribution_set, -1);
-  rb_define_method(SwigClassApi__RichlistParams.klass, "IncludeDistribution", _wrap_api__RichlistParams_IncludeDistribution_get, -1);
-  SwigClassApi__RichlistParams.mark = 0;
-  SwigClassApi__RichlistParams.destroy = (void (*)(void *)) free_api__RichlistParams;
-  SwigClassApi__RichlistParams.trackObjects = 0;
+  SwigClassApiRichlistParams.klass = rb_define_class("ApiRichlistParams", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_api__RichlistParams, (void *) &SwigClassApiRichlistParams);
+  rb_define_alloc_func(SwigClassApiRichlistParams.klass, _wrap_ApiRichlistParams_allocate);
+  rb_define_method(SwigClassApiRichlistParams.klass, "initialize", _wrap_new_ApiRichlistParams, -1);
+  rb_define_method(SwigClassApiRichlistParams.klass, "N=", _wrap_ApiRichlistParams_N_set, -1);
+  rb_define_method(SwigClassApiRichlistParams.klass, "N", _wrap_ApiRichlistParams_N_get, -1);
+  rb_define_method(SwigClassApiRichlistParams.klass, "IncludeDistribution=", _wrap_ApiRichlistParams_IncludeDistribution_set, -1);
+  rb_define_method(SwigClassApiRichlistParams.klass, "IncludeDistribution", _wrap_ApiRichlistParams_IncludeDistribution_get, -1);
+  SwigClassApiRichlistParams.mark = 0;
+  SwigClassApiRichlistParams.destroy = (void (*)(void *)) free_api__RichlistParams;
+  SwigClassApiRichlistParams.trackObjects = 0;
   
-  SwigClassApi__NetworkConnectionsFilter.klass = rb_define_class_under(mSkycoin, "Api__NetworkConnectionsFilter", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_api__NetworkConnectionsFilter, (void *) &SwigClassApi__NetworkConnectionsFilter);
-  rb_define_alloc_func(SwigClassApi__NetworkConnectionsFilter.klass, _wrap_api__NetworkConnectionsFilter_allocate);
-  rb_define_method(SwigClassApi__NetworkConnectionsFilter.klass, "initialize", _wrap_new_api__NetworkConnectionsFilter, -1);
-  rb_define_method(SwigClassApi__NetworkConnectionsFilter.klass, "States=", _wrap_api__NetworkConnectionsFilter_States_set, -1);
-  rb_define_method(SwigClassApi__NetworkConnectionsFilter.klass, "States", _wrap_api__NetworkConnectionsFilter_States_get, -1);
-  rb_define_method(SwigClassApi__NetworkConnectionsFilter.klass, "Direction=", _wrap_api__NetworkConnectionsFilter_Direction_set, -1);
-  rb_define_method(SwigClassApi__NetworkConnectionsFilter.klass, "Direction", _wrap_api__NetworkConnectionsFilter_Direction_get, -1);
-  SwigClassApi__NetworkConnectionsFilter.mark = 0;
-  SwigClassApi__NetworkConnectionsFilter.destroy = (void (*)(void *)) free_api__NetworkConnectionsFilter;
-  SwigClassApi__NetworkConnectionsFilter.trackObjects = 0;
+  SwigClassApiNetworkConnectionsFilter.klass = rb_define_class("ApiNetworkConnectionsFilter", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_api__NetworkConnectionsFilter, (void *) &SwigClassApiNetworkConnectionsFilter);
+  rb_define_alloc_func(SwigClassApiNetworkConnectionsFilter.klass, _wrap_ApiNetworkConnectionsFilter_allocate);
+  rb_define_method(SwigClassApiNetworkConnectionsFilter.klass, "initialize", _wrap_new_ApiNetworkConnectionsFilter, -1);
+  rb_define_method(SwigClassApiNetworkConnectionsFilter.klass, "States=", _wrap_ApiNetworkConnectionsFilter_States_set, -1);
+  rb_define_method(SwigClassApiNetworkConnectionsFilter.klass, "States", _wrap_ApiNetworkConnectionsFilter_States_get, -1);
+  rb_define_method(SwigClassApiNetworkConnectionsFilter.klass, "Direction=", _wrap_ApiNetworkConnectionsFilter_Direction_set, -1);
+  rb_define_method(SwigClassApiNetworkConnectionsFilter.klass, "Direction", _wrap_ApiNetworkConnectionsFilter_Direction_get, -1);
+  SwigClassApiNetworkConnectionsFilter.mark = 0;
+  SwigClassApiNetworkConnectionsFilter.destroy = (void (*)(void *)) free_api__NetworkConnectionsFilter;
+  SwigClassApiNetworkConnectionsFilter.trackObjects = 0;
   
-  SwigClassCipher__Address.klass = rb_define_class_under(mSkycoin, "Cipher__Address", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher__Address, (void *) &SwigClassCipher__Address);
-  rb_define_alloc_func(SwigClassCipher__Address.klass, _wrap_cipher__Address_allocate);
-  rb_define_method(SwigClassCipher__Address.klass, "initialize", _wrap_new_cipher__Address, -1);
-  rb_define_method(SwigClassCipher__Address.klass, "Version=", _wrap_cipher__Address_Version_set, -1);
-  rb_define_method(SwigClassCipher__Address.klass, "Version", _wrap_cipher__Address_Version_get, -1);
-  rb_define_method(SwigClassCipher__Address.klass, "Key=", _wrap_cipher__Address_Key_set, -1);
-  rb_define_method(SwigClassCipher__Address.klass, "Key", _wrap_cipher__Address_Key_get, -1);
-  SwigClassCipher__Address.mark = 0;
-  SwigClassCipher__Address.destroy = (void (*)(void *)) free_cipher__Address;
-  SwigClassCipher__Address.trackObjects = 0;
+  SwigClassCipherAddress.klass = rb_define_class("CipherAddress", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher__Address, (void *) &SwigClassCipherAddress);
+  rb_define_alloc_func(SwigClassCipherAddress.klass, _wrap_CipherAddress_allocate);
+  rb_define_method(SwigClassCipherAddress.klass, "initialize", _wrap_new_CipherAddress, -1);
+  rb_define_method(SwigClassCipherAddress.klass, "Version=", _wrap_CipherAddress_Version_set, -1);
+  rb_define_method(SwigClassCipherAddress.klass, "Version", _wrap_CipherAddress_Version_get, -1);
+  rb_define_method(SwigClassCipherAddress.klass, "Key=", _wrap_CipherAddress_Key_set, -1);
+  rb_define_method(SwigClassCipherAddress.klass, "Key", _wrap_CipherAddress_Key_get, -1);
+  SwigClassCipherAddress.mark = 0;
+  SwigClassCipherAddress.destroy = (void (*)(void *)) free_cipher__Address;
+  SwigClassCipherAddress.trackObjects = 0;
   
-  SwigClassCipher__BitcoinAddress.klass = rb_define_class_under(mSkycoin, "Cipher__BitcoinAddress", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cipher__BitcoinAddress, (void *) &SwigClassCipher__BitcoinAddress);
-  rb_define_alloc_func(SwigClassCipher__BitcoinAddress.klass, _wrap_cipher__BitcoinAddress_allocate);
-  rb_define_method(SwigClassCipher__BitcoinAddress.klass, "initialize", _wrap_new_cipher__BitcoinAddress, -1);
-  rb_define_method(SwigClassCipher__BitcoinAddress.klass, "Version=", _wrap_cipher__BitcoinAddress_Version_set, -1);
-  rb_define_method(SwigClassCipher__BitcoinAddress.klass, "Version", _wrap_cipher__BitcoinAddress_Version_get, -1);
-  rb_define_method(SwigClassCipher__BitcoinAddress.klass, "Key=", _wrap_cipher__BitcoinAddress_Key_set, -1);
-  rb_define_method(SwigClassCipher__BitcoinAddress.klass, "Key", _wrap_cipher__BitcoinAddress_Key_get, -1);
-  SwigClassCipher__BitcoinAddress.mark = 0;
-  SwigClassCipher__BitcoinAddress.destroy = (void (*)(void *)) free_cipher__BitcoinAddress;
-  SwigClassCipher__BitcoinAddress.trackObjects = 0;
+  SwigClassCipherBitcoinAddress.klass = rb_define_class("CipherBitcoinAddress", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cipher__BitcoinAddress, (void *) &SwigClassCipherBitcoinAddress);
+  rb_define_alloc_func(SwigClassCipherBitcoinAddress.klass, _wrap_CipherBitcoinAddress_allocate);
+  rb_define_method(SwigClassCipherBitcoinAddress.klass, "initialize", _wrap_new_CipherBitcoinAddress, -1);
+  rb_define_method(SwigClassCipherBitcoinAddress.klass, "Version=", _wrap_CipherBitcoinAddress_Version_set, -1);
+  rb_define_method(SwigClassCipherBitcoinAddress.klass, "Version", _wrap_CipherBitcoinAddress_Version_get, -1);
+  rb_define_method(SwigClassCipherBitcoinAddress.klass, "Key=", _wrap_CipherBitcoinAddress_Key_set, -1);
+  rb_define_method(SwigClassCipherBitcoinAddress.klass, "Key", _wrap_CipherBitcoinAddress_Key_get, -1);
+  SwigClassCipherBitcoinAddress.mark = 0;
+  SwigClassCipherBitcoinAddress.destroy = (void (*)(void *)) free_cipher__BitcoinAddress;
+  SwigClassCipherBitcoinAddress.trackObjects = 0;
   
-  SwigClassEncrypt__ScryptChacha20poly1305.klass = rb_define_class_under(mSkycoin, "Encrypt__ScryptChacha20poly1305", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_encrypt__ScryptChacha20poly1305, (void *) &SwigClassEncrypt__ScryptChacha20poly1305);
-  rb_define_alloc_func(SwigClassEncrypt__ScryptChacha20poly1305.klass, _wrap_encrypt__ScryptChacha20poly1305_allocate);
-  rb_define_method(SwigClassEncrypt__ScryptChacha20poly1305.klass, "initialize", _wrap_new_encrypt__ScryptChacha20poly1305, -1);
-  rb_define_method(SwigClassEncrypt__ScryptChacha20poly1305.klass, "N=", _wrap_encrypt__ScryptChacha20poly1305_N_set, -1);
-  rb_define_method(SwigClassEncrypt__ScryptChacha20poly1305.klass, "N", _wrap_encrypt__ScryptChacha20poly1305_N_get, -1);
-  rb_define_method(SwigClassEncrypt__ScryptChacha20poly1305.klass, "R=", _wrap_encrypt__ScryptChacha20poly1305_R_set, -1);
-  rb_define_method(SwigClassEncrypt__ScryptChacha20poly1305.klass, "R", _wrap_encrypt__ScryptChacha20poly1305_R_get, -1);
-  rb_define_method(SwigClassEncrypt__ScryptChacha20poly1305.klass, "P=", _wrap_encrypt__ScryptChacha20poly1305_P_set, -1);
-  rb_define_method(SwigClassEncrypt__ScryptChacha20poly1305.klass, "P", _wrap_encrypt__ScryptChacha20poly1305_P_get, -1);
-  rb_define_method(SwigClassEncrypt__ScryptChacha20poly1305.klass, "KeyLen=", _wrap_encrypt__ScryptChacha20poly1305_KeyLen_set, -1);
-  rb_define_method(SwigClassEncrypt__ScryptChacha20poly1305.klass, "KeyLen", _wrap_encrypt__ScryptChacha20poly1305_KeyLen_get, -1);
-  SwigClassEncrypt__ScryptChacha20poly1305.mark = 0;
-  SwigClassEncrypt__ScryptChacha20poly1305.destroy = (void (*)(void *)) free_encrypt__ScryptChacha20poly1305;
-  SwigClassEncrypt__ScryptChacha20poly1305.trackObjects = 0;
+  SwigClassEncryptScryptChacha20poly1305.klass = rb_define_class("EncryptScryptChacha20poly1305", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_encrypt__ScryptChacha20poly1305, (void *) &SwigClassEncryptScryptChacha20poly1305);
+  rb_define_alloc_func(SwigClassEncryptScryptChacha20poly1305.klass, _wrap_EncryptScryptChacha20poly1305_allocate);
+  rb_define_method(SwigClassEncryptScryptChacha20poly1305.klass, "initialize", _wrap_new_EncryptScryptChacha20poly1305, -1);
+  rb_define_method(SwigClassEncryptScryptChacha20poly1305.klass, "N=", _wrap_EncryptScryptChacha20poly1305_N_set, -1);
+  rb_define_method(SwigClassEncryptScryptChacha20poly1305.klass, "N", _wrap_EncryptScryptChacha20poly1305_N_get, -1);
+  rb_define_method(SwigClassEncryptScryptChacha20poly1305.klass, "R=", _wrap_EncryptScryptChacha20poly1305_R_set, -1);
+  rb_define_method(SwigClassEncryptScryptChacha20poly1305.klass, "R", _wrap_EncryptScryptChacha20poly1305_R_get, -1);
+  rb_define_method(SwigClassEncryptScryptChacha20poly1305.klass, "P=", _wrap_EncryptScryptChacha20poly1305_P_set, -1);
+  rb_define_method(SwigClassEncryptScryptChacha20poly1305.klass, "P", _wrap_EncryptScryptChacha20poly1305_P_get, -1);
+  rb_define_method(SwigClassEncryptScryptChacha20poly1305.klass, "KeyLen=", _wrap_EncryptScryptChacha20poly1305_KeyLen_set, -1);
+  rb_define_method(SwigClassEncryptScryptChacha20poly1305.klass, "KeyLen", _wrap_EncryptScryptChacha20poly1305_KeyLen_get, -1);
+  SwigClassEncryptScryptChacha20poly1305.mark = 0;
+  SwigClassEncryptScryptChacha20poly1305.destroy = (void (*)(void *)) free_encrypt__ScryptChacha20poly1305;
+  SwigClassEncryptScryptChacha20poly1305.trackObjects = 0;
   
-  SwigClassSecp256k1go__Field.klass = rb_define_class_under(mSkycoin, "Secp256k1go__Field", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_secp256k1go__Field, (void *) &SwigClassSecp256k1go__Field);
-  rb_define_alloc_func(SwigClassSecp256k1go__Field.klass, _wrap_secp256k1go__Field_allocate);
-  rb_define_method(SwigClassSecp256k1go__Field.klass, "initialize", _wrap_new_secp256k1go__Field, -1);
-  rb_define_method(SwigClassSecp256k1go__Field.klass, "n=", _wrap_secp256k1go__Field_n_set, -1);
-  rb_define_method(SwigClassSecp256k1go__Field.klass, "n", _wrap_secp256k1go__Field_n_get, -1);
-  SwigClassSecp256k1go__Field.mark = 0;
-  SwigClassSecp256k1go__Field.destroy = (void (*)(void *)) free_secp256k1go__Field;
-  SwigClassSecp256k1go__Field.trackObjects = 0;
+  SwigClassSecp256k1goField.klass = rb_define_class("Secp256k1goField", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_secp256k1go__Field, (void *) &SwigClassSecp256k1goField);
+  rb_define_alloc_func(SwigClassSecp256k1goField.klass, _wrap_Secp256k1goField_allocate);
+  rb_define_method(SwigClassSecp256k1goField.klass, "initialize", _wrap_new_Secp256k1goField, -1);
+  rb_define_method(SwigClassSecp256k1goField.klass, "n=", _wrap_Secp256k1goField_n_set, -1);
+  rb_define_method(SwigClassSecp256k1goField.klass, "n", _wrap_Secp256k1goField_n_get, -1);
+  SwigClassSecp256k1goField.mark = 0;
+  SwigClassSecp256k1goField.destroy = (void (*)(void *)) free_secp256k1go__Field;
+  SwigClassSecp256k1goField.trackObjects = 0;
   
-  SwigClassSecp256k1go__XY.klass = rb_define_class_under(mSkycoin, "Secp256k1go__XY", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_secp256k1go__XY, (void *) &SwigClassSecp256k1go__XY);
-  rb_define_alloc_func(SwigClassSecp256k1go__XY.klass, _wrap_secp256k1go__XY_allocate);
-  rb_define_method(SwigClassSecp256k1go__XY.klass, "initialize", _wrap_new_secp256k1go__XY, -1);
-  rb_define_method(SwigClassSecp256k1go__XY.klass, "X=", _wrap_secp256k1go__XY_X_set, -1);
-  rb_define_method(SwigClassSecp256k1go__XY.klass, "X", _wrap_secp256k1go__XY_X_get, -1);
-  rb_define_method(SwigClassSecp256k1go__XY.klass, "Y=", _wrap_secp256k1go__XY_Y_set, -1);
-  rb_define_method(SwigClassSecp256k1go__XY.klass, "Y", _wrap_secp256k1go__XY_Y_get, -1);
-  rb_define_method(SwigClassSecp256k1go__XY.klass, "Infinity=", _wrap_secp256k1go__XY_Infinity_set, -1);
-  rb_define_method(SwigClassSecp256k1go__XY.klass, "Infinity", _wrap_secp256k1go__XY_Infinity_get, -1);
-  SwigClassSecp256k1go__XY.mark = 0;
-  SwigClassSecp256k1go__XY.destroy = (void (*)(void *)) free_secp256k1go__XY;
-  SwigClassSecp256k1go__XY.trackObjects = 0;
+  SwigClassSecp256k1goXY.klass = rb_define_class("Secp256k1goXY", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_secp256k1go__XY, (void *) &SwigClassSecp256k1goXY);
+  rb_define_alloc_func(SwigClassSecp256k1goXY.klass, _wrap_Secp256k1goXY_allocate);
+  rb_define_method(SwigClassSecp256k1goXY.klass, "initialize", _wrap_new_Secp256k1goXY, -1);
+  rb_define_method(SwigClassSecp256k1goXY.klass, "X=", _wrap_Secp256k1goXY_X_set, -1);
+  rb_define_method(SwigClassSecp256k1goXY.klass, "X", _wrap_Secp256k1goXY_X_get, -1);
+  rb_define_method(SwigClassSecp256k1goXY.klass, "Y=", _wrap_Secp256k1goXY_Y_set, -1);
+  rb_define_method(SwigClassSecp256k1goXY.klass, "Y", _wrap_Secp256k1goXY_Y_get, -1);
+  rb_define_method(SwigClassSecp256k1goXY.klass, "Infinity=", _wrap_Secp256k1goXY_Infinity_set, -1);
+  rb_define_method(SwigClassSecp256k1goXY.klass, "Infinity", _wrap_Secp256k1goXY_Infinity_get, -1);
+  SwigClassSecp256k1goXY.mark = 0;
+  SwigClassSecp256k1goXY.destroy = (void (*)(void *)) free_secp256k1go__XY;
+  SwigClassSecp256k1goXY.trackObjects = 0;
   
-  SwigClassSecp256k1go__XYZ.klass = rb_define_class_under(mSkycoin, "Secp256k1go__XYZ", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_secp256k1go__XYZ, (void *) &SwigClassSecp256k1go__XYZ);
-  rb_define_alloc_func(SwigClassSecp256k1go__XYZ.klass, _wrap_secp256k1go__XYZ_allocate);
-  rb_define_method(SwigClassSecp256k1go__XYZ.klass, "initialize", _wrap_new_secp256k1go__XYZ, -1);
-  rb_define_method(SwigClassSecp256k1go__XYZ.klass, "X=", _wrap_secp256k1go__XYZ_X_set, -1);
-  rb_define_method(SwigClassSecp256k1go__XYZ.klass, "X", _wrap_secp256k1go__XYZ_X_get, -1);
-  rb_define_method(SwigClassSecp256k1go__XYZ.klass, "Y=", _wrap_secp256k1go__XYZ_Y_set, -1);
-  rb_define_method(SwigClassSecp256k1go__XYZ.klass, "Y", _wrap_secp256k1go__XYZ_Y_get, -1);
-  rb_define_method(SwigClassSecp256k1go__XYZ.klass, "Z=", _wrap_secp256k1go__XYZ_Z_set, -1);
-  rb_define_method(SwigClassSecp256k1go__XYZ.klass, "Z", _wrap_secp256k1go__XYZ_Z_get, -1);
-  rb_define_method(SwigClassSecp256k1go__XYZ.klass, "Infinity=", _wrap_secp256k1go__XYZ_Infinity_set, -1);
-  rb_define_method(SwigClassSecp256k1go__XYZ.klass, "Infinity", _wrap_secp256k1go__XYZ_Infinity_get, -1);
-  SwigClassSecp256k1go__XYZ.mark = 0;
-  SwigClassSecp256k1go__XYZ.destroy = (void (*)(void *)) free_secp256k1go__XYZ;
-  SwigClassSecp256k1go__XYZ.trackObjects = 0;
+  SwigClassSecp256k1goXYZ.klass = rb_define_class("Secp256k1goXYZ", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_secp256k1go__XYZ, (void *) &SwigClassSecp256k1goXYZ);
+  rb_define_alloc_func(SwigClassSecp256k1goXYZ.klass, _wrap_Secp256k1goXYZ_allocate);
+  rb_define_method(SwigClassSecp256k1goXYZ.klass, "initialize", _wrap_new_Secp256k1goXYZ, -1);
+  rb_define_method(SwigClassSecp256k1goXYZ.klass, "X=", _wrap_Secp256k1goXYZ_X_set, -1);
+  rb_define_method(SwigClassSecp256k1goXYZ.klass, "X", _wrap_Secp256k1goXYZ_X_get, -1);
+  rb_define_method(SwigClassSecp256k1goXYZ.klass, "Y=", _wrap_Secp256k1goXYZ_Y_set, -1);
+  rb_define_method(SwigClassSecp256k1goXYZ.klass, "Y", _wrap_Secp256k1goXYZ_Y_get, -1);
+  rb_define_method(SwigClassSecp256k1goXYZ.klass, "Z=", _wrap_Secp256k1goXYZ_Z_set, -1);
+  rb_define_method(SwigClassSecp256k1goXYZ.klass, "Z", _wrap_Secp256k1goXYZ_Z_get, -1);
+  rb_define_method(SwigClassSecp256k1goXYZ.klass, "Infinity=", _wrap_Secp256k1goXYZ_Infinity_set, -1);
+  rb_define_method(SwigClassSecp256k1goXYZ.klass, "Infinity", _wrap_Secp256k1goXYZ_Infinity_get, -1);
+  SwigClassSecp256k1goXYZ.mark = 0;
+  SwigClassSecp256k1goXYZ.destroy = (void (*)(void *)) free_secp256k1go__XYZ;
+  SwigClassSecp256k1goXYZ.trackObjects = 0;
   
-  SwigClassCli__SendAmount.klass = rb_define_class_under(mSkycoin, "Cli__SendAmount", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_cli__SendAmount, (void *) &SwigClassCli__SendAmount);
-  rb_define_alloc_func(SwigClassCli__SendAmount.klass, _wrap_cli__SendAmount_allocate);
-  rb_define_method(SwigClassCli__SendAmount.klass, "initialize", _wrap_new_cli__SendAmount, -1);
-  rb_define_method(SwigClassCli__SendAmount.klass, "Addr=", _wrap_cli__SendAmount_Addr_set, -1);
-  rb_define_method(SwigClassCli__SendAmount.klass, "Addr", _wrap_cli__SendAmount_Addr_get, -1);
-  rb_define_method(SwigClassCli__SendAmount.klass, "Coins=", _wrap_cli__SendAmount_Coins_set, -1);
-  rb_define_method(SwigClassCli__SendAmount.klass, "Coins", _wrap_cli__SendAmount_Coins_get, -1);
-  SwigClassCli__SendAmount.mark = 0;
-  SwigClassCli__SendAmount.destroy = (void (*)(void *)) free_cli__SendAmount;
-  SwigClassCli__SendAmount.trackObjects = 0;
+  SwigClassCliSendAmount.klass = rb_define_class("CliSendAmount", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_cli__SendAmount, (void *) &SwigClassCliSendAmount);
+  rb_define_alloc_func(SwigClassCliSendAmount.klass, _wrap_CliSendAmount_allocate);
+  rb_define_method(SwigClassCliSendAmount.klass, "initialize", _wrap_new_CliSendAmount, -1);
+  rb_define_method(SwigClassCliSendAmount.klass, "Addr=", _wrap_CliSendAmount_Addr_set, -1);
+  rb_define_method(SwigClassCliSendAmount.klass, "Addr", _wrap_CliSendAmount_Addr_get, -1);
+  rb_define_method(SwigClassCliSendAmount.klass, "Coins=", _wrap_CliSendAmount_Coins_set, -1);
+  rb_define_method(SwigClassCliSendAmount.klass, "Coins", _wrap_CliSendAmount_Coins_get, -1);
+  SwigClassCliSendAmount.mark = 0;
+  SwigClassCliSendAmount.destroy = (void (*)(void *)) free_cli__SendAmount;
+  SwigClassCliSendAmount.trackObjects = 0;
   
-  SwigClassCoin__Transaction.klass = rb_define_class_under(mSkycoin, "Coin__Transaction", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_coin__Transaction, (void *) &SwigClassCoin__Transaction);
-  rb_define_alloc_func(SwigClassCoin__Transaction.klass, _wrap_coin__Transaction_allocate);
-  rb_define_method(SwigClassCoin__Transaction.klass, "initialize", _wrap_new_coin__Transaction, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "Length=", _wrap_coin__Transaction_Length_set, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "Length", _wrap_coin__Transaction_Length_get, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "Type=", _wrap_coin__Transaction_Type_set, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "Type", _wrap_coin__Transaction_Type_get, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "InnerHash=", _wrap_coin__Transaction_InnerHash_set, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "InnerHash", _wrap_coin__Transaction_InnerHash_get, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "Sigs=", _wrap_coin__Transaction_Sigs_set, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "Sigs", _wrap_coin__Transaction_Sigs_get, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "In=", _wrap_coin__Transaction_In_set, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "In", _wrap_coin__Transaction_In_get, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "Out=", _wrap_coin__Transaction_Out_set, -1);
-  rb_define_method(SwigClassCoin__Transaction.klass, "Out", _wrap_coin__Transaction_Out_get, -1);
-  SwigClassCoin__Transaction.mark = 0;
-  SwigClassCoin__Transaction.destroy = (void (*)(void *)) free_coin__Transaction;
-  SwigClassCoin__Transaction.trackObjects = 0;
+  SwigClassCoinTransaction.klass = rb_define_class("CoinTransaction", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_coin__Transaction, (void *) &SwigClassCoinTransaction);
+  rb_define_alloc_func(SwigClassCoinTransaction.klass, _wrap_CoinTransaction_allocate);
+  rb_define_method(SwigClassCoinTransaction.klass, "initialize", _wrap_new_CoinTransaction, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "Length=", _wrap_CoinTransaction_Length_set, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "Length", _wrap_CoinTransaction_Length_get, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "Type=", _wrap_CoinTransaction_Type_set, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "Type", _wrap_CoinTransaction_Type_get, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "InnerHash=", _wrap_CoinTransaction_InnerHash_set, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "InnerHash", _wrap_CoinTransaction_InnerHash_get, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "Sigs=", _wrap_CoinTransaction_Sigs_set, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "Sigs", _wrap_CoinTransaction_Sigs_get, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "In=", _wrap_CoinTransaction_In_set, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "In", _wrap_CoinTransaction_In_get, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "Out=", _wrap_CoinTransaction_Out_set, -1);
+  rb_define_method(SwigClassCoinTransaction.klass, "Out", _wrap_CoinTransaction_Out_get, -1);
+  SwigClassCoinTransaction.mark = 0;
+  SwigClassCoinTransaction.destroy = (void (*)(void *)) free_coin__Transaction;
+  SwigClassCoinTransaction.trackObjects = 0;
   
-  SwigClassCoin__TransactionOutput.klass = rb_define_class_under(mSkycoin, "Coin__TransactionOutput", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_coin__TransactionOutput, (void *) &SwigClassCoin__TransactionOutput);
-  rb_define_alloc_func(SwigClassCoin__TransactionOutput.klass, _wrap_coin__TransactionOutput_allocate);
-  rb_define_method(SwigClassCoin__TransactionOutput.klass, "initialize", _wrap_new_coin__TransactionOutput, -1);
-  rb_define_method(SwigClassCoin__TransactionOutput.klass, "Address=", _wrap_coin__TransactionOutput_Address_set, -1);
-  rb_define_method(SwigClassCoin__TransactionOutput.klass, "Address", _wrap_coin__TransactionOutput_Address_get, -1);
-  rb_define_method(SwigClassCoin__TransactionOutput.klass, "Coins=", _wrap_coin__TransactionOutput_Coins_set, -1);
-  rb_define_method(SwigClassCoin__TransactionOutput.klass, "Coins", _wrap_coin__TransactionOutput_Coins_get, -1);
-  rb_define_method(SwigClassCoin__TransactionOutput.klass, "Hours=", _wrap_coin__TransactionOutput_Hours_set, -1);
-  rb_define_method(SwigClassCoin__TransactionOutput.klass, "Hours", _wrap_coin__TransactionOutput_Hours_get, -1);
-  SwigClassCoin__TransactionOutput.mark = 0;
-  SwigClassCoin__TransactionOutput.destroy = (void (*)(void *)) free_coin__TransactionOutput;
-  SwigClassCoin__TransactionOutput.trackObjects = 0;
+  SwigClassCoinTransactionOutput.klass = rb_define_class("CoinTransactionOutput", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_coin__TransactionOutput, (void *) &SwigClassCoinTransactionOutput);
+  rb_define_alloc_func(SwigClassCoinTransactionOutput.klass, _wrap_CoinTransactionOutput_allocate);
+  rb_define_method(SwigClassCoinTransactionOutput.klass, "initialize", _wrap_new_CoinTransactionOutput, -1);
+  rb_define_method(SwigClassCoinTransactionOutput.klass, "Address=", _wrap_CoinTransactionOutput_Address_set, -1);
+  rb_define_method(SwigClassCoinTransactionOutput.klass, "Address", _wrap_CoinTransactionOutput_Address_get, -1);
+  rb_define_method(SwigClassCoinTransactionOutput.klass, "Coins=", _wrap_CoinTransactionOutput_Coins_set, -1);
+  rb_define_method(SwigClassCoinTransactionOutput.klass, "Coins", _wrap_CoinTransactionOutput_Coins_get, -1);
+  rb_define_method(SwigClassCoinTransactionOutput.klass, "Hours=", _wrap_CoinTransactionOutput_Hours_set, -1);
+  rb_define_method(SwigClassCoinTransactionOutput.klass, "Hours", _wrap_CoinTransactionOutput_Hours_get, -1);
+  SwigClassCoinTransactionOutput.mark = 0;
+  SwigClassCoinTransactionOutput.destroy = (void (*)(void *)) free_coin__TransactionOutput;
+  SwigClassCoinTransactionOutput.trackObjects = 0;
   
-  SwigClassCoin__BlockHeader.klass = rb_define_class_under(mSkycoin, "Coin__BlockHeader", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_coin__BlockHeader, (void *) &SwigClassCoin__BlockHeader);
-  rb_define_alloc_func(SwigClassCoin__BlockHeader.klass, _wrap_coin__BlockHeader_allocate);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "initialize", _wrap_new_coin__BlockHeader, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "Version=", _wrap_coin__BlockHeader_Version_set, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "Version", _wrap_coin__BlockHeader_Version_get, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "Time=", _wrap_coin__BlockHeader_Time_set, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "Time", _wrap_coin__BlockHeader_Time_get, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "BkSeq=", _wrap_coin__BlockHeader_BkSeq_set, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "BkSeq", _wrap_coin__BlockHeader_BkSeq_get, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "Fee=", _wrap_coin__BlockHeader_Fee_set, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "Fee", _wrap_coin__BlockHeader_Fee_get, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "PrevHash=", _wrap_coin__BlockHeader_PrevHash_set, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "PrevHash", _wrap_coin__BlockHeader_PrevHash_get, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "BodyHash=", _wrap_coin__BlockHeader_BodyHash_set, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "BodyHash", _wrap_coin__BlockHeader_BodyHash_get, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "UxHash=", _wrap_coin__BlockHeader_UxHash_set, -1);
-  rb_define_method(SwigClassCoin__BlockHeader.klass, "UxHash", _wrap_coin__BlockHeader_UxHash_get, -1);
-  SwigClassCoin__BlockHeader.mark = 0;
-  SwigClassCoin__BlockHeader.destroy = (void (*)(void *)) free_coin__BlockHeader;
-  SwigClassCoin__BlockHeader.trackObjects = 0;
+  SwigClassCoinBlockHeader.klass = rb_define_class("CoinBlockHeader", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_coin__BlockHeader, (void *) &SwigClassCoinBlockHeader);
+  rb_define_alloc_func(SwigClassCoinBlockHeader.klass, _wrap_CoinBlockHeader_allocate);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "initialize", _wrap_new_CoinBlockHeader, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "Version=", _wrap_CoinBlockHeader_Version_set, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "Version", _wrap_CoinBlockHeader_Version_get, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "Time=", _wrap_CoinBlockHeader_Time_set, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "Time", _wrap_CoinBlockHeader_Time_get, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "BkSeq=", _wrap_CoinBlockHeader_BkSeq_set, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "BkSeq", _wrap_CoinBlockHeader_BkSeq_get, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "Fee=", _wrap_CoinBlockHeader_Fee_set, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "Fee", _wrap_CoinBlockHeader_Fee_get, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "PrevHash=", _wrap_CoinBlockHeader_PrevHash_set, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "PrevHash", _wrap_CoinBlockHeader_PrevHash_get, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "BodyHash=", _wrap_CoinBlockHeader_BodyHash_set, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "BodyHash", _wrap_CoinBlockHeader_BodyHash_get, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "UxHash=", _wrap_CoinBlockHeader_UxHash_set, -1);
+  rb_define_method(SwigClassCoinBlockHeader.klass, "UxHash", _wrap_CoinBlockHeader_UxHash_get, -1);
+  SwigClassCoinBlockHeader.mark = 0;
+  SwigClassCoinBlockHeader.destroy = (void (*)(void *)) free_coin__BlockHeader;
+  SwigClassCoinBlockHeader.trackObjects = 0;
   
-  SwigClassCoin__BlockBody.klass = rb_define_class_under(mSkycoin, "Coin__BlockBody", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_coin__BlockBody, (void *) &SwigClassCoin__BlockBody);
-  rb_define_alloc_func(SwigClassCoin__BlockBody.klass, _wrap_coin__BlockBody_allocate);
-  rb_define_method(SwigClassCoin__BlockBody.klass, "initialize", _wrap_new_coin__BlockBody, -1);
-  rb_define_method(SwigClassCoin__BlockBody.klass, "Transactions=", _wrap_coin__BlockBody_Transactions_set, -1);
-  rb_define_method(SwigClassCoin__BlockBody.klass, "Transactions", _wrap_coin__BlockBody_Transactions_get, -1);
-  SwigClassCoin__BlockBody.mark = 0;
-  SwigClassCoin__BlockBody.destroy = (void (*)(void *)) free_coin__BlockBody;
-  SwigClassCoin__BlockBody.trackObjects = 0;
+  SwigClassCoinBlockBody.klass = rb_define_class("CoinBlockBody", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_coin__BlockBody, (void *) &SwigClassCoinBlockBody);
+  rb_define_alloc_func(SwigClassCoinBlockBody.klass, _wrap_CoinBlockBody_allocate);
+  rb_define_method(SwigClassCoinBlockBody.klass, "initialize", _wrap_new_CoinBlockBody, -1);
+  rb_define_method(SwigClassCoinBlockBody.klass, "Transactions=", _wrap_CoinBlockBody_Transactions_set, -1);
+  rb_define_method(SwigClassCoinBlockBody.klass, "Transactions", _wrap_CoinBlockBody_Transactions_get, -1);
+  SwigClassCoinBlockBody.mark = 0;
+  SwigClassCoinBlockBody.destroy = (void (*)(void *)) free_coin__BlockBody;
+  SwigClassCoinBlockBody.trackObjects = 0;
   
-  SwigClassCoin__Block.klass = rb_define_class_under(mSkycoin, "Coin__Block", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_coin__Block, (void *) &SwigClassCoin__Block);
-  rb_define_alloc_func(SwigClassCoin__Block.klass, _wrap_coin__Block_allocate);
-  rb_define_method(SwigClassCoin__Block.klass, "initialize", _wrap_new_coin__Block, -1);
-  rb_define_method(SwigClassCoin__Block.klass, "Head=", _wrap_coin__Block_Head_set, -1);
-  rb_define_method(SwigClassCoin__Block.klass, "Head", _wrap_coin__Block_Head_get, -1);
-  rb_define_method(SwigClassCoin__Block.klass, "Body=", _wrap_coin__Block_Body_set, -1);
-  rb_define_method(SwigClassCoin__Block.klass, "Body", _wrap_coin__Block_Body_get, -1);
-  SwigClassCoin__Block.mark = 0;
-  SwigClassCoin__Block.destroy = (void (*)(void *)) free_coin__Block;
-  SwigClassCoin__Block.trackObjects = 0;
+  SwigClassCoinBlock.klass = rb_define_class("CoinBlock", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_coin__Block, (void *) &SwigClassCoinBlock);
+  rb_define_alloc_func(SwigClassCoinBlock.klass, _wrap_CoinBlock_allocate);
+  rb_define_method(SwigClassCoinBlock.klass, "initialize", _wrap_new_CoinBlock, -1);
+  rb_define_method(SwigClassCoinBlock.klass, "Head=", _wrap_CoinBlock_Head_set, -1);
+  rb_define_method(SwigClassCoinBlock.klass, "Head", _wrap_CoinBlock_Head_get, -1);
+  rb_define_method(SwigClassCoinBlock.klass, "Body=", _wrap_CoinBlock_Body_set, -1);
+  rb_define_method(SwigClassCoinBlock.klass, "Body", _wrap_CoinBlock_Body_get, -1);
+  SwigClassCoinBlock.mark = 0;
+  SwigClassCoinBlock.destroy = (void (*)(void *)) free_coin__Block;
+  SwigClassCoinBlock.trackObjects = 0;
   
-  SwigClassCoin__SignedBlock.klass = rb_define_class_under(mSkycoin, "Coin__SignedBlock", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_coin__SignedBlock, (void *) &SwigClassCoin__SignedBlock);
-  rb_define_alloc_func(SwigClassCoin__SignedBlock.klass, _wrap_coin__SignedBlock_allocate);
-  rb_define_method(SwigClassCoin__SignedBlock.klass, "initialize", _wrap_new_coin__SignedBlock, -1);
-  rb_define_method(SwigClassCoin__SignedBlock.klass, "_unnamed=", _wrap_coin__SignedBlock__unnamed_set, -1);
-  rb_define_method(SwigClassCoin__SignedBlock.klass, "_unnamed", _wrap_coin__SignedBlock__unnamed_get, -1);
-  rb_define_method(SwigClassCoin__SignedBlock.klass, "Sig=", _wrap_coin__SignedBlock_Sig_set, -1);
-  rb_define_method(SwigClassCoin__SignedBlock.klass, "Sig", _wrap_coin__SignedBlock_Sig_get, -1);
-  SwigClassCoin__SignedBlock.mark = 0;
-  SwigClassCoin__SignedBlock.destroy = (void (*)(void *)) free_coin__SignedBlock;
-  SwigClassCoin__SignedBlock.trackObjects = 0;
+  SwigClassCoinSignedBlock.klass = rb_define_class("CoinSignedBlock", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_coin__SignedBlock, (void *) &SwigClassCoinSignedBlock);
+  rb_define_alloc_func(SwigClassCoinSignedBlock.klass, _wrap_CoinSignedBlock_allocate);
+  rb_define_method(SwigClassCoinSignedBlock.klass, "initialize", _wrap_new_CoinSignedBlock, -1);
+  rb_define_method(SwigClassCoinSignedBlock.klass, "_unnamed=", _wrap_CoinSignedBlock__unnamed_set, -1);
+  rb_define_method(SwigClassCoinSignedBlock.klass, "_unnamed", _wrap_CoinSignedBlock__unnamed_get, -1);
+  rb_define_method(SwigClassCoinSignedBlock.klass, "Sig=", _wrap_CoinSignedBlock_Sig_set, -1);
+  rb_define_method(SwigClassCoinSignedBlock.klass, "Sig", _wrap_CoinSignedBlock_Sig_get, -1);
+  SwigClassCoinSignedBlock.mark = 0;
+  SwigClassCoinSignedBlock.destroy = (void (*)(void *)) free_coin__SignedBlock;
+  SwigClassCoinSignedBlock.trackObjects = 0;
   
-  SwigClassCoin__UxHead.klass = rb_define_class_under(mSkycoin, "Coin__UxHead", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_coin__UxHead, (void *) &SwigClassCoin__UxHead);
-  rb_define_alloc_func(SwigClassCoin__UxHead.klass, _wrap_coin__UxHead_allocate);
-  rb_define_method(SwigClassCoin__UxHead.klass, "initialize", _wrap_new_coin__UxHead, -1);
-  rb_define_method(SwigClassCoin__UxHead.klass, "Time=", _wrap_coin__UxHead_Time_set, -1);
-  rb_define_method(SwigClassCoin__UxHead.klass, "Time", _wrap_coin__UxHead_Time_get, -1);
-  rb_define_method(SwigClassCoin__UxHead.klass, "BkSeq=", _wrap_coin__UxHead_BkSeq_set, -1);
-  rb_define_method(SwigClassCoin__UxHead.klass, "BkSeq", _wrap_coin__UxHead_BkSeq_get, -1);
-  SwigClassCoin__UxHead.mark = 0;
-  SwigClassCoin__UxHead.destroy = (void (*)(void *)) free_coin__UxHead;
-  SwigClassCoin__UxHead.trackObjects = 0;
+  SwigClassCoinUxHead.klass = rb_define_class("CoinUxHead", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_coin__UxHead, (void *) &SwigClassCoinUxHead);
+  rb_define_alloc_func(SwigClassCoinUxHead.klass, _wrap_CoinUxHead_allocate);
+  rb_define_method(SwigClassCoinUxHead.klass, "initialize", _wrap_new_CoinUxHead, -1);
+  rb_define_method(SwigClassCoinUxHead.klass, "Time=", _wrap_CoinUxHead_Time_set, -1);
+  rb_define_method(SwigClassCoinUxHead.klass, "Time", _wrap_CoinUxHead_Time_get, -1);
+  rb_define_method(SwigClassCoinUxHead.klass, "BkSeq=", _wrap_CoinUxHead_BkSeq_set, -1);
+  rb_define_method(SwigClassCoinUxHead.klass, "BkSeq", _wrap_CoinUxHead_BkSeq_get, -1);
+  SwigClassCoinUxHead.mark = 0;
+  SwigClassCoinUxHead.destroy = (void (*)(void *)) free_coin__UxHead;
+  SwigClassCoinUxHead.trackObjects = 0;
   
-  SwigClassCoin__UxBody.klass = rb_define_class_under(mSkycoin, "Coin__UxBody", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_coin__UxBody, (void *) &SwigClassCoin__UxBody);
-  rb_define_alloc_func(SwigClassCoin__UxBody.klass, _wrap_coin__UxBody_allocate);
-  rb_define_method(SwigClassCoin__UxBody.klass, "initialize", _wrap_new_coin__UxBody, -1);
-  rb_define_method(SwigClassCoin__UxBody.klass, "SrcTransaction=", _wrap_coin__UxBody_SrcTransaction_set, -1);
-  rb_define_method(SwigClassCoin__UxBody.klass, "SrcTransaction", _wrap_coin__UxBody_SrcTransaction_get, -1);
-  rb_define_method(SwigClassCoin__UxBody.klass, "Address=", _wrap_coin__UxBody_Address_set, -1);
-  rb_define_method(SwigClassCoin__UxBody.klass, "Address", _wrap_coin__UxBody_Address_get, -1);
-  rb_define_method(SwigClassCoin__UxBody.klass, "Coins=", _wrap_coin__UxBody_Coins_set, -1);
-  rb_define_method(SwigClassCoin__UxBody.klass, "Coins", _wrap_coin__UxBody_Coins_get, -1);
-  rb_define_method(SwigClassCoin__UxBody.klass, "Hours=", _wrap_coin__UxBody_Hours_set, -1);
-  rb_define_method(SwigClassCoin__UxBody.klass, "Hours", _wrap_coin__UxBody_Hours_get, -1);
-  SwigClassCoin__UxBody.mark = 0;
-  SwigClassCoin__UxBody.destroy = (void (*)(void *)) free_coin__UxBody;
-  SwigClassCoin__UxBody.trackObjects = 0;
+  SwigClassCoinUxBody.klass = rb_define_class("CoinUxBody", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_coin__UxBody, (void *) &SwigClassCoinUxBody);
+  rb_define_alloc_func(SwigClassCoinUxBody.klass, _wrap_CoinUxBody_allocate);
+  rb_define_method(SwigClassCoinUxBody.klass, "initialize", _wrap_new_CoinUxBody, -1);
+  rb_define_method(SwigClassCoinUxBody.klass, "SrcTransaction=", _wrap_CoinUxBody_SrcTransaction_set, -1);
+  rb_define_method(SwigClassCoinUxBody.klass, "SrcTransaction", _wrap_CoinUxBody_SrcTransaction_get, -1);
+  rb_define_method(SwigClassCoinUxBody.klass, "Address=", _wrap_CoinUxBody_Address_set, -1);
+  rb_define_method(SwigClassCoinUxBody.klass, "Address", _wrap_CoinUxBody_Address_get, -1);
+  rb_define_method(SwigClassCoinUxBody.klass, "Coins=", _wrap_CoinUxBody_Coins_set, -1);
+  rb_define_method(SwigClassCoinUxBody.klass, "Coins", _wrap_CoinUxBody_Coins_get, -1);
+  rb_define_method(SwigClassCoinUxBody.klass, "Hours=", _wrap_CoinUxBody_Hours_set, -1);
+  rb_define_method(SwigClassCoinUxBody.klass, "Hours", _wrap_CoinUxBody_Hours_get, -1);
+  SwigClassCoinUxBody.mark = 0;
+  SwigClassCoinUxBody.destroy = (void (*)(void *)) free_coin__UxBody;
+  SwigClassCoinUxBody.trackObjects = 0;
   
-  SwigClassCoin__UxOut.klass = rb_define_class_under(mSkycoin, "Coin__UxOut", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_coin__UxOut, (void *) &SwigClassCoin__UxOut);
-  rb_define_alloc_func(SwigClassCoin__UxOut.klass, _wrap_coin__UxOut_allocate);
-  rb_define_method(SwigClassCoin__UxOut.klass, "initialize", _wrap_new_coin__UxOut, -1);
-  rb_define_method(SwigClassCoin__UxOut.klass, "Head=", _wrap_coin__UxOut_Head_set, -1);
-  rb_define_method(SwigClassCoin__UxOut.klass, "Head", _wrap_coin__UxOut_Head_get, -1);
-  rb_define_method(SwigClassCoin__UxOut.klass, "Body=", _wrap_coin__UxOut_Body_set, -1);
-  rb_define_method(SwigClassCoin__UxOut.klass, "Body", _wrap_coin__UxOut_Body_get, -1);
-  SwigClassCoin__UxOut.mark = 0;
-  SwigClassCoin__UxOut.destroy = (void (*)(void *)) free_coin__UxOut;
-  SwigClassCoin__UxOut.trackObjects = 0;
+  SwigClassCoinUxOut.klass = rb_define_class("CoinUxOut", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_coin__UxOut, (void *) &SwigClassCoinUxOut);
+  rb_define_alloc_func(SwigClassCoinUxOut.klass, _wrap_CoinUxOut_allocate);
+  rb_define_method(SwigClassCoinUxOut.klass, "initialize", _wrap_new_CoinUxOut, -1);
+  rb_define_method(SwigClassCoinUxOut.klass, "Head=", _wrap_CoinUxOut_Head_set, -1);
+  rb_define_method(SwigClassCoinUxOut.klass, "Head", _wrap_CoinUxOut_Head_get, -1);
+  rb_define_method(SwigClassCoinUxOut.klass, "Body=", _wrap_CoinUxOut_Body_set, -1);
+  rb_define_method(SwigClassCoinUxOut.klass, "Body", _wrap_CoinUxOut_Body_get, -1);
+  SwigClassCoinUxOut.mark = 0;
+  SwigClassCoinUxOut.destroy = (void (*)(void *)) free_coin__UxOut;
+  SwigClassCoinUxOut.trackObjects = 0;
   
-  SwigClassHttphelper__Address.klass = rb_define_class_under(mSkycoin, "Httphelper__Address", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_httphelper__Address, (void *) &SwigClassHttphelper__Address);
-  rb_define_alloc_func(SwigClassHttphelper__Address.klass, _wrap_httphelper__Address_allocate);
-  rb_define_method(SwigClassHttphelper__Address.klass, "initialize", _wrap_new_httphelper__Address, -1);
-  rb_define_method(SwigClassHttphelper__Address.klass, "_unnamed=", _wrap_httphelper__Address__unnamed_set, -1);
-  rb_define_method(SwigClassHttphelper__Address.klass, "_unnamed", _wrap_httphelper__Address__unnamed_get, -1);
-  SwigClassHttphelper__Address.mark = 0;
-  SwigClassHttphelper__Address.destroy = (void (*)(void *)) free_httphelper__Address;
-  SwigClassHttphelper__Address.trackObjects = 0;
+  SwigClassHttphelperAddress.klass = rb_define_class("HttphelperAddress", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_httphelper__Address, (void *) &SwigClassHttphelperAddress);
+  rb_define_alloc_func(SwigClassHttphelperAddress.klass, _wrap_HttphelperAddress_allocate);
+  rb_define_method(SwigClassHttphelperAddress.klass, "initialize", _wrap_new_HttphelperAddress, -1);
+  rb_define_method(SwigClassHttphelperAddress.klass, "_unnamed=", _wrap_HttphelperAddress__unnamed_set, -1);
+  rb_define_method(SwigClassHttphelperAddress.klass, "_unnamed", _wrap_HttphelperAddress__unnamed_get, -1);
+  SwigClassHttphelperAddress.mark = 0;
+  SwigClassHttphelperAddress.destroy = (void (*)(void *)) free_httphelper__Address;
+  SwigClassHttphelperAddress.trackObjects = 0;
   
-  SwigClassHttphelper__SHA256.klass = rb_define_class_under(mSkycoin, "Httphelper__SHA256", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_httphelper__SHA256, (void *) &SwigClassHttphelper__SHA256);
-  rb_define_alloc_func(SwigClassHttphelper__SHA256.klass, _wrap_httphelper__SHA256_allocate);
-  rb_define_method(SwigClassHttphelper__SHA256.klass, "initialize", _wrap_new_httphelper__SHA256, -1);
-  rb_define_method(SwigClassHttphelper__SHA256.klass, "_unnamed=", _wrap_httphelper__SHA256__unnamed_set, -1);
-  rb_define_method(SwigClassHttphelper__SHA256.klass, "_unnamed", _wrap_httphelper__SHA256__unnamed_get, -1);
-  SwigClassHttphelper__SHA256.mark = 0;
-  SwigClassHttphelper__SHA256.destroy = (void (*)(void *)) free_httphelper__SHA256;
-  SwigClassHttphelper__SHA256.trackObjects = 0;
+  SwigClassHttphelperSHA256.klass = rb_define_class("HttphelperSHA256", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_httphelper__SHA256, (void *) &SwigClassHttphelperSHA256);
+  rb_define_alloc_func(SwigClassHttphelperSHA256.klass, _wrap_HttphelperSHA256_allocate);
+  rb_define_method(SwigClassHttphelperSHA256.klass, "initialize", _wrap_new_HttphelperSHA256, -1);
+  rb_define_method(SwigClassHttphelperSHA256.klass, "_unnamed=", _wrap_HttphelperSHA256__unnamed_set, -1);
+  rb_define_method(SwigClassHttphelperSHA256.klass, "_unnamed", _wrap_HttphelperSHA256__unnamed_get, -1);
+  SwigClassHttphelperSHA256.mark = 0;
+  SwigClassHttphelperSHA256.destroy = (void (*)(void *)) free_httphelper__SHA256;
+  SwigClassHttphelperSHA256.trackObjects = 0;
   
-  SwigClassWallet__Balance.klass = rb_define_class_under(mSkycoin, "Wallet__Balance", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_wallet__Balance, (void *) &SwigClassWallet__Balance);
-  rb_define_alloc_func(SwigClassWallet__Balance.klass, _wrap_wallet__Balance_allocate);
-  rb_define_method(SwigClassWallet__Balance.klass, "initialize", _wrap_new_wallet__Balance, -1);
-  rb_define_method(SwigClassWallet__Balance.klass, "Coins=", _wrap_wallet__Balance_Coins_set, -1);
-  rb_define_method(SwigClassWallet__Balance.klass, "Coins", _wrap_wallet__Balance_Coins_get, -1);
-  rb_define_method(SwigClassWallet__Balance.klass, "Hours=", _wrap_wallet__Balance_Hours_set, -1);
-  rb_define_method(SwigClassWallet__Balance.klass, "Hours", _wrap_wallet__Balance_Hours_get, -1);
-  SwigClassWallet__Balance.mark = 0;
-  SwigClassWallet__Balance.destroy = (void (*)(void *)) free_wallet__Balance;
-  SwigClassWallet__Balance.trackObjects = 0;
+  SwigClassWalletBalance.klass = rb_define_class("WalletBalance", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_wallet__Balance, (void *) &SwigClassWalletBalance);
+  rb_define_alloc_func(SwigClassWalletBalance.klass, _wrap_WalletBalance_allocate);
+  rb_define_method(SwigClassWalletBalance.klass, "initialize", _wrap_new_WalletBalance, -1);
+  rb_define_method(SwigClassWalletBalance.klass, "Coins=", _wrap_WalletBalance_Coins_set, -1);
+  rb_define_method(SwigClassWalletBalance.klass, "Coins", _wrap_WalletBalance_Coins_get, -1);
+  rb_define_method(SwigClassWalletBalance.klass, "Hours=", _wrap_WalletBalance_Hours_set, -1);
+  rb_define_method(SwigClassWalletBalance.klass, "Hours", _wrap_WalletBalance_Hours_get, -1);
+  SwigClassWalletBalance.mark = 0;
+  SwigClassWalletBalance.destroy = (void (*)(void *)) free_wallet__Balance;
+  SwigClassWalletBalance.trackObjects = 0;
   
-  SwigClassWallet__BalancePair.klass = rb_define_class_under(mSkycoin, "Wallet__BalancePair", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_wallet__BalancePair, (void *) &SwigClassWallet__BalancePair);
-  rb_define_alloc_func(SwigClassWallet__BalancePair.klass, _wrap_wallet__BalancePair_allocate);
-  rb_define_method(SwigClassWallet__BalancePair.klass, "initialize", _wrap_new_wallet__BalancePair, -1);
-  rb_define_method(SwigClassWallet__BalancePair.klass, "Confirmed=", _wrap_wallet__BalancePair_Confirmed_set, -1);
-  rb_define_method(SwigClassWallet__BalancePair.klass, "Confirmed", _wrap_wallet__BalancePair_Confirmed_get, -1);
-  rb_define_method(SwigClassWallet__BalancePair.klass, "Predicted=", _wrap_wallet__BalancePair_Predicted_set, -1);
-  rb_define_method(SwigClassWallet__BalancePair.klass, "Predicted", _wrap_wallet__BalancePair_Predicted_get, -1);
-  SwigClassWallet__BalancePair.mark = 0;
-  SwigClassWallet__BalancePair.destroy = (void (*)(void *)) free_wallet__BalancePair;
-  SwigClassWallet__BalancePair.trackObjects = 0;
+  SwigClassWalletBalancePair.klass = rb_define_class("WalletBalancePair", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_wallet__BalancePair, (void *) &SwigClassWalletBalancePair);
+  rb_define_alloc_func(SwigClassWalletBalancePair.klass, _wrap_WalletBalancePair_allocate);
+  rb_define_method(SwigClassWalletBalancePair.klass, "initialize", _wrap_new_WalletBalancePair, -1);
+  rb_define_method(SwigClassWalletBalancePair.klass, "Confirmed=", _wrap_WalletBalancePair_Confirmed_set, -1);
+  rb_define_method(SwigClassWalletBalancePair.klass, "Confirmed", _wrap_WalletBalancePair_Confirmed_get, -1);
+  rb_define_method(SwigClassWalletBalancePair.klass, "Predicted=", _wrap_WalletBalancePair_Predicted_set, -1);
+  rb_define_method(SwigClassWalletBalancePair.klass, "Predicted", _wrap_WalletBalancePair_Predicted_get, -1);
+  SwigClassWalletBalancePair.mark = 0;
+  SwigClassWalletBalancePair.destroy = (void (*)(void *)) free_wallet__BalancePair;
+  SwigClassWalletBalancePair.trackObjects = 0;
   
-  SwigClassWallet__Entry.klass = rb_define_class_under(mSkycoin, "Wallet__Entry", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_wallet__Entry, (void *) &SwigClassWallet__Entry);
-  rb_define_alloc_func(SwigClassWallet__Entry.klass, _wrap_wallet__Entry_allocate);
-  rb_define_method(SwigClassWallet__Entry.klass, "initialize", _wrap_new_wallet__Entry, -1);
-  rb_define_method(SwigClassWallet__Entry.klass, "Address=", _wrap_wallet__Entry_Address_set, -1);
-  rb_define_method(SwigClassWallet__Entry.klass, "Address", _wrap_wallet__Entry_Address_get, -1);
-  rb_define_method(SwigClassWallet__Entry.klass, "Public=", _wrap_wallet__Entry_Public_set, -1);
-  rb_define_method(SwigClassWallet__Entry.klass, "Public", _wrap_wallet__Entry_Public_get, -1);
-  rb_define_method(SwigClassWallet__Entry.klass, "Secret=", _wrap_wallet__Entry_Secret_set, -1);
-  rb_define_method(SwigClassWallet__Entry.klass, "Secret", _wrap_wallet__Entry_Secret_get, -1);
-  SwigClassWallet__Entry.mark = 0;
-  SwigClassWallet__Entry.destroy = (void (*)(void *)) free_wallet__Entry;
-  SwigClassWallet__Entry.trackObjects = 0;
+  SwigClassWalletEntry.klass = rb_define_class("WalletEntry", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_wallet__Entry, (void *) &SwigClassWalletEntry);
+  rb_define_alloc_func(SwigClassWalletEntry.klass, _wrap_WalletEntry_allocate);
+  rb_define_method(SwigClassWalletEntry.klass, "initialize", _wrap_new_WalletEntry, -1);
+  rb_define_method(SwigClassWalletEntry.klass, "Address=", _wrap_WalletEntry_Address_set, -1);
+  rb_define_method(SwigClassWalletEntry.klass, "Address", _wrap_WalletEntry_Address_get, -1);
+  rb_define_method(SwigClassWalletEntry.klass, "Public=", _wrap_WalletEntry_Public_set, -1);
+  rb_define_method(SwigClassWalletEntry.klass, "Public", _wrap_WalletEntry_Public_get, -1);
+  rb_define_method(SwigClassWalletEntry.klass, "Secret=", _wrap_WalletEntry_Secret_set, -1);
+  rb_define_method(SwigClassWalletEntry.klass, "Secret", _wrap_WalletEntry_Secret_get, -1);
+  SwigClassWalletEntry.mark = 0;
+  SwigClassWalletEntry.destroy = (void (*)(void *)) free_wallet__Entry;
+  SwigClassWalletEntry.trackObjects = 0;
   
-  SwigClassWallet__Note.klass = rb_define_class_under(mSkycoin, "Wallet__Note", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_wallet__Note, (void *) &SwigClassWallet__Note);
-  rb_define_alloc_func(SwigClassWallet__Note.klass, _wrap_wallet__Note_allocate);
-  rb_define_method(SwigClassWallet__Note.klass, "initialize", _wrap_new_wallet__Note, -1);
-  rb_define_method(SwigClassWallet__Note.klass, "TxID=", _wrap_wallet__Note_TxID_set, -1);
-  rb_define_method(SwigClassWallet__Note.klass, "TxID", _wrap_wallet__Note_TxID_get, -1);
-  rb_define_method(SwigClassWallet__Note.klass, "Value=", _wrap_wallet__Note_Value_set, -1);
-  rb_define_method(SwigClassWallet__Note.klass, "Value", _wrap_wallet__Note_Value_get, -1);
-  SwigClassWallet__Note.mark = 0;
-  SwigClassWallet__Note.destroy = (void (*)(void *)) free_wallet__Note;
-  SwigClassWallet__Note.trackObjects = 0;
+  SwigClassWalletNote.klass = rb_define_class("WalletNote", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_wallet__Note, (void *) &SwigClassWalletNote);
+  rb_define_alloc_func(SwigClassWalletNote.klass, _wrap_WalletNote_allocate);
+  rb_define_method(SwigClassWalletNote.klass, "initialize", _wrap_new_WalletNote, -1);
+  rb_define_method(SwigClassWalletNote.klass, "TxID=", _wrap_WalletNote_TxID_set, -1);
+  rb_define_method(SwigClassWalletNote.klass, "TxID", _wrap_WalletNote_TxID_get, -1);
+  rb_define_method(SwigClassWalletNote.klass, "Value=", _wrap_WalletNote_Value_set, -1);
+  rb_define_method(SwigClassWalletNote.klass, "Value", _wrap_WalletNote_Value_get, -1);
+  SwigClassWalletNote.mark = 0;
+  SwigClassWalletNote.destroy = (void (*)(void *)) free_wallet__Note;
+  SwigClassWalletNote.trackObjects = 0;
   
-  SwigClassWallet__ReadableNote.klass = rb_define_class_under(mSkycoin, "Wallet__ReadableNote", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_wallet__ReadableNote, (void *) &SwigClassWallet__ReadableNote);
-  rb_define_alloc_func(SwigClassWallet__ReadableNote.klass, _wrap_wallet__ReadableNote_allocate);
-  rb_define_method(SwigClassWallet__ReadableNote.klass, "initialize", _wrap_new_wallet__ReadableNote, -1);
-  rb_define_method(SwigClassWallet__ReadableNote.klass, "TransactionID=", _wrap_wallet__ReadableNote_TransactionID_set, -1);
-  rb_define_method(SwigClassWallet__ReadableNote.klass, "TransactionID", _wrap_wallet__ReadableNote_TransactionID_get, -1);
-  rb_define_method(SwigClassWallet__ReadableNote.klass, "ActualNote=", _wrap_wallet__ReadableNote_ActualNote_set, -1);
-  rb_define_method(SwigClassWallet__ReadableNote.klass, "ActualNote", _wrap_wallet__ReadableNote_ActualNote_get, -1);
-  SwigClassWallet__ReadableNote.mark = 0;
-  SwigClassWallet__ReadableNote.destroy = (void (*)(void *)) free_wallet__ReadableNote;
-  SwigClassWallet__ReadableNote.trackObjects = 0;
+  SwigClassWalletReadableNote.klass = rb_define_class("WalletReadableNote", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_wallet__ReadableNote, (void *) &SwigClassWalletReadableNote);
+  rb_define_alloc_func(SwigClassWalletReadableNote.klass, _wrap_WalletReadableNote_allocate);
+  rb_define_method(SwigClassWalletReadableNote.klass, "initialize", _wrap_new_WalletReadableNote, -1);
+  rb_define_method(SwigClassWalletReadableNote.klass, "TransactionID=", _wrap_WalletReadableNote_TransactionID_set, -1);
+  rb_define_method(SwigClassWalletReadableNote.klass, "TransactionID", _wrap_WalletReadableNote_TransactionID_get, -1);
+  rb_define_method(SwigClassWalletReadableNote.klass, "ActualNote=", _wrap_WalletReadableNote_ActualNote_set, -1);
+  rb_define_method(SwigClassWalletReadableNote.klass, "ActualNote", _wrap_WalletReadableNote_ActualNote_get, -1);
+  SwigClassWalletReadableNote.mark = 0;
+  SwigClassWalletReadableNote.destroy = (void (*)(void *)) free_wallet__ReadableNote;
+  SwigClassWalletReadableNote.trackObjects = 0;
   
-  SwigClassWallet__UxBalance.klass = rb_define_class_under(mSkycoin, "Wallet__UxBalance", rb_cObject);
-  SWIG_TypeClientData(SWIGTYPE_p_wallet__UxBalance, (void *) &SwigClassWallet__UxBalance);
-  rb_define_alloc_func(SwigClassWallet__UxBalance.klass, _wrap_wallet__UxBalance_allocate);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "initialize", _wrap_new_wallet__UxBalance, -1);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "Hash=", _wrap_wallet__UxBalance_Hash_set, -1);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "Hash", _wrap_wallet__UxBalance_Hash_get, -1);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "BkSeq=", _wrap_wallet__UxBalance_BkSeq_set, -1);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "BkSeq", _wrap_wallet__UxBalance_BkSeq_get, -1);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "Address=", _wrap_wallet__UxBalance_Address_set, -1);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "Address", _wrap_wallet__UxBalance_Address_get, -1);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "Coins=", _wrap_wallet__UxBalance_Coins_set, -1);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "Coins", _wrap_wallet__UxBalance_Coins_get, -1);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "Hours=", _wrap_wallet__UxBalance_Hours_set, -1);
-  rb_define_method(SwigClassWallet__UxBalance.klass, "Hours", _wrap_wallet__UxBalance_Hours_get, -1);
-  SwigClassWallet__UxBalance.mark = 0;
-  SwigClassWallet__UxBalance.destroy = (void (*)(void *)) free_wallet__UxBalance;
-  SwigClassWallet__UxBalance.trackObjects = 0;
-  rb_define_const(mSkycoin, "SKY_OK", SWIG_From_int((int)(0)));
-  rb_define_const(mSkycoin, "SKY_ERROR", SWIG_From_int((int)(0x7FFFFFFF)));
-  rb_define_const(mSkycoin, "SKY_BAD_HANDLE", SWIG_From_int((int)(0x7F000001)));
-  rb_define_const(mSkycoin, "SKY_INVALID_TIMESTRING", SWIG_From_int((int)(0x7F000002)));
-  rb_define_const(mSkycoin, "SKY_PKG_API", SWIG_From_int((int)(0x01000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_CIPHER", SWIG_From_int((int)(0x02000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_CLI", SWIG_From_int((int)(0x03000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_COIN", SWIG_From_int((int)(0x04000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_CONSENSUS", SWIG_From_int((int)(0x05000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_DAEMON", SWIG_From_int((int)(0x06000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_GUI", SWIG_From_int((int)(0x07000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_SKYCOIN", SWIG_From_int((int)(0x08000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_UTIL", SWIG_From_int((int)(0x09000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_VISOR", SWIG_From_int((int)(0x0A000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_WALLET", SWIG_From_int((int)(0x0B000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_PARAMS", SWIG_From_int((int)(0x0C000000)));
-  rb_define_const(mSkycoin, "SKY_PKG_LIBCGO", SWIG_From_int((int)(0x7F000000)));
-  rb_define_const(mSkycoin, "SKY_ErrAddressInvalidLength", SWIG_From_int((int)(0x02000000)));
-  rb_define_const(mSkycoin, "SKY_ErrAddressInvalidChecksum", SWIG_From_int((int)(0x02000001)));
-  rb_define_const(mSkycoin, "SKY_ErrAddressInvalidVersion", SWIG_From_int((int)(0x02000002)));
-  rb_define_const(mSkycoin, "SKY_ErrAddressInvalidPubKey", SWIG_From_int((int)(0x02000003)));
-  rb_define_const(mSkycoin, "SKY_ErrAddressInvalidFirstByte", SWIG_From_int((int)(0x02000004)));
-  rb_define_const(mSkycoin, "SKY_ErrAddressInvalidLastByte", SWIG_From_int((int)(0x02000005)));
-  rb_define_const(mSkycoin, "SKY_ErrBufferUnderflow", SWIG_From_int((int)(0x02000006)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidOmitEmpty", SWIG_From_int((int)(0x02000007)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidLengthPubKey", SWIG_From_int((int)(0x02000008)));
-  rb_define_const(mSkycoin, "SKY_ErrPubKeyFromNullSecKey", SWIG_From_int((int)(0x02000009)));
-  rb_define_const(mSkycoin, "SKY_ErrPubKeyFromBadSecKey", SWIG_From_int((int)(0x0200000A)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidLengthSecKey", SWIG_From_int((int)(0x0200000B)));
-  rb_define_const(mSkycoin, "SKY_ErrECHDInvalidPubKey", SWIG_From_int((int)(0x0200000C)));
-  rb_define_const(mSkycoin, "SKY_ErrECHDInvalidSecKey", SWIG_From_int((int)(0x0200000D)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidLengthSig", SWIG_From_int((int)(0x0200000E)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidLengthRipemd160", SWIG_From_int((int)(0x0200000F)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidLengthSHA256", SWIG_From_int((int)(0x02000010)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidBase58Char", SWIG_From_int((int)(0x02000011)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidBase58String", SWIG_From_int((int)(0x02000012)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidBase58Length", SWIG_From_int((int)(0x02000013)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidHexLength", SWIG_From_int((int)(0x02000014)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidBytesLength", SWIG_From_int((int)(0x02000015)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidPubKey", SWIG_From_int((int)(0x02000016)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidSecKey", SWIG_From_int((int)(0x02000017)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidSigPubKeyRecovery", SWIG_From_int((int)(0x02000018)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidSecKeyHex", SWIG_From_int((int)(0x02000019)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidAddressForSig", SWIG_From_int((int)(0x0200001A)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidHashForSig", SWIG_From_int((int)(0x0200001B)));
-  rb_define_const(mSkycoin, "SKY_ErrPubKeyRecoverMismatch", SWIG_From_int((int)(0x0200001C)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidSigInvalidPubKey", SWIG_From_int((int)(0x0200001D)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidSigValidity", SWIG_From_int((int)(0x0200001E)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidSigForMessage", SWIG_From_int((int)(0x0200001F)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidSecKyVerification", SWIG_From_int((int)(0x02000020)));
-  rb_define_const(mSkycoin, "SKY_ErrNullPubKeyFromSecKey", SWIG_From_int((int)(0x02000021)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidDerivedPubKeyFromSecKey", SWIG_From_int((int)(0x02000022)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidPubKeyFromHash", SWIG_From_int((int)(0x02000023)));
-  rb_define_const(mSkycoin, "SKY_ErrPubKeyFromSecKeyMismatch", SWIG_From_int((int)(0x02000024)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidLength", SWIG_From_int((int)(0x02000025)));
-  rb_define_const(mSkycoin, "SKY_ErrBitcoinWIFInvalidFirstByte", SWIG_From_int((int)(0x02000026)));
-  rb_define_const(mSkycoin, "SKY_ErrBitcoinWIFInvalidSuffix", SWIG_From_int((int)(0x02000027)));
-  rb_define_const(mSkycoin, "SKY_ErrBitcoinWIFInvalidChecksum", SWIG_From_int((int)(0x02000028)));
-  rb_define_const(mSkycoin, "SKY_ErrEmptySeed", SWIG_From_int((int)(0x02000029)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidSig", SWIG_From_int((int)(0x0200002A)));
-  rb_define_const(mSkycoin, "SKY_ErrMissingPassword", SWIG_From_int((int)(0x0200002B)));
-  rb_define_const(mSkycoin, "SKY_ErrDataTooLarge", SWIG_From_int((int)(0x0200002C)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidChecksumLength", SWIG_From_int((int)(0x0200002D)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidChecksum", SWIG_From_int((int)(0x0200002E)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidNonceLength", SWIG_From_int((int)(0x0200002F)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidBlockSize", SWIG_From_int((int)(0x02000030)));
-  rb_define_const(mSkycoin, "SKY_ErrReadDataHashFailed", SWIG_From_int((int)(0x02000031)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidPassword", SWIG_From_int((int)(0x02000032)));
-  rb_define_const(mSkycoin, "SKY_ErrReadDataLengthFailed", SWIG_From_int((int)(0x02000033)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidDataLength", SWIG_From_int((int)(0x02000034)));
-  rb_define_const(mSkycoin, "SKY_ErrTemporaryInsufficientBalance", SWIG_From_int((int)(0x03000000)));
-  rb_define_const(mSkycoin, "SKY_ErrAddress", SWIG_From_int((int)(0x03000001)));
-  rb_define_const(mSkycoin, "SKY_ErrWalletName", SWIG_From_int((int)(0x03000002)));
-  rb_define_const(mSkycoin, "SKY_ErrJSONMarshal", SWIG_From_int((int)(0x03000003)));
-  rb_define_const(mSkycoin, "SKY_WalletLoadError", SWIG_From_int((int)(0x03000004)));
-  rb_define_const(mSkycoin, "SKY_WalletSaveError", SWIG_From_int((int)(0x03000005)));
-  rb_define_const(mSkycoin, "SKY_ErrAddEarnedCoinHoursAdditionOverflow", SWIG_From_int((int)(0x04000000)));
-  rb_define_const(mSkycoin, "SKY_ErrUint64MultOverflow", SWIG_From_int((int)(0x04000001)));
-  rb_define_const(mSkycoin, "SKY_ErrUint64AddOverflow", SWIG_From_int((int)(0x04000002)));
-  rb_define_const(mSkycoin, "SKY_ErrUint32AddOverflow", SWIG_From_int((int)(0x04000003)));
-  rb_define_const(mSkycoin, "SKY_ErrUint64OverflowsInt64", SWIG_From_int((int)(0x04000004)));
-  rb_define_const(mSkycoin, "SKY_ErrInt64UnderflowsUint64", SWIG_From_int((int)(0x04000005)));
-  rb_define_const(mSkycoin, "SKY_ErrIntUnderflowsUint32", SWIG_From_int((int)(0x04000006)));
-  rb_define_const(mSkycoin, "SKY_ErrIntOverflowsUint32", SWIG_From_int((int)(0x04000007)));
-  rb_define_const(mSkycoin, "SKY_ErrPeerlistFull", SWIG_From_int((int)(0x06000000)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidAddress", SWIG_From_int((int)(0x06000001)));
-  rb_define_const(mSkycoin, "SKY_ErrNoLocalhost", SWIG_From_int((int)(0x06000002)));
-  rb_define_const(mSkycoin, "SKY_ErrNotExternalIP", SWIG_From_int((int)(0x06000003)));
-  rb_define_const(mSkycoin, "SKY_ErrPortTooLow", SWIG_From_int((int)(0x06000004)));
-  rb_define_const(mSkycoin, "SKY_ErrBlacklistedAddress", SWIG_From_int((int)(0x06000005)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectWriteFailed", SWIG_From_int((int)(0x06000007)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectSetReadDeadlineFailed", SWIG_From_int((int)(0x06000008)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectInvalidMessageLength", SWIG_From_int((int)(0x06000009)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectMalformedMessage", SWIG_From_int((int)(0x0600000A)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectUnknownMessage", SWIG_From_int((int)(0x0600000B)));
-  rb_define_const(mSkycoin, "SKY_ErrConnectionPoolClosed", SWIG_From_int((int)(0x0600000D)));
-  rb_define_const(mSkycoin, "SKY_ErrWriteQueueFull", SWIG_From_int((int)(0x0600000E)));
-  rb_define_const(mSkycoin, "SKY_ErrNoReachableConnections", SWIG_From_int((int)(0x0600000F)));
-  rb_define_const(mSkycoin, "SKY_ErrMaxDefaultConnectionsReached", SWIG_From_int((int)(0x06000010)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectVersionNotSupported", SWIG_From_int((int)(0x06000011)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectIntroductionTimeout", SWIG_From_int((int)(0x06000012)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectIsBlacklisted", SWIG_From_int((int)(0x06000014)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectSelf", SWIG_From_int((int)(0x06000015)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectConnectedTwice", SWIG_From_int((int)(0x06000016)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectIdle", SWIG_From_int((int)(0x06000017)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectNoIntroduction", SWIG_From_int((int)(0x06000018)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectIPLimitReached", SWIG_From_int((int)(0x06000019)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectMaxDefaultConnectionReached", SWIG_From_int((int)(0x0600001B)));
-  rb_define_const(mSkycoin, "SKY_ErrDisconnectMaxOutgoingConnectionsReached", SWIG_From_int((int)(0x0600001C)));
-  rb_define_const(mSkycoin, "SKY_ConnectionError", SWIG_From_int((int)(0x0600001D)));
-  rb_define_const(mSkycoin, "SKY_ErrTxnNoFee", SWIG_From_int((int)(0x09000000)));
-  rb_define_const(mSkycoin, "SKY_ErrTxnInsufficientFee", SWIG_From_int((int)(0x09000001)));
-  rb_define_const(mSkycoin, "SKY_ErrTxnInsufficientCoinHours", SWIG_From_int((int)(0x09000002)));
-  rb_define_const(mSkycoin, "SKY_ErrNegativeValue", SWIG_From_int((int)(0x09000003)));
-  rb_define_const(mSkycoin, "SKY_ErrTooManyDecimals", SWIG_From_int((int)(0x09000004)));
-  rb_define_const(mSkycoin, "SKY_ErrTooLarge", SWIG_From_int((int)(0x09000005)));
-  rb_define_const(mSkycoin, "SKY_ErrEmptyDirectoryName", SWIG_From_int((int)(0x09000006)));
-  rb_define_const(mSkycoin, "SKY_ErrDotDirectoryName", SWIG_From_int((int)(0x09000007)));
-  rb_define_const(mSkycoin, "SKY_ErrHistoryDBCorrupted", SWIG_From_int((int)(0x0A000000)));
-  rb_define_const(mSkycoin, "SKY_ErrUxOutNotExist", SWIG_From_int((int)(0x0A000001)));
-  rb_define_const(mSkycoin, "SKY_ErrNoHeadBlock", SWIG_From_int((int)(0x0A000002)));
-  rb_define_const(mSkycoin, "SKY_ErrMissingSignature", SWIG_From_int((int)(0x0A000003)));
-  rb_define_const(mSkycoin, "SKY_ErrUnspentNotExist", SWIG_From_int((int)(0x0A000004)));
-  rb_define_const(mSkycoin, "SKY_ErrVerifyStopped", SWIG_From_int((int)(0x0A000005)));
-  rb_define_const(mSkycoin, "SKY_ErrCreateBucketFailed", SWIG_From_int((int)(0x0A000000)));
-  rb_define_const(mSkycoin, "SKY_ErrBucketNotExist", SWIG_From_int((int)(0x0A000006)));
-  rb_define_const(mSkycoin, "SKY_ErrTxnViolatesHardConstraint", SWIG_From_int((int)(0x0A000007)));
-  rb_define_const(mSkycoin, "SKY_ErrTxnViolatesSoftConstraint", SWIG_From_int((int)(0x0A000008)));
-  rb_define_const(mSkycoin, "SKY_ErrTxnViolatesUserConstraint", SWIG_From_int((int)(0x0A000009)));
-  rb_define_const(mSkycoin, "SKY_ErrInsufficientBalance", SWIG_From_int((int)(0x0B000000)));
-  rb_define_const(mSkycoin, "SKY_ErrInsufficientHours", SWIG_From_int((int)(0x0B000001)));
-  rb_define_const(mSkycoin, "SKY_ErrZeroSpend", SWIG_From_int((int)(0x0B000002)));
-  rb_define_const(mSkycoin, "SKY_ErrSpendingUnconfirmed", SWIG_From_int((int)(0x0B000003)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidEncryptedField", SWIG_From_int((int)(0x0B000004)));
-  rb_define_const(mSkycoin, "SKY_ErrWalletEncrypted", SWIG_From_int((int)(0x0B000005)));
-  rb_define_const(mSkycoin, "SKY_ErrWalletNotEncrypted", SWIG_From_int((int)(0x0B000006)));
-  rb_define_const(mSkycoin, "SKY_ErrWalletMissingPassword", SWIG_From_int((int)(0x0B000007)));
-  rb_define_const(mSkycoin, "SKY_ErrMissingEncrypt", SWIG_From_int((int)(0x0B000008)));
-  rb_define_const(mSkycoin, "SKY_ErrWalletInvalidPassword", SWIG_From_int((int)(0x0B000009)));
-  rb_define_const(mSkycoin, "SKY_ErrMissingSeed", SWIG_From_int((int)(0x0B00000A)));
-  rb_define_const(mSkycoin, "SKY_ErrMissingAuthenticated", SWIG_From_int((int)(0x0B00000B)));
-  rb_define_const(mSkycoin, "SKY_ErrWrongCryptoType", SWIG_From_int((int)(0x0B00000C)));
-  rb_define_const(mSkycoin, "SKY_ErrWalletNotExist", SWIG_From_int((int)(0x0B00000D)));
-  rb_define_const(mSkycoin, "SKY_ErrSeedUsed", SWIG_From_int((int)(0x0B00000E)));
-  rb_define_const(mSkycoin, "SKY_ErrWalletAPIDisabled", SWIG_From_int((int)(0x0B00000F)));
-  rb_define_const(mSkycoin, "SKY_ErrSeedAPIDisabled", SWIG_From_int((int)(0x0B000010)));
-  rb_define_const(mSkycoin, "SKY_ErrWalletNameConflict", SWIG_From_int((int)(0x0B000011)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidHoursSelectionMode", SWIG_From_int((int)(0x0B000012)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidHoursSelectionType", SWIG_From_int((int)(0x0B000013)));
-  rb_define_const(mSkycoin, "SKY_ErrUnknownAddress", SWIG_From_int((int)(0x0B000014)));
-  rb_define_const(mSkycoin, "SKY_ErrUnknownUxOut", SWIG_From_int((int)(0x0B000015)));
-  rb_define_const(mSkycoin, "SKY_ErrNoUnspents", SWIG_From_int((int)(0x0B000016)));
-  rb_define_const(mSkycoin, "SKY_ErrNullChangeAddress", SWIG_From_int((int)(0x0B000017)));
-  rb_define_const(mSkycoin, "SKY_ErrMissingTo", SWIG_From_int((int)(0x0B000018)));
-  rb_define_const(mSkycoin, "SKY_ErrZeroCoinsTo", SWIG_From_int((int)(0x0B000019)));
-  rb_define_const(mSkycoin, "SKY_ErrNullAddressTo", SWIG_From_int((int)(0x0B00001A)));
-  rb_define_const(mSkycoin, "SKY_ErrDuplicateTo", SWIG_From_int((int)(0x0B00001B)));
-  rb_define_const(mSkycoin, "SKY_ErrMissingWalletID", SWIG_From_int((int)(0x0B00001C)));
-  rb_define_const(mSkycoin, "SKY_ErrIncludesNullAddress", SWIG_From_int((int)(0x0B00001D)));
-  rb_define_const(mSkycoin, "SKY_ErrDuplicateAddresses", SWIG_From_int((int)(0x0B00001E)));
-  rb_define_const(mSkycoin, "SKY_ErrZeroToHoursAuto", SWIG_From_int((int)(0x0B00001F)));
-  rb_define_const(mSkycoin, "SKY_ErrMissingModeAuto", SWIG_From_int((int)(0x0B000020)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidHoursSelMode", SWIG_From_int((int)(0x0B000021)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidModeManual", SWIG_From_int((int)(0x0B000022)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidHoursSelType", SWIG_From_int((int)(0x0B000023)));
-  rb_define_const(mSkycoin, "SKY_ErrMissingShareFactor", SWIG_From_int((int)(0x0B000024)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidShareFactor", SWIG_From_int((int)(0x0B000025)));
-  rb_define_const(mSkycoin, "SKY_ErrShareFactorOutOfRange", SWIG_From_int((int)(0x0B000026)));
-  rb_define_const(mSkycoin, "SKY_ErrWalletConstraint", SWIG_From_int((int)(0x0B000027)));
-  rb_define_const(mSkycoin, "SKY_ErrDuplicateUxOuts", SWIG_From_int((int)(0x0B000028)));
-  rb_define_const(mSkycoin, "SKY_ErrUnknownWalletID", SWIG_From_int((int)(0x0B000029)));
-  rb_define_const(mSkycoin, "SKY_ErrVerifySignatureInvalidInputsNils", SWIG_From_int((int)(0x0B000033)));
-  rb_define_const(mSkycoin, "SKY_ErrVerifySignatureInvalidSigLength", SWIG_From_int((int)(0x0B000034)));
-  rb_define_const(mSkycoin, "SKY_ErrVerifySignatureInvalidPubkeysLength", SWIG_From_int((int)(0x0B000035)));
-  rb_define_const(mSkycoin, "SKY_ErrInvalidDecimals", SWIG_From_int((int)(0x0C000000)));
+  SwigClassWalletUxBalance.klass = rb_define_class("WalletUxBalance", rb_cObject);
+  SWIG_TypeClientData(SWIGTYPE_p_wallet__UxBalance, (void *) &SwigClassWalletUxBalance);
+  rb_define_alloc_func(SwigClassWalletUxBalance.klass, _wrap_WalletUxBalance_allocate);
+  rb_define_method(SwigClassWalletUxBalance.klass, "initialize", _wrap_new_WalletUxBalance, -1);
+  rb_define_method(SwigClassWalletUxBalance.klass, "Hash=", _wrap_WalletUxBalance_Hash_set, -1);
+  rb_define_method(SwigClassWalletUxBalance.klass, "Hash", _wrap_WalletUxBalance_Hash_get, -1);
+  rb_define_method(SwigClassWalletUxBalance.klass, "BkSeq=", _wrap_WalletUxBalance_BkSeq_set, -1);
+  rb_define_method(SwigClassWalletUxBalance.klass, "BkSeq", _wrap_WalletUxBalance_BkSeq_get, -1);
+  rb_define_method(SwigClassWalletUxBalance.klass, "Address=", _wrap_WalletUxBalance_Address_set, -1);
+  rb_define_method(SwigClassWalletUxBalance.klass, "Address", _wrap_WalletUxBalance_Address_get, -1);
+  rb_define_method(SwigClassWalletUxBalance.klass, "Coins=", _wrap_WalletUxBalance_Coins_set, -1);
+  rb_define_method(SwigClassWalletUxBalance.klass, "Coins", _wrap_WalletUxBalance_Coins_get, -1);
+  rb_define_method(SwigClassWalletUxBalance.klass, "Hours=", _wrap_WalletUxBalance_Hours_set, -1);
+  rb_define_method(SwigClassWalletUxBalance.klass, "Hours", _wrap_WalletUxBalance_Hours_get, -1);
+  SwigClassWalletUxBalance.mark = 0;
+  SwigClassWalletUxBalance.destroy = (void (*)(void *)) free_wallet__UxBalance;
+  SwigClassWalletUxBalance.trackObjects = 0;
+  rb_define_const(rb_cObject, "SKY_OK", SWIG_From_int((int)(0)));
+  rb_define_const(rb_cObject, "SKY_ERROR", SWIG_From_int((int)(0x7FFFFFFF)));
+  rb_define_const(rb_cObject, "SKY_BAD_HANDLE", SWIG_From_int((int)(0x7F000001)));
+  rb_define_const(rb_cObject, "SKY_INVALID_TIMESTRING", SWIG_From_int((int)(0x7F000002)));
+  rb_define_const(rb_cObject, "SKY_PKG_API", SWIG_From_int((int)(0x01000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_CIPHER", SWIG_From_int((int)(0x02000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_CLI", SWIG_From_int((int)(0x03000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_COIN", SWIG_From_int((int)(0x04000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_CONSENSUS", SWIG_From_int((int)(0x05000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_DAEMON", SWIG_From_int((int)(0x06000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_GUI", SWIG_From_int((int)(0x07000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_SKYCOIN", SWIG_From_int((int)(0x08000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_UTIL", SWIG_From_int((int)(0x09000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_VISOR", SWIG_From_int((int)(0x0A000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_WALLET", SWIG_From_int((int)(0x0B000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_PARAMS", SWIG_From_int((int)(0x0C000000)));
+  rb_define_const(rb_cObject, "SKY_PKG_LIBCGO", SWIG_From_int((int)(0x7F000000)));
+  rb_define_const(rb_cObject, "SKY_ERRADDRESSINVALIDLENGTH", SWIG_From_int((int)(0x02000000)));
+  rb_define_const(rb_cObject, "SKY_ERRADDRESSINVALIDCHECKSUM", SWIG_From_int((int)(0x02000001)));
+  rb_define_const(rb_cObject, "SKY_ERRADDRESSINVALIDVERSION", SWIG_From_int((int)(0x02000002)));
+  rb_define_const(rb_cObject, "SKY_ERRADDRESSINVALIDPUBKEY", SWIG_From_int((int)(0x02000003)));
+  rb_define_const(rb_cObject, "SKY_ERRADDRESSINVALIDFIRSTBYTE", SWIG_From_int((int)(0x02000004)));
+  rb_define_const(rb_cObject, "SKY_ERRADDRESSINVALIDLASTBYTE", SWIG_From_int((int)(0x02000005)));
+  rb_define_const(rb_cObject, "SKY_ERRBUFFERUNDERFLOW", SWIG_From_int((int)(0x02000006)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDOMITEMPTY", SWIG_From_int((int)(0x02000007)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDLENGTHPUBKEY", SWIG_From_int((int)(0x02000008)));
+  rb_define_const(rb_cObject, "SKY_ERRPUBKEYFROMNULLSECKEY", SWIG_From_int((int)(0x02000009)));
+  rb_define_const(rb_cObject, "SKY_ERRPUBKEYFROMBADSECKEY", SWIG_From_int((int)(0x0200000A)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDLENGTHSECKEY", SWIG_From_int((int)(0x0200000B)));
+  rb_define_const(rb_cObject, "SKY_ERRECHDINVALIDPUBKEY", SWIG_From_int((int)(0x0200000C)));
+  rb_define_const(rb_cObject, "SKY_ERRECHDINVALIDSECKEY", SWIG_From_int((int)(0x0200000D)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDLENGTHSIG", SWIG_From_int((int)(0x0200000E)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDLENGTHRIPEMD160", SWIG_From_int((int)(0x0200000F)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDLENGTHSHA256", SWIG_From_int((int)(0x02000010)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDBASE58CHAR", SWIG_From_int((int)(0x02000011)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDBASE58STRING", SWIG_From_int((int)(0x02000012)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDBASE58LENGTH", SWIG_From_int((int)(0x02000013)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDHEXLENGTH", SWIG_From_int((int)(0x02000014)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDBYTESLENGTH", SWIG_From_int((int)(0x02000015)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDPUBKEY", SWIG_From_int((int)(0x02000016)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDSECKEY", SWIG_From_int((int)(0x02000017)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDSIGPUBKEYRECOVERY", SWIG_From_int((int)(0x02000018)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDSECKEYHEX", SWIG_From_int((int)(0x02000019)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDADDRESSFORSIG", SWIG_From_int((int)(0x0200001A)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDHASHFORSIG", SWIG_From_int((int)(0x0200001B)));
+  rb_define_const(rb_cObject, "SKY_ERRPUBKEYRECOVERMISMATCH", SWIG_From_int((int)(0x0200001C)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDSIGINVALIDPUBKEY", SWIG_From_int((int)(0x0200001D)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDSIGVALIDITY", SWIG_From_int((int)(0x0200001E)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDSIGFORMESSAGE", SWIG_From_int((int)(0x0200001F)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDSECKYVERIFICATION", SWIG_From_int((int)(0x02000020)));
+  rb_define_const(rb_cObject, "SKY_ERRNULLPUBKEYFROMSECKEY", SWIG_From_int((int)(0x02000021)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDDERIVEDPUBKEYFROMSECKEY", SWIG_From_int((int)(0x02000022)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDPUBKEYFROMHASH", SWIG_From_int((int)(0x02000023)));
+  rb_define_const(rb_cObject, "SKY_ERRPUBKEYFROMSECKEYMISMATCH", SWIG_From_int((int)(0x02000024)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDLENGTH", SWIG_From_int((int)(0x02000025)));
+  rb_define_const(rb_cObject, "SKY_ERRBITCOINWIFINVALIDFIRSTBYTE", SWIG_From_int((int)(0x02000026)));
+  rb_define_const(rb_cObject, "SKY_ERRBITCOINWIFINVALIDSUFFIX", SWIG_From_int((int)(0x02000027)));
+  rb_define_const(rb_cObject, "SKY_ERRBITCOINWIFINVALIDCHECKSUM", SWIG_From_int((int)(0x02000028)));
+  rb_define_const(rb_cObject, "SKY_ERREMPTYSEED", SWIG_From_int((int)(0x02000029)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDSIG", SWIG_From_int((int)(0x0200002A)));
+  rb_define_const(rb_cObject, "SKY_ERRMISSINGPASSWORD", SWIG_From_int((int)(0x0200002B)));
+  rb_define_const(rb_cObject, "SKY_ERRDATATOOLARGE", SWIG_From_int((int)(0x0200002C)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDCHECKSUMLENGTH", SWIG_From_int((int)(0x0200002D)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDCHECKSUM", SWIG_From_int((int)(0x0200002E)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDNONCELENGTH", SWIG_From_int((int)(0x0200002F)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDBLOCKSIZE", SWIG_From_int((int)(0x02000030)));
+  rb_define_const(rb_cObject, "SKY_ERRREADDATAHASHFAILED", SWIG_From_int((int)(0x02000031)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDPASSWORD", SWIG_From_int((int)(0x02000032)));
+  rb_define_const(rb_cObject, "SKY_ERRREADDATALENGTHFAILED", SWIG_From_int((int)(0x02000033)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDDATALENGTH", SWIG_From_int((int)(0x02000034)));
+  rb_define_const(rb_cObject, "SKY_ERRTEMPORARYINSUFFICIENTBALANCE", SWIG_From_int((int)(0x03000000)));
+  rb_define_const(rb_cObject, "SKY_ERRADDRESS", SWIG_From_int((int)(0x03000001)));
+  rb_define_const(rb_cObject, "SKY_ERRWALLETNAME", SWIG_From_int((int)(0x03000002)));
+  rb_define_const(rb_cObject, "SKY_ERRJSONMARSHAL", SWIG_From_int((int)(0x03000003)));
+  rb_define_const(rb_cObject, "SKY_WALLETLOADERROR", SWIG_From_int((int)(0x03000004)));
+  rb_define_const(rb_cObject, "SKY_WALLETSAVEERROR", SWIG_From_int((int)(0x03000005)));
+  rb_define_const(rb_cObject, "SKY_ERRADDEARNEDCOINHOURSADDITIONOVERFLOW", SWIG_From_int((int)(0x04000000)));
+  rb_define_const(rb_cObject, "SKY_ERRUINT64MULTOVERFLOW", SWIG_From_int((int)(0x04000001)));
+  rb_define_const(rb_cObject, "SKY_ERRUINT64ADDOVERFLOW", SWIG_From_int((int)(0x04000002)));
+  rb_define_const(rb_cObject, "SKY_ERRUINT32ADDOVERFLOW", SWIG_From_int((int)(0x04000003)));
+  rb_define_const(rb_cObject, "SKY_ERRUINT64OVERFLOWSINT64", SWIG_From_int((int)(0x04000004)));
+  rb_define_const(rb_cObject, "SKY_ERRINT64UNDERFLOWSUINT64", SWIG_From_int((int)(0x04000005)));
+  rb_define_const(rb_cObject, "SKY_ERRINTUNDERFLOWSUINT32", SWIG_From_int((int)(0x04000006)));
+  rb_define_const(rb_cObject, "SKY_ERRINTOVERFLOWSUINT32", SWIG_From_int((int)(0x04000007)));
+  rb_define_const(rb_cObject, "SKY_ERRPEERLISTFULL", SWIG_From_int((int)(0x06000000)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDADDRESS", SWIG_From_int((int)(0x06000001)));
+  rb_define_const(rb_cObject, "SKY_ERRNOLOCALHOST", SWIG_From_int((int)(0x06000002)));
+  rb_define_const(rb_cObject, "SKY_ERRNOTEXTERNALIP", SWIG_From_int((int)(0x06000003)));
+  rb_define_const(rb_cObject, "SKY_ERRPORTTOOLOW", SWIG_From_int((int)(0x06000004)));
+  rb_define_const(rb_cObject, "SKY_ERRBLACKLISTEDADDRESS", SWIG_From_int((int)(0x06000005)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTWRITEFAILED", SWIG_From_int((int)(0x06000007)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTSETREADDEADLINEFAILED", SWIG_From_int((int)(0x06000008)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTINVALIDMESSAGELENGTH", SWIG_From_int((int)(0x06000009)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTMALFORMEDMESSAGE", SWIG_From_int((int)(0x0600000A)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTUNKNOWNMESSAGE", SWIG_From_int((int)(0x0600000B)));
+  rb_define_const(rb_cObject, "SKY_ERRCONNECTIONPOOLCLOSED", SWIG_From_int((int)(0x0600000D)));
+  rb_define_const(rb_cObject, "SKY_ERRWRITEQUEUEFULL", SWIG_From_int((int)(0x0600000E)));
+  rb_define_const(rb_cObject, "SKY_ERRNOREACHABLECONNECTIONS", SWIG_From_int((int)(0x0600000F)));
+  rb_define_const(rb_cObject, "SKY_ERRMAXDEFAULTCONNECTIONSREACHED", SWIG_From_int((int)(0x06000010)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTVERSIONNOTSUPPORTED", SWIG_From_int((int)(0x06000011)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTINTRODUCTIONTIMEOUT", SWIG_From_int((int)(0x06000012)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTISBLACKLISTED", SWIG_From_int((int)(0x06000014)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTSELF", SWIG_From_int((int)(0x06000015)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTCONNECTEDTWICE", SWIG_From_int((int)(0x06000016)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTIDLE", SWIG_From_int((int)(0x06000017)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTNOINTRODUCTION", SWIG_From_int((int)(0x06000018)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTIPLIMITREACHED", SWIG_From_int((int)(0x06000019)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTMAXDEFAULTCONNECTIONREACHED", SWIG_From_int((int)(0x0600001B)));
+  rb_define_const(rb_cObject, "SKY_ERRDISCONNECTMAXOUTGOINGCONNECTIONSREACHED", SWIG_From_int((int)(0x0600001C)));
+  rb_define_const(rb_cObject, "SKY_CONNECTIONERROR", SWIG_From_int((int)(0x0600001D)));
+  rb_define_const(rb_cObject, "SKY_ERRTXNNOFEE", SWIG_From_int((int)(0x09000000)));
+  rb_define_const(rb_cObject, "SKY_ERRTXNINSUFFICIENTFEE", SWIG_From_int((int)(0x09000001)));
+  rb_define_const(rb_cObject, "SKY_ERRTXNINSUFFICIENTCOINHOURS", SWIG_From_int((int)(0x09000002)));
+  rb_define_const(rb_cObject, "SKY_ERRNEGATIVEVALUE", SWIG_From_int((int)(0x09000003)));
+  rb_define_const(rb_cObject, "SKY_ERRTOOMANYDECIMALS", SWIG_From_int((int)(0x09000004)));
+  rb_define_const(rb_cObject, "SKY_ERRTOOLARGE", SWIG_From_int((int)(0x09000005)));
+  rb_define_const(rb_cObject, "SKY_ERREMPTYDIRECTORYNAME", SWIG_From_int((int)(0x09000006)));
+  rb_define_const(rb_cObject, "SKY_ERRDOTDIRECTORYNAME", SWIG_From_int((int)(0x09000007)));
+  rb_define_const(rb_cObject, "SKY_ERRHISTORYDBCORRUPTED", SWIG_From_int((int)(0x0A000000)));
+  rb_define_const(rb_cObject, "SKY_ERRUXOUTNOTEXIST", SWIG_From_int((int)(0x0A000001)));
+  rb_define_const(rb_cObject, "SKY_ERRNOHEADBLOCK", SWIG_From_int((int)(0x0A000002)));
+  rb_define_const(rb_cObject, "SKY_ERRMISSINGSIGNATURE", SWIG_From_int((int)(0x0A000003)));
+  rb_define_const(rb_cObject, "SKY_ERRUNSPENTNOTEXIST", SWIG_From_int((int)(0x0A000004)));
+  rb_define_const(rb_cObject, "SKY_ERRVERIFYSTOPPED", SWIG_From_int((int)(0x0A000005)));
+  rb_define_const(rb_cObject, "SKY_ERRCREATEBUCKETFAILED", SWIG_From_int((int)(0x0A000000)));
+  rb_define_const(rb_cObject, "SKY_ERRBUCKETNOTEXIST", SWIG_From_int((int)(0x0A000006)));
+  rb_define_const(rb_cObject, "SKY_ERRTXNVIOLATESHARDCONSTRAINT", SWIG_From_int((int)(0x0A000007)));
+  rb_define_const(rb_cObject, "SKY_ERRTXNVIOLATESSOFTCONSTRAINT", SWIG_From_int((int)(0x0A000008)));
+  rb_define_const(rb_cObject, "SKY_ERRTXNVIOLATESUSERCONSTRAINT", SWIG_From_int((int)(0x0A000009)));
+  rb_define_const(rb_cObject, "SKY_ERRINSUFFICIENTBALANCE", SWIG_From_int((int)(0x0B000000)));
+  rb_define_const(rb_cObject, "SKY_ERRINSUFFICIENTHOURS", SWIG_From_int((int)(0x0B000001)));
+  rb_define_const(rb_cObject, "SKY_ERRZEROSPEND", SWIG_From_int((int)(0x0B000002)));
+  rb_define_const(rb_cObject, "SKY_ERRSPENDINGUNCONFIRMED", SWIG_From_int((int)(0x0B000003)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDENCRYPTEDFIELD", SWIG_From_int((int)(0x0B000004)));
+  rb_define_const(rb_cObject, "SKY_ERRWALLETENCRYPTED", SWIG_From_int((int)(0x0B000005)));
+  rb_define_const(rb_cObject, "SKY_ERRWALLETNOTENCRYPTED", SWIG_From_int((int)(0x0B000006)));
+  rb_define_const(rb_cObject, "SKY_ERRWALLETMISSINGPASSWORD", SWIG_From_int((int)(0x0B000007)));
+  rb_define_const(rb_cObject, "SKY_ERRMISSINGENCRYPT", SWIG_From_int((int)(0x0B000008)));
+  rb_define_const(rb_cObject, "SKY_ERRWALLETINVALIDPASSWORD", SWIG_From_int((int)(0x0B000009)));
+  rb_define_const(rb_cObject, "SKY_ERRMISSINGSEED", SWIG_From_int((int)(0x0B00000A)));
+  rb_define_const(rb_cObject, "SKY_ERRMISSINGAUTHENTICATED", SWIG_From_int((int)(0x0B00000B)));
+  rb_define_const(rb_cObject, "SKY_ERRWRONGCRYPTOTYPE", SWIG_From_int((int)(0x0B00000C)));
+  rb_define_const(rb_cObject, "SKY_ERRWALLETNOTEXIST", SWIG_From_int((int)(0x0B00000D)));
+  rb_define_const(rb_cObject, "SKY_ERRSEEDUSED", SWIG_From_int((int)(0x0B00000E)));
+  rb_define_const(rb_cObject, "SKY_ERRWALLETAPIDISABLED", SWIG_From_int((int)(0x0B00000F)));
+  rb_define_const(rb_cObject, "SKY_ERRSEEDAPIDISABLED", SWIG_From_int((int)(0x0B000010)));
+  rb_define_const(rb_cObject, "SKY_ERRWALLETNAMECONFLICT", SWIG_From_int((int)(0x0B000011)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDHOURSSELECTIONMODE", SWIG_From_int((int)(0x0B000012)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDHOURSSELECTIONTYPE", SWIG_From_int((int)(0x0B000013)));
+  rb_define_const(rb_cObject, "SKY_ERRUNKNOWNADDRESS", SWIG_From_int((int)(0x0B000014)));
+  rb_define_const(rb_cObject, "SKY_ERRUNKNOWNUXOUT", SWIG_From_int((int)(0x0B000015)));
+  rb_define_const(rb_cObject, "SKY_ERRNOUNSPENTS", SWIG_From_int((int)(0x0B000016)));
+  rb_define_const(rb_cObject, "SKY_ERRNULLCHANGEADDRESS", SWIG_From_int((int)(0x0B000017)));
+  rb_define_const(rb_cObject, "SKY_ERRMISSINGTO", SWIG_From_int((int)(0x0B000018)));
+  rb_define_const(rb_cObject, "SKY_ERRZEROCOINSTO", SWIG_From_int((int)(0x0B000019)));
+  rb_define_const(rb_cObject, "SKY_ERRNULLADDRESSTO", SWIG_From_int((int)(0x0B00001A)));
+  rb_define_const(rb_cObject, "SKY_ERRDUPLICATETO", SWIG_From_int((int)(0x0B00001B)));
+  rb_define_const(rb_cObject, "SKY_ERRMISSINGWALLETID", SWIG_From_int((int)(0x0B00001C)));
+  rb_define_const(rb_cObject, "SKY_ERRINCLUDESNULLADDRESS", SWIG_From_int((int)(0x0B00001D)));
+  rb_define_const(rb_cObject, "SKY_ERRDUPLICATEADDRESSES", SWIG_From_int((int)(0x0B00001E)));
+  rb_define_const(rb_cObject, "SKY_ERRZEROTOHOURSAUTO", SWIG_From_int((int)(0x0B00001F)));
+  rb_define_const(rb_cObject, "SKY_ERRMISSINGMODEAUTO", SWIG_From_int((int)(0x0B000020)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDHOURSSELMODE", SWIG_From_int((int)(0x0B000021)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDMODEMANUAL", SWIG_From_int((int)(0x0B000022)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDHOURSSELTYPE", SWIG_From_int((int)(0x0B000023)));
+  rb_define_const(rb_cObject, "SKY_ERRMISSINGSHAREFACTOR", SWIG_From_int((int)(0x0B000024)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDSHAREFACTOR", SWIG_From_int((int)(0x0B000025)));
+  rb_define_const(rb_cObject, "SKY_ERRSHAREFACTOROUTOFRANGE", SWIG_From_int((int)(0x0B000026)));
+  rb_define_const(rb_cObject, "SKY_ERRWALLETCONSTRAINT", SWIG_From_int((int)(0x0B000027)));
+  rb_define_const(rb_cObject, "SKY_ERRDUPLICATEUXOUTS", SWIG_From_int((int)(0x0B000028)));
+  rb_define_const(rb_cObject, "SKY_ERRUNKNOWNWALLETID", SWIG_From_int((int)(0x0B000029)));
+  rb_define_const(rb_cObject, "SKY_ERRVERIFYSIGNATUREINVALIDINPUTSNILS", SWIG_From_int((int)(0x0B000033)));
+  rb_define_const(rb_cObject, "SKY_ERRVERIFYSIGNATUREINVALIDSIGLENGTH", SWIG_From_int((int)(0x0B000034)));
+  rb_define_const(rb_cObject, "SKY_ERRVERIFYSIGNATUREINVALIDPUBKEYSLENGTH", SWIG_From_int((int)(0x0B000035)));
+  rb_define_const(rb_cObject, "SKY_ERRINVALIDDECIMALS", SWIG_From_int((int)(0x0C000000)));
 }
 
