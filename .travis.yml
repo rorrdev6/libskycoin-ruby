@@ -1,5 +1,15 @@
 lang: ruby
 
+env:
+  global:
+    - CGO_ENABLED: 1
+
+install:
+  # Install gox
+  - go env
+  - go get github.com/gz-c/gox
+  - go get -t ./...
+
 script: 
     - ./travis/skyapi.sh
     - make build
