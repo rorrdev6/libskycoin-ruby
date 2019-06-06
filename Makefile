@@ -42,8 +42,8 @@ build-libc: configure ## Build libskycoin C client library
 	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) clean-libc
 	GOPATH="$(REPO_ROOT)/$(GOPATH_DIR)" make -C $(SKYLIBC_DIR) build-libc
 	rm -f $(LIBSWIG_DIR)/libskycoin.h
-	rm -f$(LIBSWIG_DIR)/swig.h
-	cp $(SKYLIBC_DIR)/include/swig.h $(LIBSWIG_DIR)
+	rm -f $(LIBSWIG_DIR)/swig.h
+	cp -f $(SKYLIBC_DIR)/include/swig.h $(LIBSWIG_DIR)
 	grep -v _Complex $(SKYLIBC_DIR)/include/libskycoin.h > $(LIBSWIG_DIR)/libskycoin.h
 
 build-swig: ## Generate Ruby C module from SWIG interfaces
