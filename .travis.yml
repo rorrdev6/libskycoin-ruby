@@ -1,6 +1,5 @@
 lang: ruby
 rvm: 2.5
-dist: xenial
 env:
   global:
     - CGO_ENABLED: 1
