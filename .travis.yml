@@ -1,4 +1,5 @@
 lang: ruby
+rvm: 2.5
 dist: xenial
 env:
   global:
@@ -11,13 +12,14 @@ install:
   # Install gox
   - go env
   - go get github.com/gz-c/gox
-  - go get -t ./...
 
+before_script:
+  - make -C gopath/src/github.com/skycoin/libskycoin dep
 script: 
-    - ./.travis/skyapi.sh
-    - make build
+  - ./.travis/skyapi.sh
+  - make build
 
-rvm: 2.5
+
 
 notifications:
   email: false
