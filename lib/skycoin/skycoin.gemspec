@@ -6,13 +6,12 @@ require "skycoin/version"
 Gem::Specification.new do |spec|
   spec.name          = "skycoin"
   spec.version       = Skycoin::VERSION
-  spec.authors       = ["Maykel Arias Torres"]
+  spec.authors       = ["Skycoin"]
   spec.email         = ["dev0006@simelo.tech"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-  spec.license       = "MIT"
+  spec.summary       = %q{Libskycoin library for Ruby}
+  spec.description   = %q{Libskycoin library for Ruby}
+  spec.homepage      = "https://github.com/simelo/libskycoin-ruby"
   spec.extensions    = ['ext/extconf.rb']
   
   # Specify which files should be added to the gem when it is released.
