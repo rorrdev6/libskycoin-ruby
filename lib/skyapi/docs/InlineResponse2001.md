@@ -1,8 +1,17 @@
 # SkyApi::InlineResponse2001
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**csrf_token** | **String** |  | [optional] 
+**blocks** | [**Array&lt;BlockSchema&gt;**](BlockSchema.md) |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'SkyApi'
+
+instance = SkyApi::InlineResponse2001.new(blocks: null)
+```
 
 

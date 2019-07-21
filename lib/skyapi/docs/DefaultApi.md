@@ -6,17 +6,20 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**address_count**](DefaultApi.md#address_count) | **GET** /api/v1/addresscount | Returns the total number of unique address that have coins.
 [**address_uxouts**](DefaultApi.md#address_uxouts) | **GET** /api/v1/address_uxouts | 
+[**api_v1_rawtx_get**](DefaultApi.md#api_v1_rawtx_get) | **GET** /api/v1/rawtx | 
+[**api_v2_metrics_get**](DefaultApi.md#api_v2_metrics_get) | **GET** /api/v2/metrics | 
 [**balance_get**](DefaultApi.md#balance_get) | **GET** /api/v1/balance | Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
 [**balance_post**](DefaultApi.md#balance_post) | **POST** /api/v1/balance | Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
-[**block**](DefaultApi.md#block) | **GET** /api/v1/block | 
+[**block**](DefaultApi.md#block) | **GET** /api/v1/block | Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
 [**blockchain_metadata**](DefaultApi.md#blockchain_metadata) | **GET** /api/v1/blockchain/metadata | Returns the blockchain metadata.
 [**blockchain_progress**](DefaultApi.md#blockchain_progress) | **GET** /api/v1/blockchain/progress | Returns the blockchain sync progress.
-[**blocks_get**](DefaultApi.md#blocks_get) | **GET** /api/v1/blocks | blocksHandler returns blocks between a start and end point,
-[**blocks_post**](DefaultApi.md#blocks_post) | **POST** /api/v1/blocks | blocksHandler returns blocks between a start and end point,
+[**blocks**](DefaultApi.md#blocks) | **GET** /api/v1/blocks | Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
 [**coin_supply**](DefaultApi.md#coin_supply) | **GET** /api/v1/coinSupply | 
 [**csrf**](DefaultApi.md#csrf) | **GET** /api/v1/csrf | Creates a new CSRF token. Previous CSRF tokens are invalidated by this call.
+[**data_delete**](DefaultApi.md#data_delete) | **DELETE** /api/v2/data | 
+[**data_get**](DefaultApi.md#data_get) | **GET** /api/v2/data | 
+[**data_post**](DefaultApi.md#data_post) | **POST** /api/v2/data | 
 [**default_connections**](DefaultApi.md#default_connections) | **GET** /api/v1/network/defaultConnections | defaultConnectionsHandler returns the list of default hardcoded bootstrap addresses.\\n They are not necessarily connected to.
-[**explorer_address**](DefaultApi.md#explorer_address) | **GET** /api/v1/explorer/address | 
 [**health**](DefaultApi.md#health) | **GET** /api/v1/health | Returns node health data.
 [**last_blocks**](DefaultApi.md#last_blocks) | **GET** /api/v1/last_blocks | 
 [**network_connection**](DefaultApi.md#network_connection) | **GET** /api/v1/network/connection | This endpoint returns a specific connection.
@@ -30,7 +33,9 @@ Method | HTTP request | Description
 [**resend_unconfirmed_txns**](DefaultApi.md#resend_unconfirmed_txns) | **POST** /api/v1/resendUnconfirmedTxns | 
 [**richlist**](DefaultApi.md#richlist) | **GET** /api/v1/richlist | Returns the top skycoin holders.
 [**transaction**](DefaultApi.md#transaction) | **GET** /api/v1/transaction | 
-[**transaction_inject**](DefaultApi.md#transaction_inject) | **POST** /api/v2/transaction/inject | Broadcast a hex-encoded, serialized transaction to the network.
+[**transaction_inject**](DefaultApi.md#transaction_inject) | **POST** /api/v1/injectTransaction | Broadcast a hex-encoded, serialized transaction to the network.
+[**transaction_post**](DefaultApi.md#transaction_post) | **POST** /api/v2/transaction | 
+[**transaction_post_unspent**](DefaultApi.md#transaction_post_unspent) | **POST** /api/v2/transaction/unspent | 
 [**transaction_raw**](DefaultApi.md#transaction_raw) | **GET** /api/v2/transaction/raw | Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
 [**transaction_verify**](DefaultApi.md#transaction_verify) | **POST** /api/v2/transaction/verify | 
 [**transactions_get**](DefaultApi.md#transactions_get) | **GET** /api/v1/transactions | Returns transactions that match the filters.
@@ -49,20 +54,23 @@ Method | HTTP request | Description
 [**wallet_recover**](DefaultApi.md#wallet_recover) | **POST** /api/v2/wallet/recover | Recovers an encrypted wallet by providing the seed. The first address will be generated from seed and compared to the first address of the specified wallet. If they match, the wallet will be regenerated with an optional password. If the wallet is not encrypted, an error is returned.
 [**wallet_seed**](DefaultApi.md#wallet_seed) | **POST** /api/v1/wallet/seed | This endpoint only works for encrypted wallets. If the wallet is unencrypted, The seed will be not returned.
 [**wallet_seed_verify**](DefaultApi.md#wallet_seed_verify) | **POST** /api/v2/wallet/seed/verify | Verifies a wallet seed.
-[**wallet_spent**](DefaultApi.md#wallet_spent) | **POST** /api/v1/wallet/spend | 
-[**wallet_transaction**](DefaultApi.md#wallet_transaction) | **POST** /api/v1/wallet/transaction | 
+[**wallet_transaction**](DefaultApi.md#wallet_transaction) | **POST** /api/v1/wallet/transaction | Creates a signed transaction
+[**wallet_transaction_sign**](DefaultApi.md#wallet_transaction_sign) | **POST** /api/v2/wallet/transaction/sign | Creates a signed transaction
 [**wallet_transactions**](DefaultApi.md#wallet_transactions) | **GET** /api/v1/wallet/transactions | 
 [**wallet_unload**](DefaultApi.md#wallet_unload) | **POST** /api/v1/wallet/unload | Unloads wallet from the wallet service.
 [**wallet_update**](DefaultApi.md#wallet_update) | **POST** /api/v1/wallet/update | Update the wallet.
 [**wallets**](DefaultApi.md#wallets) | **GET** /api/v1/wallets | 
 
 
-# **address_count**
-> Object address_count
+
+## address_count
+
+> InlineResponse200 address_count
 
 Returns the total number of unique address that have coins.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -79,11 +87,12 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -91,19 +100,20 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## address_uxouts
 
-# **address_uxouts**
-> Array&lt;InlineResponse200&gt; address_uxouts(address)
+> Array&lt;Object&gt; address_uxouts(address)
 
 
 
 Returns the historical, spent outputs associated with an address
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -121,13 +131,14 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | **String**| address to filter by | 
 
 ### Return type
 
-[**Array&lt;InlineResponse200&gt;**](InlineResponse200.md)
+**Array&lt;Object&gt;**
 
 ### Authorization
 
@@ -135,17 +146,98 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
+
+
+## api_v1_rawtx_get
+
+> String api_v1_rawtx_get
 
 
 
-# **balance_get**
+### Example
+
+```ruby
+# load the gem
+require 'sky_api'
+
+api_instance = SkyApi::DefaultApi.new
+
+begin
+  result = api_instance.api_v1_rawtx_get
+  p result
+rescue SkyApi::ApiError => e
+  puts "Exception when calling DefaultApi->api_v1_rawtx_get: #{e}"
+end
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain
+
+
+## api_v2_metrics_get
+
+> String api_v2_metrics_get
+
+
+
+### Example
+
+```ruby
+# load the gem
+require 'sky_api'
+
+api_instance = SkyApi::DefaultApi.new
+
+begin
+  result = api_instance.api_v2_metrics_get
+  p result
+rescue SkyApi::ApiError => e
+  puts "Exception when calling DefaultApi->api_v2_metrics_get: #{e}"
+end
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain
+
+
+## balance_get
+
 > Object balance_get(addrs)
 
 Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -164,6 +256,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addrs** | **String**| command separated list of addresses | 
@@ -178,17 +271,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## balance_post
 
-# **balance_post**
 > Object balance_post(addrs)
 
 Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -214,6 +308,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addrs** | **String**| command separated list of addresses | 
@@ -228,30 +323,30 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## block
 
-# **block**
-> Object block(opts)
+> Array&lt;BlockSchema&gt; block(opts)
 
-
-
-Returns a block by hash or seq. Note: only one of hash or seq is allowed
+Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
 
 api_instance = SkyApi::DefaultApi.new
 opts = {
-  hash: 'hash_example', # String | 
-  seq: 56 # Integer | 
+  hash: 'hash_example', # String | get block by hash
+  seq: 56 # Integer | get block by sequence number
 }
 
 begin
+  #Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
   result = api_instance.block(opts)
   p result
 rescue SkyApi::ApiError => e
@@ -261,14 +356,15 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hash** | **String**|  | [optional] 
- **seq** | **Integer**|  | [optional] 
+ **hash** | **String**| get block by hash | [optional] 
+ **seq** | **Integer**| get block by sequence number | [optional] 
 
 ### Return type
 
-**Object**
+[**Array&lt;BlockSchema&gt;**](BlockSchema.md)
 
 ### Authorization
 
@@ -276,17 +372,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## blockchain_metadata
 
-# **blockchain_metadata**
 > Object blockchain_metadata
 
 Returns the blockchain metadata.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -303,6 +400,7 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -315,17 +413,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## blockchain_progress
 
-# **blockchain_progress**
 > Object blockchain_progress
 
 Returns the blockchain sync progress.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -342,6 +441,7 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -354,50 +454,50 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## blocks
 
-# **blocks_get**
-> Object blocks_get(opts)
+> InlineResponse2001 blocks(opts)
 
-blocksHandler returns blocks between a start and end point,
-
-or an explicit list of sequences. If using start and end, the block sequences include both the start and end point. Explicit sequences cannot be combined with start and end. Without verbose.
+Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
 
 api_instance = SkyApi::DefaultApi.new
 opts = {
-  start: 56, # Integer | 
-  _end: 56, # Integer | 
-  seqs: [56] # Array<Integer> | 
+  start: 56, # Integer | start seq
+  _end: 56, # Integer | end seq
+  seq: [56] # Array<Integer> | comma-separated list of block seqs
 }
 
 begin
-  #blocksHandler returns blocks between a start and end point,
-  result = api_instance.blocks_get(opts)
+  #Returns the balance of one or more addresses, both confirmed and predicted. The predicted balance is the confirmed balance minus the pending spends.
+  result = api_instance.blocks(opts)
   p result
 rescue SkyApi::ApiError => e
-  puts "Exception when calling DefaultApi->blocks_get: #{e}"
+  puts "Exception when calling DefaultApi->blocks: #{e}"
 end
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start** | **Integer**|  | [optional] 
- **_end** | **Integer**|  | [optional] 
- **seqs** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
+ **start** | **Integer**| start seq | [optional] 
+ **_end** | **Integer**| end seq | [optional] 
+ **seq** | [**Array&lt;Integer&gt;**](Integer.md)| comma-separated list of block seqs | [optional] 
 
 ### Return type
 
-**Object**
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -405,77 +505,20 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## coin_supply
 
-# **blocks_post**
-> Object blocks_post(opts)
-
-blocksHandler returns blocks between a start and end point,
-
-or an explicit list of sequences. If using start and end, the block sequences include both the start and end point. Explicit sequences cannot be combined with start and end. Without verbose
-
-### Example
-```ruby
-# load the gem
-require 'sky_api'
-# setup authorization
-SkyApi.configure do |config|
-  # Configure API key authorization: csrfAuth
-  config.api_key['X-CSRF-TOKEN'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
-end
-
-api_instance = SkyApi::DefaultApi.new
-opts = {
-  start: 56, # Integer | 
-  _end: 56, # Integer | 
-  seqs: [56] # Array<Integer> | 
-}
-
-begin
-  #blocksHandler returns blocks between a start and end point,
-  result = api_instance.blocks_post(opts)
-  p result
-rescue SkyApi::ApiError => e
-  puts "Exception when calling DefaultApi->blocks_post: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start** | **Integer**|  | [optional] 
- **_end** | **Integer**|  | [optional] 
- **seqs** | [**Array&lt;Integer&gt;**](Integer.md)|  | [optional] 
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[csrfAuth](../README.md#csrfAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-# **coin_supply**
-> coin_supply
+> InlineResponse2002 coin_supply
 
 
 
 coinSupplyHandler returns coin distribution supply stats
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -483,18 +526,20 @@ require 'sky_api'
 api_instance = SkyApi::DefaultApi.new
 
 begin
-  api_instance.coin_supply
+  result = api_instance.coin_supply
+  p result
 rescue SkyApi::ApiError => e
   puts "Exception when calling DefaultApi->coin_supply: #{e}"
 end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-nil (empty response body)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -502,17 +547,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## csrf
 
-# **csrf**
-> InlineResponse2001 csrf
+> InlineResponse2003 csrf
 
 Creates a new CSRF token. Previous CSRF tokens are invalidated by this call.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -529,11 +575,12 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -541,17 +588,162 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
+
+
+## data_delete
+
+> data_delete(opts)
 
 
 
-# **default_connections**
+### Example
+
+```ruby
+# load the gem
+require 'sky_api'
+
+api_instance = SkyApi::DefaultApi.new
+opts = {
+  type: 'type_example', # String | storage type.
+  key: 'key_example' # String | key of the specific value to get.
+}
+
+begin
+  api_instance.data_delete(opts)
+rescue SkyApi::ApiError => e
+  puts "Exception when calling DefaultApi->data_delete: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **String**| storage type. | [optional] 
+ **key** | **String**| key of the specific value to get. | [optional] 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
+
+
+## data_get
+
+> Object data_get(opts)
+
+
+
+### Example
+
+```ruby
+# load the gem
+require 'sky_api'
+
+api_instance = SkyApi::DefaultApi.new
+opts = {
+  type: 'type_example', # String | storage type.
+  key: 'key_example' # String | key of the specific value to get.
+}
+
+begin
+  result = api_instance.data_get(opts)
+  p result
+rescue SkyApi::ApiError => e
+  puts "Exception when calling DefaultApi->data_get: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **String**| storage type. | [optional] 
+ **key** | **String**| key of the specific value to get. | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
+
+
+## data_post
+
+> data_post(opts)
+
+
+
+### Example
+
+```ruby
+# load the gem
+require 'sky_api'
+
+api_instance = SkyApi::DefaultApi.new
+opts = {
+  type: 'type_example', # String | storage type.
+  key: 'key_example', # String | key of the specific value to get.
+  val: 'val_example' # String | additional value.
+}
+
+begin
+  api_instance.data_post(opts)
+rescue SkyApi::ApiError => e
+  puts "Exception when calling DefaultApi->data_post: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **String**| storage type. | [optional] 
+ **key** | **String**| key of the specific value to get. | [optional] 
+ **val** | **String**| additional value. | [optional] 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
+
+
+## default_connections
+
 > Array&lt;String&gt; default_connections
 
 defaultConnectionsHandler returns the list of default hardcoded bootstrap addresses.\\n They are not necessarily connected to.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -568,6 +760,7 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -580,63 +773,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## health
 
-# **explorer_address**
-> Array&lt;InlineResponse2002&gt; explorer_address(opts)
-
-
-
-Returns all transactions (confirmed and unconfirmed) for an address
-
-### Example
-```ruby
-# load the gem
-require 'sky_api'
-
-api_instance = SkyApi::DefaultApi.new
-opts = {
-  address: 'address_example' # String | tags to filter by
-}
-
-begin
-  result = api_instance.explorer_address(opts)
-  p result
-rescue SkyApi::ApiError => e
-  puts "Exception when calling DefaultApi->explorer_address: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **address** | **String**| tags to filter by | [optional] 
-
-### Return type
-
-[**Array&lt;InlineResponse2002&gt;**](InlineResponse2002.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-# **health**
 > Object health
 
 Returns node health data.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -653,6 +801,7 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -665,12 +814,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## last_blocks
 
-# **last_blocks**
 > Object last_blocks(num)
 
 
@@ -678,12 +827,13 @@ No authorization required
 Returns the most recent N blocks on the blockchain
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
 
 api_instance = SkyApi::DefaultApi.new
-num = 56 # Integer | 
+num = 56 # Integer | Num of blockss
 
 begin
   result = api_instance.last_blocks(num)
@@ -695,9 +845,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **num** | **Integer**|  | 
+ **num** | **Integer**| Num of blockss | 
 
 ### Return type
 
@@ -709,17 +860,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## network_connection
 
-# **network_connection**
-> InlineResponse2003 network_connection(addr)
+> NetworkConnectionSchema network_connection(addr)
 
 This endpoint returns a specific connection.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -738,13 +890,14 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addr** | **String**| Address port | 
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**NetworkConnectionSchema**](NetworkConnectionSchema.md)
 
 ### Authorization
 
@@ -752,17 +905,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## network_connections
 
-# **network_connections**
-> Array&lt;InlineResponse2003&gt; network_connections(opts)
+> InlineResponse2004 network_connections(opts)
 
 This endpoint returns all outgoings connections.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -791,6 +945,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **states** | **String**| Connection status. | [optional] 
@@ -798,7 +953,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;InlineResponse2003&gt;**](InlineResponse2003.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -806,12 +961,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## network_connections_disconnect
 
-# **network_connections_disconnect**
 > network_connections_disconnect(id)
 
 
@@ -819,6 +974,7 @@ Name | Type | Description  | Notes
 This endpoint disconnects a connection by ID or address
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -842,6 +998,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Address id. | 
@@ -856,12 +1013,12 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
 
+## network_connections_exchange
 
-# **network_connections_exchange**
 > Array&lt;String&gt; network_connections_exchange
 
 
@@ -869,6 +1026,7 @@ nil (empty response body)
 This endpoint returns all connections found through peer exchange
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -884,6 +1042,7 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -896,27 +1055,21 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## network_connections_trust
 
-# **network_connections_trust**
 > Array&lt;String&gt; network_connections_trust
 
 trustConnectionsHandler returns all trusted connections.\\n They are not necessarily connected to. In the default configuration, these will be a subset of the default hardcoded bootstrap addresses.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
-# setup authorization
-SkyApi.configure do |config|
-  # Configure API key authorization: csrfAuth
-  config.api_key['X-CSRF-TOKEN'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
-end
 
 api_instance = SkyApi::DefaultApi.new
 
@@ -930,6 +1083,7 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -938,21 +1092,22 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[csrfAuth](../README.md#csrfAuth)
+No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## outputs_get
 
-# **outputs_get**
 > Object outputs_get(opts)
 
 If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -974,6 +1129,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | [**Array&lt;String&gt;**](String.md)|  | [optional] 
@@ -989,17 +1145,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## outputs_post
 
-# **outputs_post**
 > Object outputs_post(opts)
 
 If neither addrs nor hashes are specificed, return all unspent outputs. If only one filter is specified, then return outputs match the filter. Both filters cannot be specified.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1028,6 +1185,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **address** | **String**|  | [optional] 
@@ -1043,19 +1201,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## pending_txs
 
-# **pending_txs**
-> Array&lt;InlineResponse2004&gt; pending_txs
+> Array&lt;InlineResponse20010&gt; pending_txs
 
 
-
-Returns pending (unconfirmed) transactions without verbose
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1071,11 +1228,12 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;InlineResponse2004&gt;**](InlineResponse2004.md)
+[**Array&lt;InlineResponse20010&gt;**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -1083,19 +1241,20 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## resend_unconfirmed_txns
 
-# **resend_unconfirmed_txns**
-> resend_unconfirmed_txns
+> Object resend_unconfirmed_txns
 
 
 
 Broadcasts all unconfirmed transactions from the unconfirmed transaction pool
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1110,18 +1269,20 @@ end
 api_instance = SkyApi::DefaultApi.new
 
 begin
-  api_instance.resend_unconfirmed_txns
+  result = api_instance.resend_unconfirmed_txns
+  p result
 rescue SkyApi::ApiError => e
   puts "Exception when calling DefaultApi->resend_unconfirmed_txns: #{e}"
 end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-nil (empty response body)
+**Object**
 
 ### Authorization
 
@@ -1129,24 +1290,25 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application-json, application/json, application/xml
 
 
+## richlist
 
-# **richlist**
 > Object richlist(opts)
 
 Returns the top skycoin holders.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
 
 api_instance = SkyApi::DefaultApi.new
 opts = {
-  include_distribution: true, # BOOLEAN | include distribution addresses or not, default value false
+  include_distribution: true, # Boolean | include distribution addresses or not, default value false
   n: 'n_example' # String | include distribution addresses or not, default value false
 }
 
@@ -1161,9 +1323,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **include_distribution** | **BOOLEAN**| include distribution addresses or not, default value false | [optional] 
+ **include_distribution** | **Boolean**| include distribution addresses or not, default value false | [optional] 
  **n** | **String**| include distribution addresses or not, default value false | [optional] 
 
 ### Return type
@@ -1176,31 +1339,29 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## transaction
 
-# **transaction**
-> Object transaction(txid, opts)
+> Transaction transaction(txid)
 
 
 
 Returns a transaction identified by its txid hash with just id
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
 
 api_instance = SkyApi::DefaultApi.new
-txid = 'txid_example' # String | transaction hash
-opts = {
-  encoded: true # BOOLEAN | return as a raw encoded transaction.
-}
+txid = 'txid_example' # String | transaction Id
 
 begin
-  result = api_instance.transaction(txid, opts)
+  result = api_instance.transaction(txid)
   p result
 rescue SkyApi::ApiError => e
   puts "Exception when calling DefaultApi->transaction: #{e}"
@@ -1209,14 +1370,14 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **txid** | **String**| transaction hash | 
- **encoded** | **BOOLEAN**| return as a raw encoded transaction. | [optional] 
+ **txid** | **String**| transaction Id | 
 
 ### Return type
 
-**Object**
+[**Transaction**](Transaction.md)
 
 ### Authorization
 
@@ -1224,17 +1385,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## transaction_inject
 
-# **transaction_inject**
-> Object transaction_inject(rawtx)
+> String transaction_inject(rawtx)
 
 Broadcast a hex-encoded, serialized transaction to the network.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1260,13 +1422,14 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rawtx** | **String**| hex-encoded serialized transaction string. | 
 
 ### Return type
 
-**Object**
+**String**
 
 ### Authorization
 
@@ -1274,17 +1437,122 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, application/xml
+
+
+## transaction_post
+
+> InlineResponse2008 transaction_post(opts)
 
 
 
-# **transaction_raw**
+### Example
+
+```ruby
+# load the gem
+require 'sky_api'
+# setup authorization
+SkyApi.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['X-CSRF-TOKEN'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
+end
+
+api_instance = SkyApi::DefaultApi.new
+opts = {
+  transaction_v2_params_address: SkyApi::TransactionV2ParamsAddress.new # TransactionV2ParamsAddress | 
+}
+
+begin
+  result = api_instance.transaction_post(opts)
+  p result
+rescue SkyApi::ApiError => e
+  puts "Exception when calling DefaultApi->transaction_post: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **transaction_v2_params_address** | [**TransactionV2ParamsAddress**](TransactionV2ParamsAddress.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse2008**](InlineResponse2008.md)
+
+### Authorization
+
+[csrfAuth](../README.md#csrfAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json, application/xml, 
+
+
+## transaction_post_unspent
+
+> InlineResponse2008 transaction_post_unspent(transaction_v2_params_unspent)
+
+
+
+### Example
+
+```ruby
+# load the gem
+require 'sky_api'
+# setup authorization
+SkyApi.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['X-CSRF-TOKEN'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
+end
+
+api_instance = SkyApi::DefaultApi.new
+transaction_v2_params_unspent = SkyApi::TransactionV2ParamsUnspent.new # TransactionV2ParamsUnspent | Unspent parameters
+
+begin
+  result = api_instance.transaction_post_unspent(transaction_v2_params_unspent)
+  p result
+rescue SkyApi::ApiError => e
+  puts "Exception when calling DefaultApi->transaction_post_unspent: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **transaction_v2_params_unspent** | [**TransactionV2ParamsUnspent**](TransactionV2ParamsUnspent.md)| Unspent parameters | 
+
+### Return type
+
+[**InlineResponse2008**](InlineResponse2008.md)
+
+### Authorization
+
+[csrfAuth](../README.md#csrfAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json, application/xml, 
+
+
+## transaction_raw
+
 > Object transaction_raw(opts)
 
 Returns the hex-encoded byte serialization of a transaction. The transaction may be confirmed or unconfirmed.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1305,6 +1573,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **txid** | **String**| Transaction id hash | [optional] 
@@ -1319,19 +1588,20 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## transaction_verify
 
-# **transaction_verify**
-> Object transaction_verify
+> Object transaction_verify(transaction_verify_request)
 
 
 
 Decode and verify an encoded transaction
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1344,9 +1614,10 @@ SkyApi.configure do |config|
 end
 
 api_instance = SkyApi::DefaultApi.new
+transaction_verify_request = SkyApi::TransactionVerifyRequest.new # TransactionVerifyRequest | 
 
 begin
-  result = api_instance.transaction_verify
+  result = api_instance.transaction_verify(transaction_verify_request)
   p result
 rescue SkyApi::ApiError => e
   puts "Exception when calling DefaultApi->transaction_verify: #{e}"
@@ -1354,7 +1625,11 @@ end
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **transaction_verify_request** | [**TransactionVerifyRequest**](TransactionVerifyRequest.md)|  | 
 
 ### Return type
 
@@ -1366,17 +1641,18 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json, application/xml, 
 
 
+## transactions_get
 
-# **transactions_get**
 > Object transactions_get(opts)
 
 Returns transactions that match the filters.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1398,6 +1674,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addrs** | **String**| command separated list of addresses | [optional] 
@@ -1413,17 +1690,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## transactions_post
 
-# **transactions_post**
 > Object transactions_post(opts)
 
 Returns transactions that match the filters.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1452,6 +1730,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addrs** | **String**| command separated list of addresses | [optional] 
@@ -1467,17 +1746,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## uxout
 
-# **uxout**
 > Object uxout(opts)
 
 Returns an unspent output by ID.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1498,6 +1778,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uxid** | **String**| uxid to filter by | [optional] 
@@ -1512,17 +1793,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## verify_address
 
-# **verify_address**
-> InlineResponse2007 verify_address(address)
+> Object verify_address(address)
 
 Verifies a Skycoin address.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1535,7 +1817,7 @@ SkyApi.configure do |config|
 end
 
 api_instance = SkyApi::DefaultApi.new
-address = 'address_example' # String | Address id.
+address = nil # Object | Address id.
 
 begin
   #Verifies a Skycoin address.
@@ -1548,13 +1830,14 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | **String**| Address id. | 
+ **address** | [**Object**](.md)| Address id. | 
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+**Object**
 
 ### Authorization
 
@@ -1562,19 +1845,20 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## version
 
-# **version**
-> version
+> InlineResponse2005 version
 
 
 
 versionHandler returns the application version info
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1582,18 +1866,20 @@ require 'sky_api'
 api_instance = SkyApi::DefaultApi.new
 
 begin
-  api_instance.version
+  result = api_instance.version
+  p result
 rescue SkyApi::ApiError => e
   puts "Exception when calling DefaultApi->version: #{e}"
 end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-nil (empty response body)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -1601,17 +1887,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet
 
-# **wallet**
 > Object wallet(id)
 
 Returns a wallet by id.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1630,6 +1917,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| tags to filter by | 
@@ -1644,17 +1932,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_balance
 
-# **wallet_balance**
 > Object wallet_balance(id)
 
 Returns the wallet's balance, both confirmed and predicted.  The predicted balance is the confirmed balance minus the pending spends.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1673,6 +1962,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| tags to filter by | 
@@ -1687,12 +1977,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_create
 
-# **wallet_create**
 > Object wallet_create(seed, label, opts)
 
 
@@ -1700,6 +1990,7 @@ No authorization required
 Loads wallet from seed, will scan ahead N address and load addresses till the last one that have coins.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1716,7 +2007,7 @@ seed = 'seed_example' # String | Wallet seed.
 label = 'label_example' # String | Wallet label.
 opts = {
   scan: 56, # Integer | The number of addresses to scan ahead for balances.
-  encrypt: true, # BOOLEAN | Encrypt wallet.
+  encrypt: true, # Boolean | Encrypt wallet.
   password: 'password_example' # String | Wallet Password
 }
 
@@ -1730,12 +2021,13 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **seed** | **String**| Wallet seed. | 
  **label** | **String**| Wallet label. | 
  **scan** | **Integer**| The number of addresses to scan ahead for balances. | [optional] 
- **encrypt** | **BOOLEAN**| Encrypt wallet. | [optional] 
+ **encrypt** | **Boolean**| Encrypt wallet. | [optional] 
  **password** | **String**| Wallet Password | [optional] 
 
 ### Return type
@@ -1748,17 +2040,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_decrypt
 
-# **wallet_decrypt**
 > Object wallet_decrypt(id, password)
 
 Decrypts wallet.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1785,6 +2078,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Wallet id. | 
@@ -1800,17 +2094,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_encrypt
 
-# **wallet_encrypt**
 > Object wallet_encrypt(id, password)
 
 Encrypt wallet.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1837,6 +2132,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Wallet id. | 
@@ -1852,19 +2148,20 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_folder
 
-# **wallet_folder**
-> InlineResponse2006 wallet_folder(addr)
+> InlineResponse2007 wallet_folder(addr)
 
 
 
 Returns the wallet directory path
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1882,13 +2179,14 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **addr** | **String**| Address port | 
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -1896,12 +2194,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_new_address
 
-# **wallet_new_address**
 > Object wallet_new_address(id, opts)
 
 
@@ -1909,6 +2207,7 @@ No authorization required
 Generates new addresses
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1937,6 +2236,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Wallet Id | 
@@ -1953,12 +2253,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_new_seed
 
-# **wallet_new_seed**
 > Object wallet_new_seed(opts)
 
 
@@ -1966,6 +2266,7 @@ Name | Type | Description  | Notes
 Returns the wallet directory path
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -1985,6 +2286,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entropy** | **String**| Entropy bitSize. | [optional] 
@@ -1999,17 +2301,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_recover
 
-# **wallet_recover**
 > Object wallet_recover(id, seed, opts)
 
 Recovers an encrypted wallet by providing the seed. The first address will be generated from seed and compared to the first address of the specified wallet. If they match, the wallet will be regenerated with an optional password. If the wallet is not encrypted, an error is returned.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -2039,6 +2342,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Wallet id. | 
@@ -2055,17 +2359,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_seed
 
-# **wallet_seed**
 > Object wallet_seed(id, password)
 
 This endpoint only works for encrypted wallets. If the wallet is unencrypted, The seed will be not returned.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -2092,6 +2397,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Wallet Id. | 
@@ -2107,17 +2413,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_seed_verify
 
-# **wallet_seed_verify**
 > Object wallet_seed_verify(opts)
 
 Verifies a wallet seed.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -2145,6 +2452,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **seed** | **String**| Seed to be verified. | [optional] 
@@ -2159,76 +2467,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_transaction
 
-# **wallet_spent**
-> Object wallet_spent(id, dst, coins, password)
-
-
-
-Creates and broadcasts a transaction sending money from one of our wallets to destination address.
-
-### Example
-```ruby
-# load the gem
-require 'sky_api'
-# setup authorization
-SkyApi.configure do |config|
-  # Configure API key authorization: csrfAuth
-  config.api_key['X-CSRF-TOKEN'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  #config.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
-end
-
-api_instance = SkyApi::DefaultApi.new
-id = 'id_example' # String | Wallet id
-dst = 'dst_example' # String | Recipient address
-coins = 'coins_example' # String | Number of coins to spend, in droplets. 1 coin equals 1e6 droplets.
-password = 'password_example' # String | Wallet password.
-
-begin
-  result = api_instance.wallet_spent(id, dst, coins, password)
-  p result
-rescue SkyApi::ApiError => e
-  puts "Exception when calling DefaultApi->wallet_spent: #{e}"
-end
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| Wallet id | 
- **dst** | **String**| Recipient address | 
- **coins** | **String**| Number of coins to spend, in droplets. 1 coin equals 1e6 droplets. | 
- **password** | **String**| Wallet password. | 
-
-### Return type
-
-**Object**
-
-### Authorization
-
-[csrfAuth](../README.md#csrfAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-
-# **wallet_transaction**
-> Object wallet_transaction(opts)
-
-
+> Object wallet_transaction(wallet_transaction_request)
 
 Creates a signed transaction
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -2241,12 +2491,11 @@ SkyApi.configure do |config|
 end
 
 api_instance = SkyApi::DefaultApi.new
-opts = {
-  inline_object: SkyApi::InlineObject.new # InlineObject | 
-}
+wallet_transaction_request = SkyApi::WalletTransactionRequest.new # WalletTransactionRequest | 
 
 begin
-  result = api_instance.wallet_transaction(opts)
+  #Creates a signed transaction
+  result = api_instance.wallet_transaction(wallet_transaction_request)
   p result
 rescue SkyApi::ApiError => e
   puts "Exception when calling DefaultApi->wallet_transaction: #{e}"
@@ -2255,9 +2504,10 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inline_object** | [**InlineObject**](InlineObject.md)|  | [optional] 
+ **wallet_transaction_request** | [**WalletTransactionRequest**](WalletTransactionRequest.md)|  | 
 
 ### Return type
 
@@ -2269,25 +2519,76 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/xml
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_transaction_sign
 
-# **wallet_transactions**
-> Object wallet_transactions(id)
+> InlineResponse2009 wallet_transaction_sign(wallet_transaction_sign_request)
 
-
-
-Returns returns all unconfirmed transactions for all addresses in a given wallet verbose
+Creates a signed transaction
 
 ### Example
+
+```ruby
+# load the gem
+require 'sky_api'
+# setup authorization
+SkyApi.configure do |config|
+  # Configure API key authorization: csrfAuth
+  config.api_key['X-CSRF-TOKEN'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  #config.api_key_prefix['X-CSRF-TOKEN'] = 'Bearer'
+end
+
+api_instance = SkyApi::DefaultApi.new
+wallet_transaction_sign_request = SkyApi::WalletTransactionSignRequest.new # WalletTransactionSignRequest | 
+
+begin
+  #Creates a signed transaction
+  result = api_instance.wallet_transaction_sign(wallet_transaction_sign_request)
+  p result
+rescue SkyApi::ApiError => e
+  puts "Exception when calling DefaultApi->wallet_transaction_sign: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **wallet_transaction_sign_request** | [**WalletTransactionSignRequest**](WalletTransactionSignRequest.md)|  | 
+
+### Return type
+
+[**InlineResponse2009**](InlineResponse2009.md)
+
+### Authorization
+
+[csrfAuth](../README.md#csrfAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json, application/xml, 
+
+
+## wallet_transactions
+
+> InlineResponse2006 wallet_transactions(id)
+
+
+
+### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
 
 api_instance = SkyApi::DefaultApi.new
-id = 'id_example' # String | Wallet id.
+id = 'id_example' # String | Wallet Id.
 
 begin
   result = api_instance.wallet_transactions(id)
@@ -2299,13 +2600,14 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| Wallet id. | 
+ **id** | **String**| Wallet Id. | 
 
 ### Return type
 
-**Object**
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -2313,17 +2615,18 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
 
+## wallet_unload
 
-# **wallet_unload**
 > wallet_unload(id)
 
 Unloads wallet from the wallet service.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -2348,6 +2651,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Wallet Id. | 
@@ -2362,17 +2666,18 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
 
+## wallet_update
 
-# **wallet_update**
-> wallet_update(id, label)
+> String wallet_update(id, label)
 
 Update the wallet.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -2390,13 +2695,15 @@ label = 'label_example' # String | The label the wallet will be updated to.
 
 begin
   #Update the wallet.
-  api_instance.wallet_update(id, label)
+  result = api_instance.wallet_update(id, label)
+  p result
 rescue SkyApi::ApiError => e
   puts "Exception when calling DefaultApi->wallet_update: #{e}"
 end
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -2405,7 +2712,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+**String**
 
 ### Authorization
 
@@ -2413,19 +2720,20 @@ nil (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, application/xml
 
 
+## wallets
 
-# **wallets**
-> Array&lt;InlineResponse2005&gt; wallets
+> Array&lt;Object&gt; wallets
 
 
 
 Returns all loaded wallets
 
 ### Example
+
 ```ruby
 # load the gem
 require 'sky_api'
@@ -2441,11 +2749,12 @@ end
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-[**Array&lt;InlineResponse2005&gt;**](InlineResponse2005.md)
+**Array&lt;Object&gt;**
 
 ### Authorization
 
@@ -2453,8 +2762,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml, 
 
