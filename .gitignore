@@ -160,3 +160,5 @@ addresses.txt
 seeds.csv
 
 histogram
+lib/skycoin/ext/libskycoin_ruby_wrap.c
+lib/skycoin/ext/libskycoin.h
