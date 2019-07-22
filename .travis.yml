@@ -1,5 +1,25 @@
 lang: ruby
-
-script: ./travis/skyapi.sh
-
 rvm: 2.5
+env:
+  global:
+    - CGO_ENABLED: 1
+
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == 'linux' ]]; then bash ./.travis/install-linux.sh ; fi
+install:
+  - eval "$(gimme 1.10)" 
+  # Install gox
+  - go env
+  - go get github.com/gz-c/gox
+
+before_script:
+  - make -C gopath/src/github.com/skycoin/libskycoin dep
+script: 
+  - ./.travis/skyapi.sh
+  - make build
+
+
+
+notifications:
+  email: false
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
