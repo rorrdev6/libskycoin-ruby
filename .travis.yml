@@ -18,7 +18,19 @@ script:
   - ./.travis/skyapi.sh
   - make build
 
+before_deploy:
+  - make package
 
+deploy:
+  provider: releases
+  api_key: "1b6483754e66bd7cc6233db548ce9695cc8ecdc4"
+  file:
+    - ./lib/skyapi/skyapi-${TRAVIS_TAG}.gem
+    - ./lib/skycoin/skycoin-${TRAVIS_TAG}.gem
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: simelo/libjava-skycoin
 
 notifications:
   email: false
