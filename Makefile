@@ -71,6 +71,11 @@ test: build-libc build-swig develop ## Run project test suite
 
 clean: #Clean all
 	make -C $(SKYLIBC_DIR) clean-libc
+	find . -path "*.gem" -delete
+
+package: ## Build skyapi and skycoin gems
+	(cd ./lib/skyapi && gem build sky_api.gemspec)
+	(cd ./lib/skycoin && gem build skycoin.gemspec)
 
 help: ## List available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
