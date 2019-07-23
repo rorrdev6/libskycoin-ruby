@@ -34,6 +34,12 @@ deploy:
   api_key:
     secure: 2BKDKmM5eoG16Kpbyz0PNUMu8I1BGrcSIiXxOvKa19/rep49jibuX6Qd2jkx9x4O5f7OxNF2nXG5+GINIMl3ft7hyQ8b9LjMkUXACENb9JKinb7ZKlyYhYsEF6sR/FrKc2+XLVpHYUOno1Mkw87DhKlkmN0a7CyuiSCtzFGaid7B2MpbHS5UvBrLUj7QT4TPjW4E1GkYCz3yNEKDw2wQie7KP+xQjHTNtpMGmST4h5YJYxTyvhVyg8VcuxzqXcB2QxiEt4/qIFvfVMzGCEN73YiYzU5/8V5xqkse8nnOsJO7hc7xxo4n4vL8q/swtttI9taD2De8OTLG8KUaJMSW03mao/7Wp0Lx480FALdChGx4qIZO+Duh/4zry7xmUMXDXbskop8rHUd3sGVEmeeBVGtet71ypodqS0uBp3MdXzn3g4PY0/m9ZNmCe0mRSI+pEIypZfYuBPd7iqF56HeI9qyX8cGLFed8Ua1R955p6Dmk+CNenCsZr1V/4AusVKKdsOFR219ScoGnJkptAM4hUnktuB8Ed8I14qoCN+jRc/YOjAhTdKTQOJqybTEvs4o/9E/aHernKLHcPNOIpYvNHUmRbup2RMQ/Q+3CATLI8AuG33ASVpI458ShseYIncXTg6/NGXzvmdXPVxc9EgfHthPqUvCt/pmo/oOTavzwJs0=
 
+deploy:
+  provider: script
+  script: bash .travis/deploy_rubygems.sh
+  on:
+    tags: true
+
 notifications:
   email: false
   webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
