@@ -1391,7 +1391,7 @@ No authorization required
 
 ## transaction_inject
 
-> String transaction_inject(rawtx)
+> String transaction_inject(rawtx, opts)
 
 Broadcast a hex-encoded, serialized transaction to the network.
 
@@ -1410,10 +1410,13 @@ end
 
 api_instance = SkyApi::DefaultApi.new
 rawtx = 'rawtx_example' # String | hex-encoded serialized transaction string.
+opts = {
+  no_broadcast: true # Boolean | Disable the network broadcast
+}
 
 begin
   #Broadcast a hex-encoded, serialized transaction to the network.
-  result = api_instance.transaction_inject(rawtx)
+  result = api_instance.transaction_inject(rawtx, opts)
   p result
 rescue SkyApi::ApiError => e
   puts "Exception when calling DefaultApi->transaction_inject: #{e}"
@@ -1426,6 +1429,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rawtx** | **String**| hex-encoded serialized transaction string. | 
+ **no_broadcast** | **Boolean**| Disable the network broadcast | [optional] 
 
 ### Return type
 
@@ -1817,7 +1821,7 @@ SkyApi.configure do |config|
 end
 
 api_instance = SkyApi::DefaultApi.new
-address = nil # Object | Address id.
+address = SkyApi::Address.new # Address | Address id.
 
 begin
   #Verifies a Skycoin address.
@@ -1833,7 +1837,7 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **address** | [**Object**](.md)| Address id. | 
+ **address** | [**Address**](.md)| Address id. | 
 
 ### Return type
 
@@ -1983,11 +1987,11 @@ No authorization required
 
 ## wallet_create
 
-> Object wallet_create(seed, label, opts)
+> Object wallet_create(type, seed, label, opts)
 
 
 
-Loads wallet from seed, will scan ahead N address and load addresses till the last one that have coins.
+Create a wallet
 
 ### Example
 
@@ -2003,16 +2007,20 @@ SkyApi.configure do |config|
 end
 
 api_instance = SkyApi::DefaultApi.new
+type = 'type_example' # String | wallet seed passphrase [optional, bip44 type wallet only]
 seed = 'seed_example' # String | Wallet seed.
 label = 'label_example' # String | Wallet label.
 opts = {
+  seed_passphrase: 'seed_passphrase_example', # String | wallet seed passphrase [optional, bip44 type wallet only]
+  bip44_coin: 'bip44_coin_example', # String | BIP44 coin type [optional, defaults to 8000 (skycoin's coin type), only valid if type is \"bip44\"]
+  xpub: 'xpub_example', # String | xpub key [required for xpub wallets]
   scan: 56, # Integer | The number of addresses to scan ahead for balances.
   encrypt: true, # Boolean | Encrypt wallet.
   password: 'password_example' # String | Wallet Password
 }
 
 begin
-  result = api_instance.wallet_create(seed, label, opts)
+  result = api_instance.wallet_create(type, seed, label, opts)
   p result
 rescue SkyApi::ApiError => e
   puts "Exception when calling DefaultApi->wallet_create: #{e}"
@@ -2024,8 +2032,12 @@ end
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **type** | **String**| wallet seed passphrase [optional, bip44 type wallet only] | 
  **seed** | **String**| Wallet seed. | 
  **label** | **String**| Wallet label. | 
+ **seed_passphrase** | **String**| wallet seed passphrase [optional, bip44 type wallet only] | [optional] 
+ **bip44_coin** | **String**| BIP44 coin type [optional, defaults to 8000 (skycoin&#39;s coin type), only valid if type is \&quot;bip44\&quot;] | [optional] 
+ **xpub** | **String**| xpub key [required for xpub wallets] | [optional] 
  **scan** | **Integer**| The number of addresses to scan ahead for balances. | [optional] 
  **encrypt** | **Boolean**| Encrypt wallet. | [optional] 
  **password** | **String**| Wallet Password | [optional] 
@@ -2311,6 +2323,8 @@ No authorization required
 
 Recovers an encrypted wallet by providing the seed. The first address will be generated from seed and compared to the first address of the specified wallet. If they match, the wallet will be regenerated with an optional password. If the wallet is not encrypted, an error is returned.
 
+Recovers an encrypted wallet by providing the wallet seed and optional seed passphrase
+
 ### Example
 
 ```ruby
@@ -2328,6 +2342,7 @@ api_instance = SkyApi::DefaultApi.new
 id = 'id_example' # String | Wallet id.
 seed = 'seed_example' # String | Wallet seed.
 opts = {
+  seed_passphrase: 'seed_passphrase_example', # String | Wallet seed-passphrase.
   password: 'password_example' # String | Wallet password.
 }
 
@@ -2347,6 +2362,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Wallet id. | 
  **seed** | **String**| Wallet seed. | 
+ **seed_passphrase** | **String**| Wallet seed-passphrase. | [optional] 
  **password** | **String**| Wallet password. | [optional] 
 
 ### Return type
